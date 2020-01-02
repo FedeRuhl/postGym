@@ -13,6 +13,8 @@ namespace Gimnasio
 {
     public partial class subirRutina : FormularioBase
     {
+        private int y = 200;
+        private int conteo = 0;
         public subirRutina()
         {
             InitializeComponent();
@@ -29,87 +31,19 @@ namespace Gimnasio
           //  MessageBox.Show((DS.Tables[0].Rows[comboBox1.SelectedIndex]["idEjercicio"]).ToString());
         }
 
-        private void TxtCantidadSeries_TextChanged(object sender, EventArgs e)
-        {/*
-            try
-            {
-            Label lblCantRepeticiones = new Label();
-            TextBox txtCantRepeticiones = new TextBox();
-
-            lblCantRepeticiones.Width = 226;
-            lblCantRepeticiones.Height = 26;
-            lblCantRepeticiones.Margin = new Padding(10, 30, 3, 3);
-
-            panel1.Controls.Add(lblCantRepeticiones);
-
-            txtCantRepeticiones.Width = 157;
-            txtCantRepeticiones.Height = 22;
-            txtCantRepeticiones.Margin = new Padding(3, 3, 3,3);
-
-            panel1.Controls.Add(txtCantRepeticiones);
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show("Se ha producido un error: " + error.Message); 
-            }
-            */
-        }
-        private void TxtCantidadSeries_KeyPress(object sender, KeyPressEventArgs e)
-        {/*
-            try
-            {
-                    
-                Label lblCantRepeticiones = new Label();
-                TextBox txtCantRepeticiones = new TextBox();
-
-                lblCantRepeticiones.Width = 226;
-                lblCantRepeticiones.Height = 26;
-                lblCantRepeticiones.Margin = new Padding(10, 30, 3, 3);
-
-                panel1.Controls.Add(lblCantRepeticiones);
-
-                txtCantRepeticiones.Width = 157;
-                txtCantRepeticiones.Height = 22;
-                txtCantRepeticiones.Margin = new Padding(3, 3, 3, 3);
-
-                panel1.Controls.Add(txtCantRepeticiones);
-                
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("Se ha producido un error: " + error.Message);
-            }
-            */
-        }
-
         private void Button1_Click(object sender, EventArgs e)
-        {          
+        {
             try
             {
-            Label lblCantRepeticiones = new Label();
-            TextBox txtCantRepeticiones = new TextBox();
-            
-            lblCantRepeticiones.Width = 171;
-            lblCantRepeticiones.Height = 26;
-            //lblCantRepeticiones.Margin = new Padding(10, 30, 3, 3);
-            lblCantRepeticiones.Text = "Cantidad de repeticiones: ";
-                lblCantRepeticiones.Visible = true;
-                lblCantRepeticiones.Location = new Point(12, 284);
-                //lblCantRepeticiones.Show();
-                
-            this.Controls.Add(lblCantRepeticiones);
-  
-            txtCantRepeticiones.Width = 157;
-            txtCantRepeticiones.Height = 22;
-           // txtCantRepeticiones.Margin = new Padding(3, 3, 3,3);
-                txtCantRepeticiones.Text = "Hola";
-                txtCantRepeticiones.Location = new Point(171+12, 288);
-                txtCantRepeticiones.Visible = true;
-               // txtCantRepeticiones.Show();
-           this.Controls.Add(txtCantRepeticiones);
-            
-                
-
+                TextBox text = new TextBox();
+                text.Text = "Cantidad de peso (kg)";
+                text.Height = 23;
+                text.Width = 200;
+                text.Location = new Point(50, y);
+                y += 25;
+                text.Name = "txtDinamic" + conteo.ToString();
+                conteo++;
+                Controls.Add(text);
             }
             catch(Exception error)
             {

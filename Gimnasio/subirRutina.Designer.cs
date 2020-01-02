@@ -37,14 +37,10 @@
             this.unirEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detallesEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tablaDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblCantSeries = new System.Windows.Forms.Label();
-            this.txtCantidadSeries = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesEjercicioBindingSource)).BeginInit();
-            
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,30 +102,9 @@
             this.unirEjercicioBindingSource.DataMember = "unirEjercicio";
             this.unirEjercicioBindingSource.DataSource = this.detallesEjercicioBindingSource;
             // 
-            // detallesEjercicioBindingSource
-            // 
-            this.detallesEjercicioBindingSource.Position = 0;
-            // 
-            // detallesEjercicio
-            // 
-           
-            // 
-            // gimnasioDataSet
-            // 
-            
-            // 
             // tablaDetallesBindingSource
             // 
             this.tablaDetallesBindingSource.DataMember = "tablaDetalles";
-
-            // 
-            // tablaDetallesTableAdapter
-            // 
-
-            // 
-            // unirEjercicioTableAdapter
-            // 
-
             // 
             // comboBox1
             // 
@@ -141,33 +116,13 @@
             this.comboBox1.Size = new System.Drawing.Size(302, 24);
             this.comboBox1.TabIndex = 17;
             // 
-            // lblCantSeries
-            // 
-            this.lblCantSeries.AutoSize = true;
-            this.lblCantSeries.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantSeries.Location = new System.Drawing.Point(12, 189);
-            this.lblCantSeries.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
-            this.lblCantSeries.Name = "lblCantSeries";
-            this.lblCantSeries.Size = new System.Drawing.Size(171, 26);
-            this.lblCantSeries.TabIndex = 19;
-            this.lblCantSeries.Text = "Cantidad de series:";
-            // 
-            // txtCantidadSeries
-            // 
-            this.txtCantidadSeries.Location = new System.Drawing.Point(262, 193);
-            this.txtCantidadSeries.Name = "txtCantidadSeries";
-            this.txtCantidadSeries.Size = new System.Drawing.Size(157, 22);
-            this.txtCantidadSeries.TabIndex = 18;
-            this.txtCantidadSeries.TextChanged += new System.EventHandler(this.TxtCantidadSeries_TextChanged);
-            this.txtCantidadSeries.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantidadSeries_KeyPress);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(509, 268);
+            this.button1.Location = new System.Drawing.Point(462, 236);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(105, 33);
             this.button1.TabIndex = 21;
-            this.button1.Text = "button1";
+            this.button1.Text = "Agregar serie";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -177,8 +132,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 462);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblCantSeries);
-            this.Controls.Add(this.txtCantidadSeries);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label7);
@@ -195,10 +148,10 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.dateTimePicker1, 0);
             this.Controls.SetChildIndex(this.comboBox1, 0);
-            this.Controls.SetChildIndex(this.txtCantidadSeries, 0);
-            this.Controls.SetChildIndex(this.lblCantSeries, 0);
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.button1, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,8 +167,6 @@
         private System.Windows.Forms.BindingSource detallesEjercicioBindingSource;
         private System.Windows.Forms.BindingSource unirEjercicioBindingSource;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label lblCantSeries;
-        private System.Windows.Forms.TextBox txtCantidadSeries;
         private System.Windows.Forms.Button button1;
     }
 }
