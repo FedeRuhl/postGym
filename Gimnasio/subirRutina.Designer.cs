@@ -39,6 +39,7 @@
             this.tablaDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.labelPeso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesEjercicioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
@@ -126,11 +127,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // labelPeso
+            // 
+            this.labelPeso.AutoSize = true;
+            this.labelPeso.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPeso.Location = new System.Drawing.Point(12, 182);
+            this.labelPeso.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
+            this.labelPeso.Name = "labelPeso";
+            this.labelPeso.Size = new System.Drawing.Size(56, 26);
+            this.labelPeso.TabIndex = 22;
+            this.labelPeso.Text = "Peso:";
+            // 
             // subirRutina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 462);
+            this.Controls.Add(this.labelPeso);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
@@ -150,6 +163,7 @@
             this.Controls.SetChildIndex(this.comboBox1, 0);
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.labelPeso, 0);
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -168,5 +182,6 @@
         private System.Windows.Forms.BindingSource unirEjercicioBindingSource;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelPeso;
     }
 }

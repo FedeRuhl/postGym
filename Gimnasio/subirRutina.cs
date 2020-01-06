@@ -13,7 +13,7 @@ namespace Gimnasio
 {
     public partial class subirRutina : FormularioBase
     {
-        private int y = 200;
+        private int y = 150;
         private int conteo = 0;
         public subirRutina()
         {
@@ -39,7 +39,7 @@ namespace Gimnasio
                 text.Text = "Cantidad de peso (kg)";
                 text.Height = 23;
                 text.Width = 200;
-                text.Location = new Point(50, y);
+                text.Location = new Point(115, y);
                 y += 25;
                 text.Name = "txtDinamic" + conteo.ToString();
                 conteo++;
