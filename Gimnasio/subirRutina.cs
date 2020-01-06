@@ -15,6 +15,7 @@ namespace Gimnasio
     {
         private int y = 150;
         private int conteo = 0;
+        TextBox text = new TextBox();
         public subirRutina()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace Gimnasio
         {
             try
             {
-                TextBox text = new TextBox();
+                text = new TextBox();
                 text.Text = "Cantidad de peso (kg)";
                 text.Height = 23;
                 text.Width = 200;
@@ -44,11 +45,21 @@ namespace Gimnasio
                 text.Name = "txtDinamic" + conteo.ToString();
                 conteo++;
                 Controls.Add(text);
+                
             }
             catch(Exception error)
             {
                 MessageBox.Show("Se ha producido un error: " + error.Message); 
             }
+        }
+
+        private void btnGuardarEjercicio_Click(object sender, EventArgs e)
+        {
+            //La cantidad de series queda en CONTEO.
+            MessageBox.Show(Controls.Count.ToString());
+            //Convert.ToInt32(txtDinamic1.text.Trim());
+            MessageBox.Show(text.Text); //esto me da el último
+            
         }
     }
 }

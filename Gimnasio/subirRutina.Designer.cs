@@ -58,6 +58,7 @@
             this.btnGuardarEjercicio.TabIndex = 2;
             this.btnGuardarEjercicio.Text = "Guardar";
             this.btnGuardarEjercicio.UseVisualStyleBackColor = true;
+            this.btnGuardarEjercicio.Click += new System.EventHandler(this.btnGuardarEjercicio_Click);
             // 
             // label2
             // 
