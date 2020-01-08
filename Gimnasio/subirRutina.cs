@@ -46,6 +46,7 @@ namespace Gimnasio
                 conteo++;
                 Controls.Add(text);
                 
+
             }
             catch(Exception error)
             {
@@ -56,10 +57,18 @@ namespace Gimnasio
         private void btnGuardarEjercicio_Click(object sender, EventArgs e)
         {
             //La cantidad de series queda en CONTEO.
-            MessageBox.Show(Controls.Count.ToString());
             //Convert.ToInt32(txtDinamic1.text.Trim());
             MessageBox.Show(text.Text); //esto me da el último
+            String[] arregloDinamico = new String[conteo+1];
+            string nombreTexto;
+            for (int i = 0; i<conteo; i++)
+            {
+                nombreTexto = "txtDinamic" + i;
+                //MessageBox.Show(Controls.Find(nombreTexto, true).First().Text);
+                arregloDinamico[i] = Controls.Find(nombreTexto, true).First().Text;
+            }
             
+
         }
     }
 }
