@@ -53,12 +53,14 @@ namespace Gimnasio
                 MessageBox.Show("Se ha producido un error: " + error.Message); 
             }
         }
+		//$exception	{"Sintaxis incorrecta cerca de '/'."}	System.Data.SqlClient.SqlException
 
         private void btnGuardarEjercicio_Click(object sender, EventArgs e)
         {
+            
             //La cantidad de series queda en CONTEO.
             //Convert.ToInt32(txtDinamic1.text.Trim());
-            MessageBox.Show(text.Text); //esto me da el último
+            //MessageBox.Show(text.Text); //esto me da el último
             String[] arregloDinamico = new String[conteo+1];
             string nombreTexto;
             for (int i = 0; i<conteo; i++)
@@ -67,8 +69,19 @@ namespace Gimnasio
                 //MessageBox.Show(Controls.Find(nombreTexto, true).First().Text);
                 arregloDinamico[i] = Controls.Find(nombreTexto, true).First().Text;
             }
-            
 
+            for (int i = 0; i<conteo; i++)
+            {
+                MessageBox.Show(arregloDinamico[i]);
+            }
+            /*
+           
+
+            DateTime fecha = DateTime.Today;
+            //string cmd = string.Format("EXEC actualizaDetallesEjercicio {0}, {1}, {2}", comboBox1.Text.Trim(), dateTimePicker1.Value.ToString().Trim(), conteo);
+            string cmd = string.Format("EXEC actualizaDetallesEjercicio {0}, {1}, {2}", "fedeEjercicio", fecha, 3);
+            DataSet ds = Utilidades.Ejecutar(cmd);
+            */
         }
     }
 }
