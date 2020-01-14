@@ -70,16 +70,22 @@ namespace Gimnasio
                 arregloDinamico[i] = Controls.Find(nombreTexto, true).First().Text;
             }
 
+            string nombreEjercicio = "'" + comboBox1.Text.Trim() + "'";
+            string fecha = "'" + dateTimePicker1.Value + "'";
+
+            string cmd = string.Format("EXEC actualizaDetallesEjercicio {0}, {1}, {2}", nombreEjercicio, fecha, conteo);
+            DataSet ds = Utilidades.Ejecutar(cmd);
+
+            int idDetallesEjercicioInventado = 1;
+
             for (int i = 0; i<conteo; i++)
             {
                 MessageBox.Show(arregloDinamico[i]);
+                cmd = string.Format("EXEC crearSerie {0}, {1}", arregloDinamico[i], idDetallesEjercicioInventado);
+                ds = Utilidades.Ejecutar(cmd);
             }
 
-            string nombreEjercicio = "'" + comboBox1.Text.Trim() + "'";
-            string fecha = "'" + dateTimePicker1.Value + "'";
             
-            string cmd = string.Format("EXEC actualizaDetallesEjercicio {0}, {1}, {2}", nombreEjercicio, fecha, conteo);
-            DataSet ds = Utilidades.Ejecutar(cmd);
             
         }
     }
