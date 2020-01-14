@@ -80,7 +80,7 @@ namespace Gimnasio
 
             for (int i = 0; i<conteo; i++)
             {
-                MessageBox.Show(arregloDinamico[i]);
+                //MessageBox.Show(arregloDinamico[i]);
                 cmd = string.Format("EXEC crearSerie {0}, {1}", arregloDinamico[i], idDetallesEjercicioInventado);
                 ds = Utilidades.Ejecutar(cmd);
             }
