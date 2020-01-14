@@ -74,14 +74,13 @@ namespace Gimnasio
             {
                 MessageBox.Show(arregloDinamico[i]);
             }
-            /*
-           
 
-            DateTime fecha = DateTime.Today;
-            //string cmd = string.Format("EXEC actualizaDetallesEjercicio {0}, {1}, {2}", comboBox1.Text.Trim(), dateTimePicker1.Value.ToString().Trim(), conteo);
-            string cmd = string.Format("EXEC actualizaDetallesEjercicio {0}, {1}, {2}", "fedeEjercicio", fecha, 3);
+            string nombreEjercicio = "'" + comboBox1.Text.Trim() + "'";
+            string fecha = "'" + dateTimePicker1.Value + "'";
+            
+            string cmd = string.Format("EXEC actualizaDetallesEjercicio {0}, {1}, {2}", nombreEjercicio, fecha, conteo);
             DataSet ds = Utilidades.Ejecutar(cmd);
-            */
+            
         }
     }
 }
