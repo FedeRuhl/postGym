@@ -70,10 +70,9 @@ namespace Gimnasio
                 arregloDinamico[i] = Controls.Find(nombreTexto, true).First().Text;
             }
 
-            string nombreEjercicio = "'" + comboBox1.Text.Trim() + "'";
-            string fecha = "'" + dateTimePicker1.Value + "'";
+            string nombreEjercicio = comboBox1.Text.Trim();
 
-            string cmd = string.Format("EXEC actualizaDetallesEjercicio {0}, {1}, {2}", nombreEjercicio, fecha, conteo);
+            string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}'", nombreEjercicio, dateTimePicker1.Value, conteo);
             DataSet ds = Utilidades.Ejecutar(cmd);
 
             for (int i = 0; i<conteo; i++)

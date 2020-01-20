@@ -39,29 +39,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.personaDataSet = new Gimnasio.PersonaDataSet();
             this.tablaPersonaBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
+            this.personaDataSet = new Gimnasio.PersonaDataSet();
             this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -132,6 +114,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Seleccionar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label3
             // 
@@ -147,6 +130,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png";
             // 
             // label1
             // 
@@ -181,40 +165,15 @@
             this.comboBox1.TabIndex = 25;
             this.comboBox1.ValueMember = "nombrePersona";
             // 
-            // tablaPersonaBindingSource6
+            // tablaPersonaBindingSource7
             // 
-            this.tablaPersonaBindingSource6.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource6.DataSource = this.tablaPersonaBindingSource5;
-            // 
-            // tablaPersonaBindingSource1
-            // 
-            this.tablaPersonaBindingSource1.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource1.DataSource = this.tablaPersonaBindingSource;
-            // 
-            // tablaPersonaBindingSource2
-            // 
-            this.tablaPersonaBindingSource2.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource2.DataSource = this.tablaPersonaBindingSource;
-            // 
-            // tablaPersonaBindingSource3
-            // 
-            this.tablaPersonaBindingSource3.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource3.DataSource = this.tablaPersonaBindingSource;
-            // 
-            // tablaPersonaBindingSource4
-            // 
-            this.tablaPersonaBindingSource4.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource4.DataSource = this.tablaPersonaBindingSource;
+            this.tablaPersonaBindingSource7.DataMember = "tablaPersona";
+            this.tablaPersonaBindingSource7.DataSource = this.personaDataSet;
             // 
             // personaDataSet
             // 
             this.personaDataSet.DataSetName = "PersonaDataSet";
             this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablaPersonaBindingSource7
-            // 
-            this.tablaPersonaBindingSource7.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource7.DataSource = this.personaDataSet;
             // 
             // tablaPersonaTableAdapter
             // 
@@ -251,8 +210,8 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.comboBox1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,15 +229,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.BindingSource tablaPersonaBindingSource;
-        private System.Windows.Forms.BindingSource tablaPersonaBindingSource1;
-        private System.Windows.Forms.BindingSource tablaPersonaBindingSource2;
-        private System.Windows.Forms.BindingSource tablaPersonaBindingSource3;
-        private System.Windows.Forms.BindingSource tablaPersonaBindingSource4;
-        private System.Windows.Forms.BindingSource tablaPersonaBindingSource6;
-        private System.Windows.Forms.BindingSource tablaPersonaBindingSource5;
-        private System.Windows.Forms.BindingSource tablaPersonaDSBindingSource;
-        private System.Windows.Forms.BindingSource personaBindingSource;
         private PersonaDataSet personaDataSet;
         private System.Windows.Forms.BindingSource tablaPersonaBindingSource7;
         private PersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
