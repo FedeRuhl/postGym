@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Gimnasio
 {
-    public partial class ActualizarPersona : Mantenimiento
+    public partial class ActualizarPersona : FormularioBase
     {
         string fotoPersona = "";
         public ActualizarPersona()
@@ -22,27 +23,25 @@ namespace Gimnasio
         {
             this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
         }
-        
-        public override void Agregar()
-        {
-        int idPersona = comboBox1.SelectedIndex + 1;
-        string nombrePersona = comboBox1.Text.Trim();
-        decimal alturaPersona = Convert.ToDecimal(txtAlturaPersona.Text);
-        decimal pesoPersona = Convert.ToDecimal(txtPesoPersona.Text);
-        // LA ALTURA Y EL PESO TIENEN QUE IR CON . Y NO CON ,
-
-        string cmd = string.Format("EXEC actualizaPersona '{0}', '{1}', '{2}', '{3}', '{4}'", idPersona, nombrePersona, fotoPersona, alturaPersona, pesoPersona);
-        Utilidades.Ejecutar(cmd);
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fotoPersona = openFileDialog1.FileName;
-                MessageBox.Show(fotoPersona);
             }
         }
 
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            int idPersona = comboBox1.SelectedIndex + 1;
+            string nombrePersona = comboBox1.Text.Trim();
+            string altura = txtAlturaPersona.Text;
+            string peso = txtPesoPersona.Text;
+            double alturaPersona = Convert.ToDouble(altura.Replace(',', '.'));
+            double pesoPersona = Convert.ToDouble(peso.Replace(',', '.'));
+            string cmd = string.Format("EXEC actualizaPersona '{0}', '{1}', '{2}', '{3}', '{4}'", idPersona, nombrePersona, fotoPersona, alturaPersona, pesoPersona);
+            Utilidades.Ejecutar(cmd);
+        }
     }
 }

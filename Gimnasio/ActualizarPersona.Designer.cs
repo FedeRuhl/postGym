@@ -42,31 +42,15 @@
             this.tablaPersonaBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.personaDataSet = new Gimnasio.PersonaDataSet();
             this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(527, 117);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Enabled = false;
-            this.btnModificar.Location = new System.Drawing.Point(952, 621);
-            this.btnModificar.Size = new System.Drawing.Size(10, 10);
-            this.btnModificar.Visible = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(952, 621);
-            this.btnEliminar.Size = new System.Drawing.Size(10, 10);
-            this.btnEliminar.Visible = false;
-            // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(527, 164);
+            this.btnSalir.Location = new System.Drawing.Point(517, 176);
+            this.btnSalir.Size = new System.Drawing.Size(109, 27);
             // 
             // txtPesoPersona
             // 
@@ -179,11 +163,22 @@
             // 
             this.tablaPersonaTableAdapter.ClearBeforeFill = true;
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(517, 124);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(109, 26);
+            this.btnActualizar.TabIndex = 26;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // ActualizarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 297);
+            this.ClientSize = new System.Drawing.Size(638, 296);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -197,9 +192,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ActualizarPersona";
             this.Load += new System.EventHandler(this.ActualizarPersona_Load_1);
-            this.Controls.SetChildIndex(this.btnAgregar, 0);
-            this.Controls.SetChildIndex(this.btnEliminar, 0);
-            this.Controls.SetChildIndex(this.btnModificar, 0);
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.button1, 0);
@@ -210,6 +202,7 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.comboBox1, 0);
+            this.Controls.SetChildIndex(this.btnActualizar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -232,5 +225,6 @@
         private PersonaDataSet personaDataSet;
         private System.Windows.Forms.BindingSource tablaPersonaBindingSource7;
         private PersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
