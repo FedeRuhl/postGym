@@ -12,7 +12,6 @@ namespace Gimnasio
 {
     public partial class ContenedorProcesos : Form
     {
-        private int childFormNumber = 0;
         public ContenedorProcesos()
         {
             InitializeComponent();
@@ -30,7 +29,6 @@ namespace Gimnasio
                 }
                 catch (InvalidCastException exc)
                 {
-                    MessageBox.Show(exc.HelpLink);
                 }
             }
         }

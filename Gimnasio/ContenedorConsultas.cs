@@ -29,7 +29,6 @@ namespace Gimnasio
                 }
                 catch (InvalidCastException exc)
                 {
-                    MessageBox.Show(exc.HelpLink);
                 }
                 this.Height += 35;
                 this.TopMost = true;
