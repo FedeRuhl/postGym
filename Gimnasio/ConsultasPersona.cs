@@ -14,14 +14,9 @@ namespace Gimnasio
 {
     public partial class ConsultasPersona : Consultas
     {
-
-
         public ConsultasPersona()
         {
             InitializeComponent();
-            //string cmd = string.Format("EXEC unirPersona");
-            //DataSet DS = Utilidades.Ejecutar(cmd);
-            //listBox1.DataSource = DS.Tables[0];
         }
 
         private void ConsultasPersona_Load(object sender, EventArgs e)
@@ -42,7 +37,6 @@ namespace Gimnasio
             {
                 MessageBox.Show("Se ha producido el siguiente error: " + error.Message);
             }
-            
         }
 
         public static string direccion = "";
@@ -52,7 +46,6 @@ namespace Gimnasio
             pictureBox1.Image = Image.FromFile(direccion);
             pictureBox1.Refresh();
         }
-
         public override void Buscar()
         {
             try
@@ -61,13 +54,9 @@ namespace Gimnasio
                 string fechaInicio = listBox1.Text;
                 DateTime fechaPrueba = DateTime.Parse(fechaInicio);
                 fechaPrueba = fechaPrueba.AddMinutes(1);
-
                 string fechaFin = fechaPrueba.ToString();
-
-                //string fechaPosta = fecha.ToString("yyyyddMM HH:mm:ss");
                 string cmd = "Select * from tablaDetallesPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
                 ds = Utilidades.Ejecutar(cmd);
-
                 dataGridView3.DataSource = ds.Tables[0];
             }
             catch(Exception error)

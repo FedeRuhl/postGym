@@ -98,12 +98,6 @@
     <Compile Include="ContenedorProcesos.Designer.cs">
       <DependentUpon>ContenedorProcesos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormularioBase.cs">
       <SubType>Form</SubType>
     </Compile>

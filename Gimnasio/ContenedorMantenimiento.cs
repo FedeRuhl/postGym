@@ -29,7 +29,7 @@ namespace Gimnasio
                 }
                 catch (InvalidCastException exc)
                 {
-
+                    MessageBox.Show(exc.HelpLink);
                 }
             }
         }

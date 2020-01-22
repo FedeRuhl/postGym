@@ -44,11 +44,6 @@ namespace Gimnasio
             }
         }
 
-        private void CrearPersona_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnMod_Click(object sender, EventArgs e)
         {
             string cmd = string.Format("EXEC modificarPersona {0}, {1}", txtIdPersona.Text.Trim(), txtNombrePersona.Text.Trim());

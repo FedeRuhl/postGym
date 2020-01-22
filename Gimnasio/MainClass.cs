@@ -24,11 +24,6 @@ namespace Gimnasio
             CP.Show();
         }
 
-        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void Label3_Click(object sender, EventArgs e)
         {
             ContenedorMantenimiento CM = new ContenedorMantenimiento();

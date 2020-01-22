@@ -45,7 +45,6 @@
             // 
             this.btnBuscar.Location = new System.Drawing.Point(138, 299);
             this.btnBuscar.TabIndex = 0;
-            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // lblFechaConsultas
             // 

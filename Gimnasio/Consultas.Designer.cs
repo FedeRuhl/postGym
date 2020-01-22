@@ -129,7 +129,6 @@
             this.Controls.Add(this.btnBuscar);
             this.Name = "Consultas";
             this.Text = "Consultas";
-            this.Load += new System.EventHandler(this.Consultas_Load);
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnBuscar, 0);
             this.Controls.SetChildIndex(this.lblFechaConsultas, 0);

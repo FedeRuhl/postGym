@@ -17,12 +17,6 @@ namespace Gimnasio
         public ConsultasEjercicios()
         {
             InitializeComponent();
-            //dataGridView3.DataSource = LlenarDataGridView("tablaEjercicio").Tables[0];
-        }
-
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
-
         }
 
         public override void Buscar()
@@ -31,15 +25,11 @@ namespace Gimnasio
             {
                 DataSet ds;
                 string fechaInicio = listBox1.Text;
-                DateTime fechaPrueba = DateTime.Parse(fechaInicio);
-                fechaPrueba = fechaPrueba.AddMinutes(1);
-
-                string fechaFin = fechaPrueba.ToString();
-
-                //string fechaPosta = fecha.ToString("yyyyddMM HH:mm:ss");
+                DateTime fechaModif = DateTime.Parse(fechaInicio);
+                fechaModif = fechaModif.AddMinutes(1);
+                string fechaFin = fechaModif.ToString();
                 string cmd = "Select * from tablaDetallesEjercicio where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
                 ds = Utilidades.Ejecutar(cmd);
-
                 dataGridView3.DataSource = ds.Tables[0];
             }
             catch (Exception ex)
