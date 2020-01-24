@@ -51,10 +51,10 @@ namespace Gimnasio
             try
             {
                 DataSet ds;
-                string fechaInicio = listBox1.Text;
-                DateTime fechaPrueba = DateTime.Parse(fechaInicio);
-                fechaPrueba = fechaPrueba.AddMinutes(1);
-                string fechaFin = fechaPrueba.ToString();
+                DateTime fecha = DateTime.Parse(listBox1.Text);
+                string fechaInicio = fecha.ToString("yyyyMMdd HH:mm:ss");
+                fecha = fecha.AddMinutes(1);
+                string fechaFin = fecha.ToString("yyyyMMdd HH:mm:ss");
                 string cmd = "Select * from tablaDetallesPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];

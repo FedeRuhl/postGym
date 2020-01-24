@@ -166,6 +166,7 @@
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.labelPeso, 0);
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesEjercicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

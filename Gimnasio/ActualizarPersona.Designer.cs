@@ -51,6 +51,7 @@
             // 
             this.btnSalir.Location = new System.Drawing.Point(517, 176);
             this.btnSalir.Size = new System.Drawing.Size(109, 27);
+            this.btnSalir.TabIndex = 5;
             // 
             // txtPesoPersona
             // 
@@ -58,7 +59,7 @@
             this.txtPesoPersona.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.txtPesoPersona.Name = "txtPesoPersona";
             this.txtPesoPersona.Size = new System.Drawing.Size(223, 22);
-            this.txtPesoPersona.TabIndex = 19;
+            this.txtPesoPersona.TabIndex = 3;
             // 
             // label4
             // 
@@ -77,7 +78,7 @@
             this.txtAlturaPersona.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.txtAlturaPersona.Name = "txtAlturaPersona";
             this.txtAlturaPersona.Size = new System.Drawing.Size(223, 22);
-            this.txtAlturaPersona.TabIndex = 18;
+            this.txtAlturaPersona.TabIndex = 2;
             // 
             // label5
             // 
@@ -95,7 +96,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 23);
-            this.button1.TabIndex = 17;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Seleccionar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -146,7 +147,7 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(17, 3, 3, 17);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(223, 24);
-            this.comboBox1.TabIndex = 25;
+            this.comboBox1.TabIndex = 0;
             this.comboBox1.ValueMember = "nombrePersona";
             // 
             // tablaPersonaBindingSource7
@@ -168,7 +169,7 @@
             this.btnActualizar.Location = new System.Drawing.Point(517, 124);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(109, 26);
-            this.btnActualizar.TabIndex = 26;
+            this.btnActualizar.TabIndex = 4;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);

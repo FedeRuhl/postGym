@@ -24,10 +24,10 @@ namespace Gimnasio
             try
             {
                 DataSet ds;
-                string fechaInicio = listBox1.Text;
-                DateTime fechaModif = DateTime.Parse(fechaInicio);
-                fechaModif = fechaModif.AddMinutes(1);
-                string fechaFin = fechaModif.ToString();
+                DateTime fecha = DateTime.Parse(listBox1.Text);
+                string fechaInicio = fecha.ToString("yyyyMMdd HH:mm:ss");
+                fecha = fecha.AddMinutes(1);
+                string fechaFin = fecha.ToString("yyyyMMdd HH:mm:ss");
                 string cmd = "Select * from tablaDetallesEjercicio where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];

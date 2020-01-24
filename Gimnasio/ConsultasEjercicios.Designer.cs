@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tablaDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-         
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
@@ -66,17 +65,9 @@
             this.btnSalir.Size = new System.Drawing.Size(97, 33);
             this.btnSalir.TabIndex = 2;
             // 
-            // gimnasioDataSet
-            // 
-           
             // tablaDetallesBindingSource
             // 
             this.tablaDetallesBindingSource.DataMember = "tablaDetalles";
-
-            // 
-            // tablaDetallesTableAdapter
-            // 
- 
             // 
             // dataGridView3
             // 
@@ -98,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 808);
+            this.ClientSize = new System.Drawing.Size(920, 808);
             this.Controls.Add(this.dataGridView3);
             this.Name = "ConsultasEjercicios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -112,7 +103,6 @@
             this.Controls.SetChildIndex(this.btnSeleccionar, 0);
             this.Controls.SetChildIndex(this.dataGridView3, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-           
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
