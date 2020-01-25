@@ -114,6 +114,7 @@
             this.txtNombreEjercicio.Name = "txtNombreEjercicio";
             this.txtNombreEjercicio.Size = new System.Drawing.Size(223, 22);
             this.txtNombreEjercicio.TabIndex = 1;
+            this.txtNombreEjercicio.WordWrap = false;
             // 
             // MantenimientoEjercicio
             // 

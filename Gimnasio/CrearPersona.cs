@@ -27,7 +27,7 @@ namespace Gimnasio
 
                if(DS.Tables[0].Rows.Count == 0)
                 {
-                    string cmd = string.Format("EXEC crearPersona {0}, {1}", txtIdPersona.Text.Trim(), txtNombrePersona.Text.Trim());
+                    string cmd = string.Format("EXEC crearPersona '{0}', '{1}'", txtIdPersona.Text.Trim(), txtNombrePersona.Text.Trim());
                     DataSet ds = Utilidades.Ejecutar(cmd);
                     MessageBox.Show("Se ha agregado correctamente");
                 }
@@ -49,7 +49,7 @@ namespace Gimnasio
 
         private void BtnMod_Click(object sender, EventArgs e)
         {
-            string cmd = string.Format("EXEC modificarPersona {0}, {1}", txtIdPersona.Text.Trim(), txtNombrePersona.Text.Trim());
+            string cmd = string.Format("EXEC modificarPersona '{0}', '{1}'", txtIdPersona.Text.Trim(), txtNombrePersona.Text.Trim());
             Utilidades.Ejecutar(cmd);
         }
     }

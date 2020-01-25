@@ -27,7 +27,7 @@ namespace Gimnasio
 
                 if (DS.Tables[0].Rows.Count == 0)
                 {
-                    string cmd = string.Format("EXEC crearEjercicio {0}, {1}", txtIdEjercicio.Text, txtNombreEjercicio.Text);
+                    string cmd = string.Format("EXEC crearEjercicio '{0}', '{1}'", txtIdEjercicio.Text, txtNombreEjercicio.Text);
                     DataSet ds = Utilidades.Ejecutar(cmd);
                     MessageBox.Show("Se ha agregado correctamente");
                 }
@@ -57,7 +57,7 @@ namespace Gimnasio
 
                 if (DS.Tables[0].Rows.Count == 1)
                 {
-                    string cmd = string.Format("EXEC modificarEjercicio {0}, {1}", txtIdEjercicio.Text, txtNombreEjercicio.Text);
+                    string cmd = string.Format("EXEC modificarEjercicio '{0}', '{1}'", txtIdEjercicio.Text, txtNombreEjercicio.Text);
                     DataSet ds = Utilidades.Ejecutar(cmd);
                     MessageBox.Show("Se ha modificado correctamente");
                 }
@@ -83,7 +83,7 @@ namespace Gimnasio
 
                 if (DS.Tables[0].Rows.Count == 1)
                 {
-                    string cmd = string.Format("EXEC eliminarEjercicio {0}", txtIdEjercicio.Text);
+                    string cmd = string.Format("EXEC eliminarEjercicio '{0}'", txtIdEjercicio.Text);
                     DataSet ds = Utilidades.Ejecutar(cmd);
                     MessageBox.Show("Se ha eliminado correctamente");
                 }
