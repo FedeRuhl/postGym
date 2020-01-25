@@ -74,11 +74,17 @@
     <Compile Include="ConsultasEjercicios.Designer.cs">
       <DependentUpon>ConsultasEjercicios.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultasPersona.cs">
+    <Compile Include="ConsultasDetalles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultasPersona.Designer.cs">
-      <DependentUpon>ConsultasPersona.cs</DependentUpon>
+    <Compile Include="ConsultasDetalles.Designer.cs">
+      <DependentUpon>ConsultasDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultasPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultasPerfiles.Designer.cs">
+      <DependentUpon>ConsultasPerfiles.cs</DependentUpon>
     </Compile>
     <Compile Include="ContenedorConsultas.cs">
       <SubType>Form</SubType>
@@ -152,8 +158,11 @@
     <EmbeddedResource Include="ConsultasEjercicios.resx">
       <DependentUpon>ConsultasEjercicios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultasPersona.resx">
-      <DependentUpon>ConsultasPersona.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultasDetalles.resx">
+      <DependentUpon>ConsultasDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultasPerfiles.resx">
+      <DependentUpon>ConsultasPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContenedorConsultas.resx">
       <DependentUpon>ContenedorConsultas.cs</DependentUpon>

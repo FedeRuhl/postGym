@@ -39,21 +39,14 @@
             // listBox1
             // 
             this.listBox1.Location = new System.Drawing.Point(64, 81);
-            this.listBox1.TabIndex = 0;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(138, 299);
+            this.btnBuscar.Location = new System.Drawing.Point(183, 299);
             // 
             // lblFechaConsultas
             // 
             this.lblFechaConsultas.Location = new System.Drawing.Point(59, 34);
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(235, 299);
-            this.btnSeleccionar.Size = new System.Drawing.Size(97, 33);
-            this.btnSeleccionar.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -61,9 +54,8 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(350, 299);
+            this.btnSalir.Location = new System.Drawing.Point(283, 299);
             this.btnSalir.Size = new System.Drawing.Size(97, 33);
-            this.btnSalir.TabIndex = 3;
             // 
             // tablaDetallesBindingSource
             // 
@@ -100,7 +92,6 @@
             this.Controls.SetChildIndex(this.btnBuscar, 0);
             this.Controls.SetChildIndex(this.lblFechaConsultas, 0);
             this.Controls.SetChildIndex(this.listBox1, 0);
-            this.Controls.SetChildIndex(this.btnSeleccionar, 0);
             this.Controls.SetChildIndex(this.dataGridView3, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();

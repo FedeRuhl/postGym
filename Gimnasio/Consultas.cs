@@ -18,19 +18,6 @@ namespace Gimnasio
             InitializeComponent();
         }
 
-        private void BtnSeleccionar_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.Rows.Count == 0)
-            {
-                return;
-            }
-            else
-            {
-                DialogResult = DialogResult.OK;
-                Close();
-            }
-        }
-
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             Buscar();

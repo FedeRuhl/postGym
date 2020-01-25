@@ -96,7 +96,7 @@
             this.MinimizeBox = false;
             this.Name = "MainClass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainClass";
+            this.Text = "Post Gym";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainClass_FormClosing);
             this.ResumeLayout(false);
 

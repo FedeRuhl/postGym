@@ -41,7 +41,7 @@ namespace Gimnasio
 
         private void Label1_Click(object sender, EventArgs e)
         {
-            ConsultasPersona CP = new ConsultasPersona();
+            ConsultasPerfiles CP = new ConsultasPerfiles();
             CP.MdiParent = this;
             CP.Show();
         }
@@ -58,6 +58,13 @@ namespace Gimnasio
             MainClass MC = new MainClass();
             this.Hide();
             MC.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            ConsultasDetalles CP = new ConsultasDetalles();
+            CP.MdiParent = this;
+            CP.Show();
         }
     }
 }
