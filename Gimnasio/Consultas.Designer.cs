@@ -36,12 +36,10 @@
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-
             this.gimnasioDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-          
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +47,7 @@
             // 
             this.btnSalir.Location = new System.Drawing.Point(366, 300);
             this.btnSalir.Size = new System.Drawing.Size(79, 33);
+            this.btnSalir.TabIndex = 3;
             // 
             // btnBuscar
             // 
@@ -77,7 +76,7 @@
             this.listBox1.Location = new System.Drawing.Point(64, 74);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(445, 196);
-            this.listBox1.TabIndex = 3;
+            this.listBox1.TabIndex = 0;
             // 
             // tablaDetallesBindingSource
             // 
@@ -88,7 +87,7 @@
             this.btnSeleccionar.Location = new System.Drawing.Point(236, 300);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(108, 33);
-            this.btnSeleccionar.TabIndex = 5;
+            this.btnSeleccionar.TabIndex = 2;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.BtnSeleccionar_Click);
@@ -110,11 +109,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(10, 10);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // gimnasioDataSet
-            // 
-
-            this.gimnasioDataSetBindingSource.Position = 0;
             // 
             // Consultas
             // 
@@ -139,7 +133,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-         
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

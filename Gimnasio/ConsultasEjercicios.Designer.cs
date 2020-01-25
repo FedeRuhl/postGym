@@ -39,11 +39,11 @@
             // listBox1
             // 
             this.listBox1.Location = new System.Drawing.Point(64, 81);
+            this.listBox1.TabIndex = 0;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(138, 299);
-            this.btnBuscar.TabIndex = 0;
             // 
             // lblFechaConsultas
             // 
@@ -53,7 +53,7 @@
             // 
             this.btnSeleccionar.Location = new System.Drawing.Point(235, 299);
             this.btnSeleccionar.Size = new System.Drawing.Size(97, 33);
-            this.btnSeleccionar.TabIndex = 1;
+            this.btnSeleccionar.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -63,7 +63,7 @@
             // 
             this.btnSalir.Location = new System.Drawing.Point(350, 299);
             this.btnSalir.Size = new System.Drawing.Size(97, 33);
-            this.btnSalir.TabIndex = 2;
+            this.btnSalir.TabIndex = 3;
             // 
             // tablaDetallesBindingSource
             // 
@@ -83,7 +83,7 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(831, 467);
-            this.dataGridView3.TabIndex = 8;
+            this.dataGridView3.TabIndex = 4;
             // 
             // ConsultasEjercicios
             // 

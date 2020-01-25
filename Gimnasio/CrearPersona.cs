@@ -34,7 +34,10 @@ namespace Gimnasio
 
                 else
                 {
-                    MessageBox.Show("No se ha podido agregar debido a que el id ya existe.");
+                    string ultimoId = "select top 1 idPersona from tablaPersona order by idPersona DESC";
+                    DS = Utilidades.Ejecutar(ultimoId);
+                    int id = Convert.ToInt32(DS.Tables[0].Rows[0].ItemArray.First()) + 1;
+                    MessageBox.Show("No se ha podido agregar debido a que el id ya existe. Intente con el número de id " + id.ToString());
                 }
  
             }

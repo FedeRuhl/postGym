@@ -38,6 +38,7 @@
             this.btnSalir.Location = new System.Drawing.Point(538, 240);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 33, 3, 3);
             this.btnSalir.Size = new System.Drawing.Size(118, 30);
+            this.btnSalir.TabIndex = 3;
             // 
             // btnAgregar
             // 

@@ -40,21 +40,25 @@
             // 
             this.btnAgregar.Location = new System.Drawing.Point(561, 76);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 33, 15, 3);
+            this.btnAgregar.TabIndex = 2;
             // 
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(561, 208);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 33, 15, 3);
+            this.btnModificar.TabIndex = 4;
             // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(561, 142);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 33, 15, 3);
+            this.btnEliminar.TabIndex = 3;
             // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(561, 274);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 33, 15, 3);
+            this.btnSalir.TabIndex = 5;
             // 
             // label1
             // 
@@ -102,14 +106,14 @@
             this.txtIdEjercicio.Location = new System.Drawing.Point(211, 152);
             this.txtIdEjercicio.Name = "txtIdEjercicio";
             this.txtIdEjercicio.Size = new System.Drawing.Size(223, 22);
-            this.txtIdEjercicio.TabIndex = 7;
+            this.txtIdEjercicio.TabIndex = 0;
             // 
             // txtNombreEjercicio
             // 
             this.txtNombreEjercicio.Location = new System.Drawing.Point(211, 211);
             this.txtNombreEjercicio.Name = "txtNombreEjercicio";
             this.txtNombreEjercicio.Size = new System.Drawing.Size(223, 22);
-            this.txtNombreEjercicio.TabIndex = 8;
+            this.txtNombreEjercicio.TabIndex = 1;
             // 
             // MantenimientoEjercicio
             // 

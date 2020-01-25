@@ -57,12 +57,10 @@
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(133, 301);
-            this.btnBuscar.TabIndex = 0;
             // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.Location = new System.Drawing.Point(236, 301);
-            this.btnSeleccionar.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -72,7 +70,6 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(366, 301);
-            this.btnSalir.TabIndex = 2;
             // 
             // tablaDetallesBindingSource
             // 
@@ -93,7 +90,7 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(842, 390);
-            this.dataGridView3.TabIndex = 8;
+            this.dataGridView3.TabIndex = 4;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellClick);
             this.dataGridView3.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellEnter);
             // 
@@ -101,24 +98,12 @@
             // 
             this.unirPersonaBindingSource.DataMember = "unirPersona";
             // 
-            // unirPersonaDS
-            // 
-            this.unirPersonaDSBindingSource.Position = 0;
-            // 
-            // tablaPersonaDS
-            // 
-        
-            // 
-            // tablaPersonaDSBindingSource
-            // 
-            this.tablaPersonaDSBindingSource.Position = 0;
-            // 
             // ConsultasPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(903, 867);
+            this.ClientSize = new System.Drawing.Size(916, 861);
             this.Controls.Add(this.dataGridView3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ConsultasPersona";

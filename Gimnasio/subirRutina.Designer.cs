@@ -49,6 +49,7 @@
             // 
             this.btnSalir.Location = new System.Drawing.Point(462, 182);
             this.btnSalir.Size = new System.Drawing.Size(105, 33);
+            this.btnSalir.TabIndex = 3;
             // 
             // btnGuardarEjercicio
             // 
@@ -97,7 +98,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(101, 131);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(318, 22);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // unirEjercicioBindingSource
             // 
@@ -116,14 +117,14 @@
             this.comboBox1.Location = new System.Drawing.Point(117, 84);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(302, 24);
-            this.comboBox1.TabIndex = 17;
+            this.comboBox1.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(462, 236);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 33);
-            this.button1.TabIndex = 21;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Agregar serie";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -166,7 +167,6 @@
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.labelPeso, 0);
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesEjercicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

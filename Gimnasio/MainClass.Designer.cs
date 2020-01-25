@@ -59,7 +59,7 @@
             this.label2.Location = new System.Drawing.Point(642, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(246, 138);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "CONSULTAS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.Label2_Click);
@@ -75,7 +75,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(50, 0, 50, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(246, 138);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 1;
             this.label3.Text = "MANTENIMIENTO";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.Label3_Click);

@@ -35,14 +35,13 @@
             this.txtNombrePersona = new System.Windows.Forms.TextBox();
             this.lblNombrePersona = new System.Windows.Forms.Label();
             this.btnMod = new System.Windows.Forms.Button();
-      
             this.SuspendLayout();
             // 
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(545, 123);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3);
-            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.TabIndex = 2;
             // 
             // btnModificar
             // 
@@ -61,7 +60,7 @@
             // 
             this.btnSalir.Location = new System.Drawing.Point(545, 193);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3);
-            this.btnSalir.TabIndex = 6;
+            this.btnSalir.TabIndex = 4;
             // 
             // label2
             // 
@@ -125,14 +124,11 @@
             this.btnMod.Location = new System.Drawing.Point(545, 159);
             this.btnMod.Name = "btnMod";
             this.btnMod.Size = new System.Drawing.Size(118, 30);
-            this.btnMod.TabIndex = 11;
+            this.btnMod.TabIndex = 3;
             this.btnMod.Text = "Modificar";
             this.btnMod.UseVisualStyleBackColor = true;
             this.btnMod.Click += new System.EventHandler(this.BtnMod_Click);
             // 
-            // tablaPersona1
-            // 
-           
             // CrearPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -159,7 +155,6 @@
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnModificar, 0);
             this.Controls.SetChildIndex(this.btnMod, 0);
-          
             this.ResumeLayout(false);
             this.PerformLayout();
 

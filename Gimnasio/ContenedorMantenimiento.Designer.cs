@@ -41,7 +41,7 @@
             this.label1.Location = new System.Drawing.Point(73, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(323, 61);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "CREAR PERFIL";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.Label1_Click);
@@ -55,7 +55,7 @@
             this.label2.Location = new System.Drawing.Point(433, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(323, 61);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 1;
             this.label2.Text = "MANTENIMIENTO EJERCICIO";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.Label2_Click);
