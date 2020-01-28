@@ -40,6 +40,9 @@ namespace Gimnasio
                     MessageBox.Show("No se ha podido agregar debido a que el id ya existe. Intente con el número de id " + id.ToString());
                 }
 
+                txtIdEjercicio.Clear();
+                txtNombreEjercicio.Clear();
+
             }
             catch (Exception error)
             {
@@ -67,6 +70,9 @@ namespace Gimnasio
                     MessageBox.Show("No se ha podido modificar debido a que el id no existe.");
                 }
 
+                txtIdEjercicio.Clear();
+                txtNombreEjercicio.Clear();
+
             }
             catch (Exception error)
             {
@@ -92,6 +98,9 @@ namespace Gimnasio
                 {
                     MessageBox.Show("No se ha podido eliminar debido a que el id no existe.");
                 }
+
+                txtIdEjercicio.Clear();
+                txtNombreEjercicio.Clear();
 
             }
             catch (Exception error)

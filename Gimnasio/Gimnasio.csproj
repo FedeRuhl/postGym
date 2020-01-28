@@ -62,29 +62,35 @@
     <Compile Include="ActualizarPersona.Designer.cs">
       <DependentUpon>ActualizarPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaEjercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaEjercicio.Designer.cs">
+      <DependentUpon>ConsultaEjercicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas.Designer.cs">
       <DependentUpon>Consultas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultasEjercicios.cs">
+    <Compile Include="ConsultasDetallesEjercicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultasEjercicios.Designer.cs">
-      <DependentUpon>ConsultasEjercicios.cs</DependentUpon>
+    <Compile Include="ConsultasDetallesEjercicio.Designer.cs">
+      <DependentUpon>ConsultasDetallesEjercicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultasDetalles.cs">
+    <Compile Include="ConsultasDetallesPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultasDetalles.Designer.cs">
-      <DependentUpon>ConsultasDetalles.cs</DependentUpon>
+    <Compile Include="ConsultasDetallesPerfil.Designer.cs">
+      <DependentUpon>ConsultasDetallesPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultasPerfiles.cs">
+    <Compile Include="ConsultasPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultasPerfiles.Designer.cs">
-      <DependentUpon>ConsultasPerfiles.cs</DependentUpon>
+    <Compile Include="ConsultasPerfil.Designer.cs">
+      <DependentUpon>ConsultasPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="ContenedorConsultas.cs">
       <SubType>Form</SubType>
@@ -116,6 +122,11 @@
       <DependentUpon>PersonaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="tablaEjercicio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tablaEjercicio.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="MainClass.cs">
       <SubType>Form</SubType>
@@ -152,17 +163,20 @@
     <EmbeddedResource Include="ActualizarPersona.resx">
       <DependentUpon>ActualizarPersona.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaEjercicio.resx">
+      <DependentUpon>ConsultaEjercicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas.resx">
       <DependentUpon>Consultas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultasEjercicios.resx">
-      <DependentUpon>ConsultasEjercicios.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultasDetallesEjercicio.resx">
+      <DependentUpon>ConsultasDetallesEjercicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultasDetalles.resx">
-      <DependentUpon>ConsultasDetalles.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultasDetallesPerfil.resx">
+      <DependentUpon>ConsultasDetallesPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultasPerfiles.resx">
-      <DependentUpon>ConsultasPerfiles.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultasPerfil.resx">
+      <DependentUpon>ConsultasPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContenedorConsultas.resx">
       <DependentUpon>ContenedorConsultas.cs</DependentUpon>
@@ -241,6 +255,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tablaEjercicio.xsc">
+      <DependentUpon>tablaEjercicio.xsd</DependentUpon>
+    </None>
+    <None Include="tablaEjercicio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tablaEjercicio.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tablaEjercicio.xss">
+      <DependentUpon>tablaEjercicio.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

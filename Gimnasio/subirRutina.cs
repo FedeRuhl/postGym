@@ -66,9 +66,11 @@ namespace Gimnasio
                 DataSet ds = Utilidades.Ejecutar(cmd);
                 for (int i = 0; i < conteo; i++)
                 {
-                    cmd = string.Format("EXEC crearSerie {0}, {1}", arregloDinamico[i], nombreEjercicio);
+                    cmd = string.Format("EXEC crearSerie '{0}', '{1}'", arregloDinamico[i], nombreEjercicio);
                     ds = Utilidades.Ejecutar(cmd);
                 }
+
+                MessageBox.Show("¡Se ha guardado correctamente!");
             }
 
             else
