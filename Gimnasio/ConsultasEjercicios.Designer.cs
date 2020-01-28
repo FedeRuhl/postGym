@@ -31,9 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.tablaDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.consultasEjerciciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultasEjerciciosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -77,6 +79,10 @@
             this.dataGridView3.Size = new System.Drawing.Size(831, 467);
             this.dataGridView3.TabIndex = 4;
             // 
+            // consultasEjerciciosBindingSource
+            // 
+            this.consultasEjerciciosBindingSource.DataSource = typeof(Gimnasio.ConsultasEjercicios);
+            // 
             // ConsultasEjercicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -96,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultasEjerciciosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,5 +112,6 @@
 
         private System.Windows.Forms.BindingSource tablaDetallesBindingSource;
         public System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.BindingSource consultasEjerciciosBindingSource;
     }
 }
