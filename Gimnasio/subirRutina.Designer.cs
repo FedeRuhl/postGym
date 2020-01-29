@@ -40,9 +40,16 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.labelPeso = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.personaDataSet = new Gimnasio.PersonaDataSet();
+            this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesEjercicioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -75,7 +82,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 81);
+            this.label3.Location = new System.Drawing.Point(12, 116);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 26);
@@ -86,7 +93,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 131);
+            this.label7.Location = new System.Drawing.Point(12, 166);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 26);
@@ -95,7 +102,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(101, 131);
+            this.dateTimePicker1.Location = new System.Drawing.Point(101, 166);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(318, 22);
             this.dateTimePicker1.TabIndex = 1;
@@ -114,7 +121,7 @@
             this.comboBox1.DataSource = this.unirEjercicioBindingSource;
             this.comboBox1.DisplayMember = "nombreEjercicio";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(117, 84);
+            this.comboBox1.Location = new System.Drawing.Point(117, 119);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(302, 24);
             this.comboBox1.TabIndex = 0;
@@ -133,18 +140,56 @@
             // 
             this.labelPeso.AutoSize = true;
             this.labelPeso.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPeso.Location = new System.Drawing.Point(12, 182);
+            this.labelPeso.Location = new System.Drawing.Point(12, 217);
             this.labelPeso.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.labelPeso.Name = "labelPeso";
             this.labelPeso.Size = new System.Drawing.Size(56, 26);
             this.labelPeso.TabIndex = 22;
             this.labelPeso.Text = "Peso:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 26);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Persona:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.tablaPersonaBindingSource;
+            this.comboBox2.DisplayMember = "nombrePersona";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(117, 76);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(302, 24);
+            this.comboBox2.TabIndex = 24;
+            this.comboBox2.ValueMember = "nombrePersona";
+            // 
+            // personaDataSet
+            // 
+            this.personaDataSet.DataSetName = "PersonaDataSet";
+            this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tablaPersonaBindingSource
+            // 
+            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
+            this.tablaPersonaBindingSource.DataSource = this.personaDataSet;
+            // 
+            // tablaPersonaTableAdapter
+            // 
+            this.tablaPersonaTableAdapter.ClearBeforeFill = true;
+            // 
             // subirRutina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 462);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelPeso);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
@@ -166,8 +211,12 @@
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.labelPeso, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.comboBox2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +234,10 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelPeso;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private PersonaDataSet personaDataSet;
+        private System.Windows.Forms.BindingSource tablaPersonaBindingSource;
+        private PersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
     }
 }

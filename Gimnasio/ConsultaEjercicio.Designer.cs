@@ -63,6 +63,7 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(458, 342);
             this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView2_KeyPress);
             // 
             // idEjercicioDataGridViewTextBoxColumn
             // 

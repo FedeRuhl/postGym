@@ -23,6 +23,8 @@ namespace Gimnasio
 
         private void SubirRutina_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'personaDataSet.tablaPersona' Puede moverla o quitarla según sea necesario.
+            this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
             string cmd = string.Format("select * from tablaEjercicio");
             DataSet DS = Utilidades.Ejecutar(cmd);
             comboBox1.DataSource = DS.Tables[0];
@@ -60,9 +62,10 @@ namespace Gimnasio
 
             if (conteo > 0)
             {
+                string nombrePersona = comboBox2.Text;
                 string nombreEjercicio = comboBox1.Text;
                 string fecha = dateTimePicker1.Value.ToString("yyyyMMdd HH:mm:ss");
-                string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}'", nombreEjercicio, fecha, conteo);
+                string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fecha, conteo);
                 DataSet ds = Utilidades.Ejecutar(cmd);
                 for (int i = 0; i < conteo; i++)
                 {
