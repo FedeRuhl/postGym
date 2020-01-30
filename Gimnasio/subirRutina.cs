@@ -52,34 +52,56 @@ namespace Gimnasio
 
         private void btnGuardarEjercicio_Click(object sender, EventArgs e)
         {
-            String[] arregloDinamico = new String[conteo+1];
-            string nombreTexto;
-            for (int i = 0; i<conteo; i++)
+            bool continuar = true;
+            if (comboBox2.Text != "" && comboBox1.Text != "")
             {
-                nombreTexto = "txtDinamic" + i;
-                arregloDinamico[i] = Controls.Find(nombreTexto, true).First().Text;
-            }
-
-            if (conteo > 0)
-            {
-                string nombrePersona = comboBox2.Text;
-                string nombreEjercicio = comboBox1.Text;
-                string fecha = dateTimePicker1.Value.ToString("yyyyMMdd HH:mm:ss");
-                string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fecha, conteo);
-                DataSet ds = Utilidades.Ejecutar(cmd);
+                String[] arregloDinamico = new String[conteo + 1];
+                string nombreTexto;
+                int number = 0;
+                string cadena;
                 for (int i = 0; i < conteo; i++)
                 {
-                    cmd = string.Format("EXEC crearSerie '{0}', '{1}'", arregloDinamico[i], nombreEjercicio);
-                    ds = Utilidades.Ejecutar(cmd);
+                    nombreTexto = "txtDinamic" + i;
+                    cadena = Controls.Find(nombreTexto, true).First().Text;
+                    if (int.TryParse(cadena, out number))
+                    {
+                        arregloDinamico[i] = cadena;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los pesos deben ser ingresados únicamente de manera numérica.");
+                        continuar = false;
+                        this.Close();
+                    }
                 }
 
-                MessageBox.Show("¡Se ha guardado correctamente!");
+                if (conteo > 0 && continuar)
+                {
+                    string nombrePersona = comboBox2.Text;
+                    string nombreEjercicio = comboBox1.Text;
+                    string fecha = dateTimePicker1.Value.ToString("yyyyMMdd HH:mm:ss");
+                    string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fecha, conteo);
+                    DataSet ds = Utilidades.Ejecutar(cmd);
+                    for (int i = 0; i < conteo; i++)
+                    {
+                        cmd = string.Format("EXEC crearSerie '{0}', '{1}'", arregloDinamico[i], nombreEjercicio);
+                        ds = Utilidades.Ejecutar(cmd);
+                    }
+
+                    MessageBox.Show("¡Se ha guardado correctamente!");
+                }
+
+                else
+                {
+                    MessageBox.Show("Para subir la rutina debe haber al menos una serie realizada.");
+                }
             }
 
             else
             {
-                MessageBox.Show("Para subir la rutina debe haber al menos una serie realizada.");
+                MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
             }
+            
              
         }
     }

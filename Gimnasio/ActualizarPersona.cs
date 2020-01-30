@@ -34,16 +34,23 @@ namespace Gimnasio
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            int idPersona = comboBox1.SelectedIndex + 1;
-            string nombrePersona = comboBox1.Text.Trim();
-            string altura = txtAlturaPersona.Text;
-            string peso = txtPesoPersona.Text;
-            double alturaPersona = Convert.ToDouble(altura.Replace(',', '.'));
-            double pesoPersona = Convert.ToDouble(peso.Replace(',', '.'));
-            string cmd = string.Format("EXEC actualizaPersona '{0}', '{1}', '{2}', '{3}', '{4}'", idPersona, nombrePersona, fotoPersona, alturaPersona, pesoPersona);
-            Utilidades.Ejecutar(cmd);
+            if (comboBox1.Text != "" && fotoPersona != "" && txtAlturaPersona.Text != "" && txtPesoPersona.Text != "")
+            {
+                int idPersona = comboBox1.SelectedIndex + 1;
+                string nombrePersona = comboBox1.Text.Trim();
+                string altura = txtAlturaPersona.Text;
+                string peso = txtPesoPersona.Text;
+                double alturaPersona = Convert.ToDouble(altura.Replace(',', '.'));
+                double pesoPersona = Convert.ToDouble(peso.Replace(',', '.'));
+                string cmd = string.Format("EXEC actualizaPersona '{0}', '{1}', '{2}', '{3}', '{4}'", idPersona, nombrePersona, fotoPersona, alturaPersona, pesoPersona);
+                Utilidades.Ejecutar(cmd);
+                MessageBox.Show("¡Se ha actualizado correctamente!");
+            }
 
-            MessageBox.Show("¡Se ha actualizado correctamente!");
+            else
+            {
+                MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
+            }
         }
     }
 }
