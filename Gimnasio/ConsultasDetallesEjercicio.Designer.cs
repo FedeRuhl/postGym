@@ -78,18 +78,19 @@
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(831, 467);
             this.dataGridView3.TabIndex = 4;
+            this.dataGridView3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView3_KeyPress);
             // 
             // consultasEjerciciosBindingSource
             // 
             this.consultasEjerciciosBindingSource.DataSource = typeof(Gimnasio.ConsultasDetallesEjercicio);
             // 
-            // ConsultasEjercicios
+            // ConsultasDetallesEjercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 808);
             this.Controls.Add(this.dataGridView3);
-            this.Name = "ConsultasEjercicios";
+            this.Name = "ConsultasDetallesEjercicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultasEjercicios";
             this.Load += new System.EventHandler(this.ConsultasEjercicios_Load);
