@@ -89,12 +89,13 @@
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellClick);
             this.dataGridView3.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellEnter);
+            this.dataGridView3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView3_KeyPress);
             // 
             // unirPersonaBindingSource
             // 
             this.unirPersonaBindingSource.DataMember = "unirPersona";
             // 
-            // ConsultasPersona
+            // ConsultasDetallesPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,7 +103,7 @@
             this.ClientSize = new System.Drawing.Size(970, 822);
             this.Controls.Add(this.dataGridView3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "ConsultasPersona";
+            this.Name = "ConsultasDetallesPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultasPersona";
             this.Load += new System.EventHandler(this.ConsultasPersona_Load);
