@@ -85,5 +85,46 @@ namespace Gimnasio
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double altura = Convert.ToDouble(dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[3].Value);
+            double peso = Convert.ToDouble(dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[4].Value);
+            double IMC = peso / Math.Pow(altura, 2);
+            if (IMC < 16)
+            {
+                MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee delgadez severa.");
+            }
+            else if (IMC >= 16 && IMC < 18)
+            {
+                MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee delgadez moderada.");
+            }
+            else if (IMC >= 18 && IMC < 18.5)
+            {
+                MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee delgadez leve.");
+            }
+            else if (IMC >= 18.5 && IMC < 25)
+            {
+                MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee un peso normal y saludable.");
+            }
+            else if (IMC >= 25 && IMC < 30)
+            {
+                MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee pre-obesidad.");
+            }
+            else if (IMC >= 30 && IMC < 35)
+            {
+                MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee obesidad tipo I.");
+            }
+            else if (IMC >= 35 && IMC < 40)
+            {
+                MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee obesidad tipo II.");
+            }
+            else if (IMC > 40)
+            {
+                MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee obesidad tipo III.");
+            }
+            else
+                MessageBox.Show("No se ha podido calcular correctamente el índice de masa corporal.");
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.gimnasioDataSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.unirPersonaDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tablaPersonaDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
@@ -95,12 +96,23 @@
             // 
             this.unirPersonaBindingSource.DataMember = "unirPersona";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(414, 766);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 29);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "CALCULAR IMC";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ConsultasDetallesPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(970, 822);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ConsultasDetallesPerfil";
@@ -113,6 +125,7 @@
             this.Controls.SetChildIndex(this.listBox1, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.dataGridView3, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -139,5 +152,6 @@
         private System.Windows.Forms.BindingSource gimnasioDataSetBindingSource3;
         private System.Windows.Forms.BindingSource unirPersonaDSBindingSource;
         private System.Windows.Forms.BindingSource tablaPersonaDSBindingSource;
+        private System.Windows.Forms.Button button1;
     }
 }
