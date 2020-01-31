@@ -62,17 +62,18 @@ namespace Gimnasio
                 for (int i = 0; i < conteo; i++)
                 {
                     nombreTexto = "txtDinamic" + i;
-                    cadena = Controls.Find(nombreTexto, true).First().Text;
-                    if (int.TryParse(cadena, out number))
+                    if (Controls.Find(nombreTexto, true).Length > 0)
                     {
-                        arregloDinamico[i] = cadena;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Los pesos deben ser ingresados únicamente de manera numérica.");
-                        continuar = false;
-                        this.Close();
-                    }
+                        cadena = Controls.Find(nombreTexto, true).First().Text;
+                        if (int.TryParse(cadena, out number) && Controls.Find(nombreTexto, true).Count() != 0)
+                        {
+                            arregloDinamico[i] = cadena;
+                        }
+                        else
+                        {
+                            continuar = false;
+                        }
+                    }                   
                 }
 
                 if (conteo > 0 && continuar)
@@ -89,11 +90,18 @@ namespace Gimnasio
                     }
 
                     MessageBox.Show("¡Se ha guardado correctamente!");
+                    for (int i = 0; i < conteo; i++)
+                    {
+                        nombreTexto = "txtDinamic" + i;
+                        //Controls.Find(nombreTexto, true).First().Hide();
+                        Controls.RemoveByKey(nombreTexto);
+                        y = 150;
+                    }
                 }
 
                 else
                 {
-                    MessageBox.Show("Para subir la rutina debe haber al menos una serie realizada.");
+                    MessageBox.Show("Para subir la rutina los pesos de las series deben ser ingresados correctamente.");
                 }
             }
 
