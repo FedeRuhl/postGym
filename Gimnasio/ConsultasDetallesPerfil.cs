@@ -21,16 +21,9 @@ namespace Gimnasio
 
         private void ConsultasPersona_Load(object sender, EventArgs e)
         {
+            this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
             try
             {
-                //Esto nos trae todas las personas con detalles, pero no las que no tengan detalles.
-                string cmd = string.Format("EXEC unirPersona");
-                DataSet DS = Utilidades.Ejecutar(cmd);
-                dataGridView3.DataSource = DS.Tables[0];
-                cmd = string.Format("select fecha from tablaDetallesPersona");
-                DS = Utilidades.Ejecutar(cmd);
-                listBox1.DataSource = DS.Tables[0];
-                listBox1.ValueMember = "fecha";
                 this.Location = new Point(this.Location.X, this.Location.Y+30);
             }
             catch (Exception error)
@@ -42,9 +35,9 @@ namespace Gimnasio
         public static string direccion = "";
         private void DataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            direccion = dataGridView3.Rows[e.RowIndex].Cells["fotoPersona"].Value.ToString();
-            pictureBox1.Image = Image.FromFile(direccion);
-            pictureBox1.Refresh();
+            direccion = dataGridView3.Rows[e.RowIndex].Cells[5].Value.ToString();
+            pictureBox2.Image = Image.FromFile(direccion);
+            pictureBox2.Refresh();
         }
         public override void Buscar()
         {
@@ -68,7 +61,7 @@ namespace Gimnasio
         private void DataGridView3_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView3_CellClick(sender, e);
-            pictureBox1.Refresh();
+            pictureBox2.Refresh();
         }
 
         private void dataGridView3_KeyPress(object sender, KeyPressEventArgs e)

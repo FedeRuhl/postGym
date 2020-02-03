@@ -42,7 +42,18 @@
             this.unirPersonaDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tablaPersonaDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.unirPersonaDataSet = new Gimnasio.unirPersonaDataSet();
+            this.unirPersonaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unirPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.unirPersonaTableAdapter = new Gimnasio.unirPersonaDataSetTableAdapters.unirPersonaTableAdapter();
+            this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDetallesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alturaPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -52,16 +63,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.listBox1.DataSource = this.unirPersonaBindingSource1;
+            this.listBox1.DisplayMember = "fecha";
             this.listBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.ItemHeight = 18;
             this.listBox1.Location = new System.Drawing.Point(64, 75);
             this.listBox1.Size = new System.Drawing.Size(445, 184);
+            this.listBox1.ValueMember = "fecha";
             // 
             // btnBuscar
             // 
@@ -70,11 +88,6 @@
             // lblFechaConsultas
             // 
             this.lblFechaConsultas.ForeColor = System.Drawing.Color.White;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(600, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
             // tablaDetallesBindingSource
             // 
@@ -85,6 +98,7 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
@@ -100,6 +114,15 @@
             this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView3.ColumnHeadersHeight = 45;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idPersonaDataGridViewTextBoxColumn,
+            this.idDetallesDataGridViewTextBoxColumn,
+            this.nombrePersonaDataGridViewTextBoxColumn,
+            this.alturaPersonaDataGridViewTextBoxColumn,
+            this.pesoPersonaDataGridViewTextBoxColumn,
+            this.fotoPersonaDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.unirPersonaBindingSource1;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.dataGridView3.Location = new System.Drawing.Point(64, 370);
@@ -123,7 +146,7 @@
             this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(842, 390);
+            this.dataGridView3.Size = new System.Drawing.Size(911, 390);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellClick);
             this.dataGridView3.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellEnter);
@@ -143,13 +166,105 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(693, 75);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(213, 184);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // unirPersonaDataSet
+            // 
+            this.unirPersonaDataSet.DataSetName = "unirPersonaDataSet";
+            this.unirPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // unirPersonaDataSetBindingSource
+            // 
+            this.unirPersonaDataSetBindingSource.DataSource = this.unirPersonaDataSet;
+            this.unirPersonaDataSetBindingSource.Position = 0;
+            // 
+            // unirPersonaBindingSource1
+            // 
+            this.unirPersonaBindingSource1.DataMember = "unirPersona";
+            this.unirPersonaBindingSource1.DataSource = this.unirPersonaDataSetBindingSource;
+            // 
+            // unirPersonaTableAdapter
+            // 
+            this.unirPersonaTableAdapter.ClearBeforeFill = true;
+            // 
+            // idPersonaDataGridViewTextBoxColumn
+            // 
+            this.idPersonaDataGridViewTextBoxColumn.DataPropertyName = "idPersona";
+            this.idPersonaDataGridViewTextBoxColumn.HeaderText = "idPersona";
+            this.idPersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idPersonaDataGridViewTextBoxColumn.Name = "idPersonaDataGridViewTextBoxColumn";
+            this.idPersonaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPersonaDataGridViewTextBoxColumn.Width = 123;
+            // 
+            // idDetallesDataGridViewTextBoxColumn
+            // 
+            this.idDetallesDataGridViewTextBoxColumn.DataPropertyName = "idDetalles";
+            this.idDetallesDataGridViewTextBoxColumn.HeaderText = "idDetalles";
+            this.idDetallesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDetallesDataGridViewTextBoxColumn.Name = "idDetallesDataGridViewTextBoxColumn";
+            this.idDetallesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDetallesDataGridViewTextBoxColumn.Width = 119;
+            // 
+            // nombrePersonaDataGridViewTextBoxColumn
+            // 
+            this.nombrePersonaDataGridViewTextBoxColumn.DataPropertyName = "nombrePersona";
+            this.nombrePersonaDataGridViewTextBoxColumn.HeaderText = "nombrePersona";
+            this.nombrePersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombrePersonaDataGridViewTextBoxColumn.Name = "nombrePersonaDataGridViewTextBoxColumn";
+            this.nombrePersonaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombrePersonaDataGridViewTextBoxColumn.Width = 174;
+            // 
+            // alturaPersonaDataGridViewTextBoxColumn
+            // 
+            this.alturaPersonaDataGridViewTextBoxColumn.DataPropertyName = "alturaPersona";
+            this.alturaPersonaDataGridViewTextBoxColumn.HeaderText = "alturaPersona";
+            this.alturaPersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.alturaPersonaDataGridViewTextBoxColumn.Name = "alturaPersonaDataGridViewTextBoxColumn";
+            this.alturaPersonaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.alturaPersonaDataGridViewTextBoxColumn.Width = 153;
+            // 
+            // pesoPersonaDataGridViewTextBoxColumn
+            // 
+            this.pesoPersonaDataGridViewTextBoxColumn.DataPropertyName = "pesoPersona";
+            this.pesoPersonaDataGridViewTextBoxColumn.HeaderText = "pesoPersona";
+            this.pesoPersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pesoPersonaDataGridViewTextBoxColumn.Name = "pesoPersonaDataGridViewTextBoxColumn";
+            this.pesoPersonaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pesoPersonaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // fotoPersonaDataGridViewTextBoxColumn
+            // 
+            this.fotoPersonaDataGridViewTextBoxColumn.DataPropertyName = "fotoPersona";
+            this.fotoPersonaDataGridViewTextBoxColumn.HeaderText = "fotoPersona";
+            this.fotoPersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fotoPersonaDataGridViewTextBoxColumn.Name = "fotoPersonaDataGridViewTextBoxColumn";
+            this.fotoPersonaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fotoPersonaDataGridViewTextBoxColumn.Width = 138;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
+            this.fechaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaDataGridViewTextBoxColumn.Width = 84;
+            // 
             // ConsultasDetallesPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(970, 822);
+            this.ClientSize = new System.Drawing.Size(1008, 843);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -160,10 +275,9 @@
             this.Controls.SetChildIndex(this.btnBuscar, 0);
             this.Controls.SetChildIndex(this.lblFechaConsultas, 0);
             this.Controls.SetChildIndex(this.listBox1, 0);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.dataGridView3, 0);
             this.Controls.SetChildIndex(this.button1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Controls.SetChildIndex(this.pictureBox2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource1)).EndInit();
@@ -172,6 +286,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +308,17 @@
         private System.Windows.Forms.BindingSource unirPersonaDSBindingSource;
         private System.Windows.Forms.BindingSource tablaPersonaDSBindingSource;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.BindingSource unirPersonaDataSetBindingSource;
+        private unirPersonaDataSet unirPersonaDataSet;
+        private System.Windows.Forms.BindingSource unirPersonaBindingSource1;
+        private unirPersonaDataSetTableAdapters.unirPersonaTableAdapter unirPersonaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPersonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDetallesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombrePersonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alturaPersonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pesoPersonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fotoPersonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
     }
 }

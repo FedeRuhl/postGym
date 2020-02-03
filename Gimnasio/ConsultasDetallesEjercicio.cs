@@ -40,13 +40,11 @@ namespace Gimnasio
 
         private void ConsultasEjercicios_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'unirEjercicioDataSet.unirEjercicio' Puede moverla o quitarla según sea necesario.
+            this.unirEjercicioTableAdapter.Fill(this.unirEjercicioDataSet.unirEjercicio);
+            this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
             try
             {
-                string cmd = string.Format("EXEC unirEjercicio");
-                DataSet DS = Utilidades.Ejecutar(cmd);
-                dataGridView3.DataSource = DS.Tables[0];
-                listBox1.DataSource = DS.Tables[0];
-                listBox1.ValueMember = "fecha";
                 this.Location = new Point(this.Location.X, this.Location.Y + 30);
             }
             catch (Exception error)

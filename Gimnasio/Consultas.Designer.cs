@@ -33,10 +33,8 @@
             this.lblFechaConsultas = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tablaDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gimnasioDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,31 +71,17 @@
             // 
             this.tablaDetallesBindingSource.DataMember = "tablaDetalles";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(831, 74);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(228, 143);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 402);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(580, 366);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblFechaConsultas);
             this.Controls.Add(this.btnBuscar);
             this.Name = "Consultas";
             this.Text = "Consultas";
-            this.Controls.SetChildIndex(this.btnBuscar, 0);
-            this.Controls.SetChildIndex(this.lblFechaConsultas, 0);
-            this.Controls.SetChildIndex(this.listBox1, 0);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -109,7 +93,6 @@
         protected System.Windows.Forms.Button btnBuscar;
         protected System.Windows.Forms.Label lblFechaConsultas;
         private System.Windows.Forms.BindingSource tablaDetallesBindingSource;
-        protected System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource gimnasioDataSetBindingSource;
     }
 }
