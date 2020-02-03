@@ -45,7 +45,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(323, 61);
             this.label2.TabIndex = 1;
-            this.label2.Text = "CONSULTA EJERCICIO";
+            this.label2.Text = "EJERCICIOS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
@@ -60,7 +60,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(323, 61);
             this.label1.TabIndex = 0;
-            this.label1.Text = "CONSULTA PERFIL";
+            this.label1.Text = "PERFILES";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
@@ -75,7 +75,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(323, 61);
             this.label3.TabIndex = 3;
-            this.label3.Text = "CONSULTA DETALLES";
+            this.label3.Text = "DETALLES PERFILES";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -90,7 +90,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(323, 61);
             this.label4.TabIndex = 5;
-            this.label4.Text = "DETALLES EJERCICIO";
+            this.label4.Text = "DETALLES EJERCICIOS";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 

@@ -44,7 +44,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(323, 61);
             this.label1.TabIndex = 1;
-            this.label1.Text = "ACTUALIZAR RUTINA";
+            this.label1.Text = "SUBIR RUTINA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
