@@ -17,14 +17,6 @@ namespace Gimnasio
             InitializeComponent();
         }
 
-        private void Salir_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("¿Desea salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
         public virtual void Agregar()
         {
 
@@ -43,6 +35,17 @@ namespace Gimnasio
         public virtual void Buscar()
         {
 
+        }
+
+        private void FormularioBase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                if (MessageBox.Show("¿Desea salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
         }
     }
 }

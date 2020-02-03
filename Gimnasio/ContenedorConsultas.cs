@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Gimnasio
 {
-    public partial class ContenedorConsultas : Form
+    public partial class ContenedorConsultas : FormularioBase
     {
         public ContenedorConsultas()
         {

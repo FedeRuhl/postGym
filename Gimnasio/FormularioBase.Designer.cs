@@ -28,18 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(333, 375);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.Salir_Click);
+
             // 
             // FormularioBase
             // 
@@ -47,8 +37,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSalir);
+            this.KeyPreview = true;
             this.Name = "FormularioBase";
             this.Text = "FormularioBase";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormularioBase_KeyPress);
             this.ResumeLayout(false);
 
         }

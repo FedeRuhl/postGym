@@ -40,12 +40,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(299, 300);
-            this.btnSalir.Size = new System.Drawing.Size(79, 33);
-            this.btnSalir.TabIndex = 3;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(199, 300);
@@ -102,7 +96,6 @@
             this.Controls.SetChildIndex(this.lblFechaConsultas, 0);
             this.Controls.SetChildIndex(this.listBox1, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).EndInit();
