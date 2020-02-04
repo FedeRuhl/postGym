@@ -42,15 +42,16 @@
             this.labelPeso = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.personaDataSet = new Gimnasio.PersonaDataSet();
             this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personaDataSet = new Gimnasio.PersonaDataSet();
             this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesEjercicioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
             // btnGuardarEjercicio
             // 
             this.btnGuardarEjercicio.Location = new System.Drawing.Point(462, 131);
@@ -162,15 +163,15 @@
             this.comboBox2.TabIndex = 24;
             this.comboBox2.ValueMember = "nombrePersona";
             // 
-            // personaDataSet
-            // 
-            this.personaDataSet.DataSetName = "PersonaDataSet";
-            this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tablaPersonaBindingSource
             // 
             this.tablaPersonaBindingSource.DataMember = "tablaPersona";
             this.tablaPersonaBindingSource.DataSource = this.personaDataSet;
+            // 
+            // personaDataSet
+            // 
+            this.personaDataSet.DataSetName = "PersonaDataSet";
+            this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tablaPersonaTableAdapter
             // 
@@ -195,20 +196,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "subirRutina";
             this.Load += new System.EventHandler(this.SubirRutina_Load);
-            this.Controls.SetChildIndex(this.btnGuardarEjercicio, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.label7, 0);
-            this.Controls.SetChildIndex(this.dateTimePicker1, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.labelPeso, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.comboBox2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

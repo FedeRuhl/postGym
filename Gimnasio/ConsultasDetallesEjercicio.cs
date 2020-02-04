@@ -40,7 +40,6 @@ namespace Gimnasio
 
         private void ConsultasEjercicios_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'unirEjercicioDataSet.unirEjercicio' Puede moverla o quitarla según sea necesario.
             this.unirEjercicioTableAdapter.Fill(this.unirEjercicioDataSet.unirEjercicio);
             this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
             try

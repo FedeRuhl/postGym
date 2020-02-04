@@ -26,6 +26,7 @@ namespace Gimnasio
                 {
                     oMDI = (MdiClient)ctl;
                     oMDI.BackColor = this.BackColor;
+
                 }
                 catch (InvalidCastException exc)
                 {

@@ -35,6 +35,16 @@
             this.gimnasioDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tablaDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDetallesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alturaPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unirPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.unirPersonaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unirPersonaDataSet = new Gimnasio.unirPersonaDataSet();
             this.gimnasioDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gimnasioDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.unirPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -43,20 +53,13 @@
             this.tablaPersonaDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.unirPersonaDataSet = new Gimnasio.unirPersonaDataSet();
-            this.unirPersonaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.unirPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.unirPersonaTableAdapter = new Gimnasio.unirPersonaDataSetTableAdapters.unirPersonaTableAdapter();
-            this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDetallesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alturaPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fotoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).BeginInit();
@@ -64,9 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -83,7 +83,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(182, 301);
+            this.btnBuscar.Location = new System.Drawing.Point(244, 265);
             // 
             // lblFechaConsultas
             // 
@@ -152,48 +152,6 @@
             this.dataGridView3.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellEnter);
             this.dataGridView3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView3_KeyPress);
             // 
-            // unirPersonaBindingSource
-            // 
-            this.unirPersonaBindingSource.DataMember = "unirPersona";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(414, 766);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 29);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "CALCULAR IMC";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(693, 75);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(213, 184);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // unirPersonaDataSet
-            // 
-            this.unirPersonaDataSet.DataSetName = "unirPersonaDataSet";
-            this.unirPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // unirPersonaDataSetBindingSource
-            // 
-            this.unirPersonaDataSetBindingSource.DataSource = this.unirPersonaDataSet;
-            this.unirPersonaDataSetBindingSource.Position = 0;
-            // 
-            // unirPersonaBindingSource1
-            // 
-            this.unirPersonaBindingSource1.DataMember = "unirPersona";
-            this.unirPersonaBindingSource1.DataSource = this.unirPersonaDataSetBindingSource;
-            // 
-            // unirPersonaTableAdapter
-            // 
-            this.unirPersonaTableAdapter.ClearBeforeFill = true;
-            // 
             // idPersonaDataGridViewTextBoxColumn
             // 
             this.idPersonaDataGridViewTextBoxColumn.DataPropertyName = "idPersona";
@@ -257,13 +215,55 @@
             this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
             this.fechaDataGridViewTextBoxColumn.Width = 84;
             // 
+            // unirPersonaBindingSource1
+            // 
+            this.unirPersonaBindingSource1.DataMember = "unirPersona";
+            this.unirPersonaBindingSource1.DataSource = this.unirPersonaDataSetBindingSource;
+            // 
+            // unirPersonaDataSetBindingSource
+            // 
+            this.unirPersonaDataSetBindingSource.DataSource = this.unirPersonaDataSet;
+            this.unirPersonaDataSetBindingSource.Position = 0;
+            // 
+            // unirPersonaDataSet
+            // 
+            this.unirPersonaDataSet.DataSetName = "unirPersonaDataSet";
+            this.unirPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // unirPersonaBindingSource
+            // 
+            this.unirPersonaBindingSource.DataMember = "unirPersona";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(414, 766);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 29);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "CALCULAR IMC";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(693, 75);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(213, 184);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // unirPersonaTableAdapter
+            // 
+            this.unirPersonaTableAdapter.ClearBeforeFill = true;
+            // 
             // ConsultasDetallesPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1008, 843);
+            this.ClientSize = new System.Drawing.Size(1008, 807);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView3);
@@ -280,6 +280,9 @@
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).EndInit();
@@ -287,9 +290,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

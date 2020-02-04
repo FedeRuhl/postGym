@@ -23,7 +23,6 @@ namespace Gimnasio
 
         private void SubirRutina_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'personaDataSet.tablaPersona' Puede moverla o quitarla según sea necesario.
             this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
             string cmd = string.Format("select * from tablaEjercicio");
             DataSet DS = Utilidades.Ejecutar(cmd);
@@ -108,9 +107,7 @@ namespace Gimnasio
             else
             {
                 MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
-            }
-            
-             
+            }      
         }
     }
 }

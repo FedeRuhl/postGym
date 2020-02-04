@@ -30,12 +30,6 @@ namespace Gimnasio
                 catch (InvalidCastException exc)
                 {
                 }
-                this.Height += 35;
-                this.TopMost = true;
-                Rectangle r = Screen.FromPoint(this.Location).WorkingArea;
-                int x = r.Left + (r.Width - this.Width) / 2;
-                int y = r.Top;
-                this.Location = new Point(x, y);
             }
         }
 
