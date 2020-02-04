@@ -122,7 +122,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(462, 236);
+            this.button1.Location = new System.Drawing.Point(462, 170);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 33);
             this.button1.TabIndex = 4;
@@ -197,6 +197,7 @@
             this.Text = "subirRutina";
             this.Load += new System.EventHandler(this.SubirRutina_Load);
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesEjercicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
