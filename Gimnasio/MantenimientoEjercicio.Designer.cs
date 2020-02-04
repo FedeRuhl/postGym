@@ -54,12 +54,6 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 33, 15, 3);
             this.btnEliminar.TabIndex = 3;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(561, 274);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 33, 15, 3);
-            this.btnSalir.TabIndex = 5;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -133,7 +127,6 @@
             this.Controls.SetChildIndex(this.btnAgregar, 0);
             this.Controls.SetChildIndex(this.btnEliminar, 0);
             this.Controls.SetChildIndex(this.btnModificar, 0);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.lblIdEjercicio, 0);

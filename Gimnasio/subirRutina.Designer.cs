@@ -51,13 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(462, 182);
-            this.btnSalir.Size = new System.Drawing.Size(105, 33);
-            this.btnSalir.TabIndex = 3;
-            // 
             // btnGuardarEjercicio
             // 
             this.btnGuardarEjercicio.Location = new System.Drawing.Point(462, 131);
@@ -208,7 +201,6 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.dateTimePicker1, 0);
             this.Controls.SetChildIndex(this.comboBox1, 0);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.labelPeso, 0);
             this.Controls.SetChildIndex(this.label1, 0);

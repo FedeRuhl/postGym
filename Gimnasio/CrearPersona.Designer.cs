@@ -56,12 +56,6 @@
             this.btnEliminar.Size = new System.Drawing.Size(10, 10);
             this.btnEliminar.Visible = false;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(545, 193);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3);
-            this.btnSalir.TabIndex = 4;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -152,7 +146,6 @@
             this.Controls.SetChildIndex(this.txtNombrePersona, 0);
             this.Controls.SetChildIndex(this.btnAgregar, 0);
             this.Controls.SetChildIndex(this.btnEliminar, 0);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnModificar, 0);
             this.Controls.SetChildIndex(this.btnMod, 0);
             this.ResumeLayout(false);

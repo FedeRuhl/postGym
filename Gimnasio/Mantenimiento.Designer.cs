@@ -33,13 +33,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(538, 240);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 33, 3, 3);
-            this.btnSalir.Size = new System.Drawing.Size(118, 30);
-            this.btnSalir.TabIndex = 3;
-            // 
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(538, 42);
@@ -86,7 +79,6 @@
             this.Controls.SetChildIndex(this.btnAgregar, 0);
             this.Controls.SetChildIndex(this.btnEliminar, 0);
             this.Controls.SetChildIndex(this.btnModificar, 0);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
             this.ResumeLayout(false);
 
         }

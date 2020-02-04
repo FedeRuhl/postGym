@@ -47,12 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(517, 176);
-            this.btnSalir.Size = new System.Drawing.Size(109, 27);
-            this.btnSalir.TabIndex = 5;
-            // 
             // txtPesoPersona
             // 
             this.txtPesoPersona.Location = new System.Drawing.Point(242, 237);
@@ -193,7 +187,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ActualizarPersona";
             this.Load += new System.EventHandler(this.ActualizarPersona_Load_1);
-            this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.label5, 0);
