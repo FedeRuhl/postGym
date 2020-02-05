@@ -12,6 +12,8 @@ namespace Gimnasio
 {
     public partial class ContenedorProcesos : FormularioBase
     {
+        private bool salio;
+        private bool botonDosAdentro;
         public ContenedorProcesos()
         {
             InitializeComponent();
@@ -27,18 +29,14 @@ namespace Gimnasio
                     oMDI = (MdiClient)ctl;
                     oMDI.BackColor = this.BackColor;
 
+                    panel1.Controls.Add(button1);
+
+                    botonDosAdentro = false;
                 }
                 catch (InvalidCastException exc)
                 {
                 }
             }
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-            subirRutina SR = new subirRutina();
-            SR.MdiParent = this;
-            SR.Show();
         }
 
         private void ContenedorProcesos_FormClosing(object sender, FormClosingEventArgs e)
@@ -48,11 +46,35 @@ namespace Gimnasio
             MC.Show();
         }
 
-        private void Label2_Click(object sender, EventArgs e)
+        private void panel1_MouseEnter(object sender, EventArgs e)
         {
+            panel1.Width = 250;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Width = 52;
+            subirRutina SR = new subirRutina();
+            SR.MdiParent = this;
+            SR.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Width = 52;
             ActualizarPersona AP = new ActualizarPersona();
             AP.MdiParent = this;
             AP.Show();
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Width = 250;
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Width = 250;
         }
     }
 }

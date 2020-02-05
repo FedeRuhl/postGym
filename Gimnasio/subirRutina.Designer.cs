@@ -197,7 +197,6 @@
             this.Text = "subirRutina";
             this.Load += new System.EventHandler(this.SubirRutina_Load);
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesEjercicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
