@@ -33,20 +33,6 @@ namespace Gimnasio
             }
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-            ConsultasPerfiles CP = new ConsultasPerfiles();
-            CP.MdiParent = this;
-            CP.Show();
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-            ConsultaEjercicio CE = new ConsultaEjercicio();
-            CE.MdiParent = this;
-            CE.Show();
-        }
-
         private void ContenedorConsultas_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainClass MC = new MainClass();
@@ -54,18 +40,61 @@ namespace Gimnasio
             MC.Show();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            panel1.Width = 55;
+            ConsultasPerfiles CP = new ConsultasPerfiles();
+            CP.MdiParent = this;
+            CP.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Width = 55;
             ConsultasDetallesPerfil CP = new ConsultasDetallesPerfil();
             CP.MdiParent = this;
             CP.Show();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
+            panel1.Width = 55;
+            ConsultaEjercicio CE = new ConsultaEjercicio();
+            CE.MdiParent = this;
+            CE.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel1.Width = 55;
             ConsultasDetallesEjercicio CE = new ConsultasDetallesEjercicio();
             CE.MdiParent = this;
             CE.Show();
+        }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Width = 242;
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Width = 242;
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Width = 242;
+        }
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Width = 242;
+        }
+
+        private void button4_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Width = 242;
         }
     }
 }

@@ -238,13 +238,10 @@
     </None>
     <None Include="Properties\DataSources\ActualizarPersona.datasource" />
     <None Include="Properties\DataSources\Consultas.datasource" />
-    <None Include="Properties\DataSources\ConsultasEjercicios.datasource" />
-    <None Include="Properties\DataSources\ConsultasPersona.datasource" />
     <None Include="Properties\DataSources\ContenedorConsultas.datasource" />
     <None Include="Properties\DataSources\ContenedorMantenimiento.datasource" />
     <None Include="Properties\DataSources\ContenedorProcesos.datasource" />
     <None Include="Properties\DataSources\CrearPersona.datasource" />
-    <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\FormularioBase.datasource" />
     <None Include="Properties\DataSources\Gimnasio.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\Gimnasio.Properties.Settings.datasource" />
@@ -253,8 +250,6 @@
     <None Include="Properties\DataSources\MantenimientoEjercicio.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\subirRutina.datasource" />
-    <None Include="Properties\DataSources\tablaPersonaDS.datasource" />
-    <None Include="Properties\DataSources\unirPersonaDS.datasource" />
     <None Include="Properties\DataSources\Utilidades.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

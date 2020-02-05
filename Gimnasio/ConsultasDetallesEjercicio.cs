@@ -40,11 +40,10 @@ namespace Gimnasio
 
         private void ConsultasEjercicios_Load(object sender, EventArgs e)
         {
-            this.unirEjercicioTableAdapter.Fill(this.unirEjercicioDataSet.unirEjercicio);
-            this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
             try
             {
-                this.Location = new Point(this.Location.X, this.Location.Y + 30);
+                this.unirEjercicioTableAdapter.Fill(this.unirEjercicioDataSet.unirEjercicio);
+                this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
             }
             catch (Exception error)
             {

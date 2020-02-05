@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gimnasioDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDetallesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +54,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.unirPersonaTableAdapter = new Gimnasio.unirPersonaDataSetTableAdapters.unirPersonaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSetBindingSource)).BeginInit();
@@ -77,22 +75,18 @@
             this.listBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(64, 75);
+            this.listBox1.Location = new System.Drawing.Point(64, 56);
             this.listBox1.Size = new System.Drawing.Size(445, 184);
             this.listBox1.ValueMember = "fecha";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(244, 265);
+            this.btnBuscar.Location = new System.Drawing.Point(244, 246);
             // 
             // lblFechaConsultas
             // 
             this.lblFechaConsultas.ForeColor = System.Drawing.Color.White;
-            // 
-            // tablaDetallesBindingSource
-            // 
-            this.tablaDetallesBindingSource.DataMember = "tablaDetalles";
-            this.tablaDetallesBindingSource.DataSource = this.gimnasioDataSetBindingSource;
+            this.lblFechaConsultas.Location = new System.Drawing.Point(59, 12);
             // 
             // dataGridView3
             // 
@@ -125,7 +119,7 @@
             this.dataGridView3.DataSource = this.unirPersonaBindingSource1;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dataGridView3.Location = new System.Drawing.Point(64, 370);
+            this.dataGridView3.Location = new System.Drawing.Point(64, 295);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -236,7 +230,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(414, 766);
+            this.button1.Location = new System.Drawing.Point(414, 691);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 29);
             this.button1.TabIndex = 7;
@@ -246,7 +240,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(693, 75);
+            this.pictureBox2.Location = new System.Drawing.Point(693, 56);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(213, 184);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,7 +257,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1008, 807);
+            this.ClientSize = new System.Drawing.Size(1031, 730);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView3);
@@ -298,7 +292,6 @@
         #endregion
 
         private System.Windows.Forms.BindingSource gimnasioDataSetBindingSource;
-        private System.Windows.Forms.BindingSource tablaDetallesBindingSource;
        // private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource gimnasioDataSetBindingSource1;

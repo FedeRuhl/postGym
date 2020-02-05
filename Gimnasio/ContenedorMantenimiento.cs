@@ -33,25 +33,42 @@ namespace Gimnasio
             }
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-            CrearPersona MP = new CrearPersona();
-            MP.MdiParent = this;
-            MP.Show();
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-            MantenimientoEjercicio ME = new MantenimientoEjercicio();
-            ME.MdiParent = this;
-            ME.Show();
-        }
-
         private void ContenedorMantenimiento_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainClass MC = new MainClass();
             this.Hide();
             MC.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Width = 45;
+            CrearPersona MP = new CrearPersona();
+            MP.MdiParent = this;
+            MP.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Width = 45;
+            MantenimientoEjercicio ME = new MantenimientoEjercicio();
+            ME.MdiParent = this;
+            ME.Show();
+        }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Width = 277;
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Width = 277;
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Width = 277;
         }
     }
 }

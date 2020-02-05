@@ -21,10 +21,10 @@ namespace Gimnasio
 
         private void ConsultasPersona_Load(object sender, EventArgs e)
         {
-            this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
+            
             try
             {
-                this.Location = new Point(this.Location.X, this.Location.Y+30);
+                this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
             }
             catch (Exception error)
             {
