@@ -62,14 +62,14 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 322);
+            this.button2.Location = new System.Drawing.Point(12, 346);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(290, 63);
-            this.button2.TabIndex = 6;
+            this.button2.TabIndex = 10;
             this.button2.Text = "ACTUALIZAR PERSONA";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
             // 
             // button1
@@ -83,13 +83,13 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 237);
+            this.button1.Location = new System.Drawing.Point(12, 261);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(290, 63);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 9;
             this.button1.Text = "SUBIR RUTINA";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             // 
             // ContenedorProcesos
@@ -114,8 +114,8 @@
         #endregion
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

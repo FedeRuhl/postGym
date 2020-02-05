@@ -28,10 +28,6 @@ namespace Gimnasio
                 {
                     oMDI = (MdiClient)ctl;
                     oMDI.BackColor = this.BackColor;
-
-                    panel1.Controls.Add(button1);
-
-                    botonDosAdentro = false;
                 }
                 catch (InvalidCastException exc)
                 {
@@ -51,7 +47,7 @@ namespace Gimnasio
             panel1.Width = 250;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             panel1.Width = 52;
             subirRutina SR = new subirRutina();
@@ -59,7 +55,7 @@ namespace Gimnasio
             SR.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             panel1.Width = 52;
             ActualizarPersona AP = new ActualizarPersona();
