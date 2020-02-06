@@ -47,7 +47,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 264);
+            this.button1.Location = new System.Drawing.Point(0, 244);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(369, 63);
             this.button1.TabIndex = 10;
@@ -69,7 +69,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 351);
+            this.button2.Location = new System.Drawing.Point(3, 331);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(366, 63);
             this.button2.TabIndex = 11;
@@ -85,9 +85,9 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 714);
+            this.panel1.Size = new System.Drawing.Size(369, 675);
             this.panel1.TabIndex = 15;
             this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
@@ -98,13 +98,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(841, 714);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
             this.Name = "ContenedorMantenimiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContenedorMantenimiento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContenedorMantenimiento_FormClosing);
             this.Load += new System.EventHandler(this.ContenedorMantenimiento_Load);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
