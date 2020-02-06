@@ -44,7 +44,8 @@ namespace Gimnasio
 
         private void panel1_MouseEnter(object sender, EventArgs e)
         {
-            panel1.Width = 250;
+            if (MdiChildren.Length == 0)
+                panel1.Width = 250;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -65,12 +66,14 @@ namespace Gimnasio
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
+            if (MdiChildren.Length == 0)
             panel1.Width = 250;
         }
 
         private void button2_MouseEnter(object sender, EventArgs e)
         {
-            panel1.Width = 250;
+            if (MdiChildren.Length == 0)
+                panel1.Width = 250;
         }
     }
 }
