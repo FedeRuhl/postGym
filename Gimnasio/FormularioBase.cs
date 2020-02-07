@@ -47,16 +47,16 @@ namespace Gimnasio
         {
             if (e.KeyChar == Convert.ToChar(Keys.Escape))
             {
-                if (MessageBox.Show("¿Desea salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-                {
-                    this.Close();
-                }
+                iconCerrar_Click(sender, e);
             }
         }
 
         private void iconCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("¿Desea salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void iconMaximizar_Click(object sender, EventArgs e)

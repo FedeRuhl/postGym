@@ -61,19 +61,19 @@
             this.listBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(264, 71);
+            this.listBox1.Location = new System.Drawing.Point(264, 93);
             this.listBox1.Size = new System.Drawing.Size(445, 184);
             this.listBox1.ValueMember = "fecha";
             // 
             // btnBuscar
             // 
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(448, 261);
+            this.btnBuscar.Location = new System.Drawing.Point(448, 283);
             // 
             // lblFechaConsultas
             // 
             this.lblFechaConsultas.ForeColor = System.Drawing.Color.White;
-            this.lblFechaConsultas.Location = new System.Drawing.Point(418, 27);
+            this.lblFechaConsultas.Location = new System.Drawing.Point(418, 49);
             // 
             // tablaDetallesBindingSource
             // 
@@ -106,7 +106,7 @@
             this.dataGridView3.DataSource = this.unirEjercicioBindingSource;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dataGridView3.Location = new System.Drawing.Point(35, 306);
+            this.dataGridView3.Location = new System.Drawing.Point(35, 328);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;

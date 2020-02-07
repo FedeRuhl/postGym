@@ -75,18 +75,19 @@
             this.listBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(64, 56);
-            this.listBox1.Size = new System.Drawing.Size(445, 184);
+            this.listBox1.Location = new System.Drawing.Point(64, 90);
+            this.listBox1.Size = new System.Drawing.Size(445, 148);
             this.listBox1.ValueMember = "fecha";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(244, 246);
+            this.btnBuscar.Location = new System.Drawing.Point(244, 280);
+            this.btnBuscar.Size = new System.Drawing.Size(79, 10);
             // 
             // lblFechaConsultas
             // 
             this.lblFechaConsultas.ForeColor = System.Drawing.Color.White;
-            this.lblFechaConsultas.Location = new System.Drawing.Point(59, 12);
+            this.lblFechaConsultas.Location = new System.Drawing.Point(59, 46);
             // 
             // dataGridView3
             // 
@@ -119,7 +120,7 @@
             this.dataGridView3.DataSource = this.unirPersonaBindingSource1;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dataGridView3.Location = new System.Drawing.Point(64, 295);
+            this.dataGridView3.Location = new System.Drawing.Point(64, 329);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -140,7 +141,7 @@
             this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(911, 390);
+            this.dataGridView3.Size = new System.Drawing.Size(911, 358);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellClick);
             this.dataGridView3.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellEnter);
@@ -240,9 +241,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(693, 56);
+            this.pictureBox2.Location = new System.Drawing.Point(693, 90);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(213, 184);
+            this.pictureBox2.Size = new System.Drawing.Size(213, 152);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -261,7 +262,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ConsultasDetallesPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultasPersona";

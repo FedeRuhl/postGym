@@ -39,7 +39,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(545, 123);
+            this.btnAgregar.Location = new System.Drawing.Point(529, 160);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3);
             this.btnAgregar.TabIndex = 2;
             // 
@@ -60,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 21);
+            this.label2.Location = new System.Drawing.Point(20, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 27);
             this.label2.TabIndex = 7;
@@ -70,7 +70,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 76);
+            this.label1.Location = new System.Drawing.Point(20, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(419, 26);
             this.label1.TabIndex = 8;
@@ -78,7 +78,7 @@
             // 
             // txtIdPersona
             // 
-            this.txtIdPersona.Location = new System.Drawing.Point(235, 136);
+            this.txtIdPersona.Location = new System.Drawing.Point(243, 160);
             this.txtIdPersona.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txtIdPersona.Name = "txtIdPersona";
             this.txtIdPersona.Size = new System.Drawing.Size(223, 22);
@@ -88,7 +88,7 @@
             // 
             this.lblIdPersona.AutoSize = true;
             this.lblIdPersona.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdPersona.Location = new System.Drawing.Point(25, 132);
+            this.lblIdPersona.Location = new System.Drawing.Point(25, 156);
             this.lblIdPersona.Name = "lblIdPersona";
             this.lblIdPersona.Size = new System.Drawing.Size(105, 26);
             this.lblIdPersona.TabIndex = 8;
@@ -96,7 +96,7 @@
             // 
             // txtNombrePersona
             // 
-            this.txtNombrePersona.Location = new System.Drawing.Point(235, 195);
+            this.txtNombrePersona.Location = new System.Drawing.Point(243, 203);
             this.txtNombrePersona.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txtNombrePersona.Name = "txtNombrePersona";
             this.txtNombrePersona.Size = new System.Drawing.Size(223, 22);
@@ -106,7 +106,7 @@
             // 
             this.lblNombrePersona.AutoSize = true;
             this.lblNombrePersona.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombrePersona.Location = new System.Drawing.Point(25, 191);
+            this.lblNombrePersona.Location = new System.Drawing.Point(25, 199);
             this.lblNombrePersona.Margin = new System.Windows.Forms.Padding(3, 33, 3, 0);
             this.lblNombrePersona.Name = "lblNombrePersona";
             this.lblNombrePersona.Size = new System.Drawing.Size(204, 26);
@@ -115,7 +115,7 @@
             // 
             // btnMod
             // 
-            this.btnMod.Location = new System.Drawing.Point(545, 159);
+            this.btnMod.Location = new System.Drawing.Point(529, 196);
             this.btnMod.Name = "btnMod";
             this.btnMod.Size = new System.Drawing.Size(118, 30);
             this.btnMod.TabIndex = 3;
@@ -127,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 268);
+            this.ClientSize = new System.Drawing.Size(681, 270);
             this.Controls.Add(this.btnMod);
             this.Controls.Add(this.txtNombrePersona);
             this.Controls.Add(this.lblNombrePersona);

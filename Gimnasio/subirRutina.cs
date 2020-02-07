@@ -13,7 +13,7 @@ namespace Gimnasio
 {
     public partial class subirRutina : FormularioBase
     {
-        private int y = 176;
+        private int y = 198;
         private int conteo = 0;
         TextBox text = new TextBox();
         public subirRutina()
@@ -94,7 +94,7 @@ namespace Gimnasio
                         nombreTexto = "txtDinamic" + i;
                         //Controls.Find(nombreTexto, true).First().Hide();
                         Controls.RemoveByKey(nombreTexto);
-                        y = 176;
+                        y = 198;
                     }
                 }
 
