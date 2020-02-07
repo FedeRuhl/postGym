@@ -39,6 +39,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAgregar.Location = new System.Drawing.Point(531, 164);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3);
             this.btnAgregar.TabIndex = 2;
@@ -58,6 +59,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -69,6 +71,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -80,6 +83,7 @@
             // 
             // txtIdPersona
             // 
+            this.txtIdPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIdPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.txtIdPersona.ForeColor = System.Drawing.Color.White;
             this.txtIdPersona.Location = new System.Drawing.Point(238, 164);
@@ -90,6 +94,7 @@
             // 
             // lblIdPersona
             // 
+            this.lblIdPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdPersona.AutoSize = true;
             this.lblIdPersona.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdPersona.ForeColor = System.Drawing.Color.White;
@@ -101,6 +106,7 @@
             // 
             // txtNombrePersona
             // 
+            this.txtNombrePersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombrePersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.txtNombrePersona.ForeColor = System.Drawing.Color.White;
             this.txtNombrePersona.Location = new System.Drawing.Point(238, 207);
@@ -111,6 +117,7 @@
             // 
             // lblNombrePersona
             // 
+            this.lblNombrePersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombrePersona.AutoSize = true;
             this.lblNombrePersona.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombrePersona.ForeColor = System.Drawing.Color.White;
@@ -123,6 +130,7 @@
             // 
             // btnMod
             // 
+            this.btnMod.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMod.Location = new System.Drawing.Point(531, 200);
             this.btnMod.Name = "btnMod";
             this.btnMod.Size = new System.Drawing.Size(118, 30);

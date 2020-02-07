@@ -69,6 +69,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.listBox1.DataSource = this.unirPersonaBindingSource1;
             this.listBox1.DisplayMember = "fecha";
@@ -81,11 +82,13 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(244, 280);
-            this.btnBuscar.Size = new System.Drawing.Size(79, 10);
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.Location = new System.Drawing.Point(245, 244);
+            this.btnBuscar.Size = new System.Drawing.Size(79, 28);
             // 
             // lblFechaConsultas
             // 
+            this.lblFechaConsultas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaConsultas.ForeColor = System.Drawing.Color.White;
             this.lblFechaConsultas.Location = new System.Drawing.Point(59, 46);
             // 
@@ -93,6 +96,7 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -120,7 +124,8 @@
             this.dataGridView3.DataSource = this.unirPersonaBindingSource1;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dataGridView3.Location = new System.Drawing.Point(64, 329);
+            this.dataGridView3.Location = new System.Drawing.Point(12, 297);
+            this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -141,7 +146,7 @@
             this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(911, 358);
+            this.dataGridView3.Size = new System.Drawing.Size(996, 371);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellClick);
             this.dataGridView3.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellEnter);
@@ -231,7 +236,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(414, 691);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Location = new System.Drawing.Point(414, 674);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 29);
             this.button1.TabIndex = 7;
@@ -241,6 +247,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Location = new System.Drawing.Point(693, 90);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(213, 152);

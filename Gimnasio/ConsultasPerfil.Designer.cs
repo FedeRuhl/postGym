@@ -48,6 +48,8 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -101,7 +103,6 @@
             this.idPersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idPersonaDataGridViewTextBoxColumn.Name = "idPersonaDataGridViewTextBoxColumn";
             this.idPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idPersonaDataGridViewTextBoxColumn.Width = 125;
             // 
             // nombrePersonaDataGridViewTextBoxColumn
             // 
@@ -110,7 +111,6 @@
             this.nombrePersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombrePersonaDataGridViewTextBoxColumn.Name = "nombrePersonaDataGridViewTextBoxColumn";
             this.nombrePersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombrePersonaDataGridViewTextBoxColumn.Width = 125;
             // 
             // tablaPersonaBindingSource
             // 

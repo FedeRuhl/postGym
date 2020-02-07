@@ -14,6 +14,8 @@ namespace Gimnasio
 {
     public partial class ConsultasDetallesEjercicio : Consultas
     {
+        bool unaVezMaximizar = false;
+        bool unaVezRestaurar = false;
         public ConsultasDetallesEjercicio()
         {
             InitializeComponent();
@@ -62,6 +64,30 @@ namespace Gimnasio
                     string cmd = string.Format("EXEC eliminarDetallesEjercicio '{0}'", id);
                     DataSet DS = Utilidades.Ejecutar(cmd);
                 }
+            }
+        }
+
+        protected override void iconMaximizar_Click(object sender, EventArgs e)
+        {
+            base.iconMaximizar_Click(sender, e);
+            dataGridView3.Size = new Size(902, dataGridView3.Size.Height);
+            if (!unaVezMaximizar)
+            {
+                dataGridView3.Location = new Point((dataGridView3.Location.X - 30), dataGridView3.Location.Y);
+                unaVezMaximizar = true;
+                unaVezRestaurar = false;
+            }
+        }
+
+        protected override void iconRestaurar_Click(object sender, EventArgs e)
+        {
+            base.iconRestaurar_Click(sender, e);
+            dataGridView3.Size = new Size(702, dataGridView3.Size.Height);
+            if (!unaVezRestaurar)
+            {
+                dataGridView3.Location = new Point((dataGridView3.Location.X + 30), dataGridView3.Location.Y);
+                unaVezRestaurar = true;
+                unaVezMaximizar = false;
             }
         }
     }

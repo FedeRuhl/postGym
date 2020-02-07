@@ -48,6 +48,8 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -68,7 +70,7 @@
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Location = new System.Drawing.Point(0, 39);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -90,7 +92,7 @@
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(402, 460);
+            this.dataGridView2.Size = new System.Drawing.Size(402, 421);
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView2_KeyPress);
             // 
@@ -101,7 +103,6 @@
             this.idEjercicioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idEjercicioDataGridViewTextBoxColumn.Name = "idEjercicioDataGridViewTextBoxColumn";
             this.idEjercicioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idEjercicioDataGridViewTextBoxColumn.Width = 125;
             // 
             // nombreEjercicioDataGridViewTextBoxColumn
             // 
@@ -110,7 +111,6 @@
             this.nombreEjercicioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombreEjercicioDataGridViewTextBoxColumn.Name = "nombreEjercicioDataGridViewTextBoxColumn";
             this.nombreEjercicioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreEjercicioDataGridViewTextBoxColumn.Width = 125;
             // 
             // tablaEjercicioBindingSource
             // 

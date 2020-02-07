@@ -38,24 +38,28 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAgregar.Location = new System.Drawing.Point(496, 147);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3);
             this.btnAgregar.TabIndex = 2;
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModificar.Location = new System.Drawing.Point(496, 219);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(3);
             this.btnModificar.TabIndex = 4;
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.Location = new System.Drawing.Point(496, 183);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3);
             this.btnEliminar.TabIndex = 3;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -67,6 +71,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -78,6 +83,7 @@
             // 
             // lblIdEjercicio
             // 
+            this.lblIdEjercicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdEjercicio.AutoSize = true;
             this.lblIdEjercicio.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdEjercicio.ForeColor = System.Drawing.Color.White;
@@ -89,6 +95,7 @@
             // 
             // lblNombreEjercicio
             // 
+            this.lblNombreEjercicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombreEjercicio.AutoSize = true;
             this.lblNombreEjercicio.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreEjercicio.ForeColor = System.Drawing.Color.White;
@@ -101,6 +108,7 @@
             // 
             // txtIdEjercicio
             // 
+            this.txtIdEjercicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIdEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.txtIdEjercicio.ForeColor = System.Drawing.Color.White;
             this.txtIdEjercicio.Location = new System.Drawing.Point(199, 166);
@@ -110,6 +118,7 @@
             // 
             // txtNombreEjercicio
             // 
+            this.txtNombreEjercicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombreEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.txtNombreEjercicio.Location = new System.Drawing.Point(199, 209);
             this.txtNombreEjercicio.Name = "txtNombreEjercicio";

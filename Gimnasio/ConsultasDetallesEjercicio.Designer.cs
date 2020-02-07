@@ -55,6 +55,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.listBox1.DataSource = this.unirEjercicioBindingSource;
             this.listBox1.DisplayMember = "fecha";
@@ -67,11 +68,13 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Location = new System.Drawing.Point(448, 283);
             // 
             // lblFechaConsultas
             // 
+            this.lblFechaConsultas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaConsultas.ForeColor = System.Drawing.Color.White;
             this.lblFechaConsultas.Location = new System.Drawing.Point(418, 49);
             // 
@@ -83,6 +86,7 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;

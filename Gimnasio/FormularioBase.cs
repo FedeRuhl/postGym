@@ -59,7 +59,7 @@ namespace Gimnasio
             }
         }
 
-        private void iconMaximizar_Click(object sender, EventArgs e)
+        protected virtual void iconMaximizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
             iconMaximizar.Visible = false;
@@ -71,7 +71,7 @@ namespace Gimnasio
             WindowState = FormWindowState.Minimized;
         }
 
-        private void iconRestaurar_Click(object sender, EventArgs e)
+        protected virtual void iconRestaurar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
             iconRestaurar.Visible = false;
