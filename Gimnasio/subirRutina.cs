@@ -34,6 +34,9 @@ namespace Gimnasio
             try
             {
                 text = new TextBox();
+                Color colour = ColorTranslator.FromHtml("#3a3a3a");
+                text.BackColor = colour;
+                text.ForeColor = Color.White;
                 text.Text = "Cantidad de peso (kg)";
                 text.Height = 23;
                 text.Width = 200;

@@ -38,19 +38,19 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(501, 159);
+            this.btnAgregar.Location = new System.Drawing.Point(496, 147);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3);
             this.btnAgregar.TabIndex = 2;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(501, 231);
+            this.btnModificar.Location = new System.Drawing.Point(496, 219);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(3);
             this.btnModificar.TabIndex = 4;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(501, 195);
+            this.btnEliminar.Location = new System.Drawing.Point(496, 183);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3);
             this.btnEliminar.TabIndex = 3;
             // 
@@ -58,7 +58,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 102);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(17, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(422, 26);
             this.label1.TabIndex = 3;
@@ -68,6 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(246, 27);
@@ -78,7 +80,8 @@
             // 
             this.lblIdEjercicio.AutoSize = true;
             this.lblIdEjercicio.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdEjercicio.Location = new System.Drawing.Point(29, 175);
+            this.lblIdEjercicio.ForeColor = System.Drawing.Color.White;
+            this.lblIdEjercicio.Location = new System.Drawing.Point(17, 163);
             this.lblIdEjercicio.Name = "lblIdEjercicio";
             this.lblIdEjercicio.Size = new System.Drawing.Size(108, 26);
             this.lblIdEjercicio.TabIndex = 5;
@@ -88,7 +91,8 @@
             // 
             this.lblNombreEjercicio.AutoSize = true;
             this.lblNombreEjercicio.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEjercicio.Location = new System.Drawing.Point(29, 218);
+            this.lblNombreEjercicio.ForeColor = System.Drawing.Color.White;
+            this.lblNombreEjercicio.Location = new System.Drawing.Point(17, 206);
             this.lblNombreEjercicio.Margin = new System.Windows.Forms.Padding(3, 33, 3, 0);
             this.lblNombreEjercicio.Name = "lblNombreEjercicio";
             this.lblNombreEjercicio.Size = new System.Drawing.Size(161, 26);
@@ -97,14 +101,17 @@
             // 
             // txtIdEjercicio
             // 
-            this.txtIdEjercicio.Location = new System.Drawing.Point(211, 178);
+            this.txtIdEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.txtIdEjercicio.ForeColor = System.Drawing.Color.White;
+            this.txtIdEjercicio.Location = new System.Drawing.Point(199, 166);
             this.txtIdEjercicio.Name = "txtIdEjercicio";
             this.txtIdEjercicio.Size = new System.Drawing.Size(223, 22);
             this.txtIdEjercicio.TabIndex = 0;
             // 
             // txtNombreEjercicio
             // 
-            this.txtNombreEjercicio.Location = new System.Drawing.Point(211, 221);
+            this.txtNombreEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.txtNombreEjercicio.Location = new System.Drawing.Point(199, 209);
             this.txtNombreEjercicio.Name = "txtNombreEjercicio";
             this.txtNombreEjercicio.Size = new System.Drawing.Size(223, 22);
             this.txtNombreEjercicio.TabIndex = 1;
@@ -114,7 +121,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 295);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.ClientSize = new System.Drawing.Size(667, 286);
             this.Controls.Add(this.txtNombreEjercicio);
             this.Controls.Add(this.txtIdEjercicio);
             this.Controls.Add(this.lblNombreEjercicio);
