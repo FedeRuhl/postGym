@@ -135,6 +135,5 @@ namespace Gimnasio
                 MessageBox.Show("Error: " + error.Message);
             }
         }
-
     }
 }

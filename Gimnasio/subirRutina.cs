@@ -13,7 +13,8 @@ namespace Gimnasio
 {
     public partial class subirRutina : FormularioBase
     {
-        private int y = 198;
+        //private int y = 198;
+        private int y = 0;
         private int conteo = 0;
         TextBox text = new TextBox();
         public subirRutina()
@@ -27,6 +28,9 @@ namespace Gimnasio
             string cmd = string.Format("select * from tablaEjercicio");
             DataSet DS = Utilidades.Ejecutar(cmd);
             comboBox1.DataSource = DS.Tables[0];
+            y = labelPeso.Location.Y;
+
+            //y = 254;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -40,7 +44,8 @@ namespace Gimnasio
                 text.Text = "Cantidad de peso (kg)";
                 text.Height = 23;
                 text.Width = 200;
-                text.Location = new Point(115, y);
+                //text.Location = new Point(115, y);
+                text.Location = new Point(labelPeso.Location.X + 108, y);
                 y += 25;
                 text.Name = "txtDinamic" + conteo.ToString();
                 conteo++;
@@ -100,17 +105,20 @@ namespace Gimnasio
                         y = 198;
                     }
                 }
-
                 else
                 {
                     MessageBox.Show("Para subir la rutina los pesos de las series deben ser ingresados correctamente.");
                 }
             }
-
             else
             {
                 MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
             }      
+        }
+
+        private void subirRutina_SizeChanged(object sender, EventArgs e)
+        {
+            y = labelPeso.Location.Y;
         }
     }
 }

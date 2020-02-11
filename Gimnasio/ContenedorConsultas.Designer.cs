@@ -34,6 +34,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 335);
+            this.button2.Location = new System.Drawing.Point(12, 333);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(301, 63);
@@ -71,7 +72,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 418);
+            this.button1.Location = new System.Drawing.Point(12, 416);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(301, 63);
@@ -94,7 +95,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 501);
+            this.button3.Location = new System.Drawing.Point(12, 499);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(301, 63);
@@ -116,7 +117,7 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 584);
+            this.button4.Location = new System.Drawing.Point(12, 582);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(301, 63);
@@ -137,26 +138,38 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(323, 1016);
+            this.panel1.Size = new System.Drawing.Size(323, 1012);
             this.panel1.TabIndex = 20;
             this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            // 
+            // panel2
+            // 
+            this.panel2.AutoSize = true;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(323, 39);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1356, 1012);
+            this.panel2.TabIndex = 21;
             // 
             // ContenedorConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(1679, 1055);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.ClientSize = new System.Drawing.Size(1679, 1051);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.IsMdiContainer = true;
             this.Name = "ContenedorConsultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContenedorConsultas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContenedorConsultas_FormClosing);
             this.Load += new System.EventHandler(this.ContenedorConsultas_Load);
+            this.Resize += new System.EventHandler(this.ContenedorConsultas_Resize);
             this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -166,5 +179,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

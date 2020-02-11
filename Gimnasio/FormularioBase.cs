@@ -38,11 +38,6 @@ namespace Gimnasio
 
         }
 
-        public virtual void Buscar()
-        {
-
-        }
-
         private void FormularioBase_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Escape))

@@ -14,8 +14,6 @@ namespace Gimnasio
 {
     public partial class ConsultasDetallesPerfil : Consultas
     {
-        bool unaVezMaximizar = false;
-        bool unaVezRestaurar = false;
         public ConsultasDetallesPerfil()
         {
             InitializeComponent();
@@ -50,7 +48,7 @@ namespace Gimnasio
                 string fechaInicio = fecha.ToString("yyyyMMdd HH:mm:ss");
                 fecha = fecha.AddMinutes(1);
                 string fechaFin = fecha.ToString("yyyyMMdd HH:mm:ss");
-                string cmd = "Select * from tablaDetallesPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
+                string cmd = "select tablaPersona.idPersona, idDetalles, nombrePersona, alturaPersona, pesoPersona, fotoPersona, fecha from tablaPersona inner join tablaDetallesPersona on tablaPersona.idPersona = tablaDetallesPersona.idPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];
             }
@@ -120,30 +118,6 @@ namespace Gimnasio
             }
             else
                 MessageBox.Show("No se ha podido calcular correctamente el índice de masa corporal.");
-        }
-
-        protected override void iconMaximizar_Click(object sender, EventArgs e)
-        {
-            base.iconMaximizar_Click(sender, e);
-            dataGridView3.Size = new Size(1100, dataGridView3.Size.Height);
-            if (!unaVezMaximizar)
-            {
-                dataGridView3.Location = new Point((dataGridView3.Location.X - 200), dataGridView3.Location.Y);
-                unaVezMaximizar = true;
-                unaVezRestaurar = false;
-            }
-        }
-
-        protected override void iconRestaurar_Click(object sender, EventArgs e)
-        {
-            base.iconRestaurar_Click(sender, e);
-            dataGridView3.Size = new Size(996, dataGridView3.Size.Height);
-            if (!unaVezRestaurar)
-            {
-                dataGridView3.Location = new Point((dataGridView3.Location.X + 200), dataGridView3.Location.Y);
-                unaVezRestaurar = true;
-                unaVezMaximizar = false;
-            }
         }
     }
 }

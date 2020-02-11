@@ -44,6 +44,7 @@
             this.consultasEjerciciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.unirPersonaTableAdapter = new Gimnasio.unirPersonaDataSetTableAdapters.unirPersonaTableAdapter();
             this.unirEjercicioTableAdapter = new Gimnasio.unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).BeginInit();
@@ -51,6 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultasEjerciciosBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -86,7 +88,6 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -108,9 +109,10 @@
             this.idDetallesDataGridViewTextBoxColumn,
             this.fechaDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.unirEjercicioBindingSource;
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dataGridView3.Location = new System.Drawing.Point(35, 328);
+            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
@@ -132,7 +134,7 @@
             this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(902, 397);
+            this.dataGridView3.Size = new System.Drawing.Size(923, 361);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView3_KeyPress);
             // 
@@ -195,13 +197,22 @@
             // 
             this.unirEjercicioTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.dataGridView3);
+            this.panel1.Location = new System.Drawing.Point(55, 335);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(923, 361);
+            this.panel1.TabIndex = 5;
+            // 
             // ConsultasDetallesEjercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1035, 734);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.panel1);
             this.Name = "ConsultasDetallesEjercicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultasEjercicios";
@@ -209,7 +220,7 @@
             this.Controls.SetChildIndex(this.btnBuscar, 0);
             this.Controls.SetChildIndex(this.lblFechaConsultas, 0);
             this.Controls.SetChildIndex(this.listBox1, 0);
-            this.Controls.SetChildIndex(this.dataGridView3, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
@@ -217,6 +228,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultasEjerciciosBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +248,6 @@
         private unirEjercicioDataSet unirEjercicioDataSet;
         private System.Windows.Forms.BindingSource unirEjercicioBindingSource;
         private unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter unirEjercicioTableAdapter;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -218,9 +218,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGuardarEjercicio);
             this.Name = "subirRutina";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Auto;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "subirRutina";
             this.Load += new System.EventHandler(this.SubirRutina_Load);
+            this.SizeChanged += new System.EventHandler(this.subirRutina_SizeChanged);
             this.Controls.SetChildIndex(this.btnGuardarEjercicio, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);

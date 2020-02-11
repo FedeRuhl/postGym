@@ -14,8 +14,6 @@ namespace Gimnasio
 {
     public partial class ConsultasDetallesEjercicio : Consultas
     {
-        bool unaVezMaximizar = false;
-        bool unaVezRestaurar = false;
         public ConsultasDetallesEjercicio()
         {
             InitializeComponent();
@@ -66,7 +64,7 @@ namespace Gimnasio
                 }
             }
         }
-
+        /*
         protected override void iconMaximizar_Click(object sender, EventArgs e)
         {
             base.iconMaximizar_Click(sender, e);
@@ -89,6 +87,6 @@ namespace Gimnasio
                 unaVezRestaurar = true;
                 unaVezMaximizar = false;
             }
-        }
+        }*/
     }
 }

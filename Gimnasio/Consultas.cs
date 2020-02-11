@@ -11,11 +11,16 @@ using System.Windows.Forms;
 
 namespace Gimnasio
 {
-    public partial class Consultas : FormularioBase
+    public partial class Consultas : Form
     {
         public Consultas()
         {
             InitializeComponent();
+        }
+
+        public virtual void Buscar()
+        {
+
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)

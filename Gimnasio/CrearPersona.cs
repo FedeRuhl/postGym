@@ -65,6 +65,10 @@ namespace Gimnasio
             {
                 string cmd = string.Format("EXEC modificarPersona '{0}', '{1}'", txtIdPersona.Text.Trim(), txtNombrePersona.Text.Trim());
                 Utilidades.Ejecutar(cmd);
+                MessageBox.Show("Se ha modificado correctamente");
+
+                txtIdPersona.Clear();
+                txtNombrePersona.Clear();
             }
             else
             {

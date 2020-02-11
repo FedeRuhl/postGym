@@ -53,6 +53,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.unirPersonaTableAdapter = new Gimnasio.unirPersonaDataSetTableAdapters.unirPersonaTableAdapter();
+            this.panelDataGridView = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).BeginInit();
@@ -65,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelDataGridView.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -96,7 +98,6 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -122,9 +123,10 @@
             this.fotoPersonaDataGridViewTextBoxColumn,
             this.fechaDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.unirPersonaBindingSource1;
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dataGridView3.Location = new System.Drawing.Point(12, 297);
+            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
@@ -146,7 +148,7 @@
             this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(996, 371);
+            this.dataGridView3.Size = new System.Drawing.Size(919, 345);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellClick);
             this.dataGridView3.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellEnter);
@@ -237,7 +239,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(414, 674);
+            this.button1.Location = new System.Drawing.Point(437, 689);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 29);
             this.button1.TabIndex = 7;
@@ -259,6 +261,15 @@
             // 
             this.unirPersonaTableAdapter.ClearBeforeFill = true;
             // 
+            // panelDataGridView
+            // 
+            this.panelDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDataGridView.Controls.Add(this.dataGridView3);
+            this.panelDataGridView.Location = new System.Drawing.Point(64, 324);
+            this.panelDataGridView.Name = "panelDataGridView";
+            this.panelDataGridView.Size = new System.Drawing.Size(919, 345);
+            this.panelDataGridView.TabIndex = 9;
+            // 
             // ConsultasDetallesPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -266,9 +277,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1031, 730);
+            this.Controls.Add(this.panelDataGridView);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView3);
             this.Name = "ConsultasDetallesPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultasPersona";
@@ -276,9 +287,9 @@
             this.Controls.SetChildIndex(this.btnBuscar, 0);
             this.Controls.SetChildIndex(this.lblFechaConsultas, 0);
             this.Controls.SetChildIndex(this.listBox1, 0);
-            this.Controls.SetChildIndex(this.dataGridView3, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.pictureBox2, 0);
+            this.Controls.SetChildIndex(this.panelDataGridView, 0);
             ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).EndInit();
@@ -291,6 +302,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelDataGridView.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,5 +332,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pesoPersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fotoPersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panelDataGridView;
     }
 }

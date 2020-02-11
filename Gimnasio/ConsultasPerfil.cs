@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Gimnasio
 {
-    public partial class ConsultasPerfiles : FormularioBase
+    public partial class ConsultasPerfiles : Form
     {
         public ConsultasPerfiles()
         {

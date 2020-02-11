@@ -79,6 +79,7 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblFechaConsultas);
             this.Controls.Add(this.btnBuscar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultas";
             this.Text = "Consultas";
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();

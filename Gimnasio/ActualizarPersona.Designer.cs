@@ -51,6 +51,7 @@
             // 
             this.txtPesoPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.txtPesoPersona.ForeColor = System.Drawing.Color.White;
             this.txtPesoPersona.Location = new System.Drawing.Point(247, 275);
             this.txtPesoPersona.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.txtPesoPersona.Name = "txtPesoPersona";
@@ -74,6 +75,7 @@
             // 
             this.txtAlturaPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAlturaPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.txtAlturaPersona.ForeColor = System.Drawing.Color.White;
             this.txtAlturaPersona.Location = new System.Drawing.Point(247, 219);
             this.txtAlturaPersona.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.txtAlturaPersona.Name = "txtAlturaPersona";
@@ -155,6 +157,7 @@
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.comboBox1.DataSource = this.tablaPersonaBindingSource7;
             this.comboBox1.DisplayMember = "nombrePersona";
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(247, 104);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(17, 3, 3, 17);

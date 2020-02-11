@@ -120,6 +120,7 @@
             // 
             this.txtNombreEjercicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombreEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.txtNombreEjercicio.ForeColor = System.Drawing.Color.White;
             this.txtNombreEjercicio.Location = new System.Drawing.Point(199, 209);
             this.txtNombreEjercicio.Name = "txtNombreEjercicio";
             this.txtNombreEjercicio.Size = new System.Drawing.Size(223, 22);
