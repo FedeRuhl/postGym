@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace Gimnasio
 {
-    public partial class Mantenimiento : FormularioBase
+    public partial class Mantenimiento : Form
     {
         public Mantenimiento()
         {
             InitializeComponent();
+        }
+
+        public virtual void Agregar()
+        {
+
+        }
+
+        public virtual void Eliminar()
+        {
+
+        }
+
+        public virtual void Modificar()
+        {
+
         }
 
         private void Button1_Click(object sender, EventArgs e)

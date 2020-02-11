@@ -19,7 +19,7 @@ namespace Gimnasio
 
         private void ContenedorMantenimiento_Load(object sender, EventArgs e)
         {
-            MdiClient oMDI;
+            /*MdiClient oMDI;
             foreach (Control ctl in this.Controls)
             {
                 try
@@ -30,7 +30,7 @@ namespace Gimnasio
                 catch (InvalidCastException exc)
                 {
                 }
-            }
+            }*/
         }
 
         private void ContenedorMantenimiento_FormClosing(object sender, FormClosingEventArgs e)
@@ -43,34 +43,37 @@ namespace Gimnasio
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Width = 45;
+            panel2.Controls.Clear();
             CrearPersona MP = new CrearPersona();
-            MP.MdiParent = this;
+            MP.TopLevel = false;
+            MP.Dock = DockStyle.Fill;
+            panel2.Controls.Add(MP);
             MP.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             panel1.Width = 45;
+            panel2.Controls.Clear();
             MantenimientoEjercicio ME = new MantenimientoEjercicio();
-            ME.MdiParent = this;
+            ME.TopLevel = false;
+            ME.Dock = DockStyle.Fill;
+            panel2.Controls.Add(ME);
             ME.Show();
         }
 
         private void panel1_MouseEnter(object sender, EventArgs e)
         {
-            if (MdiChildren.Length == 0)
                 panel1.Width = 277;
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            if (MdiChildren.Length == 0)
                 panel1.Width = 277;
         }
 
         private void button2_MouseEnter(object sender, EventArgs e)
         {
-            if (MdiChildren.Length == 0)
                 panel1.Width = 277;
         }
     }
