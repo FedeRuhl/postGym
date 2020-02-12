@@ -19,8 +19,14 @@ namespace Gimnasio
 
         private void ConsultasPerfiles_Load(object sender, EventArgs e)
         {
-            this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
-
+            try
+            {
+                this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Se ha producido el siguiente error: " + ex.Message);
+            }
         }
 
         private void dataGridView1_KeyPress(object sender, KeyPressEventArgs e)

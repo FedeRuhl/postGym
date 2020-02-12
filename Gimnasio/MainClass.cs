@@ -24,23 +24,44 @@ namespace Gimnasio
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ContenedorProcesos CP = new ContenedorProcesos();
-            this.Hide();
-            CP.Show();
+            try
+            {
+                ContenedorProcesos CP = new ContenedorProcesos();
+                this.Hide();
+                CP.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Se ha producido el siguiente error: " + ex.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ContenedorMantenimiento CM = new ContenedorMantenimiento();
-            this.Hide();
-            CM.Show();
+            try
+            {
+                ContenedorMantenimiento CM = new ContenedorMantenimiento();
+                this.Hide();
+                CM.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se ha producido el siguiente error: " + ex.Message);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ContenedorConsultas CC = new ContenedorConsultas();
-            this.Hide();
-            CC.Show();
+            try
+            {
+                ContenedorConsultas CC = new ContenedorConsultas();
+                this.Hide();
+                CC.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Se ha producido el siguiente error: " + ex.Message);
+            }
         }
     }
 }

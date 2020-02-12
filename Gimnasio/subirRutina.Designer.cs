@@ -233,7 +233,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "subirRutina";
             this.Load += new System.EventHandler(this.SubirRutina_Load);
-            this.SizeChanged += new System.EventHandler(this.subirRutina_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();

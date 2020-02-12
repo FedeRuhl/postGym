@@ -21,35 +21,58 @@ namespace Gimnasio
 
         private void ActualizarPersona_Load_1(object sender, EventArgs e)
         {
-            this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
+            try
+            {
+                this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Se ha producido el siguiente error: " + ex.Message);
+            }
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            try
             {
-                fotoPersona = openFileDialog1.FileName;
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    fotoPersona = openFileDialog1.FileName;
+                }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se ha podido cargar la foto. " + ex.Message);
+            }
+            
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text != "" && fotoPersona != "" && txtAlturaPersona.Text != "" && txtPesoPersona.Text != "")
+            try
             {
-                int idPersona = comboBox1.SelectedIndex + 1;
-                string nombrePersona = comboBox1.Text.Trim();
-                string altura = txtAlturaPersona.Text;
-                string peso = txtPesoPersona.Text;
-                double alturaPersona = Convert.ToDouble(altura.Replace(',', '.'));
-                double pesoPersona = Convert.ToDouble(peso.Replace(',', '.'));
-                string cmd = string.Format("EXEC actualizaPersona '{0}', '{1}', '{2}', '{3}', '{4}'", idPersona, nombrePersona, fotoPersona, alturaPersona, pesoPersona);
-                Utilidades.Ejecutar(cmd);
-                MessageBox.Show("¡Se ha actualizado correctamente!");
-            }
+                if (comboBox1.Text != "" && fotoPersona != "" && txtAlturaPersona.Text != "" && txtPesoPersona.Text != "")
+                {
+                    int idPersona = comboBox1.SelectedIndex + 1;
+                    string nombrePersona = comboBox1.Text.Trim();
+                    string altura = txtAlturaPersona.Text;
+                    string peso = txtPesoPersona.Text;
+                    double alturaPersona = Convert.ToDouble(altura.Replace(',', '.'));
+                    double pesoPersona = Convert.ToDouble(peso.Replace(',', '.'));
+                    string cmd = string.Format("EXEC actualizaPersona '{0}', '{1}', '{2}', '{3}', '{4}'", idPersona, nombrePersona, fotoPersona, alturaPersona, pesoPersona);
+                    Utilidades.Ejecutar(cmd);
+                    MessageBox.Show("¡Se ha actualizado correctamente!");
+                }
 
-            else
+                else
+                {
+                    MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
+                }
+            }
+            catch(Exception ex)
             {
-                MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
+                MessageBox.Show("Se ha producido el siguiente error: " + ex.Message);
             }
         }
     }

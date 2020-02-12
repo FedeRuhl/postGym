@@ -24,14 +24,18 @@ namespace Gimnasio
 
         private void SubirRutina_Load(object sender, EventArgs e)
         {
-            this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
-            string cmd = string.Format("select * from tablaEjercicio");
-            DataSet DS = Utilidades.Ejecutar(cmd);
-            comboBox1.DataSource = DS.Tables[0];
-            //y = labelPeso.Location.Y;
-            y = 0;
-
-            //y = 254;
+            try
+            {
+                this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
+                string cmd = string.Format("select * from tablaEjercicio");
+                DataSet DS = Utilidades.Ejecutar(cmd);
+                comboBox1.DataSource = DS.Tables[0];
+                y = 0;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se ha podido cargar la ventana. " + ex.Message);
+            }
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -58,66 +62,63 @@ namespace Gimnasio
 
         private void btnGuardarEjercicio_Click(object sender, EventArgs e)
         {
-            bool continuar = true;
-            if (comboBox2.Text != "" && comboBox1.Text != "")
+            try
             {
-                String[] arregloDinamico = new String[conteo + 1];
-                string nombreTexto;
-                int number = 0;
-                string cadena;
-                for (int i = 0; i < conteo; i++)
+                bool continuar = true;
+                if (comboBox2.Text != "" && comboBox1.Text != "")
                 {
-                    nombreTexto = "txtDinamic" + i;
-                    if (Controls.Find(nombreTexto, true).Length > 0)
-                    {
-                        cadena = Controls.Find(nombreTexto, true).First().Text;
-                        if (int.TryParse(cadena, out number) && Controls.Find(nombreTexto, true).Count() != 0)
-                        {
-                            arregloDinamico[i] = cadena;
-                        }
-                        else
-                        {
-                            continuar = false;
-                        }
-                    }                   
-                }
-
-                if (conteo > 0 && continuar)
-                {
-                    string nombrePersona = comboBox2.Text;
-                    string nombreEjercicio = comboBox1.Text;
-                    string fecha = dateTimePicker1.Value.ToString("yyyyMMdd HH:mm:ss");
-                    string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fecha, conteo);
-                    DataSet ds = Utilidades.Ejecutar(cmd);
-                    for (int i = 0; i < conteo; i++)
-                    {
-                        cmd = string.Format("EXEC crearSerie '{0}', '{1}'", arregloDinamico[i], nombreEjercicio);
-                        ds = Utilidades.Ejecutar(cmd);
-                    }
-
-                    MessageBox.Show("¡Se ha guardado correctamente!");
+                    String[] arregloDinamico = new String[conteo + 1];
+                    string nombreTexto;
+                    int number = 0;
+                    string cadena;
                     for (int i = 0; i < conteo; i++)
                     {
                         nombreTexto = "txtDinamic" + i;
-                        //Controls.Find(nombreTexto, true).First().Hide();
-                        Controls.RemoveByKey(nombreTexto);
-                        //y = 198;
+                        if (Controls.Find(nombreTexto, true).Length > 0)
+                        {
+                            cadena = Controls.Find(nombreTexto, true).First().Text;
+                            if (int.TryParse(cadena, out number) && Controls.Find(nombreTexto, true).Count() != 0)
+                            {
+                                arregloDinamico[i] = cadena;
+                            }
+                            else
+                            {
+                                continuar = false;
+                            }
+                        }
+                    }
+
+                    if (conteo > 0 && continuar)
+                    {
+                        string nombrePersona = comboBox2.Text;
+                        string nombreEjercicio = comboBox1.Text;
+                        string fecha = dateTimePicker1.Value.ToString("yyyyMMdd HH:mm:ss");
+                        string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fecha, conteo);
+                        DataSet ds = Utilidades.Ejecutar(cmd);
+                        for (int i = 0; i < conteo; i++)
+                        {
+                            cmd = string.Format("EXEC crearSerie '{0}', '{1}'", arregloDinamico[i], nombreEjercicio);
+                            ds = Utilidades.Ejecutar(cmd);
+                        }
+
+                        MessageBox.Show("¡Se ha guardado correctamente!");
+                        panelPesos.Controls.Clear();
+                        y = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Para subir la rutina los pesos de las series deben ser ingresados correctamente.");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Para subir la rutina los pesos de las series deben ser ingresados correctamente.");
+                    MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
                 }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
-            }      
-        }
-
-        private void subirRutina_SizeChanged(object sender, EventArgs e)
-        {
-            //y = labelPeso.Location.Y;
+                MessageBox.Show("Se ha producido el siguiente error: " + ex.Message); 
+            } 
         }
     }
 }

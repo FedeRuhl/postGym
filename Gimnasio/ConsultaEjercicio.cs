@@ -19,7 +19,14 @@ namespace Gimnasio
 
         private void ConsultaEjercicio_Load(object sender, EventArgs e)
         {
-            this.tablaEjercicioTableAdapter.Fill(this.tablaEjercicio._tablaEjercicio);
+            try
+            {
+                this.tablaEjercicioTableAdapter.Fill(this.tablaEjercicio._tablaEjercicio);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Se ha producido el siguiente error : " + ex.Message);
+            }
         }
 
         private void dataGridView2_KeyPress(object sender, KeyPressEventArgs e)

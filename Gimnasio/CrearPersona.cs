@@ -61,20 +61,26 @@ namespace Gimnasio
 
         private void BtnMod_Click(object sender, EventArgs e)
         {
-            if (txtIdPersona.Text != "" && txtNombrePersona.Text != "" && int.TryParse(txtIdPersona.Text, out number))
+            try
             {
-                string cmd = string.Format("EXEC modificarPersona '{0}', '{1}'", txtIdPersona.Text.Trim(), txtNombrePersona.Text.Trim());
-                Utilidades.Ejecutar(cmd);
-                MessageBox.Show("Se ha modificado correctamente");
+                if (txtIdPersona.Text != "" && txtNombrePersona.Text != "" && int.TryParse(txtIdPersona.Text, out number))
+                {
+                    string cmd = string.Format("EXEC modificarPersona '{0}', '{1}'", txtIdPersona.Text.Trim(), txtNombrePersona.Text.Trim());
+                    Utilidades.Ejecutar(cmd);
+                    MessageBox.Show("Se ha modificado correctamente");
 
-                txtIdPersona.Clear();
-                txtNombrePersona.Clear();
+                    txtIdPersona.Clear();
+                    txtNombrePersona.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Ningún campo debe estar vacio.");
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Ningún campo debe estar vacio.");
-            }
-            
+                MessageBox.Show("Se ha producido el siguiente error: " + ex.Message);
+            } 
         }
     }
 }
