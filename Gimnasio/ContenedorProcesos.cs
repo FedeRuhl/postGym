@@ -12,8 +12,6 @@ namespace Gimnasio
 {
     public partial class ContenedorProcesos : FormularioBase
     {
-        private bool salio;
-        private bool botonDosAdentro;
         public ContenedorProcesos()
         {
             InitializeComponent();
@@ -21,7 +19,7 @@ namespace Gimnasio
 
         private void ContenedorProcesos_Load(object sender, EventArgs e)
         {
-            MdiClient oMDI;
+            /*MdiClient oMDI;
             foreach (Control ctl in this.Controls)
             {
                 try
@@ -33,6 +31,7 @@ namespace Gimnasio
                 {
                 }
             }
+            */
         }
 
         private void ContenedorProcesos_FormClosing(object sender, FormClosingEventArgs e)
@@ -44,35 +43,38 @@ namespace Gimnasio
 
         private void panel1_MouseEnter(object sender, EventArgs e)
         {
-            if (MdiChildren.Length == 0)
                 panel1.Width = 250;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             panel1.Width = 52;
+            panel2.Controls.Clear();
             subirRutina SR = new subirRutina();
-            SR.MdiParent = this;
+            SR.TopLevel = false;
+            SR.Dock = DockStyle.Fill;
+            panel2.Controls.Add(SR);
             SR.Show();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             panel1.Width = 52;
+            panel2.Controls.Clear();
             ActualizarPersona AP = new ActualizarPersona();
-            AP.MdiParent = this;
+            AP.TopLevel = false;
+            AP.Dock = DockStyle.Fill;
+            panel2.Controls.Add(AP);
             AP.Show();
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            if (MdiChildren.Length == 0)
             panel1.Width = 250;
         }
 
         private void button2_MouseEnter(object sender, EventArgs e)
         {
-            if (MdiChildren.Length == 0)
                 panel1.Width = 250;
         }
     }

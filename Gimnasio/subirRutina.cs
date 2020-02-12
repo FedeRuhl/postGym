@@ -11,7 +11,7 @@ using LibreriaGimnasio;
 
 namespace Gimnasio
 {
-    public partial class subirRutina : FormularioBase
+    public partial class subirRutina : Form
     {
         //private int y = 198;
         private int y = 0;

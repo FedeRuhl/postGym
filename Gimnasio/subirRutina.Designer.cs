@@ -55,7 +55,7 @@
             // btnGuardarEjercicio
             // 
             this.btnGuardarEjercicio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardarEjercicio.Location = new System.Drawing.Point(462, 156);
+            this.btnGuardarEjercicio.Location = new System.Drawing.Point(482, 199);
             this.btnGuardarEjercicio.Name = "btnGuardarEjercicio";
             this.btnGuardarEjercicio.Size = new System.Drawing.Size(105, 33);
             this.btnGuardarEjercicio.TabIndex = 2;
@@ -69,7 +69,8 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 57);
+            this.label2.Location = new System.Drawing.Point(32, 86);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(476, 26);
             this.label2.TabIndex = 9;
@@ -81,7 +82,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 141);
+            this.label3.Location = new System.Drawing.Point(32, 184);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 26);
@@ -94,7 +95,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(12, 191);
+            this.label7.Location = new System.Drawing.Point(32, 234);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 26);
@@ -109,7 +110,7 @@
             this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.dateTimePicker1.Location = new System.Drawing.Point(101, 191);
+            this.dateTimePicker1.Location = new System.Drawing.Point(121, 234);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(318, 22);
             this.dateTimePicker1.TabIndex = 1;
@@ -131,7 +132,7 @@
             this.comboBox1.DisplayMember = "nombreEjercicio";
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(117, 144);
+            this.comboBox1.Location = new System.Drawing.Point(137, 187);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(302, 24);
             this.comboBox1.TabIndex = 0;
@@ -139,7 +140,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(462, 195);
+            this.button1.Location = new System.Drawing.Point(482, 238);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 33);
             this.button1.TabIndex = 4;
@@ -153,7 +154,7 @@
             this.labelPeso.AutoSize = true;
             this.labelPeso.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPeso.ForeColor = System.Drawing.Color.White;
-            this.labelPeso.Location = new System.Drawing.Point(12, 242);
+            this.labelPeso.Location = new System.Drawing.Point(32, 285);
             this.labelPeso.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.labelPeso.Name = "labelPeso";
             this.labelPeso.Size = new System.Drawing.Size(56, 26);
@@ -166,7 +167,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 99);
+            this.label1.Location = new System.Drawing.Point(32, 142);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 26);
@@ -181,7 +182,7 @@
             this.comboBox2.DisplayMember = "nombrePersona";
             this.comboBox2.ForeColor = System.Drawing.Color.White;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(117, 101);
+            this.comboBox2.Location = new System.Drawing.Point(137, 144);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(302, 24);
             this.comboBox2.TabIndex = 24;
@@ -206,7 +207,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(604, 462);
+            this.ClientSize = new System.Drawing.Size(638, 462);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelPeso);
@@ -217,22 +218,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGuardarEjercicio);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "subirRutina";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Auto;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "subirRutina";
             this.Load += new System.EventHandler(this.SubirRutina_Load);
             this.SizeChanged += new System.EventHandler(this.subirRutina_SizeChanged);
-            this.Controls.SetChildIndex(this.btnGuardarEjercicio, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.label7, 0);
-            this.Controls.SetChildIndex(this.dateTimePicker1, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.labelPeso, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.comboBox2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();

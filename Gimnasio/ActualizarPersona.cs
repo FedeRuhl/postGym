@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Gimnasio
 {
-    public partial class ActualizarPersona : FormularioBase
+    public partial class ActualizarPersona : Form
     {
         string fotoPersona = "";
         public ActualizarPersona()
