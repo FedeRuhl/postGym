@@ -28,7 +28,8 @@ namespace Gimnasio
             string cmd = string.Format("select * from tablaEjercicio");
             DataSet DS = Utilidades.Ejecutar(cmd);
             comboBox1.DataSource = DS.Tables[0];
-            y = labelPeso.Location.Y;
+            //y = labelPeso.Location.Y;
+            y = 0;
 
             //y = 254;
         }
@@ -42,14 +43,12 @@ namespace Gimnasio
                 text.BackColor = colour;
                 text.ForeColor = Color.White;
                 text.Text = "Cantidad de peso (kg)";
-                text.Height = 23;
-                text.Width = 200;
-                //text.Location = new Point(115, y);
-                text.Location = new Point(labelPeso.Location.X + 108, y);
-                y += 25;
+                text.Width = 228;
+                text.Location = new Point(0, y);
                 text.Name = "txtDinamic" + conteo.ToString();
+                panelPesos.Controls.Add(text);
                 conteo++;
-                Controls.Add(text);
+                y += 25;
             }
             catch(Exception error)
             {
@@ -102,7 +101,7 @@ namespace Gimnasio
                         nombreTexto = "txtDinamic" + i;
                         //Controls.Find(nombreTexto, true).First().Hide();
                         Controls.RemoveByKey(nombreTexto);
-                        y = 198;
+                        //y = 198;
                     }
                 }
                 else
@@ -118,7 +117,7 @@ namespace Gimnasio
 
         private void subirRutina_SizeChanged(object sender, EventArgs e)
         {
-            y = labelPeso.Location.Y;
+            //y = labelPeso.Location.Y;
         }
     }
 }
