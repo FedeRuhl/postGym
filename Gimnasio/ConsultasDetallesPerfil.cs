@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 //using LibreriaGimnasio;
 using System.IO;
 
@@ -36,7 +37,11 @@ namespace Gimnasio
         {
             try
             {
-                direccion = dataGridView3.Rows[e.RowIndex].Cells[5].Value.ToString();
+                DataSet ds;
+                string idDetalles = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string cmd = "Select fotoPersona from tablaDetallesPersona where idDetalles = '" + idDetalles + "'";
+                ds = Utilidades.Ejecutar(cmd);
+                direccion = ds.Tables[0].Rows[0]["fotoPersona"].ToString();
                 pictureBox2.Image = Image.FromFile(direccion);
                 pictureBox2.Refresh();
             }
@@ -54,7 +59,7 @@ namespace Gimnasio
                 string fechaInicio = fecha.ToString("yyyyMMdd HH:mm:ss");
                 fecha = fecha.AddMinutes(1);
                 string fechaFin = fecha.ToString("yyyyMMdd HH:mm:ss");
-                string cmd = "select tablaPersona.idPersona, idDetalles, nombrePersona, alturaPersona, pesoPersona, fotoPersona, fecha from tablaPersona inner join tablaDetallesPersona on tablaPersona.idPersona = tablaDetallesPersona.idPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
+                string cmd = "select tablaPersona.idPersona, idDetalles, nombrePersona, alturaPersona, pesoPersona, fecha from tablaPersona inner join tablaDetallesPersona on tablaPersona.idPersona = tablaDetallesPersona.idPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];
             }

@@ -286,9 +286,9 @@
       <DependentUpon>unirPersonaDataSet.xsd</DependentUpon>
     </None>
     <None Include="unirPersonaDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>unirPersonaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="unirPersonaDataSet.xss">
       <DependentUpon>unirPersonaDataSet.xsd</DependentUpon>

@@ -40,19 +40,19 @@
             this.unirEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.unirEjercicioDataSet = new Gimnasio.unirEjercicioDataSet();
             this.unirPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.unirPersonaDataSet = new Gimnasio.unirPersonaDataSet();
             this.consultasEjerciciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.unirPersonaTableAdapter = new Gimnasio.unirPersonaDataSetTableAdapters.unirPersonaTableAdapter();
             this.unirEjercicioTableAdapter = new Gimnasio.unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.unirPersonaDataSet = new Gimnasio.unirPersonaDataSet();
+            this.unirPersonaTableAdapter = new Gimnasio.unirPersonaDataSetTableAdapters.unirPersonaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultasEjerciciosBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -175,23 +175,9 @@
             this.unirEjercicioDataSet.DataSetName = "unirEjercicioDataSet";
             this.unirEjercicioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // unirPersonaBindingSource
-            // 
-            this.unirPersonaBindingSource.DataMember = "unirPersona";
-            this.unirPersonaBindingSource.DataSource = this.unirPersonaDataSet;
-            // 
-            // unirPersonaDataSet
-            // 
-            this.unirPersonaDataSet.DataSetName = "unirPersonaDataSet";
-            this.unirPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // consultasEjerciciosBindingSource
             // 
             this.consultasEjerciciosBindingSource.DataSource = typeof(Gimnasio.ConsultasDetallesEjercicio);
-            // 
-            // unirPersonaTableAdapter
-            // 
-            this.unirPersonaTableAdapter.ClearBeforeFill = true;
             // 
             // unirEjercicioTableAdapter
             // 
@@ -205,6 +191,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(923, 361);
             this.panel1.TabIndex = 5;
+            // 
+            // unirPersonaDataSet
+            // 
+            this.unirPersonaDataSet.DataSetName = "unirPersonaDataSet";
+            this.unirPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // unirPersonaTableAdapter
+            // 
+            this.unirPersonaTableAdapter.ClearBeforeFill = true;
             // 
             // ConsultasDetallesEjercicio
             // 
@@ -226,9 +221,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultasEjerciciosBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,9 +234,7 @@
         private System.Windows.Forms.BindingSource tablaDetallesBindingSource;
         public System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource consultasEjerciciosBindingSource;
-        private unirPersonaDataSet unirPersonaDataSet;
         private System.Windows.Forms.BindingSource unirPersonaBindingSource;
-        private unirPersonaDataSetTableAdapters.unirPersonaTableAdapter unirPersonaTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDetallesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
@@ -249,5 +242,7 @@
         private System.Windows.Forms.BindingSource unirEjercicioBindingSource;
         private unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter unirEjercicioTableAdapter;
         private System.Windows.Forms.Panel panel1;
+        private unirPersonaDataSet unirPersonaDataSet;
+        private unirPersonaDataSetTableAdapters.unirPersonaTableAdapter unirPersonaTableAdapter;
     }
 }

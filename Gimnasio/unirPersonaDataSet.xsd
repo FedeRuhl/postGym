@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="unirPersonaTableAdapter" GeneratorDataComponentClassName="unirPersonaTableAdapter" Name="unirPersona" UserDataComponentName="unirPersonaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="GimnasioConnectionString1 (Settings)" DbObjectName="Gimnasio.dbo.unirPersona" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="GimnasioConnectionString1 (Settings)" DbObjectName="Gimnasio.dbo.unirPersona" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.unirPersona</CommandText>
@@ -26,7 +26,6 @@
               <Mapping SourceColumn="nombrePersona" DataSetColumn="nombrePersona" />
               <Mapping SourceColumn="alturaPersona" DataSetColumn="alturaPersona" />
               <Mapping SourceColumn="pesoPersona" DataSetColumn="pesoPersona" />
-              <Mapping SourceColumn="fotoPersona" DataSetColumn="fotoPersona" />
               <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
             </Mappings>
             <Sources />
@@ -36,7 +35,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="unirPersonaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="unirPersonaDataSet" msprop:Generator_UserDSName="unirPersonaDataSet">
+  <xs:element name="unirPersonaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="unirPersonaDataSet" msprop:Generator_UserDSName="unirPersonaDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="unirPersona" msprop:Generator_TableClassName="unirPersonaDataTable" msprop:Generator_TableVarName="tableunirPersona" msprop:Generator_TablePropName="unirPersona" msprop:Generator_RowDeletingName="unirPersonaRowDeleting" msprop:Generator_RowChangingName="unirPersonaRowChanging" msprop:Generator_RowEvHandlerName="unirPersonaRowChangeEventHandler" msprop:Generator_RowDeletedName="unirPersonaRowDeleted" msprop:Generator_UserTableName="unirPersona" msprop:Generator_RowChangedName="unirPersonaRowChanged" msprop:Generator_RowEvArgName="unirPersonaRowChangeEvent" msprop:Generator_RowClassName="unirPersonaRow">
@@ -53,13 +52,6 @@
               </xs:element>
               <xs:element name="alturaPersona" msprop:Generator_ColumnVarNameInTable="columnalturaPersona" msprop:Generator_ColumnPropNameInRow="alturaPersona" msprop:Generator_ColumnPropNameInTable="alturaPersonaColumn" msprop:Generator_UserColumnName="alturaPersona" type="xs:double" minOccurs="0" />
               <xs:element name="pesoPersona" msprop:Generator_ColumnVarNameInTable="columnpesoPersona" msprop:Generator_ColumnPropNameInRow="pesoPersona" msprop:Generator_ColumnPropNameInTable="pesoPersonaColumn" msprop:Generator_UserColumnName="pesoPersona" type="xs:double" minOccurs="0" />
-              <xs:element name="fotoPersona" msprop:Generator_ColumnVarNameInTable="columnfotoPersona" msprop:Generator_ColumnPropNameInRow="fotoPersona" msprop:Generator_ColumnPropNameInTable="fotoPersonaColumn" msprop:Generator_UserColumnName="fotoPersona" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="200" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>

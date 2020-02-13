@@ -289,8 +289,6 @@ namespace Gimnasio {
             
             private global::System.Data.DataColumn columnpesoPersona;
             
-            private global::System.Data.DataColumn columnfotoPersona;
-            
             private global::System.Data.DataColumn columnfecha;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -368,14 +366,6 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fotoPersonaColumn {
-                get {
-                    return this.columnfotoPersona;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn fechaColumn {
                 get {
                     return this.columnfecha;
@@ -419,7 +409,7 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirPersonaRow AddunirPersonaRow(int idPersona, int idDetalles, string nombrePersona, double alturaPersona, double pesoPersona, string fotoPersona, System.DateTime fecha) {
+            public unirPersonaRow AddunirPersonaRow(int idPersona, int idDetalles, string nombrePersona, double alturaPersona, double pesoPersona, System.DateTime fecha) {
                 unirPersonaRow rowunirPersonaRow = ((unirPersonaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idPersona,
@@ -427,7 +417,6 @@ namespace Gimnasio {
                         nombrePersona,
                         alturaPersona,
                         pesoPersona,
-                        fotoPersona,
                         fecha};
                 rowunirPersonaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowunirPersonaRow);
@@ -464,7 +453,6 @@ namespace Gimnasio {
                 this.columnnombrePersona = base.Columns["nombrePersona"];
                 this.columnalturaPersona = base.Columns["alturaPersona"];
                 this.columnpesoPersona = base.Columns["pesoPersona"];
-                this.columnfotoPersona = base.Columns["fotoPersona"];
                 this.columnfecha = base.Columns["fecha"];
             }
             
@@ -481,8 +469,6 @@ namespace Gimnasio {
                 base.Columns.Add(this.columnalturaPersona);
                 this.columnpesoPersona = new global::System.Data.DataColumn("pesoPersona", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpesoPersona);
-                this.columnfotoPersona = new global::System.Data.DataColumn("fotoPersona", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfotoPersona);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -491,7 +477,6 @@ namespace Gimnasio {
                 this.columnidPersona.AllowDBNull = false;
                 this.columnidDetalles.AllowDBNull = false;
                 this.columnnombrePersona.MaxLength = 100;
-                this.columnfotoPersona.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -704,22 +689,6 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string fotoPersona {
-                get {
-                    try {
-                        return ((string)(this[this.tableunirPersona.fotoPersonaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fotoPersona\' de la tabla \'unirPersona\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableunirPersona.fotoPersonaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime fecha {
                 get {
                     try {
@@ -768,18 +737,6 @@ namespace Gimnasio {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetpesoPersonaNull() {
                 this[this.tableunirPersona.pesoPersonaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsfotoPersonaNull() {
-                return this.IsNull(this.tableunirPersona.fotoPersonaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetfotoPersonaNull() {
-                this[this.tableunirPersona.fotoPersonaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -959,7 +916,6 @@ namespace Gimnasio.unirPersonaDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("nombrePersona", "nombrePersona");
             tableMapping.ColumnMappings.Add("alturaPersona", "alturaPersona");
             tableMapping.ColumnMappings.Add("pesoPersona", "pesoPersona");
-            tableMapping.ColumnMappings.Add("fotoPersona", "fotoPersona");
             tableMapping.ColumnMappings.Add("fecha", "fecha");
             this._adapter.TableMappings.Add(tableMapping);
         }
