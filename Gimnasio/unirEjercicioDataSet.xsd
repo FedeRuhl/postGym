@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="unirEjercicioTableAdapter" GeneratorDataComponentClassName="unirEjercicioTableAdapter" Name="unirEjercicio" UserDataComponentName="unirEjercicioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="GimnasioConnectionString1 (Settings)" DbObjectName="Gimnasio.dbo.unirEjercicio" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="GimnasioConnectionString1 (Settings)" DbObjectName="Gimnasio.dbo.unirEjercicio" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.unirEjercicio</CommandText>
@@ -21,11 +21,11 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="idDetalles" DataSetColumn="idDetalles" />
-              <Mapping SourceColumn="idPersona" DataSetColumn="idPersona" />
               <Mapping SourceColumn="idEjercicio" DataSetColumn="idEjercicio" />
               <Mapping SourceColumn="nombreEjercicio" DataSetColumn="nombreEjercicio" />
+              <Mapping SourceColumn="cantidadSeries" DataSetColumn="cantidadSeries" />
               <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="nombrePersona" DataSetColumn="nombrePersona" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -40,8 +40,6 @@
         <xs:element name="unirEjercicio" msprop:Generator_TableClassName="unirEjercicioDataTable" msprop:Generator_TableVarName="tableunirEjercicio" msprop:Generator_TablePropName="unirEjercicio" msprop:Generator_RowDeletingName="unirEjercicioRowDeleting" msprop:Generator_RowChangingName="unirEjercicioRowChanging" msprop:Generator_RowEvHandlerName="unirEjercicioRowChangeEventHandler" msprop:Generator_RowDeletedName="unirEjercicioRowDeleted" msprop:Generator_UserTableName="unirEjercicio" msprop:Generator_RowChangedName="unirEjercicioRowChanged" msprop:Generator_RowEvArgName="unirEjercicioRowChangeEvent" msprop:Generator_RowClassName="unirEjercicioRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idDetalles" msprop:Generator_ColumnVarNameInTable="columnidDetalles" msprop:Generator_ColumnPropNameInRow="idDetalles" msprop:Generator_ColumnPropNameInTable="idDetallesColumn" msprop:Generator_UserColumnName="idDetalles" type="xs:int" />
-              <xs:element name="idPersona" msprop:Generator_ColumnVarNameInTable="columnidPersona" msprop:Generator_ColumnPropNameInRow="idPersona" msprop:Generator_ColumnPropNameInTable="idPersonaColumn" msprop:Generator_UserColumnName="idPersona" type="xs:int" minOccurs="0" />
               <xs:element name="idEjercicio" msprop:Generator_ColumnVarNameInTable="columnidEjercicio" msprop:Generator_ColumnPropNameInRow="idEjercicio" msprop:Generator_ColumnPropNameInTable="idEjercicioColumn" msprop:Generator_UserColumnName="idEjercicio" type="xs:int" />
               <xs:element name="nombreEjercicio" msprop:Generator_ColumnVarNameInTable="columnnombreEjercicio" msprop:Generator_ColumnPropNameInRow="nombreEjercicio" msprop:Generator_ColumnPropNameInTable="nombreEjercicioColumn" msprop:Generator_UserColumnName="nombreEjercicio" minOccurs="0">
                 <xs:simpleType>
@@ -50,16 +48,19 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="cantidadSeries" msprop:Generator_ColumnVarNameInTable="columncantidadSeries" msprop:Generator_ColumnPropNameInRow="cantidadSeries" msprop:Generator_ColumnPropNameInTable="cantidadSeriesColumn" msprop:Generator_UserColumnName="cantidadSeries" type="xs:int" minOccurs="0" />
               <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="nombrePersona" msprop:Generator_ColumnVarNameInTable="columnnombrePersona" msprop:Generator_ColumnPropNameInRow="nombrePersona" msprop:Generator_ColumnPropNameInTable="nombrePersonaColumn" msprop:Generator_UserColumnName="nombrePersona" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:unirEjercicio" />
-      <xs:field xpath="mstns:idDetalles" />
-      <xs:field xpath="mstns:idEjercicio" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

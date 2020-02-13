@@ -28,7 +28,8 @@ namespace Gimnasio
                 string fechaInicio = fecha.ToString("yyyyMMdd HH:mm:ss");
                 fecha = fecha.AddMinutes(1);
                 string fechaFin = fecha.ToString("yyyyMMdd HH:mm:ss");
-                string cmd = "Select * from tablaDetallesEjercicio where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
+                string cmd = "Select tablaEjercicio.idEjercicio, tablaEjercicio.nombreEjercicio, tablaDetallesEjercicio.cantidadSeries, tablaDetallesEjercicio.fecha, tablaPersona.nombrePersona FROM tablaEjercicio inner join tablaDetallesEjercicio on tablaEjercicio.idEjercicio = tablaDetallesEjercicio.idEjercicio inner join tablaSerie on tablaDetallesEjercicio.idDetalles = tablaSerie.idDetallesEjercicio inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
+                //string cmd = "Select * from tablaDetallesEjercicio where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];
             }
@@ -43,7 +44,6 @@ namespace Gimnasio
             try
             {
                 this.unirEjercicioTableAdapter.Fill(this.unirEjercicioDataSet.unirEjercicio);
-                this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
             }
             catch (Exception error)
             {

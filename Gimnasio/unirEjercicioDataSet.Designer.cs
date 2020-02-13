@@ -279,15 +279,15 @@ namespace Gimnasio {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class unirEjercicioDataTable : global::System.Data.TypedTableBase<unirEjercicioRow> {
             
-            private global::System.Data.DataColumn columnidDetalles;
-            
-            private global::System.Data.DataColumn columnidPersona;
-            
             private global::System.Data.DataColumn columnidEjercicio;
             
             private global::System.Data.DataColumn columnnombreEjercicio;
             
+            private global::System.Data.DataColumn columncantidadSeries;
+            
             private global::System.Data.DataColumn columnfecha;
+            
+            private global::System.Data.DataColumn columnnombrePersona;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -324,22 +324,6 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idDetallesColumn {
-                get {
-                    return this.columnidDetalles;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idPersonaColumn {
-                get {
-                    return this.columnidPersona;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn idEjercicioColumn {
                 get {
                     return this.columnidEjercicio;
@@ -356,9 +340,25 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn cantidadSeriesColumn {
+                get {
+                    return this.columncantidadSeries;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn fechaColumn {
                 get {
                     return this.columnfecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nombrePersonaColumn {
+                get {
+                    return this.columnnombrePersona;
                 }
             }
             
@@ -399,25 +399,17 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirEjercicioRow AddunirEjercicioRow(int idDetalles, int idPersona, int idEjercicio, string nombreEjercicio, System.DateTime fecha) {
+            public unirEjercicioRow AddunirEjercicioRow(int idEjercicio, string nombreEjercicio, int cantidadSeries, System.DateTime fecha, string nombrePersona) {
                 unirEjercicioRow rowunirEjercicioRow = ((unirEjercicioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idDetalles,
-                        idPersona,
                         idEjercicio,
                         nombreEjercicio,
-                        fecha};
+                        cantidadSeries,
+                        fecha,
+                        nombrePersona};
                 rowunirEjercicioRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowunirEjercicioRow);
                 return rowunirEjercicioRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirEjercicioRow FindByidDetallesidEjercicio(int idDetalles, int idEjercicio) {
-                return ((unirEjercicioRow)(this.Rows.Find(new object[] {
-                            idDetalles,
-                            idEjercicio})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -437,32 +429,29 @@ namespace Gimnasio {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnidDetalles = base.Columns["idDetalles"];
-                this.columnidPersona = base.Columns["idPersona"];
                 this.columnidEjercicio = base.Columns["idEjercicio"];
                 this.columnnombreEjercicio = base.Columns["nombreEjercicio"];
+                this.columncantidadSeries = base.Columns["cantidadSeries"];
                 this.columnfecha = base.Columns["fecha"];
+                this.columnnombrePersona = base.Columns["nombrePersona"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnidDetalles = new global::System.Data.DataColumn("idDetalles", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidDetalles);
-                this.columnidPersona = new global::System.Data.DataColumn("idPersona", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidPersona);
                 this.columnidEjercicio = new global::System.Data.DataColumn("idEjercicio", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidEjercicio);
                 this.columnnombreEjercicio = new global::System.Data.DataColumn("nombreEjercicio", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombreEjercicio);
+                this.columncantidadSeries = new global::System.Data.DataColumn("cantidadSeries", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncantidadSeries);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidDetalles,
-                                this.columnidEjercicio}, true));
-                this.columnidDetalles.AllowDBNull = false;
+                this.columnnombrePersona = new global::System.Data.DataColumn("nombrePersona", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombrePersona);
                 this.columnidEjercicio.AllowDBNull = false;
                 this.columnnombreEjercicio.MaxLength = 50;
+                this.columnnombrePersona.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -605,33 +594,6 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idDetalles {
-                get {
-                    return ((int)(this[this.tableunirEjercicio.idDetallesColumn]));
-                }
-                set {
-                    this[this.tableunirEjercicio.idDetallesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idPersona {
-                get {
-                    try {
-                        return ((int)(this[this.tableunirEjercicio.idPersonaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idPersona\' de la tabla \'unirEjercicio\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableunirEjercicio.idPersonaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int idEjercicio {
                 get {
                     return ((int)(this[this.tableunirEjercicio.idEjercicioColumn]));
@@ -659,6 +621,22 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int cantidadSeries {
+                get {
+                    try {
+                        return ((int)(this[this.tableunirEjercicio.cantidadSeriesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidadSeries\' de la tabla \'unirEjercicio\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableunirEjercicio.cantidadSeriesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime fecha {
                 get {
                     try {
@@ -675,14 +653,18 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsidPersonaNull() {
-                return this.IsNull(this.tableunirEjercicio.idPersonaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetidPersonaNull() {
-                this[this.tableunirEjercicio.idPersonaColumn] = global::System.Convert.DBNull;
+            public string nombrePersona {
+                get {
+                    try {
+                        return ((string)(this[this.tableunirEjercicio.nombrePersonaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombrePersona\' de la tabla \'unirEjercicio\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableunirEjercicio.nombrePersonaColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -699,6 +681,18 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscantidadSeriesNull() {
+                return this.IsNull(this.tableunirEjercicio.cantidadSeriesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcantidadSeriesNull() {
+                this[this.tableunirEjercicio.cantidadSeriesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsfechaNull() {
                 return this.IsNull(this.tableunirEjercicio.fechaColumn);
             }
@@ -707,6 +701,18 @@ namespace Gimnasio {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetfechaNull() {
                 this[this.tableunirEjercicio.fechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsnombrePersonaNull() {
+                return this.IsNull(this.tableunirEjercicio.nombrePersonaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetnombrePersonaNull() {
+                this[this.tableunirEjercicio.nombrePersonaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -869,11 +875,11 @@ namespace Gimnasio.unirEjercicioDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "unirEjercicio";
-            tableMapping.ColumnMappings.Add("idDetalles", "idDetalles");
-            tableMapping.ColumnMappings.Add("idPersona", "idPersona");
             tableMapping.ColumnMappings.Add("idEjercicio", "idEjercicio");
             tableMapping.ColumnMappings.Add("nombreEjercicio", "nombreEjercicio");
+            tableMapping.ColumnMappings.Add("cantidadSeries", "cantidadSeries");
             tableMapping.ColumnMappings.Add("fecha", "fecha");
+            tableMapping.ColumnMappings.Add("nombrePersona", "nombrePersona");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

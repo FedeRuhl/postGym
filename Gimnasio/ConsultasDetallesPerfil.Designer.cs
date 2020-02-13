@@ -281,7 +281,6 @@
         private System.Windows.Forms.BindingSource tablaPersonaDSBindingSource;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fotoPersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panelDataGridView;
         private unirPersonaDataSet unirPersonaDataSet;
         private unirPersonaDataSetTableAdapters.unirPersonaTableAdapter unirPersonaTableAdapter;
