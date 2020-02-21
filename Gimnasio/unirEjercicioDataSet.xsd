@@ -21,11 +21,12 @@
               </DbSource>
             </MainSource>
             <Mappings>
+              <Mapping SourceColumn="nombrePersona" DataSetColumn="nombrePersona" />
               <Mapping SourceColumn="idEjercicio" DataSetColumn="idEjercicio" />
               <Mapping SourceColumn="nombreEjercicio" DataSetColumn="nombreEjercicio" />
               <Mapping SourceColumn="cantidadSeries" DataSetColumn="cantidadSeries" />
+              <Mapping SourceColumn="Lista de pesos" DataSetColumn="Lista de pesos" />
               <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
-              <Mapping SourceColumn="nombrePersona" DataSetColumn="nombrePersona" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -40,6 +41,13 @@
         <xs:element name="unirEjercicio" msprop:Generator_TableClassName="unirEjercicioDataTable" msprop:Generator_TableVarName="tableunirEjercicio" msprop:Generator_TablePropName="unirEjercicio" msprop:Generator_RowDeletingName="unirEjercicioRowDeleting" msprop:Generator_RowChangingName="unirEjercicioRowChanging" msprop:Generator_RowEvHandlerName="unirEjercicioRowChangeEventHandler" msprop:Generator_RowDeletedName="unirEjercicioRowDeleted" msprop:Generator_UserTableName="unirEjercicio" msprop:Generator_RowChangedName="unirEjercicioRowChanged" msprop:Generator_RowEvArgName="unirEjercicioRowChangeEvent" msprop:Generator_RowClassName="unirEjercicioRow">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="nombrePersona" msprop:Generator_ColumnVarNameInTable="columnnombrePersona" msprop:Generator_ColumnPropNameInRow="nombrePersona" msprop:Generator_ColumnPropNameInTable="nombrePersonaColumn" msprop:Generator_UserColumnName="nombrePersona" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="idEjercicio" msprop:Generator_ColumnVarNameInTable="columnidEjercicio" msprop:Generator_ColumnPropNameInRow="idEjercicio" msprop:Generator_ColumnPropNameInTable="idEjercicioColumn" msprop:Generator_UserColumnName="idEjercicio" type="xs:int" />
               <xs:element name="nombreEjercicio" msprop:Generator_ColumnVarNameInTable="columnnombreEjercicio" msprop:Generator_ColumnPropNameInRow="nombreEjercicio" msprop:Generator_ColumnPropNameInTable="nombreEjercicioColumn" msprop:Generator_UserColumnName="nombreEjercicio" minOccurs="0">
                 <xs:simpleType>
@@ -49,14 +57,14 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="cantidadSeries" msprop:Generator_ColumnVarNameInTable="columncantidadSeries" msprop:Generator_ColumnPropNameInRow="cantidadSeries" msprop:Generator_ColumnPropNameInTable="cantidadSeriesColumn" msprop:Generator_UserColumnName="cantidadSeries" type="xs:int" minOccurs="0" />
-              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="nombrePersona" msprop:Generator_ColumnVarNameInTable="columnnombrePersona" msprop:Generator_ColumnPropNameInRow="nombrePersona" msprop:Generator_ColumnPropNameInTable="nombrePersonaColumn" msprop:Generator_UserColumnName="nombrePersona" minOccurs="0">
+              <xs:element name="Lista_x0020_de_x0020_pesos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLista_de_pesos" msprop:Generator_ColumnPropNameInRow="Lista_de_pesos" msprop:Generator_ColumnPropNameInTable="Lista_de_pesosColumn" msprop:Generator_UserColumnName="Lista de pesos" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
+                    <xs:maxLength value="4000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

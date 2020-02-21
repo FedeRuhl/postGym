@@ -127,6 +127,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>tablaEjercicio.xsd</DependentUpon>
     </Compile>
+    <Compile Include="unirEjercicioDataSet.cs">
+      <DependentUpon>unirEjercicioDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="unirEjercicioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
