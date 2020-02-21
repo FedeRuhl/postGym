@@ -22,6 +22,8 @@ namespace Gimnasio
 
         private void ConsultasPersona_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'unirPersonaDataSet.unirPersona' Puede moverla o quitarla según sea necesario.
+            this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
             try
             {
                 this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
@@ -56,10 +58,7 @@ namespace Gimnasio
             {
                 DataSet ds;
                 DateTime fecha = DateTime.Parse(listBox1.Text);
-                string fechaInicio = fecha.ToString("yyyyMMdd HH:mm:ss");
-                fecha = fecha.AddMinutes(1);
-                string fechaFin = fecha.ToString("yyyyMMdd HH:mm:ss");
-                string cmd = "select tablaPersona.idPersona, idDetalles, nombrePersona, alturaPersona, pesoPersona, fecha from tablaPersona inner join tablaDetallesPersona on tablaPersona.idPersona = tablaDetallesPersona.idPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
+                string cmd = "select tablaPersona.idPersona, idDetalles, nombrePersona, alturaPersona, pesoPersona, fecha from tablaPersona inner join tablaDetallesPersona on tablaPersona.idPersona = tablaDetallesPersona.idPersona where fecha = '" + fecha.ToString() + "'";
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];
             }
