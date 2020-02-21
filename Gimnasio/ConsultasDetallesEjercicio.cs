@@ -25,11 +25,13 @@ namespace Gimnasio
             {
                 DataSet ds;
                 DateTime fecha = DateTime.Parse(listBox1.Text);
-                string fechaInicio = fecha.ToString("yyyyMMdd HH:mm:ss");
+                string fechaInicio = fecha.ToString();
                 fecha = fecha.AddMinutes(1);
-                string fechaFin = fecha.ToString("yyyyMMdd HH:mm:ss");
+                string fechaFin = fecha.ToString("yyyyMMdd HH:mm");
+                MessageBox.Show("Fecha inicio: " + fechaInicio + "- fecha fin: " + fechaFin);
                 // este si string cmd = "Select nombrePersona, tablaEjercicio.idEjercicio, nombreEjercicio, cantidadSeries, peso, tablaDetallesEjercicio.fecha FROM tablaEjercicio inner join tablaDetallesEjercicio on tablaEjercicio.idEjercicio = tablaDetallesEjercicio.idEjercicio inner join tablaSerie on tablaDetallesEjercicio.idDetalles = tablaSerie.idDetallesEjercicio inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "'";
                 string cmd = "Select nombrePersona, tablaEjercicio.idEjercicio, nombreEjercicio, cantidadSeries, STRING_AGG(tablaSerie.peso,',') 'Lista de pesos', tablaDetallesEjercicio.fecha from tablaEjercicio inner join tablaDetallesEjercicio on tablaEjercicio.idEjercicio = tablaDetallesEjercicio.idEjercicio inner join tablaSerie on tablaDetallesEjercicio.idDetalles = tablaSerie.idDetallesEjercicio inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "' group by nombrePersona, tablaEjercicio.idEjercicio, nombreEjercicio, cantidadSeries, tablaDetallesEjercicio.fecha";
+                //string cmd = "Select nombrePersona, tablaEjercicio.idEjercicio, nombreEjercicio, cantidadSeries, STRING_AGG(tablaSerie.peso,',') 'Lista de pesos', tablaDetallesEjercicio.fecha from tablaEjercicio inner join tablaDetallesEjercicio on tablaEjercicio.idEjercicio = tablaDetallesEjercicio.idEjercicio inner join tablaSerie on tablaDetallesEjercicio.idDetalles = tablaSerie.idDetallesEjercicio inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona where fecha = '" + fechaInicio + "' group by nombrePersona, tablaEjercicio.idEjercicio, nombreEjercicio, cantidadSeries, tablaDetallesEjercicio.fecha";
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];
             }
@@ -41,13 +43,13 @@ namespace Gimnasio
 
         private void ConsultasEjercicios_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'unirEjercicioDataSet.unirEjercicio' Puede moverla o quitarla según sea necesario.
-            this.unirEjercicioTableAdapter.Fill(this.unirEjercicioDataSet.unirEjercicio);
-            // TODO: esta línea de código carga datos en la tabla 'unirEjercicioDataSet.unirEjercicio' Puede moverla o quitarla según sea necesario.
-            this.unirEjercicioTableAdapter.Fill(this.unirEjercicioDataSet.unirEjercicio);
             try
             {
+                string cmd = "select fecha from tablaDetallesEjercicio where idEjercicio = 1 AND idDetalles = 0";
+                DataSet ds = Utilidades.Ejecutar(cmd);
+                MessageBox.Show(ds.Tables[0].Rows[0]["fecha"].ToString());
                 this.unirEjercicioTableAdapter.Fill(this.unirEjercicioDataSet.unirEjercicio);
+                //dataGridView3.DataSource = ds.Tables[0].Rows[0]["fecha"];
             }
             catch (Exception error)
             {

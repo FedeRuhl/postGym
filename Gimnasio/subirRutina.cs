@@ -92,7 +92,8 @@ namespace Gimnasio
                     {
                         string nombrePersona = comboBox2.Text;
                         string nombreEjercicio = comboBox1.Text;
-                        string fecha = dateTimePicker1.Value.ToString("yyyyMMdd HH:mm:ss");
+                        //string fecha = dateTimePicker1.Value.ToString("yyyyMMdd HH:mm:ss");
+                        DateTime fecha = dateTimePicker1.Value;
                         string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fecha, conteo);
                         DataSet ds = Utilidades.Ejecutar(cmd);
                         for (int i = 0; i < conteo; i++)
