@@ -23,6 +23,7 @@
             <Mappings>
               <Mapping SourceColumn="nombrePersona" DataSetColumn="nombrePersona" />
               <Mapping SourceColumn="idEjercicio" DataSetColumn="idEjercicio" />
+              <Mapping SourceColumn="idDetalles" DataSetColumn="idDetalles" />
               <Mapping SourceColumn="nombreEjercicio" DataSetColumn="nombreEjercicio" />
               <Mapping SourceColumn="cantidadSeries" DataSetColumn="cantidadSeries" />
               <Mapping SourceColumn="Lista de pesos" DataSetColumn="Lista de pesos" />
@@ -49,6 +50,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="idEjercicio" msprop:Generator_ColumnVarNameInTable="columnidEjercicio" msprop:Generator_ColumnPropNameInRow="idEjercicio" msprop:Generator_ColumnPropNameInTable="idEjercicioColumn" msprop:Generator_UserColumnName="idEjercicio" type="xs:int" />
+              <xs:element name="idDetalles" msprop:Generator_ColumnVarNameInTable="columnidDetalles" msprop:Generator_ColumnPropNameInRow="idDetalles" msprop:Generator_ColumnPropNameInTable="idDetallesColumn" msprop:Generator_UserColumnName="idDetalles" type="xs:int" />
               <xs:element name="nombreEjercicio" msprop:Generator_ColumnVarNameInTable="columnnombreEjercicio" msprop:Generator_ColumnPropNameInRow="nombreEjercicio" msprop:Generator_ColumnPropNameInTable="nombreEjercicioColumn" msprop:Generator_UserColumnName="nombreEjercicio" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -70,5 +72,10 @@
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:unirEjercicio" />
+      <xs:field xpath="mstns:idEjercicio" />
+      <xs:field xpath="mstns:idDetalles" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

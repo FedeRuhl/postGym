@@ -88,7 +88,6 @@ namespace Gimnasio
                 if (MessageBox.Show("¿Desea eliminar el elemento seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     int id = Convert.ToInt16(dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[1].Value);
-                    MessageBox.Show(id.ToString());
                     dataGridView3.Rows.RemoveAt(dataGridView3.CurrentRow.Index);
                     string cmd = string.Format("EXEC eliminarDetallesPersona '{0}'", id);
                     DataSet DS = Utilidades.Ejecutar(cmd);

@@ -283,6 +283,8 @@ namespace Gimnasio {
             
             private global::System.Data.DataColumn columnidEjercicio;
             
+            private global::System.Data.DataColumn columnidDetalles;
+            
             private global::System.Data.DataColumn columnnombreEjercicio;
             
             private global::System.Data.DataColumn columncantidadSeries;
@@ -337,6 +339,14 @@ namespace Gimnasio {
             public global::System.Data.DataColumn idEjercicioColumn {
                 get {
                     return this.columnidEjercicio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idDetallesColumn {
+                get {
+                    return this.columnidDetalles;
                 }
             }
             
@@ -409,11 +419,12 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirEjercicioRow AddunirEjercicioRow(string nombrePersona, int idEjercicio, string nombreEjercicio, int cantidadSeries, string Lista_de_pesos, System.DateTime fecha) {
+            public unirEjercicioRow AddunirEjercicioRow(string nombrePersona, int idEjercicio, int idDetalles, string nombreEjercicio, int cantidadSeries, string Lista_de_pesos, System.DateTime fecha) {
                 unirEjercicioRow rowunirEjercicioRow = ((unirEjercicioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         nombrePersona,
                         idEjercicio,
+                        idDetalles,
                         nombreEjercicio,
                         cantidadSeries,
                         Lista_de_pesos,
@@ -421,6 +432,14 @@ namespace Gimnasio {
                 rowunirEjercicioRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowunirEjercicioRow);
                 return rowunirEjercicioRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public unirEjercicioRow FindByidEjercicioidDetalles(int idEjercicio, int idDetalles) {
+                return ((unirEjercicioRow)(this.Rows.Find(new object[] {
+                            idEjercicio,
+                            idDetalles})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -442,6 +461,7 @@ namespace Gimnasio {
             internal void InitVars() {
                 this.columnnombrePersona = base.Columns["nombrePersona"];
                 this.columnidEjercicio = base.Columns["idEjercicio"];
+                this.columnidDetalles = base.Columns["idDetalles"];
                 this.columnnombreEjercicio = base.Columns["nombreEjercicio"];
                 this.columncantidadSeries = base.Columns["cantidadSeries"];
                 this.columnLista_de_pesos = base.Columns["Lista de pesos"];
@@ -455,6 +475,8 @@ namespace Gimnasio {
                 base.Columns.Add(this.columnnombrePersona);
                 this.columnidEjercicio = new global::System.Data.DataColumn("idEjercicio", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidEjercicio);
+                this.columnidDetalles = new global::System.Data.DataColumn("idDetalles", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidDetalles);
                 this.columnnombreEjercicio = new global::System.Data.DataColumn("nombreEjercicio", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombreEjercicio);
                 this.columncantidadSeries = new global::System.Data.DataColumn("cantidadSeries", typeof(int), null, global::System.Data.MappingType.Element);
@@ -463,8 +485,12 @@ namespace Gimnasio {
                 base.Columns.Add(this.columnLista_de_pesos);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidEjercicio,
+                                this.columnidDetalles}, true));
                 this.columnnombrePersona.MaxLength = 100;
                 this.columnidEjercicio.AllowDBNull = false;
+                this.columnidDetalles.AllowDBNull = false;
                 this.columnnombreEjercicio.MaxLength = 50;
                 this.columnLista_de_pesos.ReadOnly = true;
                 this.columnLista_de_pesos.MaxLength = 4000;
@@ -632,6 +658,17 @@ namespace Gimnasio {
                 }
                 set {
                     this[this.tableunirEjercicio.idEjercicioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idDetalles {
+                get {
+                    return ((int)(this[this.tableunirEjercicio.idDetallesColumn]));
+                }
+                set {
+                    this[this.tableunirEjercicio.idDetallesColumn] = value;
                 }
             }
             
@@ -921,6 +958,7 @@ namespace Gimnasio.unirEjercicioDataSetTableAdapters {
             tableMapping.DataSetTable = "unirEjercicio";
             tableMapping.ColumnMappings.Add("nombrePersona", "nombrePersona");
             tableMapping.ColumnMappings.Add("idEjercicio", "idEjercicio");
+            tableMapping.ColumnMappings.Add("idDetalles", "idDetalles");
             tableMapping.ColumnMappings.Add("nombreEjercicio", "nombreEjercicio");
             tableMapping.ColumnMappings.Add("cantidadSeries", "cantidadSeries");
             tableMapping.ColumnMappings.Add("Lista de pesos", "Lista de pesos");

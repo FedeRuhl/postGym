@@ -40,6 +40,7 @@
             this.unirEjercicioTableAdapter = new Gimnasio.unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter();
             this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEjercicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDetallesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreEjercicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadSeriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listaDePesosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +61,7 @@
             this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormatString = "G";
             this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(239, 95);
+            this.listBox1.Location = new System.Drawing.Point(406, 87);
             this.listBox1.Size = new System.Drawing.Size(445, 184);
             this.listBox1.ValueMember = "fecha";
             // 
@@ -68,13 +69,13 @@
             // 
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(423, 285);
+            this.btnBuscar.Location = new System.Drawing.Point(590, 277);
             // 
             // lblFechaConsultas
             // 
             this.lblFechaConsultas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaConsultas.ForeColor = System.Drawing.Color.White;
-            this.lblFechaConsultas.Location = new System.Drawing.Point(393, 51);
+            this.lblFechaConsultas.Location = new System.Drawing.Point(560, 43);
             // 
             // dataGridView3
             // 
@@ -101,6 +102,7 @@
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombrePersonaDataGridViewTextBoxColumn,
             this.idEjercicioDataGridViewTextBoxColumn,
+            this.idDetallesDataGridViewTextBoxColumn,
             this.nombreEjercicioDataGridViewTextBoxColumn,
             this.cantidadSeriesDataGridViewTextBoxColumn,
             this.listaDePesosDataGridViewTextBoxColumn,
@@ -145,7 +147,7 @@
             this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(1095, 361);
+            this.dataGridView3.Size = new System.Drawing.Size(1223, 361);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView3_KeyPress);
             // 
@@ -153,9 +155,9 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.dataGridView3);
-            this.panel1.Location = new System.Drawing.Point(30, 337);
+            this.panel1.Location = new System.Drawing.Point(25, 334);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1095, 361);
+            this.panel1.Size = new System.Drawing.Size(1223, 361);
             this.panel1.TabIndex = 5;
             // 
             // unirEjercicioDataSet
@@ -189,6 +191,15 @@
             this.idEjercicioDataGridViewTextBoxColumn.Name = "idEjercicioDataGridViewTextBoxColumn";
             this.idEjercicioDataGridViewTextBoxColumn.ReadOnly = true;
             this.idEjercicioDataGridViewTextBoxColumn.Width = 126;
+            // 
+            // idDetallesDataGridViewTextBoxColumn
+            // 
+            this.idDetallesDataGridViewTextBoxColumn.DataPropertyName = "idDetalles";
+            this.idDetallesDataGridViewTextBoxColumn.HeaderText = "idDetalles";
+            this.idDetallesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDetallesDataGridViewTextBoxColumn.Name = "idDetallesDataGridViewTextBoxColumn";
+            this.idDetallesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDetallesDataGridViewTextBoxColumn.Width = 119;
             // 
             // nombreEjercicioDataGridViewTextBoxColumn
             // 
@@ -231,7 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1239, 734);
+            this.ClientSize = new System.Drawing.Size(1273, 734);
             this.Controls.Add(this.panel1);
             this.Name = "ConsultasDetallesEjercicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -258,6 +269,7 @@
         private unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter unirEjercicioTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEjercicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDetallesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreEjercicioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadSeriesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn listaDePesosDataGridViewTextBoxColumn;
