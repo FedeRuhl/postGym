@@ -34,7 +34,7 @@ namespace Gimnasio
             if ((e.KeyChar == Convert.ToChar(Keys.Delete)) || (e.KeyChar == Convert.ToChar(Keys.Back))){
                 if (MessageBox.Show("¿Desea eliminar el elemento seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    int id = Convert.ToInt16(dataGridView2.CurrentCell.Value);
+                    int id = Convert.ToInt16(dataGridView2.Rows[dataGridView2.CurrentRow.Index].Cells[0].Value);
                     dataGridView2.Rows.RemoveAt(dataGridView2.CurrentRow.Index);
                     string cmd = string.Format("EXEC eliminarEjercicio '{0}'", id);
                     DataSet DS = Utilidades.Ejecutar(cmd);

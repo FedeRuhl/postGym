@@ -52,7 +52,7 @@
             this.txtPesoPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.txtPesoPersona.ForeColor = System.Drawing.Color.White;
-            this.txtPesoPersona.Location = new System.Drawing.Point(247, 319);
+            this.txtPesoPersona.Location = new System.Drawing.Point(252, 350);
             this.txtPesoPersona.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.txtPesoPersona.Name = "txtPesoPersona";
             this.txtPesoPersona.Size = new System.Drawing.Size(223, 22);
@@ -64,7 +64,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(32, 319);
+            this.label4.Location = new System.Drawing.Point(37, 350);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 33, 3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(175, 26);
@@ -76,7 +76,7 @@
             this.txtAlturaPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAlturaPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.txtAlturaPersona.ForeColor = System.Drawing.Color.White;
-            this.txtAlturaPersona.Location = new System.Drawing.Point(247, 263);
+            this.txtAlturaPersona.Location = new System.Drawing.Point(252, 294);
             this.txtAlturaPersona.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.txtAlturaPersona.Name = "txtAlturaPersona";
             this.txtAlturaPersona.Size = new System.Drawing.Size(223, 22);
@@ -88,7 +88,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(32, 261);
+            this.label5.Location = new System.Drawing.Point(37, 292);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(186, 26);
             this.label5.TabIndex = 21;
@@ -99,7 +99,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(247, 209);
+            this.button1.Location = new System.Drawing.Point(252, 240);
             this.button1.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 31);
@@ -114,7 +114,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(32, 205);
+            this.label3.Location = new System.Drawing.Point(37, 236);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 33, 3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(172, 26);
@@ -132,7 +132,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 146);
+            this.label1.Location = new System.Drawing.Point(37, 177);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 33, 3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 26);
@@ -145,7 +145,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 86);
+            this.label2.Location = new System.Drawing.Point(37, 117);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(464, 27);
@@ -160,7 +160,7 @@
             this.comboBox1.DisplayMember = "nombrePersona";
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(247, 148);
+            this.comboBox1.Location = new System.Drawing.Point(252, 179);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(17, 3, 3, 17);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(223, 24);
@@ -186,7 +186,7 @@
             this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnActualizar.BackColor = System.Drawing.SystemColors.Control;
             this.btnActualizar.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizar.Location = new System.Drawing.Point(503, 228);
+            this.btnActualizar.Location = new System.Drawing.Point(508, 259);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(109, 34);
             this.btnActualizar.TabIndex = 4;

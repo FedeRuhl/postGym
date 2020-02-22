@@ -34,29 +34,28 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.unirEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.detallesEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.labelPeso = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personaDataSet = new Gimnasio.PersonaDataSet();
-            this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
             this.panelPesos = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesEjercicioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
+            this.personaDataSet = new Gimnasio.PersonaDataSet();
+            this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
+            this.tablaEjercicio = new Gimnasio.tablaEjercicio();
+            this.tablaEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablaEjercicioTableAdapter = new Gimnasio.tablaEjercicioTableAdapters.tablaEjercicioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardarEjercicio
             // 
             this.btnGuardarEjercicio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardarEjercicio.Location = new System.Drawing.Point(498, 374);
+            this.btnGuardarEjercicio.Location = new System.Drawing.Point(495, 440);
             this.btnGuardarEjercicio.Name = "btnGuardarEjercicio";
             this.btnGuardarEjercicio.Size = new System.Drawing.Size(105, 33);
             this.btnGuardarEjercicio.TabIndex = 2;
@@ -70,7 +69,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(48, 261);
+            this.label2.Location = new System.Drawing.Point(45, 327);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(476, 26);
@@ -83,7 +82,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(48, 359);
+            this.label3.Location = new System.Drawing.Point(45, 425);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 26);
@@ -96,7 +95,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(48, 409);
+            this.label7.Location = new System.Drawing.Point(45, 475);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 26);
@@ -111,37 +110,29 @@
             this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.dateTimePicker1.Location = new System.Drawing.Point(137, 409);
+            this.dateTimePicker1.Location = new System.Drawing.Point(134, 475);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(318, 22);
             this.dateTimePicker1.TabIndex = 1;
-            // 
-            // unirEjercicioBindingSource
-            // 
-            this.unirEjercicioBindingSource.DataMember = "unirEjercicio";
-            this.unirEjercicioBindingSource.DataSource = this.detallesEjercicioBindingSource;
-            // 
-            // tablaDetallesBindingSource
-            // 
-            this.tablaDetallesBindingSource.DataMember = "tablaDetalles";
             // 
             // comboBox1
             // 
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.comboBox1.DataSource = this.unirEjercicioBindingSource;
+            this.comboBox1.DataSource = this.tablaEjercicioBindingSource;
             this.comboBox1.DisplayMember = "nombreEjercicio";
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(153, 362);
+            this.comboBox1.Location = new System.Drawing.Point(150, 428);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(302, 24);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.ValueMember = "nombreEjercicio";
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(498, 413);
+            this.button1.Location = new System.Drawing.Point(495, 479);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 33);
             this.button1.TabIndex = 4;
@@ -155,7 +146,7 @@
             this.labelPeso.AutoSize = true;
             this.labelPeso.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPeso.ForeColor = System.Drawing.Color.White;
-            this.labelPeso.Location = new System.Drawing.Point(48, 460);
+            this.labelPeso.Location = new System.Drawing.Point(45, 526);
             this.labelPeso.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.labelPeso.Name = "labelPeso";
             this.labelPeso.Size = new System.Drawing.Size(56, 26);
@@ -168,7 +159,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(48, 317);
+            this.label1.Location = new System.Drawing.Point(45, 383);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 26);
@@ -183,40 +174,54 @@
             this.comboBox2.DisplayMember = "nombrePersona";
             this.comboBox2.ForeColor = System.Drawing.Color.White;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(153, 319);
+            this.comboBox2.Location = new System.Drawing.Point(150, 385);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(302, 24);
             this.comboBox2.TabIndex = 24;
             this.comboBox2.ValueMember = "nombrePersona";
             // 
-            // tablaPersonaBindingSource
+            // panelPesos
             // 
-            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource.DataSource = this.personaDataSet;
+            this.panelPesos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelPesos.Location = new System.Drawing.Point(150, 526);
+            this.panelPesos.Name = "panelPesos";
+            this.panelPesos.Size = new System.Drawing.Size(314, 543);
+            this.panelPesos.TabIndex = 25;
             // 
             // personaDataSet
             // 
             this.personaDataSet.DataSetName = "PersonaDataSet";
             this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // tablaPersonaBindingSource
+            // 
+            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
+            this.tablaPersonaBindingSource.DataSource = this.personaDataSet;
+            // 
             // tablaPersonaTableAdapter
             // 
             this.tablaPersonaTableAdapter.ClearBeforeFill = true;
             // 
-            // panelPesos
+            // tablaEjercicio
             // 
-            this.panelPesos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelPesos.Location = new System.Drawing.Point(153, 460);
-            this.panelPesos.Name = "panelPesos";
-            this.panelPesos.Size = new System.Drawing.Size(314, 543);
-            this.panelPesos.TabIndex = 25;
+            this.tablaEjercicio.DataSetName = "tablaEjercicio";
+            this.tablaEjercicio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tablaEjercicioBindingSource
+            // 
+            this.tablaEjercicioBindingSource.DataMember = "tablaEjercicio";
+            this.tablaEjercicioBindingSource.DataSource = this.tablaEjercicio;
+            // 
+            // tablaEjercicioTableAdapter
+            // 
+            this.tablaEjercicioTableAdapter.ClearBeforeFill = true;
             // 
             // subirRutina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(638, 1078);
+            this.ClientSize = new System.Drawing.Size(638, 1087);
             this.Controls.Add(this.panelPesos);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label1);
@@ -233,10 +238,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "subirRutina";
             this.Load += new System.EventHandler(this.SubirRutina_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaDetallesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,17 +253,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.BindingSource tablaDetallesBindingSource;
-        private System.Windows.Forms.BindingSource detallesEjercicioBindingSource;
-        private System.Windows.Forms.BindingSource unirEjercicioBindingSource;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelPeso;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Panel panelPesos;
         private PersonaDataSet personaDataSet;
         private System.Windows.Forms.BindingSource tablaPersonaBindingSource;
         private PersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
-        private System.Windows.Forms.Panel panelPesos;
+        private tablaEjercicio tablaEjercicio;
+        private System.Windows.Forms.BindingSource tablaEjercicioBindingSource;
+        private tablaEjercicioTableAdapters.tablaEjercicioTableAdapter tablaEjercicioTableAdapter;
     }
 }

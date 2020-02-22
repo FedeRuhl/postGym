@@ -103,7 +103,7 @@ namespace Gimnasio
         {
             try
             {
-                if (txtIdEjercicio.Text != "" && txtNombreEjercicio.Text != "" && int.TryParse(txtIdEjercicio.Text, out number))
+                if (txtIdEjercicio.Text != "" && int.TryParse(txtIdEjercicio.Text, out number))
                 {
                     string buscarId = "select * from tablaEjercicio where idEjercicio = '" + txtIdEjercicio.Text + "'";
                     DataSet DS = Utilidades.Ejecutar(buscarId);
@@ -126,7 +126,7 @@ namespace Gimnasio
 
                 else
                 {
-                    MessageBox.Show("Ningún campo debe estar vacio. Además el identificador debe ser un número entero.");
+                    MessageBox.Show("El id no debe estar vacio. Además debe ser un número entero.");
                 }
             }
                 

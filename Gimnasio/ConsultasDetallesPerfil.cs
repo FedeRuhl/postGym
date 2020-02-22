@@ -22,8 +22,6 @@ namespace Gimnasio
 
         private void ConsultasPersona_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'unirPersonaDataSet.unirPersona' Puede moverla o quitarla según sea necesario.
-            this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
             try
             {
                 this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
@@ -101,41 +99,41 @@ namespace Gimnasio
             {
                 double altura = Convert.ToDouble(dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[3].Value);
                 double peso = Convert.ToDouble(dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[4].Value);
-                double IMC = peso / Math.Pow(altura, 2);
+                double IMC = Math.Round(peso / Math.Pow(altura, 2), 2);
                 if (IMC < 16)
                 {
-                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee delgadez severa.");
+                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee delgadez severa.", "IMC");
                 }
                 else if (IMC >= 16 && IMC < 18)
                 {
-                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee delgadez moderada.");
+                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee delgadez moderada.", "IMC");
                 }
                 else if (IMC >= 18 && IMC < 18.5)
                 {
-                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee delgadez leve.");
+                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee delgadez leve.", "IMC");
                 }
                 else if (IMC >= 18.5 && IMC < 25)
                 {
-                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee un peso normal y saludable.");
+                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee un peso normal y saludable.", "IMC");
                 }
                 else if (IMC >= 25 && IMC < 30)
                 {
-                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee pre-obesidad.");
+                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee pre-obesidad.", "IMC");
                 }
                 else if (IMC >= 30 && IMC < 35)
                 {
-                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee obesidad tipo I.");
+                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee obesidad tipo I.", "IMC");
                 }
                 else if (IMC >= 35 && IMC < 40)
                 {
-                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee obesidad tipo II.");
+                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee obesidad tipo II.", "IMC");
                 }
                 else if (IMC > 40)
                 {
-                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee obesidad tipo III.");
+                    MessageBox.Show("Su IMC es de " + IMC.ToString() + ". Usted posee obesidad tipo III.", "IMC");
                 }
                 else
-                    MessageBox.Show("No se ha podido calcular correctamente el índice de masa corporal.");
+                    MessageBox.Show("No se ha podido calcular correctamente el índice de masa corporal.", "IMC");
             }
             catch(Exception ex)
             {

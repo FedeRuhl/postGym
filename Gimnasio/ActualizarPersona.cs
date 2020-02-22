@@ -63,6 +63,8 @@ namespace Gimnasio
                     string cmd = string.Format("EXEC actualizaPersona '{0}', '{1}', '{2}', '{3}', '{4}'", idPersona, nombrePersona, fotoPersona, alturaPersona, pesoPersona);
                     Utilidades.Ejecutar(cmd);
                     MessageBox.Show("¡Se ha actualizado correctamente!");
+                    txtAlturaPersona.Clear();
+                    txtPesoPersona.Clear();
                 }
 
                 else

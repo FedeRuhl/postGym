@@ -27,9 +27,7 @@ namespace Gimnasio
             try
             {
                 this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
-                string cmd = string.Format("select * from tablaEjercicio");
-                DataSet DS = Utilidades.Ejecutar(cmd);
-                comboBox1.DataSource = DS.Tables[0];
+                this.tablaEjercicioTableAdapter.Fill(this.tablaEjercicio._tablaEjercicio);
                 y = 0;
             }
             catch(Exception ex)
