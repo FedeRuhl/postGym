@@ -105,6 +105,7 @@ namespace Gimnasio
                         MessageBox.Show("¡Se ha guardado correctamente!");
                         panelPesos.Controls.Clear();
                         y = 0;
+                        conteo = 0;
                     }
                     else
                     {
