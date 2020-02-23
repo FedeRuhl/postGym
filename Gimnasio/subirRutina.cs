@@ -75,8 +75,10 @@ namespace Gimnasio
                         if (Controls.Find(nombreTexto, true).Length > 0)
                         {
                             cadena = Controls.Find(nombreTexto, true).First().Text;
-                            if (int.TryParse(cadena, out number) && Controls.Find(nombreTexto, true).Count() != 0)
+                            //int.TryParse(cadena, out number)
+                            if (cadena != "" && Controls.Find(nombreTexto, true).Count() != 0)
                             {
+                                cadena = cadena.Replace(",", ".");
                                 arregloDinamico[i] = cadena;
                             }
                             else
