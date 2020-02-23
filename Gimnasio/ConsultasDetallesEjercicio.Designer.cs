@@ -55,15 +55,13 @@
             // 
             this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.listBox1.DataSource = this.unirEjercicioBindingSource;
             this.listBox1.DisplayMember = "fecha";
             this.listBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormatString = "d";
+            this.listBox1.FormatString = "D";
             this.listBox1.ItemHeight = 18;
             this.listBox1.Location = new System.Drawing.Point(406, 87);
             this.listBox1.Size = new System.Drawing.Size(445, 184);
-            this.listBox1.ValueMember = "fecha";
             // 
             // btnBuscar
             // 

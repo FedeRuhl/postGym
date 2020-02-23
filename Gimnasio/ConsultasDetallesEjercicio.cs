@@ -25,10 +25,7 @@ namespace Gimnasio
             {
                 DataSet ds;
                 DateTime fecha = DateTime.Parse(listBox1.Text);
-                //MessageBox.Show(fecha.ToString());
-                //string cmd = "Select nombrePersona, tablaEjercicio.idEjercicio, nombreEjercicio, cantidadSeries, STRING_AGG(tablaSerie.peso,',') 'Lista de pesos', tablaDetallesEjercicio.fecha from tablaEjercicio inner join tablaDetallesEjercicio on tablaEjercicio.idEjercicio = tablaDetallesEjercicio.idEjercicio inner join tablaSerie on tablaDetallesEjercicio.idDetalles = tablaSerie.idDetallesEjercicio inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona where fecha >= '" + fechaInicio + "' and  fecha < '" + fechaFin + "' group by nombrePersona, tablaEjercicio.idEjercicio, nombreEjercicio, cantidadSeries, tablaDetallesEjercicio.fecha";
                 string cmd = "Select nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries, STRING_AGG(tablaSerie.peso,', ') 'Lista de pesos', tablaDetallesEjercicio.fecha from tablaEjercicio inner join tablaDetallesEjercicio on tablaEjercicio.idEjercicio = tablaDetallesEjercicio.idEjercicio inner join tablaSerie on tablaDetallesEjercicio.idDetalles = tablaSerie.idDetallesEjercicio inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona where fecha = '" + fecha.ToShortDateString() + "' group by nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries, tablaDetallesEjercicio.fecha";
-                MessageBox.Show(cmd);
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];
             }
@@ -42,6 +39,9 @@ namespace Gimnasio
         {
             try
             {
+                string cmd = "select fecha from tablaDetallesEjercicio group by fecha";
+                DataSet ds = Utilidades.Ejecutar(cmd);
+                listBox1.DataSource = ds.Tables[0];
                 this.unirEjercicioTableAdapter.Fill(this.unirEjercicioDataSet.unirEjercicio);
             }
             catch (Exception error)
