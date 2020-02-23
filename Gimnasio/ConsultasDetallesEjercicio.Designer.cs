@@ -34,10 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.unirEjercicioDataSet = new Gimnasio.unirEjercicioDataSet();
-            this.unirEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.unirEjercicioTableAdapter = new Gimnasio.unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter();
             this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEjercicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDetallesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,10 +41,14 @@
             this.cantidadSeriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listaDePesosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unirEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unirEjercicioDataSet = new Gimnasio.unirEjercicioDataSet();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.unirEjercicioTableAdapter = new Gimnasio.unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -59,7 +59,7 @@
             this.listBox1.DisplayMember = "fecha";
             this.listBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormatString = "G";
+            this.listBox1.FormatString = "d";
             this.listBox1.ItemHeight = 18;
             this.listBox1.Location = new System.Drawing.Point(406, 87);
             this.listBox1.Size = new System.Drawing.Size(445, 184);
@@ -91,7 +91,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Crimson;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Format = "G";
+            dataGridViewCellStyle1.Format = "d";
             dataGridViewCellStyle1.NullValue = null;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Crimson;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -112,7 +112,7 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Format = "G";
+            dataGridViewCellStyle2.Format = "d";
             dataGridViewCellStyle2.NullValue = null;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -130,7 +130,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Crimson;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Format = "G";
+            dataGridViewCellStyle3.Format = "d";
             dataGridViewCellStyle3.NullValue = null;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Crimson;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -140,7 +140,7 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Format = "G";
+            dataGridViewCellStyle4.Format = "d";
             dataGridViewCellStyle4.NullValue = null;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkRed;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
@@ -150,29 +150,6 @@
             this.dataGridView3.Size = new System.Drawing.Size(1223, 361);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView3_KeyPress);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.dataGridView3);
-            this.panel1.Location = new System.Drawing.Point(25, 334);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1223, 361);
-            this.panel1.TabIndex = 5;
-            // 
-            // unirEjercicioDataSet
-            // 
-            this.unirEjercicioDataSet.DataSetName = "unirEjercicioDataSet";
-            this.unirEjercicioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // unirEjercicioBindingSource
-            // 
-            this.unirEjercicioBindingSource.DataMember = "unirEjercicio";
-            this.unirEjercicioBindingSource.DataSource = this.unirEjercicioDataSet;
-            // 
-            // unirEjercicioTableAdapter
-            // 
-            this.unirEjercicioTableAdapter.ClearBeforeFill = true;
             // 
             // nombrePersonaDataGridViewTextBoxColumn
             // 
@@ -237,6 +214,29 @@
             this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
             this.fechaDataGridViewTextBoxColumn.Width = 84;
             // 
+            // unirEjercicioBindingSource
+            // 
+            this.unirEjercicioBindingSource.DataMember = "unirEjercicio";
+            this.unirEjercicioBindingSource.DataSource = this.unirEjercicioDataSet;
+            // 
+            // unirEjercicioDataSet
+            // 
+            this.unirEjercicioDataSet.DataSetName = "unirEjercicioDataSet";
+            this.unirEjercicioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.dataGridView3);
+            this.panel1.Location = new System.Drawing.Point(25, 334);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1223, 361);
+            this.panel1.TabIndex = 5;
+            // 
+            // unirEjercicioTableAdapter
+            // 
+            this.unirEjercicioTableAdapter.ClearBeforeFill = true;
+            // 
             // ConsultasDetallesEjercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -253,9 +253,9 @@
             this.Controls.SetChildIndex(this.listBox1, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioDataSet)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

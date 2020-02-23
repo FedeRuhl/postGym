@@ -104,7 +104,7 @@ namespace Gimnasio
                         panelPesos.Controls.Clear();
                         y = 0;
                         conteo = 0;
-                        dateTimePicker1.Value = DateTime.Now;
+                        //dateTimePicker1.Value = DateTime.Now;
                     }
                     else
                     {
