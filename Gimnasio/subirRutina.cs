@@ -67,7 +67,7 @@ namespace Gimnasio
                 {
                     String[] arregloDinamico = new String[conteo + 1];
                     string nombreTexto;
-                    int number = 0;
+                    float number = 0;
                     string cadena;
                     for (int i = 0; i < conteo; i++)
                     {
@@ -75,10 +75,10 @@ namespace Gimnasio
                         if (Controls.Find(nombreTexto, true).Length > 0)
                         {
                             cadena = Controls.Find(nombreTexto, true).First().Text;
-                            //int.TryParse(cadena, out number)
-                            if (cadena != "" && Controls.Find(nombreTexto, true).Count() != 0)
+                            cadena = cadena.Replace(",", ".");
+
+                            if (float.TryParse(cadena, out number) && Controls.Find(nombreTexto, true).Count() != 0)
                             {
-                                cadena = cadena.Replace(",", ".");
                                 arregloDinamico[i] = cadena;
                             }
                             else
