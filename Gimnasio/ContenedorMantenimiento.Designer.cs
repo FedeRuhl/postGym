@@ -113,7 +113,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContenedorMantenimiento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContenedorMantenimiento_FormClosing);
-            this.Load += new System.EventHandler(this.ContenedorMantenimiento_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);

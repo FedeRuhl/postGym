@@ -17,23 +17,6 @@ namespace Gimnasio
             InitializeComponent();
         }
 
-        private void ContenedorProcesos_Load(object sender, EventArgs e)
-        {
-            /*MdiClient oMDI;
-            foreach (Control ctl in this.Controls)
-            {
-                try
-                {
-                    oMDI = (MdiClient)ctl;
-                    oMDI.BackColor = this.BackColor;
-                }
-                catch (InvalidCastException exc)
-                {
-                }
-            }
-            */
-        }
-
         private void ContenedorProcesos_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainClass MC = new MainClass();

@@ -118,7 +118,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContenedorProcesos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContenedorProcesos_FormClosing);
-            this.Load += new System.EventHandler(this.ContenedorProcesos_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);

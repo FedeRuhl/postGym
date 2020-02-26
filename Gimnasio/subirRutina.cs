@@ -13,7 +13,6 @@ namespace Gimnasio
 {
     public partial class subirRutina : Form
     {
-        //private int y = 198;
         private int y = 0;
         private int conteo = 0;
         TextBox text = new TextBox();
@@ -92,7 +91,6 @@ namespace Gimnasio
                     {
                         string nombrePersona = comboBox2.Text;
                         string nombreEjercicio = comboBox1.Text;
-                        //string fecha = dateTimePicker1.Value.ToString("yyyyMMdd HH:mm:ss");
                         DateTime fecha = dateTimePicker1.Value;
                         string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fecha, conteo);
                         DataSet ds = Utilidades.Ejecutar(cmd);
@@ -106,7 +104,6 @@ namespace Gimnasio
                         panelPesos.Controls.Clear();
                         y = 0;
                         conteo = 0;
-                        //dateTimePicker1.Value = DateTime.Now;
                     }
                     else
                     {

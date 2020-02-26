@@ -17,10 +17,6 @@ namespace Gimnasio
             InitializeComponent();
         }
 
-        private void ContenedorMantenimiento_Load(object sender, EventArgs e)
-        {
-        }
-
         private void ContenedorMantenimiento_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainClass MC = new MainClass();

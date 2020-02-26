@@ -163,7 +163,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContenedorConsultas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContenedorConsultas_FormClosing);
-            this.Load += new System.EventHandler(this.ContenedorConsultas_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
