@@ -64,6 +64,12 @@ namespace Gimnasio
                 bool continuar = true;
                 if (comboBox2.Text != "" && comboBox1.Text != "")
                 {
+                    string buscarPersona = "select idPersona from tablaPersona where nombrePersona = '" + comboBox2.Text + "'";
+                    DataSet DS = Utilidades.Ejecutar(buscarPersona);
+                    string buscarEjercicio = "select idEjercicio from tablaEjercicio where nombreEjercicio = '" + comboBox1.Text + "'";
+                    DataSet DS2 = Utilidades.Ejecutar(buscarEjercicio);
+                    if (DS.Tables[0].Rows.Count == 0 || DS2.Tables[0].Rows.Count == 0)
+                        continuar = false;
                     String[] arregloDinamico = new String[conteo + 1];
                     string nombreTexto;
                     float number = 0;

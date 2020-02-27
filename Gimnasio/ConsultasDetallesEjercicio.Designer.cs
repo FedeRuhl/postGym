@@ -145,7 +145,7 @@
             this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(1223, 361);
+            this.dataGridView3.Size = new System.Drawing.Size(1155, 361);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView3_KeyPress);
             // 
@@ -228,7 +228,7 @@
             this.panel1.Controls.Add(this.dataGridView3);
             this.panel1.Location = new System.Drawing.Point(25, 334);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1223, 361);
+            this.panel1.Size = new System.Drawing.Size(1155, 361);
             this.panel1.TabIndex = 5;
             // 
             // unirEjercicioTableAdapter

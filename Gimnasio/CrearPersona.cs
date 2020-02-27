@@ -44,6 +44,7 @@ namespace Gimnasio
 
                     txtIdPersona.Clear();
                     txtNombrePersona.Clear();
+                    txtIdPersona.Focus();
                 }
 
                 else
@@ -62,18 +63,20 @@ namespace Gimnasio
         {
             try
             {
-                if (txtIdPersona.Text != "" && txtNombrePersona.Text != "" && int.TryParse(txtIdPersona.Text, out number))
+                string buscarPersona = "select idPersona from tablaPersona where idPersona = '" + txtIdPersona.Text + "'";
+                DataSet DS = Utilidades.Ejecutar(buscarPersona);
+                if (txtIdPersona.Text != "" && txtNombrePersona.Text != "" && int.TryParse(txtIdPersona.Text, out number) && DS.Tables[0].Rows.Count != 0)
                 {
                     string cmd = string.Format("EXEC modificarPersona '{0}', '{1}'", txtIdPersona.Text.Trim(), txtNombrePersona.Text.Trim());
                     Utilidades.Ejecutar(cmd);
                     MessageBox.Show("Se ha modificado correctamente");
-
                     txtIdPersona.Clear();
                     txtNombrePersona.Clear();
+                    txtIdPersona.Focus();
                 }
                 else
                 {
-                    MessageBox.Show("Ningún campo debe estar vacio.");
+                    MessageBox.Show("Ningún campo debe estar vacio. Además el id debe existir para poder modificar los datos de una persona.");
                 }
             }
             catch(Exception ex)

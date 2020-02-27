@@ -45,6 +45,7 @@ namespace Gimnasio
 
                     txtIdEjercicio.Clear();
                     txtNombreEjercicio.Clear();
+                    txtIdEjercicio.Focus();
 
                 }
 
@@ -84,6 +85,7 @@ namespace Gimnasio
 
                     txtIdEjercicio.Clear();
                     txtNombreEjercicio.Clear();
+                    txtIdEjercicio.Focus();
 
                 }
 
@@ -122,6 +124,7 @@ namespace Gimnasio
 
                     txtIdEjercicio.Clear();
                     txtNombreEjercicio.Clear();
+                    txtIdEjercicio.Focus();
                 }
 
                 else

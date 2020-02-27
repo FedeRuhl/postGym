@@ -52,7 +52,9 @@ namespace Gimnasio
         {
             try
             {
-                if (comboBox1.Text != "" && fotoPersona != "" && txtAlturaPersona.Text != "" && txtPesoPersona.Text != "")
+                string buscarPersona = "select idPersona from tablaPersona where nombrePersona = '" + comboBox1.Text + "'";
+                DataSet DS = Utilidades.Ejecutar(buscarPersona);
+                if (comboBox1.Text != "" && fotoPersona != "" && txtAlturaPersona.Text != "" && txtPesoPersona.Text != "" && DS.Tables[0].Rows.Count != 0)
                 {
                     int idPersona = comboBox1.SelectedIndex + 1;
                     string nombrePersona = comboBox1.Text.Trim();
@@ -69,7 +71,7 @@ namespace Gimnasio
 
                 else
                 {
-                    MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
+                    MessageBox.Show("Ningún campo debe estar vacio para poder actualizar. El nombre de la persona debe ser seleccionado entre los existentes.");
                 }
             }
             catch(Exception ex)
