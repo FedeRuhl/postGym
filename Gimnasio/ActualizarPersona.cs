@@ -60,9 +60,9 @@ namespace Gimnasio
                     string nombrePersona = comboBox1.Text.Trim();
                     string altura = txtAlturaPersona.Text;
                     string peso = txtPesoPersona.Text;
-                    double alturaPersona = Convert.ToDouble(altura.Replace(',', '.'));
-                    double pesoPersona = Convert.ToDouble(peso.Replace(',', '.'));
-                    string cmd = string.Format("EXEC actualizaPersona '{0}', '{1}', '{2}', '{3}', '{4}'", idPersona, nombrePersona, fotoPersona, alturaPersona, pesoPersona);
+                    altura = altura.Replace(",", ".");
+                    peso = peso.Replace(",", ".");
+                    string cmd = string.Format("EXEC actualizaPersona '{0}', '{1}', '{2}', '{3}', '{4}'", idPersona, nombrePersona, fotoPersona, altura, peso);
                     Utilidades.Ejecutar(cmd);
                     MessageBox.Show("¡Se ha actualizado correctamente!");
                     txtAlturaPersona.Clear();
