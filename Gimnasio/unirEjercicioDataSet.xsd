@@ -39,7 +39,7 @@
   <xs:element name="unirEjercicioDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="unirEjercicioDataSet" msprop:Generator_UserDSName="unirEjercicioDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="unirEjercicio" msprop:Generator_TableClassName="unirEjercicioDataTable" msprop:Generator_TableVarName="tableunirEjercicio" msprop:Generator_TablePropName="unirEjercicio" msprop:Generator_RowDeletingName="unirEjercicioRowDeleting" msprop:Generator_RowChangingName="unirEjercicioRowChanging" msprop:Generator_RowEvHandlerName="unirEjercicioRowChangeEventHandler" msprop:Generator_RowDeletedName="unirEjercicioRowDeleted" msprop:Generator_UserTableName="unirEjercicio" msprop:Generator_RowChangedName="unirEjercicioRowChanged" msprop:Generator_RowEvArgName="unirEjercicioRowChangeEvent" msprop:Generator_RowClassName="unirEjercicioRow">
+        <xs:element name="unirEjercicio" msprop:Generator_TableClassName="unirEjercicioDataTable" msprop:Generator_TableVarName="tableunirEjercicio" msprop:Generator_RowChangedName="unirEjercicioRowChanged" msprop:Generator_TablePropName="unirEjercicio" msprop:Generator_RowDeletingName="unirEjercicioRowDeleting" msprop:Generator_RowChangingName="unirEjercicioRowChanging" msprop:Generator_RowEvHandlerName="unirEjercicioRowChangeEventHandler" msprop:Generator_RowDeletedName="unirEjercicioRowDeleted" msprop:Generator_RowClassName="unirEjercicioRow" msprop:Generator_UserTableName="unirEjercicio" msprop:Generator_RowEvArgName="unirEjercicioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombrePersona" msprop:Generator_ColumnVarNameInTable="columnnombrePersona" msprop:Generator_ColumnPropNameInRow="nombrePersona" msprop:Generator_ColumnPropNameInTable="nombrePersonaColumn" msprop:Generator_UserColumnName="nombrePersona" minOccurs="0">
@@ -72,10 +72,5 @@
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:unirEjercicio" />
-      <xs:field xpath="mstns:idEjercicio" />
-      <xs:field xpath="mstns:idDetalles" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

@@ -35,21 +35,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tablaEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablaEjercicio = new Gimnasio.tablaEjercicio();
             this.button1 = new System.Windows.Forms.Button();
             this.labelPeso = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.panelPesos = new System.Windows.Forms.Panel();
-            this.personaDataSet = new Gimnasio.PersonaDataSet();
             this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personaDataSet = new Gimnasio.PersonaDataSet();
+            this.panelPesos = new System.Windows.Forms.Panel();
             this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
-            this.tablaEjercicio = new Gimnasio.tablaEjercicio();
-            this.tablaEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tablaEjercicioTableAdapter = new Gimnasio.tablaEjercicioTableAdapters.tablaEjercicioTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardarEjercicio
@@ -58,7 +58,7 @@
             this.btnGuardarEjercicio.Location = new System.Drawing.Point(495, 440);
             this.btnGuardarEjercicio.Name = "btnGuardarEjercicio";
             this.btnGuardarEjercicio.Size = new System.Drawing.Size(105, 33);
-            this.btnGuardarEjercicio.TabIndex = 2;
+            this.btnGuardarEjercicio.TabIndex = 4;
             this.btnGuardarEjercicio.Text = "Guardar";
             this.btnGuardarEjercicio.UseVisualStyleBackColor = true;
             this.btnGuardarEjercicio.Click += new System.EventHandler(this.btnGuardarEjercicio_Click);
@@ -113,7 +113,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(134, 475);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(318, 22);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // comboBox1
             // 
@@ -126,8 +126,18 @@
             this.comboBox1.Location = new System.Drawing.Point(150, 428);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(302, 24);
-            this.comboBox1.TabIndex = 0;
+            this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "nombreEjercicio";
+            // 
+            // tablaEjercicioBindingSource
+            // 
+            this.tablaEjercicioBindingSource.DataMember = "tablaEjercicio";
+            this.tablaEjercicioBindingSource.DataSource = this.tablaEjercicio;
+            // 
+            // tablaEjercicio
+            // 
+            this.tablaEjercicio.DataSetName = "tablaEjercicio";
+            this.tablaEjercicio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -135,7 +145,7 @@
             this.button1.Location = new System.Drawing.Point(495, 479);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 33);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Agregar serie";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -177,8 +187,18 @@
             this.comboBox2.Location = new System.Drawing.Point(150, 385);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(302, 24);
-            this.comboBox2.TabIndex = 24;
+            this.comboBox2.TabIndex = 0;
             this.comboBox2.ValueMember = "nombrePersona";
+            // 
+            // tablaPersonaBindingSource
+            // 
+            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
+            this.tablaPersonaBindingSource.DataSource = this.personaDataSet;
+            // 
+            // personaDataSet
+            // 
+            this.personaDataSet.DataSetName = "PersonaDataSet";
+            this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panelPesos
             // 
@@ -186,31 +206,11 @@
             this.panelPesos.Location = new System.Drawing.Point(150, 526);
             this.panelPesos.Name = "panelPesos";
             this.panelPesos.Size = new System.Drawing.Size(314, 543);
-            this.panelPesos.TabIndex = 25;
-            // 
-            // personaDataSet
-            // 
-            this.personaDataSet.DataSetName = "PersonaDataSet";
-            this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablaPersonaBindingSource
-            // 
-            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource.DataSource = this.personaDataSet;
+            this.panelPesos.TabIndex = 3;
             // 
             // tablaPersonaTableAdapter
             // 
             this.tablaPersonaTableAdapter.ClearBeforeFill = true;
-            // 
-            // tablaEjercicio
-            // 
-            this.tablaEjercicio.DataSetName = "tablaEjercicio";
-            this.tablaEjercicio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablaEjercicioBindingSource
-            // 
-            this.tablaEjercicioBindingSource.DataMember = "tablaEjercicio";
-            this.tablaEjercicioBindingSource.DataSource = this.tablaEjercicio;
             // 
             // tablaEjercicioTableAdapter
             // 
@@ -238,10 +238,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "subirRutina";
             this.Load += new System.EventHandler(this.SubirRutina_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

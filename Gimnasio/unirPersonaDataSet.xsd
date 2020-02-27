@@ -38,7 +38,7 @@
   <xs:element name="unirPersonaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="unirPersonaDataSet" msprop:Generator_UserDSName="unirPersonaDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="unirPersona" msprop:Generator_TableClassName="unirPersonaDataTable" msprop:Generator_TableVarName="tableunirPersona" msprop:Generator_TablePropName="unirPersona" msprop:Generator_RowDeletingName="unirPersonaRowDeleting" msprop:Generator_RowChangingName="unirPersonaRowChanging" msprop:Generator_RowEvHandlerName="unirPersonaRowChangeEventHandler" msprop:Generator_RowDeletedName="unirPersonaRowDeleted" msprop:Generator_UserTableName="unirPersona" msprop:Generator_RowChangedName="unirPersonaRowChanged" msprop:Generator_RowEvArgName="unirPersonaRowChangeEvent" msprop:Generator_RowClassName="unirPersonaRow">
+        <xs:element name="unirPersona" msprop:Generator_TableClassName="unirPersonaDataTable" msprop:Generator_TableVarName="tableunirPersona" msprop:Generator_RowChangedName="unirPersonaRowChanged" msprop:Generator_TablePropName="unirPersona" msprop:Generator_RowDeletingName="unirPersonaRowDeleting" msprop:Generator_RowChangingName="unirPersonaRowChanging" msprop:Generator_RowEvHandlerName="unirPersonaRowChangeEventHandler" msprop:Generator_RowDeletedName="unirPersonaRowDeleted" msprop:Generator_RowClassName="unirPersonaRow" msprop:Generator_UserTableName="unirPersona" msprop:Generator_RowEvArgName="unirPersonaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPersona" msprop:Generator_ColumnVarNameInTable="columnidPersona" msprop:Generator_ColumnPropNameInRow="idPersona" msprop:Generator_ColumnPropNameInTable="idPersonaColumn" msprop:Generator_UserColumnName="idPersona" type="xs:int" />
@@ -58,10 +58,5 @@
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:unirPersona" />
-      <xs:field xpath="mstns:idPersona" />
-      <xs:field xpath="mstns:idDetalles" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

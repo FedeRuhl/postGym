@@ -436,14 +436,6 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirEjercicioRow FindByidEjercicioidDetalles(int idEjercicio, int idDetalles) {
-                return ((unirEjercicioRow)(this.Rows.Find(new object[] {
-                            idEjercicio,
-                            idDetalles})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 unirEjercicioDataTable cln = ((unirEjercicioDataTable)(base.Clone()));
                 cln.InitVars();
@@ -485,9 +477,6 @@ namespace Gimnasio {
                 base.Columns.Add(this.columnLista_de_pesos);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidEjercicio,
-                                this.columnidDetalles}, true));
                 this.columnnombrePersona.MaxLength = 100;
                 this.columnidEjercicio.AllowDBNull = false;
                 this.columnidDetalles.AllowDBNull = false;
