@@ -1,0 +1,4 @@
+Ejecutar el script db (primero los create y luego 
+cada uno de los procedure por separado).
+Se utiliza (local) como servidor y instancia sin nombre,
+o instancia predeterminada.
