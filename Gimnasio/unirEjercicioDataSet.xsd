@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GimnasioConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GimnasioConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Gimnasio.Properties.Settings.GlobalReference.Default.GimnasioConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="local" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="local (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Gimnasio.Properties.Settings.GlobalReference.Default.local" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="unirEjercicioTableAdapter" GeneratorDataComponentClassName="unirEjercicioTableAdapter" Name="unirEjercicio" UserDataComponentName="unirEjercicioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="GimnasioConnectionString1 (Settings)" DbObjectName="Gimnasio.dbo.unirEjercicio" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local (Settings)" DbObjectName="Gimnasio.dbo.unirEjercicio" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.unirEjercicio</CommandText>
@@ -39,7 +39,7 @@
   <xs:element name="unirEjercicioDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="unirEjercicioDataSet" msprop:Generator_UserDSName="unirEjercicioDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="unirEjercicio" msprop:Generator_TableClassName="unirEjercicioDataTable" msprop:Generator_TableVarName="tableunirEjercicio" msprop:Generator_RowChangedName="unirEjercicioRowChanged" msprop:Generator_TablePropName="unirEjercicio" msprop:Generator_RowDeletingName="unirEjercicioRowDeleting" msprop:Generator_RowChangingName="unirEjercicioRowChanging" msprop:Generator_RowEvHandlerName="unirEjercicioRowChangeEventHandler" msprop:Generator_RowDeletedName="unirEjercicioRowDeleted" msprop:Generator_RowClassName="unirEjercicioRow" msprop:Generator_UserTableName="unirEjercicio" msprop:Generator_RowEvArgName="unirEjercicioRowChangeEvent">
+        <xs:element name="unirEjercicio" msprop:Generator_TableClassName="unirEjercicioDataTable" msprop:Generator_TableVarName="tableunirEjercicio" msprop:Generator_TablePropName="unirEjercicio" msprop:Generator_RowDeletingName="unirEjercicioRowDeleting" msprop:Generator_RowChangingName="unirEjercicioRowChanging" msprop:Generator_RowEvHandlerName="unirEjercicioRowChangeEventHandler" msprop:Generator_RowDeletedName="unirEjercicioRowDeleted" msprop:Generator_UserTableName="unirEjercicio" msprop:Generator_RowChangedName="unirEjercicioRowChanged" msprop:Generator_RowEvArgName="unirEjercicioRowChangeEvent" msprop:Generator_RowClassName="unirEjercicioRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombrePersona" msprop:Generator_ColumnVarNameInTable="columnnombrePersona" msprop:Generator_ColumnPropNameInRow="nombrePersona" msprop:Generator_ColumnPropNameInTable="nombrePersonaColumn" msprop:Generator_UserColumnName="nombrePersona" minOccurs="0">
@@ -72,5 +72,10 @@
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:unirEjercicio" />
+      <xs:field xpath="mstns:idEjercicio" />
+      <xs:field xpath="mstns:idDetalles" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

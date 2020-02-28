@@ -26,21 +26,10 @@ namespace Gimnasio.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")]
-        public string GimnasioConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=Gimnasio;Integrated Security=True")]
+        public string local {
             get {
-                return ((string)(this["GimnasioConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\feder\\source\\repos\\p" +
-            "ostGym\\Gimnasio.mdf;Integrated Security=True;Connect Timeout=30")]
-        public string Conectar {
-            get {
-                return ((string)(this["Conectar"]));
+                return ((string)(this["local"]));
             }
         }
     }

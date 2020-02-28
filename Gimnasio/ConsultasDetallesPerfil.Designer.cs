@@ -40,26 +40,31 @@
             this.alturaPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pesoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unirPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unirPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.unirPersonaDataSet = new Gimnasio.unirPersonaDataSet();
-            this.tablaPersonaDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelDataGridView = new System.Windows.Forms.Panel();
-            this.unirPersonaTableAdapter = new Gimnasio.unirPersonaDataSetTableAdapters.unirPersonaTableAdapter();
+            this.unirPersonaFechaDataSet = new Gimnasio.unirPersonaFechaDataSet();
+            this.unirPersonaFechaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unirPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unirPersonaTableAdapter = new Gimnasio.unirPersonaFechaDataSetTableAdapters.unirPersonaTableAdapter();
+            this.unirPersonaTableAdapter1 = new Gimnasio.unirPersonaDataSetTableAdapters.unirPersonaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDataGridView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaFechaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaFechaDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
             // 
             this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.listBox1.DataSource = this.unirPersonaBindingSource;
+            this.listBox1.DataSource = this.unirPersonaBindingSource1;
             this.listBox1.DisplayMember = "fecha";
             this.listBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.White;
@@ -110,7 +115,7 @@
             this.alturaPersonaDataGridViewTextBoxColumn,
             this.pesoPersonaDataGridViewTextBoxColumn,
             this.fechaDataGridViewTextBoxColumn});
-            this.dataGridView3.DataSource = this.unirPersonaBindingSource;
+            this.dataGridView3.DataSource = this.unirPersonaBindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,10 +215,10 @@
             this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
             this.fechaDataGridViewTextBoxColumn.Width = 84;
             // 
-            // unirPersonaBindingSource
+            // unirPersonaBindingSource1
             // 
-            this.unirPersonaBindingSource.DataMember = "unirPersona";
-            this.unirPersonaBindingSource.DataSource = this.unirPersonaDataSet;
+            this.unirPersonaBindingSource1.DataMember = "unirPersona";
+            this.unirPersonaBindingSource1.DataSource = this.unirPersonaDataSet;
             // 
             // unirPersonaDataSet
             // 
@@ -250,9 +255,28 @@
             this.panelDataGridView.Size = new System.Drawing.Size(1007, 345);
             this.panelDataGridView.TabIndex = 9;
             // 
+            // unirPersonaFechaDataSet
+            // 
+            this.unirPersonaFechaDataSet.DataSetName = "unirPersonaFechaDataSet";
+            this.unirPersonaFechaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // unirPersonaFechaDataSetBindingSource
+            // 
+            this.unirPersonaFechaDataSetBindingSource.DataSource = this.unirPersonaFechaDataSet;
+            this.unirPersonaFechaDataSetBindingSource.Position = 0;
+            // 
+            // unirPersonaBindingSource
+            // 
+            this.unirPersonaBindingSource.DataMember = "unirPersona";
+            this.unirPersonaBindingSource.DataSource = this.unirPersonaFechaDataSetBindingSource;
+            // 
             // unirPersonaTableAdapter
             // 
             this.unirPersonaTableAdapter.ClearBeforeFill = true;
+            // 
+            // unirPersonaTableAdapter1
+            // 
+            this.unirPersonaTableAdapter1.ClearBeforeFill = true;
             // 
             // ConsultasDetallesPerfil
             // 
@@ -275,11 +299,13 @@
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.panelDataGridView, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDataGridView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaFechaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaFechaDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,13 +314,16 @@
         #endregion
        // private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.BindingSource tablaPersonaDSBindingSource;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelDataGridView;
-        private unirPersonaDataSet unirPersonaDataSet;
+        private System.Windows.Forms.BindingSource unirPersonaFechaDataSetBindingSource;
+        private unirPersonaFechaDataSet unirPersonaFechaDataSet;
         private System.Windows.Forms.BindingSource unirPersonaBindingSource;
-        private unirPersonaDataSetTableAdapters.unirPersonaTableAdapter unirPersonaTableAdapter;
+        private unirPersonaFechaDataSetTableAdapters.unirPersonaTableAdapter unirPersonaTableAdapter;
+        private unirPersonaDataSet unirPersonaDataSet;
+        private System.Windows.Forms.BindingSource unirPersonaBindingSource1;
+        private unirPersonaDataSetTableAdapters.unirPersonaTableAdapter unirPersonaTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDetallesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePersonaDataGridViewTextBoxColumn;

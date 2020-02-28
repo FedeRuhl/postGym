@@ -40,12 +40,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tablaPersonaBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
-            this.personaDataSet = new Gimnasio.PersonaDataSet();
-            this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
             this.btnActualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
+            this.tablaPersonaDataSet = new Gimnasio.tablaPersonaDataSet();
+            this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablaPersonaTableAdapter = new Gimnasio.tablaPersonaDataSetTableAdapters.tablaPersonaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPesoPersona
@@ -157,7 +157,7 @@
             // 
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.comboBox1.DataSource = this.tablaPersonaBindingSource7;
+            this.comboBox1.DataSource = this.tablaPersonaBindingSource;
             this.comboBox1.DisplayMember = "nombrePersona";
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
@@ -167,20 +167,6 @@
             this.comboBox1.Size = new System.Drawing.Size(223, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.ValueMember = "nombrePersona";
-            // 
-            // tablaPersonaBindingSource7
-            // 
-            this.tablaPersonaBindingSource7.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource7.DataSource = this.personaDataSet;
-            // 
-            // personaDataSet
-            // 
-            this.personaDataSet.DataSetName = "PersonaDataSet";
-            this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablaPersonaTableAdapter
-            // 
-            this.tablaPersonaTableAdapter.ClearBeforeFill = true;
             // 
             // btnActualizar
             // 
@@ -194,6 +180,20 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // tablaPersonaDataSet
+            // 
+            this.tablaPersonaDataSet.DataSetName = "tablaPersonaDataSet";
+            this.tablaPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tablaPersonaBindingSource
+            // 
+            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
+            this.tablaPersonaBindingSource.DataSource = this.tablaPersonaDataSet;
+            // 
+            // tablaPersonaTableAdapter
+            // 
+            this.tablaPersonaTableAdapter.ClearBeforeFill = true;
             // 
             // ActualizarPersona
             // 
@@ -217,8 +217,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ActualizarPersona";
             this.Load += new System.EventHandler(this.ActualizarPersona_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,9 +236,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private PersonaDataSet personaDataSet;
-        private System.Windows.Forms.BindingSource tablaPersonaBindingSource7;
-        private PersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
         private System.Windows.Forms.Button btnActualizar;
+        private tablaPersonaDataSet tablaPersonaDataSet;
+        private System.Windows.Forms.BindingSource tablaPersonaBindingSource;
+        private tablaPersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
     }
 }

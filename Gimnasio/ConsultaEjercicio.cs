@@ -21,7 +21,7 @@ namespace Gimnasio
         {
             try
             {
-                this.tablaEjercicioTableAdapter.Fill(this.tablaEjercicio._tablaEjercicio);
+                this.tablaEjercicioTableAdapter.Fill(this.tablaEjercicioDataSet.tablaEjercicio);
             }
             catch(Exception ex)
             {

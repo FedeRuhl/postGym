@@ -23,10 +23,11 @@ namespace Gimnasio
 
         private void SubirRutina_Load(object sender, EventArgs e)
         {
+            
             try
             {
-                this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
-                this.tablaEjercicioTableAdapter.Fill(this.tablaEjercicio._tablaEjercicio);
+                this.tablaEjercicioTableAdapter.Fill(this.tablaEjercicioDataSet.tablaEjercicio);
+                this.tablaPersonaTableAdapter.Fill(this.tablaPersonaDataSet.tablaPersona);
                 y = 0;
             }
             catch(Exception ex)

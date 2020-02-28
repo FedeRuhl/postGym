@@ -425,6 +425,14 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public unirPersonaRow FindByidPersonaidDetalles(int idPersona, int idDetalles) {
+                return ((unirPersonaRow)(this.Rows.Find(new object[] {
+                            idPersona,
+                            idDetalles})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 unirPersonaDataTable cln = ((unirPersonaDataTable)(base.Clone()));
                 cln.InitVars();
@@ -463,6 +471,9 @@ namespace Gimnasio {
                 base.Columns.Add(this.columnpesoPersona);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidPersona,
+                                this.columnidDetalles}, true));
                 this.columnidPersona.AllowDBNull = false;
                 this.columnidDetalles.AllowDBNull = false;
                 this.columnnombrePersona.MaxLength = 100;
@@ -913,7 +924,7 @@ namespace Gimnasio.unirPersonaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Gimnasio.Properties.Settings.Default.GimnasioConnectionString1;
+            this._connection.ConnectionString = global::Gimnasio.Properties.Settings.Default.local;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

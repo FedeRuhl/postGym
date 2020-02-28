@@ -33,13 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.personaDataSet = new Gimnasio.PersonaDataSet();
+            this.tablaPersonaDataSet = new Gimnasio.tablaPersonaDataSet();
             this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
+            this.tablaPersonaTableAdapter = new Gimnasio.tablaPersonaDataSetTableAdapters.tablaPersonaTableAdapter();
             this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,15 +96,15 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
             // 
-            // personaDataSet
+            // tablaPersonaDataSet
             // 
-            this.personaDataSet.DataSetName = "PersonaDataSet";
-            this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tablaPersonaDataSet.DataSetName = "tablaPersonaDataSet";
+            this.tablaPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tablaPersonaBindingSource
             // 
             this.tablaPersonaBindingSource.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource.DataSource = this.personaDataSet;
+            this.tablaPersonaBindingSource.DataSource = this.tablaPersonaDataSet;
             // 
             // tablaPersonaTableAdapter
             // 
@@ -138,7 +138,7 @@
             this.Text = "Perfiles";
             this.Load += new System.EventHandler(this.ConsultasPerfiles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -147,9 +147,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private PersonaDataSet personaDataSet;
+        private tablaPersonaDataSet tablaPersonaDataSet;
         private System.Windows.Forms.BindingSource tablaPersonaBindingSource;
-        private PersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
+        private tablaPersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePersonaDataGridViewTextBoxColumn;
     }

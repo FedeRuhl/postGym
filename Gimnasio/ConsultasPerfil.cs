@@ -18,10 +18,10 @@ namespace Gimnasio
         }
 
         private void ConsultasPerfiles_Load(object sender, EventArgs e)
-        {   
+        {    
             try
             {
-                this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
+                this.tablaPersonaTableAdapter.Fill(this.tablaPersonaDataSet.tablaPersona);
             }
             catch(Exception ex)
             {
