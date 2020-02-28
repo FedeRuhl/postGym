@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Gimnasio.exe" version="1.0.0.2" publicKeyToken="074c2fe4ed071517" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="install icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Gimnasio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Gimnasio.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gimnasio.exe" size="4743136">
+      <assemblyIdentity name="Gimnasio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>e/RwJJmUOlbnz+lhqyTOElAuHOcVeEUFK6IMLNeuKOc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LibreriaGimnasio.dll" size="4608">
+      <assemblyIdentity name="LibreriaGimnasio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>btPOgdWxRLf6mUdZPSol0AxzsCK3LOTTt54S6qSr/2g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.Types.dll" size="392456">
+      <assemblyIdentity name="Microsoft.SqlServer.Types" version="14.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>MBCP8iJXWg/sjexlvJLRsHc+FCmr75GNlp3/63tbsso=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="app_icon.ico" size="16958">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eUj7HmOOs2qB6MctKOBn535LAGCJ10UfhL4y/gcXEgc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Gimnasio.exe.config" size="483">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yGYJB0wg+8JPLM2tp7tPC6g8iRczpJOJWf0cHSagGBI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="install icon.ico" size="38078">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zm8CFx99cIPko/o/t8uwhzVzd1F4cX+R6jaYTaKIVlY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SqlServerTypes\readme.htm" size="2369">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BJeEVrWpRfGg1+JGs0y5jUfWeRb8LhM/r3ZxnZxUbP8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SqlServerTypes\x64\msvcr120.dll" size="963744">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DQC/F1apVnlxXpPcgrGzGZR3PQKfu9Tg6FE27wgrhqk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SqlServerTypes\x64\SqlServerSpatial140.dll" size="732936">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WFoMNnaROt3XfwxAt9b0DeSBHde3Difv9+ABpcoGX7E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SqlServerTypes\x86\msvcr120.dll" size="971584">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HIRJ9BdWbdD9adwh73fUa5R1+6rHMdo1vccWafIiQsg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SqlServerTypes\x86\SqlServerSpatial140.dll" size="587016">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8eJ1vDSOzCKLH6hLBhOVcB8W9jAQ9fjqzX4uog5/7Gw=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-TG5SMR3\feder" issuerKeyHash="6c5103238fc4d012d30a603d29105da2079c4285" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>rGntHqUehTKxBEidp1NTcWGI/hJxzSbYb3zC3H/nJ/8=</DigestValue></Reference></SignedInfo><SignatureValue>qRPyjo3KBksGE6QCNYTcLQdPgZ7GBd2L3x/WT0dsZ8zA4Lm9EedPSyMtRm0IHCow9qi6aIjARpHskOjCB2/IoCu0P/eJKUU1WJCDpB2DoEWVxN9j3GNv5VP2oKKpFSvG+5u6V6vTJLd2biSqvXarvII4ix9QciaruxsrFj66gdI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>yogxQ4NWe94DYgczNs/krmk5HPTmPYF7h8eQedji1VTbHw/bHVxY424XwR3QnBMBzNdvQbAvwzdU8K6pQsjtL4U+NBlcvKflIKLhaB7xyFij7vulOWs1n3FPR2VrCY797fQGNi3CcxcP4skvvopG87mCBIuptVCDzYcvYlemU80=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ff27e77fdcc27c6fd826cd7112fe8861715353a79d4804b132851ea51eed69ac" Description="" Url=""><as:assemblyIdentity name="Gimnasio.exe" version="1.0.0.2" publicKeyToken="074c2fe4ed071517" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-TG5SMR3\feder</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>1GzqAEagdx2as6v0UBdmM5walo3M9aSOz7eH2RJSpfo=</DigestValue></Reference></SignedInfo><SignatureValue>W7XJ1BEpG7BYO0FEPocOI45U1x0hy0O9EA5R7lM+hHmePldGacEpHnEg/YSOIyhLmhy99LCigmf5e3aW4rlPxWtPnA/L6BczO6JEyACLtdM5bRfwOZNOpcPzZAn1XZ8KduMWKspCMa0ZYDgn9co7bdL+LFg1Hsy2jkXSgpw4bbA=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>yogxQ4NWe94DYgczNs/krmk5HPTmPYF7h8eQedji1VTbHw/bHVxY424XwR3QnBMBzNdvQbAvwzdU8K6pQsjtL4U+NBlcvKflIKLhaB7xyFij7vulOWs1n3FPR2VrCY797fQGNi3CcxcP4skvvopG87mCBIuptVCDzYcvYlemU80=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQS3PvVmLWnoBCUfyfATrTOjANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFQARwA1AFMATQBSADMAXABmAGUAZABlAHIwHhcNMjAwMjI4MTczNjM3WhcNMjEwMjI3MjMzNjM3WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFQARwA1AFMATQBSADMAXABmAGUAZABlAHIwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMqIMUODVnveA2IHMzbP5K5pORz05j2Be4fHkHnY4tVU2x8P2x1cWONuF8Ed0JwTAczXb0GwL8M3VPCuqULI7S+FPjQZXLyn5SCi4Wge8chYo+77pTlrNZ9xT0dlawmO/e30BjYtwnMXD+LJL76KRvO5ggSLqbVQg82HL2JXplPNAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAmPNKk3adbVZ+QEp/s4Q5YRLX1NFQS0NwnjmUANMRfVqorno8S0GxshfSZP+BQ5iKi4/nvs0orTbQbOdAD3oViNCP/XVj4EDZRWGuj3veeJeUejX6nCjzqnKP64+bG5vzQ6RzjWWU6sAlxyj591BmY2iXIjzBYNV+wJJI1iC6514=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
