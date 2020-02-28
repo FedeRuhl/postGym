@@ -21,17 +21,14 @@ namespace Gimnasio
 
         private void ActualizarPersona_Load_1(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'tablaPersonaDataSet.tablaPersona' Puede moverla o quitarla según sea necesario.
-            this.tablaPersonaTableAdapter.Fill(this.tablaPersonaDataSet.tablaPersona);
             try
             {
-                //this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
+                this.tablaPersonaTableAdapter.Fill(this.tablaPersonaDataSet.tablaPersona);
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Se ha producido el siguiente error: " + ex.Message);
             }
-            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
