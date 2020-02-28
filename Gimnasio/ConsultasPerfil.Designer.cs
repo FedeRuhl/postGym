@@ -33,14 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.personaDataSet = new Gimnasio.PersonaDataSet();
+            this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
             this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personaDataSet = new Gimnasio.PersonaDataSet();
-            this.tablaPersonaTableAdapter = new Gimnasio.PersonaDataSetTableAdapters.tablaPersonaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -96,6 +96,20 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
             // 
+            // personaDataSet
+            // 
+            this.personaDataSet.DataSetName = "PersonaDataSet";
+            this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tablaPersonaBindingSource
+            // 
+            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
+            this.tablaPersonaBindingSource.DataSource = this.personaDataSet;
+            // 
+            // tablaPersonaTableAdapter
+            // 
+            this.tablaPersonaTableAdapter.ClearBeforeFill = true;
+            // 
             // idPersonaDataGridViewTextBoxColumn
             // 
             this.idPersonaDataGridViewTextBoxColumn.DataPropertyName = "idPersona";
@@ -112,20 +126,6 @@
             this.nombrePersonaDataGridViewTextBoxColumn.Name = "nombrePersonaDataGridViewTextBoxColumn";
             this.nombrePersonaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // tablaPersonaBindingSource
-            // 
-            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource.DataSource = this.personaDataSet;
-            // 
-            // personaDataSet
-            // 
-            this.personaDataSet.DataSetName = "PersonaDataSet";
-            this.personaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablaPersonaTableAdapter
-            // 
-            this.tablaPersonaTableAdapter.ClearBeforeFill = true;
-            // 
             // ConsultasPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -138,8 +138,8 @@
             this.Text = "Perfiles";
             this.Load += new System.EventHandler(this.ConsultasPerfiles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
