@@ -33,14 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tablaEjercicioDataSet = new Gimnasio.tablaEjercicioDataSet();
+            this.tablaEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablaEjercicioTableAdapter = new Gimnasio.tablaEjercicioDataSetTableAdapters.tablaEjercicioTableAdapter();
             this.idEjercicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreEjercicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tablaEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaEjercicio = new Gimnasio.tablaEjercicio();
-            this.tablaEjercicioTableAdapter = new Gimnasio.tablaEjercicioTableAdapters.tablaEjercicioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicio)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -96,6 +96,20 @@
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView2_KeyPress);
             // 
+            // tablaEjercicioDataSet
+            // 
+            this.tablaEjercicioDataSet.DataSetName = "tablaEjercicioDataSet";
+            this.tablaEjercicioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tablaEjercicioBindingSource
+            // 
+            this.tablaEjercicioBindingSource.DataMember = "tablaEjercicio";
+            this.tablaEjercicioBindingSource.DataSource = this.tablaEjercicioDataSet;
+            // 
+            // tablaEjercicioTableAdapter
+            // 
+            this.tablaEjercicioTableAdapter.ClearBeforeFill = true;
+            // 
             // idEjercicioDataGridViewTextBoxColumn
             // 
             this.idEjercicioDataGridViewTextBoxColumn.DataPropertyName = "idEjercicio";
@@ -112,20 +126,6 @@
             this.nombreEjercicioDataGridViewTextBoxColumn.Name = "nombreEjercicioDataGridViewTextBoxColumn";
             this.nombreEjercicioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // tablaEjercicioBindingSource
-            // 
-            this.tablaEjercicioBindingSource.DataMember = "tablaEjercicio";
-            this.tablaEjercicioBindingSource.DataSource = this.tablaEjercicio;
-            // 
-            // tablaEjercicio
-            // 
-            this.tablaEjercicio.DataSetName = "tablaEjercicio";
-            this.tablaEjercicio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablaEjercicioTableAdapter
-            // 
-            this.tablaEjercicioTableAdapter.ClearBeforeFill = true;
-            // 
             // ConsultaEjercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -139,8 +139,8 @@
             this.Text = "Ejercicios";
             this.Load += new System.EventHandler(this.ConsultaEjercicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,9 +148,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView2;
-        private tablaEjercicio tablaEjercicio;
+        private tablaEjercicioDataSet tablaEjercicioDataSet;
         private System.Windows.Forms.BindingSource tablaEjercicioBindingSource;
-        private tablaEjercicioTableAdapters.tablaEjercicioTableAdapter tablaEjercicioTableAdapter;
+        private tablaEjercicioDataSetTableAdapters.tablaEjercicioTableAdapter tablaEjercicioTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEjercicioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreEjercicioDataGridViewTextBoxColumn;
     }

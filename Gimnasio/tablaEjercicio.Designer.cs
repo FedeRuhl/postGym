@@ -381,6 +381,13 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public tablaEjercicioRow FindByidEjercicio(int idEjercicio) {
+                return ((tablaEjercicioRow)(this.Rows.Find(new object[] {
+                            idEjercicio})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 tablaEjercicioDataTable cln = ((tablaEjercicioDataTable)(base.Clone()));
                 cln.InitVars();
@@ -407,7 +414,10 @@ namespace Gimnasio {
                 base.Columns.Add(this.columnidEjercicio);
                 this.columnnombreEjercicio = new global::System.Data.DataColumn("nombreEjercicio", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombreEjercicio);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidEjercicio}, true));
                 this.columnidEjercicio.AllowDBNull = false;
+                this.columnidEjercicio.Unique = true;
                 this.columnnombreEjercicio.MaxLength = 50;
                 this.ExtendedProperties.Add("Generator_TablePropName", "_tablaEjercicio");
                 this.ExtendedProperties.Add("Generator_UserTableName", "tablaEjercicio");
@@ -786,7 +796,7 @@ SELECT idEjercicio, nombreEjercicio FROM tablaEjercicio WHERE (idEjercicio = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Gimnasio.Properties.Settings.Default.GimnasioConnectionString1;
+            //this._connection.ConnectionString = global::Gimnasio.Properties.Settings.Default.GimnasioConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -945,6 +955,14 @@ SELECT idEjercicio, nombreEjercicio FROM tablaEjercicio WHERE (idEjercicio = @id
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string nombreEjercicio, int Original_idEjercicio, string Original_nombreEjercicio) {
+            return this.Update(Original_idEjercicio, nombreEjercicio, Original_idEjercicio, Original_nombreEjercicio);
         }
     }
     

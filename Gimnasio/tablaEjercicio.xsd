@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GimnasioConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GimnasioConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Gimnasio.Properties.Settings.GlobalReference.Default.GimnasioConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="local" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="local (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Gimnasio.Properties.Settings.GlobalReference.Default.GimnasioConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tablaEjercicioTableAdapter" GeneratorDataComponentClassName="tablaEjercicioTableAdapter" Name="tablaEjercicio" UserDataComponentName="tablaEjercicioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="GimnasioConnectionString1 (Settings)" DbObjectName="Gimnasio.dbo.tablaEjercicio" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="local (Settings)" DbObjectName="Gimnasio.dbo.tablaEjercicio" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tablaEjercicio] WHERE (([idEjercicio] = @Original_idEjercicio) AND ((@IsNull_nombreEjercicio = 1 AND [nombreEjercicio] IS NULL) OR ([nombreEjercicio] = @Original_nombreEjercicio)))</CommandText>
@@ -65,7 +65,7 @@ SELECT idEjercicio, nombreEjercicio FROM tablaEjercicio WHERE (idEjercicio = @id
   <xs:element name="tablaEjercicio" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="tablaEjercicio" msprop:Generator_UserDSName="tablaEjercicio">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tablaEjercicio" msprop:Generator_TableClassName="tablaEjercicioDataTable" msprop:Generator_TableVarName="tabletablaEjercicio" msprop:Generator_TablePropName="_tablaEjercicio" msprop:Generator_RowDeletingName="tablaEjercicioRowDeleting" msprop:Generator_RowChangingName="tablaEjercicioRowChanging" msprop:Generator_RowEvHandlerName="tablaEjercicioRowChangeEventHandler" msprop:Generator_RowDeletedName="tablaEjercicioRowDeleted" msprop:Generator_UserTableName="tablaEjercicio" msprop:Generator_RowChangedName="tablaEjercicioRowChanged" msprop:Generator_RowEvArgName="tablaEjercicioRowChangeEvent" msprop:Generator_RowClassName="tablaEjercicioRow">
+        <xs:element name="tablaEjercicio" msprop:Generator_TableClassName="tablaEjercicioDataTable" msprop:Generator_TableVarName="tabletablaEjercicio" msprop:Generator_RowChangedName="tablaEjercicioRowChanged" msprop:Generator_TablePropName="_tablaEjercicio" msprop:Generator_RowDeletingName="tablaEjercicioRowDeleting" msprop:Generator_RowChangingName="tablaEjercicioRowChanging" msprop:Generator_RowEvHandlerName="tablaEjercicioRowChangeEventHandler" msprop:Generator_RowDeletedName="tablaEjercicioRowDeleted" msprop:Generator_RowClassName="tablaEjercicioRow" msprop:Generator_UserTableName="tablaEjercicio" msprop:Generator_RowEvArgName="tablaEjercicioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idEjercicio" msprop:Generator_ColumnVarNameInTable="columnidEjercicio" msprop:Generator_ColumnPropNameInRow="idEjercicio" msprop:Generator_ColumnPropNameInTable="idEjercicioColumn" msprop:Generator_UserColumnName="idEjercicio" type="xs:int" />
@@ -81,5 +81,9 @@ SELECT idEjercicio, nombreEjercicio FROM tablaEjercicio WHERE (idEjercicio = @id
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tablaEjercicio" />
+      <xs:field xpath="mstns:idEjercicio" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

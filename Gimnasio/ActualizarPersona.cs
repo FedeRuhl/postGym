@@ -21,9 +21,11 @@ namespace Gimnasio
 
         private void ActualizarPersona_Load_1(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tablaPersonaDataSet.tablaPersona' Puede moverla o quitarla según sea necesario.
+            this.tablaPersonaTableAdapter.Fill(this.tablaPersonaDataSet.tablaPersona);
             try
             {
-                this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
+                //this.tablaPersonaTableAdapter.Fill(this.personaDataSet.tablaPersona);
             }
             catch(Exception ex)
             {

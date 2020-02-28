@@ -23,7 +23,8 @@ namespace Gimnasio
         {
             try
             {
-                this.unirPersonaTableAdapter.Fill(this.unirPersonaDataSet.unirPersona);
+                this.unirPersonaTableAdapter1.Fill(this.unirPersonaDataSet.unirPersona);
+                this.unirPersonaTableAdapter.Fill(this.unirPersonaFechaDataSet.unirPersona);
             }
             catch (Exception error)
             {

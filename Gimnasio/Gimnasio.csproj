@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -150,22 +150,26 @@
     <Compile Include="FormularioBase.Designer.cs">
       <DependentUpon>FormularioBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PersonaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="tablaEjercicio.cs">
-      <DependentUpon>tablaEjercicio.xsd</DependentUpon>
-    </Compile>
     <Compile Include="tablaEjercicio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>tablaEjercicio.xsd</DependentUpon>
     </Compile>
-    <Compile Include="unirEjercicioDataSet.cs">
-      <DependentUpon>unirEjercicioDataSet.xsd</DependentUpon>
+    <Compile Include="tablaEjercicioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tablaEjercicioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tablaPersona1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tablaPersona1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tablaPersonaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tablaPersonaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="unirEjercicioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -176,6 +180,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>unirPersonaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="unirPersonaFechaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unirPersonaFechaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="MainClass.cs">
@@ -266,17 +275,6 @@
     </EmbeddedResource>
     <None Include="Gimnasio_TemporaryKey.pfx" />
     <None Include="packages.config" />
-    <None Include="PersonaDataSet.xsc">
-      <DependentUpon>PersonaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PersonaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PersonaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PersonaDataSet.xss">
-      <DependentUpon>PersonaDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\DataSources\ActualizarPersona.datasource" />
     <None Include="Properties\DataSources\Consultas.datasource" />
     <None Include="Properties\DataSources\ContenedorConsultas.datasource" />
@@ -312,6 +310,39 @@
     <None Include="tablaEjercicio.xss">
       <DependentUpon>tablaEjercicio.xsd</DependentUpon>
     </None>
+    <None Include="tablaEjercicioDataSet.xsc">
+      <DependentUpon>tablaEjercicioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tablaEjercicioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tablaEjercicioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tablaEjercicioDataSet.xss">
+      <DependentUpon>tablaEjercicioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tablaPersona1.xsc">
+      <DependentUpon>tablaPersona1.xsd</DependentUpon>
+    </None>
+    <None Include="tablaPersona1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tablaPersona1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tablaPersona1.xss">
+      <DependentUpon>tablaPersona1.xsd</DependentUpon>
+    </None>
+    <None Include="tablaPersonaDataSet.xsc">
+      <DependentUpon>tablaPersonaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tablaPersonaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tablaPersonaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tablaPersonaDataSet.xss">
+      <DependentUpon>tablaPersonaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="unirEjercicioDataSet.xsc">
       <DependentUpon>unirEjercicioDataSet.xsd</DependentUpon>
     </None>
@@ -327,12 +358,23 @@
       <DependentUpon>unirPersonaDataSet.xsd</DependentUpon>
     </None>
     <None Include="unirPersonaDataSet.xsd">
-      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>unirPersonaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="unirPersonaDataSet.xss">
       <DependentUpon>unirPersonaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="unirPersonaFechaDataSet.xsc">
+      <DependentUpon>unirPersonaFechaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="unirPersonaFechaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unirPersonaFechaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unirPersonaFechaDataSet.xss">
+      <DependentUpon>unirPersonaFechaDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
