@@ -12,7 +12,7 @@ namespace Gimnasio
     {
         public static DataSet Ejecutar(string cmd)
         {
-            string con = @"Data Source=DESKTOP-TG5SMR3\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True";
+            string con = @"Data Source=(local);Initial Catalog=Gimnasio;Integrated Security=True";
             SqlConnection conexion = new SqlConnection(con);
             conexion.Open();
             DataSet DS = new DataSet();
