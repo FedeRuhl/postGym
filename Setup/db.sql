@@ -229,7 +229,7 @@ as
 if exists (select idPersona from tablaPersona where idPersona = @idPersona)
 update tablaPersona set nombrePersona = @nombrePersona where idPersona = @idPersona
 
-create procedure unirEjercicio
+create procedure unirEjercicio /* PARA WINDOWS 10*/
 
 as
 
@@ -242,6 +242,22 @@ FROM
 	inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona
 GROUP BY
     nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries, tablaDetallesEjercicio.fecha
+
+create procedure unirEjercicio /*PARA WINDOWS ANTERIORES*/
+SELECT nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries,
+STUFF(
+(SELECT
+    ', ' + CONVERT (VARCHAR(50), tablaSerie.peso,128)
+FROM
+	 tablaSerie
+FOR XML PATH ('')), 
+1,1, '') as Pesos, tablaDetallesEjercicio.fecha
+FROM tablaEjercicio inner join tablaDetallesEjercicio on tablaEjercicio.idEjercicio = tablaDetallesEjercicio.idEjercicio
+    inner join tablaSerie on tablaDetallesEjercicio.idDetalles = tablaSerie.idDetallesEjercicio
+	inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona
+GROUP BY nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries,
+tablaDetallesEjercicio.fecha
+
 
 create procedure unirPersona
 
