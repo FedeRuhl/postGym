@@ -244,6 +244,9 @@ GROUP BY
     nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries, tablaDetallesEjercicio.fecha
 
 create procedure unirEjercicio /*PARA WINDOWS ANTERIORES*/
+
+as
+
 SELECT nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries,
 STUFF(
 (SELECT
