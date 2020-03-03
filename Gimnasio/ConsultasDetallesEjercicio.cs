@@ -38,8 +38,11 @@ namespace Gimnasio
         {
             try
             {
-                string cmd = "select fecha from tablaDetallesEjercicio group by fecha";
+                string cmd = string.Format("EXEC unirEjercicio");
                 DataSet ds = Utilidades.Ejecutar(cmd);
+                dataGridView1.DataSource = ds.Tables[0];
+                cmd = "select fecha from tablaDetallesEjercicio group by fecha";
+                ds = Utilidades.Ejecutar(cmd);
                 listBox1.DataSource = ds.Tables[0];
                 this.unirEjercicioTableAdapter1.Fill(this.unirEjercicioDataSet1.unirEjercicio);
             }

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimnasio", "Gimnasio.csproj
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PostGym", "..\PostGym\PostGym.vdproj", "{48C7C3D7-BFAF-4A0E-9FB3-E5CC79708142}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador PostGym", "..\Instalador PostGym\Instalador PostGym.vdproj", "{6E62BC6F-B645-4058-89BF-2E1F746D6CAD}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador PostGym", "..\Instalador PostGym\Instalador PostGym.vdproj", "{E30C66B2-D306-41C0-B796-7A00F29C1350}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +21,8 @@ Global
 		{EF4F2B33-0C6F-4486-B1D9-A0AC39BDE42A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{48C7C3D7-BFAF-4A0E-9FB3-E5CC79708142}.Debug|Any CPU.ActiveCfg = Debug
 		{48C7C3D7-BFAF-4A0E-9FB3-E5CC79708142}.Release|Any CPU.ActiveCfg = Release
-		{6E62BC6F-B645-4058-89BF-2E1F746D6CAD}.Debug|Any CPU.ActiveCfg = Debug
-		{6E62BC6F-B645-4058-89BF-2E1F746D6CAD}.Release|Any CPU.ActiveCfg = Release
+		{E30C66B2-D306-41C0-B796-7A00F29C1350}.Debug|Any CPU.ActiveCfg = Debug
+		{E30C66B2-D306-41C0-B796-7A00F29C1350}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

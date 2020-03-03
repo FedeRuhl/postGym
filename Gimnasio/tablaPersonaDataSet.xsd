@@ -65,7 +65,7 @@ SELECT idPersona, nombrePersona FROM tablaPersona WHERE (idPersona = @idPersona)
   <xs:element name="tablaPersonaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="tablaPersonaDataSet" msprop:Generator_UserDSName="tablaPersonaDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tablaPersona" msprop:Generator_TableClassName="tablaPersonaDataTable" msprop:Generator_TableVarName="tabletablaPersona" msprop:Generator_TablePropName="tablaPersona" msprop:Generator_RowDeletingName="tablaPersonaRowDeleting" msprop:Generator_RowChangingName="tablaPersonaRowChanging" msprop:Generator_RowEvHandlerName="tablaPersonaRowChangeEventHandler" msprop:Generator_RowDeletedName="tablaPersonaRowDeleted" msprop:Generator_UserTableName="tablaPersona" msprop:Generator_RowChangedName="tablaPersonaRowChanged" msprop:Generator_RowEvArgName="tablaPersonaRowChangeEvent" msprop:Generator_RowClassName="tablaPersonaRow">
+        <xs:element name="tablaPersona" msprop:Generator_TableClassName="tablaPersonaDataTable" msprop:Generator_TableVarName="tabletablaPersona" msprop:Generator_RowChangedName="tablaPersonaRowChanged" msprop:Generator_TablePropName="tablaPersona" msprop:Generator_RowDeletingName="tablaPersonaRowDeleting" msprop:Generator_RowChangingName="tablaPersonaRowChanging" msprop:Generator_RowEvHandlerName="tablaPersonaRowChangeEventHandler" msprop:Generator_RowDeletedName="tablaPersonaRowDeleted" msprop:Generator_RowClassName="tablaPersonaRow" msprop:Generator_UserTableName="tablaPersona" msprop:Generator_RowEvArgName="tablaPersonaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPersona" msprop:Generator_ColumnVarNameInTable="columnidPersona" msprop:Generator_ColumnPropNameInRow="idPersona" msprop:Generator_ColumnPropNameInTable="idPersonaColumn" msprop:Generator_UserColumnName="idPersona" type="xs:int" />
@@ -81,9 +81,5 @@ SELECT idPersona, nombrePersona FROM tablaPersona WHERE (idPersona = @idPersona)
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:tablaPersona" />
-      <xs:field xpath="mstns:idPersona" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

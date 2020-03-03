@@ -381,13 +381,6 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tablaPersonaRow FindByidPersona(int idPersona) {
-                return ((tablaPersonaRow)(this.Rows.Find(new object[] {
-                            idPersona})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 tablaPersonaDataTable cln = ((tablaPersonaDataTable)(base.Clone()));
                 cln.InitVars();
@@ -414,10 +407,7 @@ namespace Gimnasio {
                 base.Columns.Add(this.columnidPersona);
                 this.columnnombrePersona = new global::System.Data.DataColumn("nombrePersona", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombrePersona);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidPersona}, true));
                 this.columnidPersona.AllowDBNull = false;
-                this.columnidPersona.Unique = true;
                 this.columnnombrePersona.MaxLength = 100;
             }
             
@@ -953,14 +943,6 @@ SELECT idPersona, nombrePersona FROM tablaPersona WHERE (idPersona = @idPersona)
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nombrePersona, int Original_idPersona, string Original_nombrePersona) {
-            return this.Update(Original_idPersona, nombrePersona, Original_idPersona, Original_nombrePersona);
         }
     }
     
