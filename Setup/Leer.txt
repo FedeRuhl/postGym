@@ -3,3 +3,6 @@ cada uno de los procedure por separado).
 Se utiliza (local) como servidor y instancia sin nombre,
 o instancia predeterminada.
 Luego correr el instalador "PostGym".
+
+Si el script no funciona, restaurar este backup con 
+versiones de sql server 18 en adelante.
