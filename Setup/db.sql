@@ -14,7 +14,7 @@ create table tablaPersona
 	pesoPersona float,
 	fecha datetime
 	constraint [Pk_idDetallesPersona] primary key (idDetalles)
-	constraint [Fk_idPersona] foreign key (idPersona) references tablaPersona (idPersona)
+	constraint [Fk_idPersona] foreign key (idPersona) references tablaPersona (idPersona) ON DELETE CASCADE
  )
 
  create table tablaEjercicio
@@ -32,8 +32,8 @@ create table tablaPersona
 	cantidadSeries int,
 	fecha date,
 	constraint [Pk_idDetallesEjercicio] primary key (idDetalles),
-	constraint [Fk_idEjercicio] foreign key (idEjercicio) references tablaEjercicio (idEjercicio),
-	constraint [Fk_idPersonaa] foreign key (idPersona) references tablaPersona (idPersona)
+	constraint [Fk_idEjercicio] foreign key (idEjercicio) references tablaEjercicio (idEjercicio) ON DELETE CASCADE,
+	constraint [Fk_idPersonaa] foreign key (idPersona) references tablaPersona (idPersona) ON DELETE CASCADE
  )
 
  create table tablaSerie
@@ -42,7 +42,7 @@ create table tablaPersona
 	idDetallesEjercicio int not null,
 	peso float
 	constraint [Pk_idSerie] primary key (idSerie)
-	constraint [Fk_idDetallesEjercicio] foreign key (idDetallesEjercicio) references tablaDetallesEjercicio (idDetalles)
+	constraint [Fk_idDetallesEjercicio] foreign key (idDetallesEjercicio) references tablaDetallesEjercicio (idDetalles) ON DELETE CASCADE
  )
 
  create procedure crearPersona
@@ -160,25 +160,6 @@ create procedure eliminarEjercicio
 
 as
 
-if exists (select idEjercicio from tablaEjercicio where idEjercicio = @idEjercicio)
-declare @detalles as int
-declare rs cursor for
-select idDetalles 
-from tablaDetallesEjercicio
-where idEjercicio = @idEjercicio
-
-open rs 
-	fetch next from rs
-	into @detalles
-	while @@FETCH_STATUS = 0
-		begin	
-		delete from tablaSerie where idDetallesEjercicio = @detalles
-		fetch next from rs
-		into @detalles
-	end
-close rs
-deallocate rs
-
 delete from tablaDetallesEjercicio where idEjercicio = @idEjercicio
 delete from tablaEjercicio where idEjercicio = @idEjercicio
 
@@ -187,25 +168,6 @@ create procedure eliminarPersona
 @idPersona int
 
 as
-
-if exists (select idPersona from tablaPersona where idPersona = @idPersona)
-declare @detalles as int
-declare rs cursor for
-select idDetalles 
-from tablaDetallesEjercicio
-where idPersona = @idPersona
-
-open rs 
-	fetch next from rs
-	into @detalles
-	while @@FETCH_STATUS = 0
-		begin
-		delete from tablaSerie where idDetallesEjercicio = @detalles
-		fetch next from rs
-		into @detalles
-	end
-close rs
-deallocate rs
 
 delete from tablaDetallesEjercicio where idPersona = @idPersona
 delete from tablaDetallesPersona where idPersona = @idPersona
