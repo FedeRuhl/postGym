@@ -56,6 +56,7 @@ namespace Gimnasio
             {
                 DataSet ds;
                 DateTime fecha = DateTime.Parse(listBox1.Text);
+                string fechaFormatoUniversal = Utilidades.convertirFormatoUniversal(fecha);
                 string cmd = "select tablaPersona.idPersona, idDetalles, nombrePersona, alturaPersona, pesoPersona, fecha from tablaPersona inner join tablaDetallesPersona on tablaPersona.idPersona = tablaDetallesPersona.idPersona where fecha = '" + fecha.ToString() + "'";
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];

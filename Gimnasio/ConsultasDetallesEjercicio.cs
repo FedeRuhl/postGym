@@ -24,7 +24,8 @@ namespace Gimnasio
             {
                 DataSet ds;
                 DateTime fecha = DateTime.Parse(listBox1.Text);
-                string cmd = "Select nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries, STRING_AGG(tablaSerie.peso,', ') 'Lista de pesos', tablaDetallesEjercicio.fecha from tablaEjercicio inner join tablaDetallesEjercicio on tablaEjercicio.idEjercicio = tablaDetallesEjercicio.idEjercicio inner join tablaSerie on tablaDetallesEjercicio.idDetalles = tablaSerie.idDetallesEjercicio inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona where fecha = '" + fecha.ToShortDateString() + "' group by nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries, tablaDetallesEjercicio.fecha";
+                string fechaFormatoUniversal = Utilidades.convertirFormatoUniversal(fecha);
+                string cmd = "Select nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries, STRING_AGG(tablaSerie.peso,', ') 'Lista de pesos', tablaDetallesEjercicio.fecha from tablaEjercicio inner join tablaDetallesEjercicio on tablaEjercicio.idEjercicio = tablaDetallesEjercicio.idEjercicio inner join tablaSerie on tablaDetallesEjercicio.idDetalles = tablaSerie.idDetallesEjercicio inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona where fecha = '" + fechaFormatoUniversal + "' group by nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries, tablaDetallesEjercicio.fecha";
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView1.DataSource = ds.Tables[0];
             }
