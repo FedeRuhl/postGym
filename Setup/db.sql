@@ -3,7 +3,7 @@ create table tablaPersona
 	 idPersona int not null,
 	 nombrePersona varchar (100),
 	 constraint [Pk_idPersona] primary key (idPersona)
- )
+ );
 
  create table tablaDetallesPersona
  (
@@ -15,14 +15,14 @@ create table tablaPersona
 	fecha datetime
 	constraint [Pk_idDetallesPersona] primary key (idDetalles)
 	constraint [Fk_idPersona] foreign key (idPersona) references tablaPersona (idPersona) ON DELETE CASCADE
- )
+ );
 
  create table tablaEjercicio
  (
 	idEjercicio int not null,
 	nombreEjercicio nvarchar (50)
 	constraint [Pk_idEjercicio] primary key (idEjercicio)
- )
+ );
 
  create table tablaDetallesEjercicio
  (
@@ -34,17 +34,20 @@ create table tablaPersona
 	constraint [Pk_idDetallesEjercicio] primary key (idDetalles),
 	constraint [Fk_idEjercicio] foreign key (idEjercicio) references tablaEjercicio (idEjercicio) ON DELETE CASCADE,
 	constraint [Fk_idPersonaa] foreign key (idPersona) references tablaPersona (idPersona) ON DELETE CASCADE
- )
+ );
 
  create table tablaSerie
  (
 	idSerie int not null,
 	idDetallesEjercicio int not null,
-	peso float
+	peso float,
+	cantidadRepeticiones int,
+	cantidadSegundos float
 	constraint [Pk_idSerie] primary key (idSerie)
 	constraint [Fk_idDetallesEjercicio] foreign key (idDetallesEjercicio) references tablaDetallesEjercicio (idDetalles) ON DELETE CASCADE
- )
+ );
 
+ ----------------------------------------------------------------------------------------------
  create procedure crearPersona
  
 	@idPersona int, @nombrePersona nvarchar(50)
@@ -62,7 +65,10 @@ as
 
 if not exists(select idEjercicio from tablaEjercicio where idEjercicio = @idEjercicio)
 insert into tablaEjercicio (idEjercicio, nombreEjercicio) values (@idEjercicio, @nombreEjercicio)
+go;
+----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
 create procedure actualizaPersona
 
 @idPersona int, @nombrePersona varchar(50), @fotoPersona nvarchar(200), @alturaPersona float, @pesoPersona float
@@ -86,7 +92,10 @@ SET @Today = DateAdd(dd, DateDiff(dd, 0, @TheDate), 0)
 
 insert into tablaDetallesPersona (idPersona, idDetalles ,fotoPersona, alturaPersona, pesoPersona, fecha) 
 values (@idPersona, @idDetalles, @fotoPersona, @alturaPersona, @pesoPersona, DateAdd(s, DateDiff(s, @Today, @TheDate), @Today))
+go;
+----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
 create procedure actualizaDetallesEjercicio
 
 @nombrePersona nvarchar(100), @nombreEjercicio nvarchar(50), @fecha date, @cantidadSeries int
@@ -109,7 +118,10 @@ set @idDetallesEjercicio = (select top 1 idDetalles from tablaDetallesEjercicio 
 if exists (select idEjercicio from tablaEjercicio where idEjercicio = @idEjercicio) 
 insert into tablaDetallesEjercicio (idPersona, idEjercicio, idDetalles, cantidadSeries, fecha) values
 (@idPersona, @idEjercicio, @idDetallesEjercicio, @cantidadSeries, @fecha)
+go;
+----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
 create procedure crearSerie
 
 @peso float, @nombreEjercicio nvarchar(50)
@@ -133,7 +145,10 @@ set @idSerie = (select top 1 idSerie from tablaSerie  order by idSerie DESC) + 1
 
 if not exists(select idSerie from tablaSerie where idSerie = @idSerie)
 insert into tablaSerie (idSerie, peso, idDetallesEjercicio) values (@idSerie, @peso, @idDetalles)
+go;
+----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
 create procedure eliminarDetallesEjercicio
 
 @idDetalles int
@@ -143,8 +158,10 @@ as
 if exists (select idDetalles from tablaDetallesEjercicio where idDetalles = @idDetalles)
 delete from tablaSerie where idDetallesEjercicio = @idDetalles
 delete from tablaDetallesEjercicio where idDetalles = @idDetalles
+go;
+----------------------------------------------------------------------------------------------
 
-
+----------------------------------------------------------------------------------------------
 create procedure eliminarDetallesPersona
 
 @idDetalles int
@@ -153,7 +170,10 @@ as
 
 if exists (select idDetalles from tablaDetallesPersona where idDetalles = @idDetalles)
 delete from tablaDetallesPersona where idDetalles = @idDetalles
+go;
+----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
 create procedure eliminarEjercicio
 
 @idEjercicio int
@@ -162,7 +182,10 @@ as
 
 delete from tablaDetallesEjercicio where idEjercicio = @idEjercicio
 delete from tablaEjercicio where idEjercicio = @idEjercicio
+go;
+----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
 create procedure eliminarPersona
 
 @idPersona int
@@ -172,7 +195,10 @@ as
 delete from tablaDetallesEjercicio where idPersona = @idPersona
 delete from tablaDetallesPersona where idPersona = @idPersona
 delete from tablaPersona where idPersona = @idPersona
+go;
+----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
 create procedure modificarEjercicio
 
 @idEjercicio int, @nombreEjercicio nvarchar(50)
@@ -181,7 +207,10 @@ as
 
 if exists (select idEjercicio from tablaEjercicio where idEjercicio = @idEjercicio)
 update tablaEjercicio set nombreEjercicio = @nombreEjercicio where idEjercicio = @idEjercicio
+go;
+----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
 create procedure modificarPersona
 
 @idPersona int, @nombrePersona nvarchar(50)
@@ -190,7 +219,10 @@ as
 
 if exists (select idPersona from tablaPersona where idPersona = @idPersona)
 update tablaPersona set nombrePersona = @nombrePersona where idPersona = @idPersona
+go;
+----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
 create procedure unirEjercicio /* PARA WINDOWS 10*/
 
 as
@@ -204,7 +236,10 @@ FROM
 	inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona
 GROUP BY
     nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries, tablaDetallesEjercicio.fecha
+	go;
+----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
 create procedure unirEjercicio /*PARA WINDOWS ANTERIORES*/
 
 as
@@ -222,8 +257,10 @@ FROM tablaEjercicio inner join tablaDetallesEjercicio on tablaEjercicio.idEjerci
 	inner join tablaPersona on tablaDetallesEjercicio.idPersona = tablaPersona.idPersona
 GROUP BY nombrePersona, tablaEjercicio.idEjercicio, tablaDetallesEjercicio.idDetalles, nombreEjercicio, cantidadSeries,
 tablaDetallesEjercicio.fecha
+go;
+----------------------------------------------------------------------------------------------
 
-
+----------------------------------------------------------------------------------------------
 create procedure unirPersona
 
 as
@@ -232,3 +269,5 @@ select
 P.idPersona, DP.idDetalles, P.nombrePersona, DP.alturaPersona, DP.pesoPersona, DP.fecha
 from 
 tablaPersona P inner join tablaDetallesPersona DP on P.idPersona = DP.idPersona
+go;
+----------------------------------------------------------------------------------------------
