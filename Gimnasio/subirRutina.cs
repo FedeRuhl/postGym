@@ -113,10 +113,10 @@ namespace Gimnasio
                     if (DS.Tables[0].Rows.Count == 0 || DS2.Tables[0].Rows.Count == 0)
                         continuar = false;
 
-                    String[] segundoOrepeticion = new String[conteo + 1];
+                    String[] pesos = generarArregloDinamico("textPeso", ref continuar);
 
-                    String[] pesos = generarArregloDinamico("textPeso", ref continuar, false, ref segundoOrepeticion);
-                    String[] repeticionesYsegundos = generarArregloDinamico("txtRepOSeg", ref continuar, true, ref segundoOrepeticion);
+                    String[] segundoOrepeticion = new String[conteo + 1];
+                    String[] repeticionesYsegundos = generarArregloDinamico("txtRepOSeg", ref continuar, ref segundoOrepeticion);
 
                     if (conteo > 0 && continuar)
                     {
@@ -162,7 +162,7 @@ namespace Gimnasio
             }
         }
 
-        private String[] generarArregloDinamico(String nombreTexto, ref Boolean continuar, Boolean conSegundosYrepeticiones, ref String[] segundoOrepeticion)
+        private string[] generarArregloDinamico(String nombreTexto, ref Boolean continuar)
         {
             String cadena = "";
             float number = 0;
@@ -176,35 +176,50 @@ namespace Gimnasio
                     cadena = Controls.Find(textBox, true).First().Text;
                     cadena = cadena.Replace(",", ".");
 
-                    if (conSegundosYrepeticiones)
-                    {
-                        String checkSegundos = "checkSegundos" + i;
-                        String checkRepeticiones = "checkRepeticiones" + i;
-                        CheckBox arregloSegundos = Controls.Find(checkSegundos, true).First() as CheckBox;
-                        //CheckBox arregloRepeticiones = Controls.Find(checkRepeticiones, true).First() as CheckBox;
+                    if (float.TryParse(cadena, out number) && Controls.Find(textBox, true).Count() != 0)
+                        arregloDinamico[i] = cadena;
+                    else
+                        continuar = false;
+                }
+            }
+            return arregloDinamico;
+        }
 
-                        if (arregloSegundos.Checked)
-                        {
-                            segundoOrepeticion[i] = "S";
-                        }
-                        else
-                        {
-                            segundoOrepeticion[i] = "R";
-                        }
-                    }
+        private String[] generarArregloDinamico(String nombreTexto, ref Boolean continuar, ref String[] segundoOrepeticion)
+        {
+            String cadena = "";
+            float number = 0;
+            String[] arregloDinamico = new String[conteo + 1];
+
+            for (int i = 0; i < conteo; i++)
+            {
+                String textBox = nombreTexto + i;
+                if (Controls.Find(textBox, true).Length > 0)
+                {
+                    cadena = Controls.Find(textBox, true).First().Text;
+                    cadena = cadena.Replace(",", ".");
+
+                    String checkSegundos = "checkSegundos" + i;
+                    String checkRepeticiones = "checkRepeticiones" + i;
+                    CheckBox arregloSegundos = Controls.Find(checkSegundos, true).First() as CheckBox;
+                    //CheckBox arregloRepeticiones = Controls.Find(checkRepeticiones, true).First() as CheckBox;
+
+                    if (arregloSegundos.Checked)
+                        segundoOrepeticion[i] = "S";
+                    else
+                        segundoOrepeticion[i] = "R";
+
 
                     if (float.TryParse(cadena, out number) && Controls.Find(textBox, true).Count() != 0)
-                    {
                         arregloDinamico[i] = cadena;
-                    }
                     else
-                    {
                         continuar = false;
-                    }
                 }
             }
 
             return arregloDinamico;
         }
+
+
     }
 }
