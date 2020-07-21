@@ -120,41 +120,15 @@ namespace Gimnasio
 
                     if (conteo > 0 && continuar)
                     {
-                        string nombrePersona = comboBox2.Text;
-                        string nombreEjercicio = comboBox1.Text;
-                        DateTime fecha = dateTimePicker1.Value;
-                        string fechaFormatoUniversal = Utilidades.convertirFormatoUniversal(fecha);
-                        string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fechaFormatoUniversal, conteo);
-                        DataSet ds = Utilidades.Ejecutar(cmd);
-                        for (int i = 0; i < conteo; i++)
-                        {
-                            if (segundoOrepeticion.Length > 0)
-                            {
-                                if (segundoOrepeticion[i] == "S")
-                                    cmd = string.Format("EXEC crearSerie '{0}', '{1}', '{2}', '{3}'", pesos[i], nombreEjercicio, null, repeticionesYsegundos[i]);
-                                else
-                                    cmd = string.Format("EXEC crearSerie '{0}', '{1}', '{2}', '{3}'", pesos[i], nombreEjercicio, repeticionesYsegundos[i], null);
-                            }
-                            else
-                                cmd = string.Format("EXEC crearSerie '{0}', '{1}', '{2}', '{3}'", pesos[i], nombreEjercicio, null, null);
-
-                            ds = Utilidades.Ejecutar(cmd);
-                        }
-
-                        MessageBox.Show("¡Se ha guardado correctamente!");
-                        panelPesos.Controls.Clear();
+                        crearSerie(segundoOrepeticion, pesos, repeticionesYsegundos);
                         y = 0;
                         conteo = 0;
                     }
                     else
-                    {
                         MessageBox.Show("Para subir la rutina los pesos de las series deben ser ingresados correctamente.");
-                    }
                 }
                 else
-                {
                     MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
-                }
             }
             catch (Exception ex)
             {
@@ -199,6 +173,11 @@ namespace Gimnasio
                     cadena = Controls.Find(textBox, true).First().Text;
                     cadena = cadena.Replace(",", ".");
 
+                    if (float.TryParse(cadena, out number) && Controls.Find(textBox, true).Count() != 0)
+                        arregloDinamico[i] = cadena;
+                    else
+                        continuar = false;
+
                     String checkSegundos = "checkSegundos" + i;
                     String checkRepeticiones = "checkRepeticiones" + i;
                     CheckBox arregloSegundos = Controls.Find(checkSegundos, true).First() as CheckBox;
@@ -208,18 +187,38 @@ namespace Gimnasio
                         segundoOrepeticion[i] = "S";
                     else
                         segundoOrepeticion[i] = "R";
-
-
-                    if (float.TryParse(cadena, out number) && Controls.Find(textBox, true).Count() != 0)
-                        arregloDinamico[i] = cadena;
-                    else
-                        continuar = false;
                 }
             }
 
             return arregloDinamico;
         }
 
+        private void crearSerie(string[] segundoOrepeticion, string[] pesos, string[] repeticionesYsegundos)
+        {
+            string nombrePersona = comboBox2.Text;
+            string nombreEjercicio = comboBox1.Text;
+            DateTime fecha = dateTimePicker1.Value;
+            string fechaFormatoUniversal = Utilidades.convertirFormatoUniversal(fecha);
+            string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fechaFormatoUniversal, conteo);
+            DataSet ds = Utilidades.Ejecutar(cmd);
+            for (int i = 0; i < conteo; i++)
+            {
+                if (segundoOrepeticion.Length > 0)
+                {
+                    if (segundoOrepeticion[i] == "S")
+                        cmd = string.Format("EXEC crearSerie '{0}', '{1}', '{2}', '{3}'", pesos[i], nombreEjercicio, null, repeticionesYsegundos[i]);
+                    else
+                        cmd = string.Format("EXEC crearSerie '{0}', '{1}', '{2}', '{3}'", pesos[i], nombreEjercicio, repeticionesYsegundos[i], null);
+                }
+                else
+                    cmd = string.Format("EXEC crearSerie '{0}', '{1}', '{2}', '{3}'", pesos[i], nombreEjercicio, null, null);
+
+                ds = Utilidades.Ejecutar(cmd);
+            }
+
+            MessageBox.Show("¡Se ha guardado correctamente!");
+            panelPesos.Controls.Clear();
+        }
 
     }
 }
