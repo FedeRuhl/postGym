@@ -15,8 +15,8 @@ namespace Gimnasio
     {
         private int y = 0;
         private int conteo = 0;
-        private TextBox textPeso = new TextBox();
-        private TextBox textRepOSeg = new TextBox();
+        private TextBox textPeso;
+        private TextBox textRepOSeg;
         private CheckBox checkSegundos;
         private CheckBox checkRepeticiones;
 
@@ -40,7 +40,7 @@ namespace Gimnasio
             }
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnAgregarSerie_Click(object sender, EventArgs e)
         {
             try
             {
@@ -103,22 +103,18 @@ namespace Gimnasio
         {
             try
             {
-                bool continuar = true;
-                if (comboBox1.Text != "" && comboBox2.Text != "")
+                if (cbEjercicio.Text != "" && cbPersona.Text != "")
                 {
-                    string buscarPersona = "select idPersona from tablaPersona where nombrePersona = '" + comboBox2.Text + "'";
-                    DataSet DS = Utilidades.Ejecutar(buscarPersona);
-                    string buscarEjercicio = "select idEjercicio from tablaEjercicio where nombreEjercicio = '" + comboBox1.Text + "'";
-                    DataSet DS2 = Utilidades.Ejecutar(buscarEjercicio);
-                    if (DS.Tables[0].Rows.Count == 0 || DS2.Tables[0].Rows.Count == 0)
-                        continuar = false;
-
-                    String[] pesos = generarArregloDinamico("textPeso", ref continuar);
-
                     String[] segundoOrepeticion = new String[conteo + 1];
-                    String[] repeticionesYsegundos = generarArregloDinamico("txtRepOSeg", ref continuar, ref segundoOrepeticion);
+                    segundoOrepeticion = verificarCheckBoxActivados(segundoOrepeticion);
 
-                    if (conteo > 0 && continuar)
+                    String[] pesos = generarArregloDinamico("textPeso");
+                    //String[] repeticionesYsegundos = generarArregloDinamico("txtRepOSeg", ref segundoOrepeticion);
+                    String[] repeticionesYsegundos = generarArregloDinamico("txtRepOSeg");
+
+
+
+                    if (conteo > 0)
                     {
                         crearSerie(segundoOrepeticion, pesos, repeticionesYsegundos);
                         y = 0;
@@ -128,7 +124,10 @@ namespace Gimnasio
                         MessageBox.Show("Para subir la rutina los pesos de las series deben ser ingresados correctamente.");
                 }
                 else
-                    MessageBox.Show("Ningún campo debe estar vacio para poder actualizar.");
+                {
+                    MessageBox.Show("Antes de subir una rutina debes crear un usuario y al menos un ejercicio.");
+                    return;
+                }
             }
             catch (Exception ex)
             {
@@ -136,7 +135,7 @@ namespace Gimnasio
             }
         }
 
-        private string[] generarArregloDinamico(String nombreTexto, ref Boolean continuar)
+        private string[] generarArregloDinamico(String nombreTexto)
         {
             String cadena = "";
             float number = 0;
@@ -152,52 +151,16 @@ namespace Gimnasio
 
                     if (float.TryParse(cadena, out number) && Controls.Find(textBox, true).Count() != 0)
                         arregloDinamico[i] = cadena;
-                    else
-                        continuar = false;
                 }
             }
-            return arregloDinamico;
-        }
-
-        private String[] generarArregloDinamico(String nombreTexto, ref Boolean continuar, ref String[] segundoOrepeticion)
-        {
-            String cadena = "";
-            float number = 0;
-            String[] arregloDinamico = new String[conteo + 1];
-
-            for (int i = 0; i < conteo; i++)
-            {
-                String textBox = nombreTexto + i;
-                if (Controls.Find(textBox, true).Length > 0)
-                {
-                    cadena = Controls.Find(textBox, true).First().Text;
-                    cadena = cadena.Replace(",", ".");
-
-                    if (float.TryParse(cadena, out number) && Controls.Find(textBox, true).Count() != 0)
-                        arregloDinamico[i] = cadena;
-                    else
-                        continuar = false;
-
-                    String checkSegundos = "checkSegundos" + i;
-                    String checkRepeticiones = "checkRepeticiones" + i;
-                    CheckBox arregloSegundos = Controls.Find(checkSegundos, true).First() as CheckBox;
-                    //CheckBox arregloRepeticiones = Controls.Find(checkRepeticiones, true).First() as CheckBox;
-
-                    if (arregloSegundos.Checked)
-                        segundoOrepeticion[i] = "S";
-                    else
-                        segundoOrepeticion[i] = "R";
-                }
-            }
-
             return arregloDinamico;
         }
 
         private void crearSerie(string[] segundoOrepeticion, string[] pesos, string[] repeticionesYsegundos)
         {
-            string nombrePersona = comboBox2.Text;
-            string nombreEjercicio = comboBox1.Text;
-            DateTime fecha = dateTimePicker1.Value;
+            string nombrePersona = cbPersona.Text;
+            string nombreEjercicio = cbEjercicio.Text;
+            DateTime fecha = dtpFechaRutina.Value;
             string fechaFormatoUniversal = Utilidades.convertirFormatoUniversal(fecha);
             string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fechaFormatoUniversal, conteo);
             DataSet ds = Utilidades.Ejecutar(cmd);
@@ -220,5 +183,25 @@ namespace Gimnasio
             panelPesos.Controls.Clear();
         }
 
+        private String[] verificarCheckBoxActivados(String[] segundoOrepeticion)
+        {
+            for (int i = 0; i<conteo; i++)
+            {
+                String checkSegundos = "checkSegundos" + i;
+                String checkRepeticiones = "checkRepeticiones" + i;
+                int cantidadCheck = Controls.Find(checkSegundos, true).Length;
+                if (cantidadCheck == 1)
+                {
+                    CheckBox arregloSegundos = Controls.Find(checkSegundos, true).First() as CheckBox;
+                    //CheckBox arregloRepeticiones = Controls.Find(checkRepeticiones, true).First() as CheckBox;
+
+                    if (arregloSegundos.Checked)
+                        segundoOrepeticion[i] = "S";
+                    else
+                        segundoOrepeticion[i] = "R";
+                }
+            }
+            return segundoOrepeticion;
+        }
     }
 }

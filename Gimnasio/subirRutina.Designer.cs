@@ -33,14 +33,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dtpFechaRutina = new System.Windows.Forms.DateTimePicker();
+            this.cbEjercicio = new System.Windows.Forms.ComboBox();
             this.tablaEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tablaEjercicioDataSet = new Gimnasio.tablaEjercicioDataSet();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarSerie = new System.Windows.Forms.Button();
             this.labelPeso = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbPersona = new System.Windows.Forms.ComboBox();
             this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tablaPersonaDataSet = new Gimnasio.tablaPersonaDataSet();
             this.panelPesos = new System.Windows.Forms.Panel();
@@ -104,34 +104,34 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Fecha:";
             // 
-            // dateTimePicker1
+            // dtpFechaRutina
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.dateTimePicker1.Location = new System.Drawing.Point(134, 475);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(318, 22);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpFechaRutina.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFechaRutina.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.dtpFechaRutina.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.dtpFechaRutina.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.dtpFechaRutina.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.dtpFechaRutina.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.dtpFechaRutina.Location = new System.Drawing.Point(134, 475);
+            this.dtpFechaRutina.Name = "dtpFechaRutina";
+            this.dtpFechaRutina.Size = new System.Drawing.Size(318, 22);
+            this.dtpFechaRutina.TabIndex = 2;
             // 
-            // comboBox1
+            // cbEjercicio
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.comboBox1.DataSource = this.tablaEjercicioBindingSource;
-            this.comboBox1.DisplayMember = "nombreEjercicio";
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(150, 428);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(302, 24);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.ValueMember = "nombreEjercicio";
+            this.cbEjercicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbEjercicio.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbEjercicio.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.cbEjercicio.DataSource = this.tablaEjercicioBindingSource;
+            this.cbEjercicio.DisplayMember = "nombreEjercicio";
+            this.cbEjercicio.ForeColor = System.Drawing.Color.White;
+            this.cbEjercicio.FormattingEnabled = true;
+            this.cbEjercicio.Location = new System.Drawing.Point(150, 428);
+            this.cbEjercicio.Name = "cbEjercicio";
+            this.cbEjercicio.Size = new System.Drawing.Size(302, 24);
+            this.cbEjercicio.TabIndex = 1;
+            this.cbEjercicio.ValueMember = "nombreEjercicio";
             // 
             // tablaEjercicioBindingSource
             // 
@@ -143,16 +143,16 @@
             this.tablaEjercicioDataSet.DataSetName = "tablaEjercicioDataSet";
             this.tablaEjercicioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button1
+            // btnAgregarSerie
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(495, 479);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 33);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Agregar serie";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnAgregarSerie.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregarSerie.Location = new System.Drawing.Point(495, 479);
+            this.btnAgregarSerie.Name = "btnAgregarSerie";
+            this.btnAgregarSerie.Size = new System.Drawing.Size(105, 33);
+            this.btnAgregarSerie.TabIndex = 5;
+            this.btnAgregarSerie.Text = "Agregar serie";
+            this.btnAgregarSerie.UseVisualStyleBackColor = true;
+            this.btnAgregarSerie.Click += new System.EventHandler(this.btnAgregarSerie_Click);
             // 
             // labelPeso
             // 
@@ -180,19 +180,19 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Persona:";
             // 
-            // comboBox2
+            // cbPersona
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.comboBox2.DataSource = this.tablaPersonaBindingSource;
-            this.comboBox2.DisplayMember = "nombrePersona";
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(150, 385);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(302, 24);
-            this.comboBox2.TabIndex = 0;
-            this.comboBox2.ValueMember = "nombrePersona";
+            this.cbPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.cbPersona.DataSource = this.tablaPersonaBindingSource;
+            this.cbPersona.DisplayMember = "nombrePersona";
+            this.cbPersona.ForeColor = System.Drawing.Color.White;
+            this.cbPersona.FormattingEnabled = true;
+            this.cbPersona.Location = new System.Drawing.Point(150, 385);
+            this.cbPersona.Name = "cbPersona";
+            this.cbPersona.Size = new System.Drawing.Size(302, 24);
+            this.cbPersona.TabIndex = 0;
+            this.cbPersona.ValueMember = "nombrePersona";
             // 
             // tablaPersonaBindingSource
             // 
@@ -232,12 +232,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(638, 1087);
             this.Controls.Add(this.panelPesos);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbPersona);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelPeso);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.btnAgregarSerie);
+            this.Controls.Add(this.cbEjercicio);
+            this.Controls.Add(this.dtpFechaRutina);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -262,12 +262,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dtpFechaRutina;
+        private System.Windows.Forms.ComboBox cbEjercicio;
+        private System.Windows.Forms.Button btnAgregarSerie;
         private System.Windows.Forms.Label labelPeso;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbPersona;
         private System.Windows.Forms.Panel panelPesos;
         private tablaPersonaDataSet tablaPersonaDataSet;
         private System.Windows.Forms.BindingSource tablaPersonaBindingSource;
