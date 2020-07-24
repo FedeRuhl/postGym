@@ -15,8 +15,8 @@ namespace Gimnasio
     {
         private int y = 0;
         private int conteo = 0;
-        private TextBox textPeso;
-        private TextBox textRepOSeg;
+        private TextBoxPersonalizado textPeso;
+        private TextBoxPersonalizado textRepOSeg;
         private CheckBox checkSegundos;
         private CheckBox checkRepeticiones;
 
@@ -46,7 +46,7 @@ namespace Gimnasio
             {
                 Color colour = ColorTranslator.FromHtml("#3a3a3a");
 
-                textPeso = new TextBox
+                textPeso = new TextBoxPersonalizado
                 {
                     BackColor = colour,
                     ForeColor = Color.White,
@@ -57,7 +57,7 @@ namespace Gimnasio
                 };
                 panelPesos.Controls.Add(textPeso);
 
-                textRepOSeg = new TextBox
+                textRepOSeg = new TextBoxPersonalizado
                 {
                     BackColor = colour,
                     ForeColor = Color.White,
@@ -109,10 +109,7 @@ namespace Gimnasio
                     segundoOrepeticion = verificarCheckBoxActivados(segundoOrepeticion);
 
                     String[] pesos = generarArregloDinamico("textPeso");
-                    //String[] repeticionesYsegundos = generarArregloDinamico("txtRepOSeg", ref segundoOrepeticion);
                     String[] repeticionesYsegundos = generarArregloDinamico("txtRepOSeg");
-
-
 
                     if (conteo > 0)
                     {
