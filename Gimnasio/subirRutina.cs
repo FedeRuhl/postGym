@@ -79,6 +79,15 @@ namespace Gimnasio
                 };
                 panelPesos.Controls.Add(checkSegundos);
 
+                ToolTip tooltip = new ToolTip()
+                {
+                    AutoPopDelay = 3000,
+                    ReshowDelay = 500,
+                    ShowAlways = true
+                };
+                
+                tooltip.SetToolTip(checkSegundos, "Segundos");
+
                 checkRepeticiones = new CheckBox
                 {
                     ForeColor = Color.White,
@@ -86,9 +95,12 @@ namespace Gimnasio
                     Width = 50,
                     Text = "R",
                     Location = new Point(200, y),
-                    Name = "checkRepeticiones" + conteo.ToString()
+                    Name = "checkRepeticiones" + conteo.ToString(),
+                    Checked = true
                 };
                 panelPesos.Controls.Add(checkRepeticiones);
+
+                tooltip.SetToolTip(checkRepeticiones, "Repeticiones");
 
                 conteo++;
                 y += 25;
