@@ -68,7 +68,7 @@ namespace Gimnasio
                 };
                 panelPesos.Controls.Add(textRepOSeg);
 
-                checkSegundos = new CheckBox
+                checkSegundos = new CheckBoxPersonalizado
                 {
                     ForeColor = Color.White,
                     BackColor = colour,
@@ -77,6 +77,7 @@ namespace Gimnasio
                     Location = new Point(150, y),
                     Name = "checkSegundos" + conteo.ToString()
                 };
+
                 panelPesos.Controls.Add(checkSegundos);
 
                 ToolTip tooltip = new ToolTip()
@@ -88,7 +89,7 @@ namespace Gimnasio
                 
                 tooltip.SetToolTip(checkSegundos, "Segundos");
 
-                checkRepeticiones = new CheckBox
+                checkRepeticiones = new CheckBoxPersonalizado
                 {
                     ForeColor = Color.White,
                     BackColor = colour,
