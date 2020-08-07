@@ -24,7 +24,7 @@ namespace Gimnasio {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class unirPersonaFechaDataSet : global::System.Data.DataSet {
         
-        private unirPersonaDataTable tableunirPersona;
+        private traerPersonaDataTable tabletraerPersona;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Gimnasio {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["unirPersona"] != null)) {
-                    base.Tables.Add(new unirPersonaDataTable(ds.Tables["unirPersona"]));
+                if ((ds.Tables["traerPersona"] != null)) {
+                    base.Tables.Add(new traerPersonaDataTable(ds.Tables["traerPersona"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Gimnasio {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public unirPersonaDataTable unirPersona {
+        public traerPersonaDataTable traerPersona {
             get {
-                return this.tableunirPersona;
+                return this.tabletraerPersona;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Gimnasio {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["unirPersona"] != null)) {
-                    base.Tables.Add(new unirPersonaDataTable(ds.Tables["unirPersona"]));
+                if ((ds.Tables["traerPersona"] != null)) {
+                    base.Tables.Add(new traerPersonaDataTable(ds.Tables["traerPersona"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Gimnasio {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableunirPersona = ((unirPersonaDataTable)(base.Tables["unirPersona"]));
+            this.tabletraerPersona = ((traerPersonaDataTable)(base.Tables["traerPersona"]));
             if ((initTable == true)) {
-                if ((this.tableunirPersona != null)) {
-                    this.tableunirPersona.InitVars();
+                if ((this.tabletraerPersona != null)) {
+                    this.tabletraerPersona.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Gimnasio {
             this.Namespace = "http://tempuri.org/unirPersonaFechaDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableunirPersona = new unirPersonaDataTable();
-            base.Tables.Add(this.tableunirPersona);
+            this.tabletraerPersona = new traerPersonaDataTable();
+            base.Tables.Add(this.tabletraerPersona);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeunirPersona() {
+        private bool ShouldSerializetraerPersona() {
             return false;
         }
         
@@ -270,21 +270,31 @@ namespace Gimnasio {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void unirPersonaRowChangeEventHandler(object sender, unirPersonaRowChangeEvent e);
+        public delegate void traerPersonaRowChangeEventHandler(object sender, traerPersonaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class unirPersonaDataTable : global::System.Data.TypedTableBase<unirPersonaRow> {
+        public partial class traerPersonaDataTable : global::System.Data.TypedTableBase<traerPersonaRow> {
+            
+            private global::System.Data.DataColumn columnidPersona;
+            
+            private global::System.Data.DataColumn columnidDetalles;
+            
+            private global::System.Data.DataColumn columnnombrePersona;
+            
+            private global::System.Data.DataColumn columnalturaPersona;
+            
+            private global::System.Data.DataColumn columnpesoPersona;
             
             private global::System.Data.DataColumn columnfecha;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirPersonaDataTable() {
-                this.TableName = "unirPersona";
+            public traerPersonaDataTable() {
+                this.TableName = "traerPersona";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +302,7 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal unirPersonaDataTable(global::System.Data.DataTable table) {
+            internal traerPersonaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,9 +319,49 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected unirPersonaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected traerPersonaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idPersonaColumn {
+                get {
+                    return this.columnidPersona;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idDetallesColumn {
+                get {
+                    return this.columnidDetalles;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nombrePersonaColumn {
+                get {
+                    return this.columnnombrePersona;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn alturaPersonaColumn {
+                get {
+                    return this.columnalturaPersona;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn pesoPersonaColumn {
+                get {
+                    return this.columnpesoPersona;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -333,45 +383,58 @@ namespace Gimnasio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirPersonaRow this[int index] {
+            public traerPersonaRow this[int index] {
                 get {
-                    return ((unirPersonaRow)(this.Rows[index]));
+                    return ((traerPersonaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event unirPersonaRowChangeEventHandler unirPersonaRowChanging;
+            public event traerPersonaRowChangeEventHandler traerPersonaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event unirPersonaRowChangeEventHandler unirPersonaRowChanged;
+            public event traerPersonaRowChangeEventHandler traerPersonaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event unirPersonaRowChangeEventHandler unirPersonaRowDeleting;
+            public event traerPersonaRowChangeEventHandler traerPersonaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event unirPersonaRowChangeEventHandler unirPersonaRowDeleted;
+            public event traerPersonaRowChangeEventHandler traerPersonaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddunirPersonaRow(unirPersonaRow row) {
+            public void AddtraerPersonaRow(traerPersonaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirPersonaRow AddunirPersonaRow(System.DateTime fecha) {
-                unirPersonaRow rowunirPersonaRow = ((unirPersonaRow)(this.NewRow()));
+            public traerPersonaRow AddtraerPersonaRow(int idPersona, int idDetalles, string nombrePersona, double alturaPersona, double pesoPersona, System.DateTime fecha) {
+                traerPersonaRow rowtraerPersonaRow = ((traerPersonaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        idPersona,
+                        idDetalles,
+                        nombrePersona,
+                        alturaPersona,
+                        pesoPersona,
                         fecha};
-                rowunirPersonaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowunirPersonaRow);
-                return rowunirPersonaRow;
+                rowtraerPersonaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtraerPersonaRow);
+                return rowtraerPersonaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public traerPersonaRow FindByidPersonaidDetalles(int idPersona, int idDetalles) {
+                return ((traerPersonaRow)(this.Rows.Find(new object[] {
+                            idPersona,
+                            idDetalles})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                unirPersonaDataTable cln = ((unirPersonaDataTable)(base.Clone()));
+                traerPersonaDataTable cln = ((traerPersonaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -379,46 +442,67 @@ namespace Gimnasio {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new unirPersonaDataTable();
+                return new traerPersonaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnidPersona = base.Columns["idPersona"];
+                this.columnidDetalles = base.Columns["idDetalles"];
+                this.columnnombrePersona = base.Columns["nombrePersona"];
+                this.columnalturaPersona = base.Columns["alturaPersona"];
+                this.columnpesoPersona = base.Columns["pesoPersona"];
                 this.columnfecha = base.Columns["fecha"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnidPersona = new global::System.Data.DataColumn("idPersona", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidPersona);
+                this.columnidDetalles = new global::System.Data.DataColumn("idDetalles", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidDetalles);
+                this.columnnombrePersona = new global::System.Data.DataColumn("nombrePersona", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombrePersona);
+                this.columnalturaPersona = new global::System.Data.DataColumn("alturaPersona", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnalturaPersona);
+                this.columnpesoPersona = new global::System.Data.DataColumn("pesoPersona", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpesoPersona);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidPersona,
+                                this.columnidDetalles}, true));
+                this.columnidPersona.AllowDBNull = false;
+                this.columnidDetalles.AllowDBNull = false;
+                this.columnnombrePersona.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirPersonaRow NewunirPersonaRow() {
-                return ((unirPersonaRow)(this.NewRow()));
+            public traerPersonaRow NewtraerPersonaRow() {
+                return ((traerPersonaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new unirPersonaRow(builder);
+                return new traerPersonaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(unirPersonaRow);
+                return typeof(traerPersonaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.unirPersonaRowChanged != null)) {
-                    this.unirPersonaRowChanged(this, new unirPersonaRowChangeEvent(((unirPersonaRow)(e.Row)), e.Action));
+                if ((this.traerPersonaRowChanged != null)) {
+                    this.traerPersonaRowChanged(this, new traerPersonaRowChangeEvent(((traerPersonaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -426,8 +510,8 @@ namespace Gimnasio {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.unirPersonaRowChanging != null)) {
-                    this.unirPersonaRowChanging(this, new unirPersonaRowChangeEvent(((unirPersonaRow)(e.Row)), e.Action));
+                if ((this.traerPersonaRowChanging != null)) {
+                    this.traerPersonaRowChanging(this, new traerPersonaRowChangeEvent(((traerPersonaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -435,8 +519,8 @@ namespace Gimnasio {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.unirPersonaRowDeleted != null)) {
-                    this.unirPersonaRowDeleted(this, new unirPersonaRowChangeEvent(((unirPersonaRow)(e.Row)), e.Action));
+                if ((this.traerPersonaRowDeleted != null)) {
+                    this.traerPersonaRowDeleted(this, new traerPersonaRowChangeEvent(((traerPersonaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -444,14 +528,14 @@ namespace Gimnasio {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.unirPersonaRowDeleting != null)) {
-                    this.unirPersonaRowDeleting(this, new unirPersonaRowChangeEvent(((unirPersonaRow)(e.Row)), e.Action));
+                if ((this.traerPersonaRowDeleting != null)) {
+                    this.traerPersonaRowDeleting(this, new traerPersonaRowChangeEvent(((traerPersonaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveunirPersonaRow(unirPersonaRow row) {
+            public void RemovetraerPersonaRow(traerPersonaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -478,7 +562,7 @@ namespace Gimnasio {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "unirPersonaDataTable";
+                attribute2.FixedValue = "traerPersonaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -522,15 +606,85 @@ namespace Gimnasio {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class unirPersonaRow : global::System.Data.DataRow {
+        public partial class traerPersonaRow : global::System.Data.DataRow {
             
-            private unirPersonaDataTable tableunirPersona;
+            private traerPersonaDataTable tabletraerPersona;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal unirPersonaRow(global::System.Data.DataRowBuilder rb) : 
+            internal traerPersonaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableunirPersona = ((unirPersonaDataTable)(this.Table));
+                this.tabletraerPersona = ((traerPersonaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idPersona {
+                get {
+                    return ((int)(this[this.tabletraerPersona.idPersonaColumn]));
+                }
+                set {
+                    this[this.tabletraerPersona.idPersonaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idDetalles {
+                get {
+                    return ((int)(this[this.tabletraerPersona.idDetallesColumn]));
+                }
+                set {
+                    this[this.tabletraerPersona.idDetallesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nombrePersona {
+                get {
+                    try {
+                        return ((string)(this[this.tabletraerPersona.nombrePersonaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombrePersona\' de la tabla \'traerPersona\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletraerPersona.nombrePersonaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double alturaPersona {
+                get {
+                    try {
+                        return ((double)(this[this.tabletraerPersona.alturaPersonaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'alturaPersona\' de la tabla \'traerPersona\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletraerPersona.alturaPersonaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double pesoPersona {
+                get {
+                    try {
+                        return ((double)(this[this.tabletraerPersona.pesoPersonaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'pesoPersona\' de la tabla \'traerPersona\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletraerPersona.pesoPersonaColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -538,27 +692,63 @@ namespace Gimnasio {
             public System.DateTime fecha {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableunirPersona.fechaColumn]));
+                        return ((global::System.DateTime)(this[this.tabletraerPersona.fechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha\' de la tabla \'unirPersona\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha\' de la tabla \'traerPersona\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableunirPersona.fechaColumn] = value;
+                    this[this.tabletraerPersona.fechaColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsnombrePersonaNull() {
+                return this.IsNull(this.tabletraerPersona.nombrePersonaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetnombrePersonaNull() {
+                this[this.tabletraerPersona.nombrePersonaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsalturaPersonaNull() {
+                return this.IsNull(this.tabletraerPersona.alturaPersonaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetalturaPersonaNull() {
+                this[this.tabletraerPersona.alturaPersonaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IspesoPersonaNull() {
+                return this.IsNull(this.tabletraerPersona.pesoPersonaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetpesoPersonaNull() {
+                this[this.tabletraerPersona.pesoPersonaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsfechaNull() {
-                return this.IsNull(this.tableunirPersona.fechaColumn);
+                return this.IsNull(this.tabletraerPersona.fechaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetfechaNull() {
-                this[this.tableunirPersona.fechaColumn] = global::System.Convert.DBNull;
+                this[this.tabletraerPersona.fechaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -566,22 +756,22 @@ namespace Gimnasio {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class unirPersonaRowChangeEvent : global::System.EventArgs {
+        public class traerPersonaRowChangeEvent : global::System.EventArgs {
             
-            private unirPersonaRow eventRow;
+            private traerPersonaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirPersonaRowChangeEvent(unirPersonaRow row, global::System.Data.DataRowAction action) {
+            public traerPersonaRowChangeEvent(traerPersonaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public unirPersonaRow Row {
+            public traerPersonaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -609,7 +799,7 @@ namespace Gimnasio.unirPersonaFechaDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class unirPersonaTableAdapter : global::System.ComponentModel.Component {
+    public partial class traerPersonaTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -623,7 +813,7 @@ namespace Gimnasio.unirPersonaFechaDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public unirPersonaTableAdapter() {
+        public traerPersonaTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -720,7 +910,7 @@ namespace Gimnasio.unirPersonaFechaDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "unirPersona";
+            tableMapping.DataSetTable = "traerPersona";
             tableMapping.ColumnMappings.Add("idPersona", "idPersona");
             tableMapping.ColumnMappings.Add("idDetalles", "idDetalles");
             tableMapping.ColumnMappings.Add("nombrePersona", "nombrePersona");
@@ -743,7 +933,7 @@ namespace Gimnasio.unirPersonaFechaDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.unirPersona";
+            this._commandCollection[0].CommandText = "dbo.traerPersona";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -752,7 +942,7 @@ namespace Gimnasio.unirPersonaFechaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(unirPersonaFechaDataSet.unirPersonaDataTable dataTable) {
+        public virtual int Fill(unirPersonaFechaDataSet.traerPersonaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -765,9 +955,9 @@ namespace Gimnasio.unirPersonaFechaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual unirPersonaFechaDataSet.unirPersonaDataTable GetData() {
+        public virtual unirPersonaFechaDataSet.traerPersonaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            unirPersonaFechaDataSet.unirPersonaDataTable dataTable = new unirPersonaFechaDataSet.unirPersonaDataTable();
+            unirPersonaFechaDataSet.traerPersonaDataTable dataTable = new unirPersonaFechaDataSet.traerPersonaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

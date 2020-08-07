@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.unirEjercicioDataSet1 = new Gimnasio.unirEjercicioDataSet();
+            this.unirEjercicioDataSet1 = new Gimnasio.traerEjercicioDataSet();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.unirEjercicioTableAdapter1 = new Gimnasio.unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -128,7 +128,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = "0";
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkRed;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
@@ -183,7 +183,7 @@
         #endregion
         public System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Panel panel1;
-        private unirEjercicioDataSet unirEjercicioDataSet;
+        private traerEjercicioDataSet unirEjercicioDataSet;
         private System.Windows.Forms.BindingSource unirEjercicioBindingSource;
         private unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter unirEjercicioTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePersonaDataGridViewTextBoxColumn;
@@ -193,7 +193,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadSeriesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn listaDePesosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
-        private unirEjercicioDataSet unirEjercicioDataSet1;
+        private traerEjercicioDataSet unirEjercicioDataSet1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter unirEjercicioTableAdapter1;
         private System.Windows.Forms.DataGridView dataGridView1;

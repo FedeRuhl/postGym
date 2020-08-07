@@ -177,20 +177,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>tablaPersonaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="unirEjercicioDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>unirEjercicioDataSet.xsd</DependentUpon>
+    <Compile Include="traerEjercicioDataSet.cs">
+      <DependentUpon>traerEjercicioDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="unirPersonaDataSet.Designer.cs">
+    <Compile Include="traerEjercicioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>unirPersonaDataSet.xsd</DependentUpon>
+      <DependentUpon>traerEjercicioDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="unirPersonaFechaDataSet.Designer.cs">
+    <Compile Include="traerPersonaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>unirPersonaFechaDataSet.xsd</DependentUpon>
+      <DependentUpon>traerPersonaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="traerPersonaFechaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>traerPersonaFechaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="MainClass.cs">
@@ -349,38 +352,38 @@
     <None Include="tablaPersonaDataSet.xss">
       <DependentUpon>tablaPersonaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="unirEjercicioDataSet.xsc">
-      <DependentUpon>unirEjercicioDataSet.xsd</DependentUpon>
+    <None Include="traerEjercicioDataSet.xsc">
+      <DependentUpon>traerEjercicioDataSet.xsd</DependentUpon>
     </None>
-    <None Include="unirEjercicioDataSet.xsd">
+    <None Include="traerEjercicioDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>unirEjercicioDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>traerEjercicioDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="unirEjercicioDataSet.xss">
-      <DependentUpon>unirEjercicioDataSet.xsd</DependentUpon>
+    <None Include="traerEjercicioDataSet.xss">
+      <DependentUpon>traerEjercicioDataSet.xsd</DependentUpon>
     </None>
-    <None Include="unirPersonaDataSet.xsc">
-      <DependentUpon>unirPersonaDataSet.xsd</DependentUpon>
+    <None Include="traerPersonaDataSet.xsc">
+      <DependentUpon>traerPersonaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="unirPersonaDataSet.xsd">
+    <None Include="traerPersonaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>unirPersonaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>traerPersonaDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="unirPersonaDataSet.xss">
-      <DependentUpon>unirPersonaDataSet.xsd</DependentUpon>
+    <None Include="traerPersonaDataSet.xss">
+      <DependentUpon>traerPersonaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="unirPersonaFechaDataSet.xsc">
-      <DependentUpon>unirPersonaFechaDataSet.xsd</DependentUpon>
+    <None Include="traerPersonaFechaDataSet.xsc">
+      <DependentUpon>traerPersonaFechaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="unirPersonaFechaDataSet.xsd">
+    <None Include="traerPersonaFechaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>unirPersonaFechaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>traerPersonaFechaDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="unirPersonaFechaDataSet.xss">
-      <DependentUpon>unirPersonaFechaDataSet.xsd</DependentUpon>
+    <None Include="traerPersonaFechaDataSet.xss">
+      <DependentUpon>traerPersonaFechaDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -23,8 +23,16 @@ namespace Gimnasio
         {
             try
             {
-                this.unirPersonaTableAdapter1.Fill(this.unirPersonaDataSet.unirPersona);
-                this.unirPersonaTableAdapter.Fill(this.unirPersonaFechaDataSet.unirPersona);
+                string cmd = string.Format("EXEC traerPersona");
+                DataSet ds = Utilidades.Ejecutar(cmd);
+                dataGridView3.DataSource = ds.Tables[0];
+                cmd = "select fecha from tablaDetallesPersona group by fecha";
+                ds = Utilidades.Ejecutar(cmd);
+                listBox1.DataSource = ds.Tables[0];
+
+                dataGridView3.Columns["fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
+
+                //this.unirPersonaTableAdapter.Fill(this.unirPersonaFechaDataSet.traerPersona);
             }
             catch (Exception error)
             {
@@ -57,7 +65,7 @@ namespace Gimnasio
                 DataSet ds;
                 DateTime fecha = DateTime.Parse(listBox1.Text);
                 string fechaFormatoUniversal = Utilidades.convertirFormatoUniversal(fecha);
-                string cmd = "select tablaPersona.idPersona, idDetalles, nombrePersona, alturaPersona, pesoPersona, fecha from tablaPersona inner join tablaDetallesPersona on tablaPersona.idPersona = tablaDetallesPersona.idPersona where fecha = '" + fecha.ToString() + "'";
+                string cmd = "select tablaPersona.idPersona, idDetalles, nombrePersona, alturaPersona, pesoPersona, fecha from tablaPersona inner join tablaDetallesPersona on tablaPersona.idPersona = tablaDetallesPersona.idPersona where fecha = '" + fechaFormatoUniversal + "'";
                 ds = Utilidades.Ejecutar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];
             }

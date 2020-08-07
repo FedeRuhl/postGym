@@ -29,50 +29,35 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDetallesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alturaPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unirPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.unirPersonaDataSet = new Gimnasio.unirPersonaDataSet();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelDataGridView = new System.Windows.Forms.Panel();
-            this.unirPersonaFechaDataSet = new Gimnasio.unirPersonaFechaDataSet();
-            this.unirPersonaFechaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.unirPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.unirPersonaTableAdapter = new Gimnasio.unirPersonaFechaDataSetTableAdapters.unirPersonaTableAdapter();
-            this.unirPersonaTableAdapter1 = new Gimnasio.unirPersonaDataSetTableAdapters.unirPersonaTableAdapter();
+            this.traerPersonaDataSet = new Gimnasio.traerPersonaDataSet();
+            this.traerPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDataGridView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaFechaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaFechaDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traerPersonaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traerPersonaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
             // 
             this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.listBox1.DataSource = this.unirPersonaBindingSource1;
+            this.listBox1.DataSource = this.traerPersonaBindingSource;
             this.listBox1.DisplayMember = "fecha";
             this.listBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormatString = "G";
+            this.listBox1.FormatString = "D";
             this.listBox1.ItemHeight = 18;
             this.listBox1.Location = new System.Drawing.Point(49, 93);
             this.listBox1.Size = new System.Drawing.Size(445, 148);
-            this.listBox1.ValueMember = "fecha";
             // 
             // btnBuscar
             // 
@@ -90,42 +75,32 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Format = "G";
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Format = "G";
+            dataGridViewCellStyle9.NullValue = null;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView3.ColumnHeadersHeight = 45;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idPersonaDataGridViewTextBoxColumn,
-            this.idDetallesDataGridViewTextBoxColumn,
-            this.nombrePersonaDataGridViewTextBoxColumn,
-            this.alturaPersonaDataGridViewTextBoxColumn,
-            this.pesoPersonaDataGridViewTextBoxColumn,
-            this.fechaDataGridViewTextBoxColumn});
-            this.dataGridView3.DataSource = this.unirPersonaBindingSource1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Format = "G";
-            dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.NullValue = null;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
@@ -134,25 +109,23 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Format = "G";
-            dataGridViewCellStyle3.NullValue = null;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.NullValue = null;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView3.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Format = "G";
-            dataGridViewCellStyle4.NullValue = null;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.NullValue = null;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(1007, 345);
@@ -160,70 +133,6 @@
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellClick);
             this.dataGridView3.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellEnter);
             this.dataGridView3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView3_KeyPress);
-            // 
-            // idPersonaDataGridViewTextBoxColumn
-            // 
-            this.idPersonaDataGridViewTextBoxColumn.DataPropertyName = "idPersona";
-            this.idPersonaDataGridViewTextBoxColumn.HeaderText = "idPersona";
-            this.idPersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idPersonaDataGridViewTextBoxColumn.Name = "idPersonaDataGridViewTextBoxColumn";
-            this.idPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idPersonaDataGridViewTextBoxColumn.Width = 123;
-            // 
-            // idDetallesDataGridViewTextBoxColumn
-            // 
-            this.idDetallesDataGridViewTextBoxColumn.DataPropertyName = "idDetalles";
-            this.idDetallesDataGridViewTextBoxColumn.HeaderText = "idDetalles";
-            this.idDetallesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDetallesDataGridViewTextBoxColumn.Name = "idDetallesDataGridViewTextBoxColumn";
-            this.idDetallesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDetallesDataGridViewTextBoxColumn.Width = 119;
-            // 
-            // nombrePersonaDataGridViewTextBoxColumn
-            // 
-            this.nombrePersonaDataGridViewTextBoxColumn.DataPropertyName = "nombrePersona";
-            this.nombrePersonaDataGridViewTextBoxColumn.HeaderText = "nombrePersona";
-            this.nombrePersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombrePersonaDataGridViewTextBoxColumn.Name = "nombrePersonaDataGridViewTextBoxColumn";
-            this.nombrePersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombrePersonaDataGridViewTextBoxColumn.Width = 174;
-            // 
-            // alturaPersonaDataGridViewTextBoxColumn
-            // 
-            this.alturaPersonaDataGridViewTextBoxColumn.DataPropertyName = "alturaPersona";
-            this.alturaPersonaDataGridViewTextBoxColumn.HeaderText = "alturaPersona";
-            this.alturaPersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.alturaPersonaDataGridViewTextBoxColumn.Name = "alturaPersonaDataGridViewTextBoxColumn";
-            this.alturaPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.alturaPersonaDataGridViewTextBoxColumn.Width = 153;
-            // 
-            // pesoPersonaDataGridViewTextBoxColumn
-            // 
-            this.pesoPersonaDataGridViewTextBoxColumn.DataPropertyName = "pesoPersona";
-            this.pesoPersonaDataGridViewTextBoxColumn.HeaderText = "pesoPersona";
-            this.pesoPersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pesoPersonaDataGridViewTextBoxColumn.Name = "pesoPersonaDataGridViewTextBoxColumn";
-            this.pesoPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pesoPersonaDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
-            this.fechaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaDataGridViewTextBoxColumn.Width = 84;
-            // 
-            // unirPersonaBindingSource1
-            // 
-            this.unirPersonaBindingSource1.DataMember = "unirPersona";
-            this.unirPersonaBindingSource1.DataSource = this.unirPersonaDataSet;
-            // 
-            // unirPersonaDataSet
-            // 
-            this.unirPersonaDataSet.DataSetName = "unirPersonaDataSet";
-            this.unirPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -255,28 +164,15 @@
             this.panelDataGridView.Size = new System.Drawing.Size(1007, 345);
             this.panelDataGridView.TabIndex = 9;
             // 
-            // unirPersonaFechaDataSet
+            // traerPersonaDataSet
             // 
-            this.unirPersonaFechaDataSet.DataSetName = "unirPersonaFechaDataSet";
-            this.unirPersonaFechaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.traerPersonaDataSet.DataSetName = "unirPersonaDataSet";
+            this.traerPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // unirPersonaFechaDataSetBindingSource
+            // traerPersonaBindingSource
             // 
-            this.unirPersonaFechaDataSetBindingSource.DataSource = this.unirPersonaFechaDataSet;
-            this.unirPersonaFechaDataSetBindingSource.Position = 0;
-            // 
-            // unirPersonaBindingSource
-            // 
-            this.unirPersonaBindingSource.DataMember = "unirPersona";
-            this.unirPersonaBindingSource.DataSource = this.unirPersonaFechaDataSetBindingSource;
-            // 
-            // unirPersonaTableAdapter
-            // 
-            this.unirPersonaTableAdapter.ClearBeforeFill = true;
-            // 
-            // unirPersonaTableAdapter1
-            // 
-            this.unirPersonaTableAdapter1.ClearBeforeFill = true;
+            this.traerPersonaBindingSource.DataMember = "traerPersona";
+            this.traerPersonaBindingSource.DataSource = this.traerPersonaDataSet;
             // 
             // ConsultasDetallesPerfil
             // 
@@ -299,13 +195,10 @@
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.panelDataGridView, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDataGridView.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaFechaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaFechaDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unirPersonaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traerPersonaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traerPersonaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,18 +210,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelDataGridView;
-        private System.Windows.Forms.BindingSource unirPersonaFechaDataSetBindingSource;
-        private unirPersonaFechaDataSet unirPersonaFechaDataSet;
-        private System.Windows.Forms.BindingSource unirPersonaBindingSource;
-        private unirPersonaFechaDataSetTableAdapters.unirPersonaTableAdapter unirPersonaTableAdapter;
-        private unirPersonaDataSet unirPersonaDataSet;
-        private System.Windows.Forms.BindingSource unirPersonaBindingSource1;
-        private unirPersonaDataSetTableAdapters.unirPersonaTableAdapter unirPersonaTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDetallesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombrePersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alturaPersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pesoPersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource traerPersonaBindingSource;
+        private traerPersonaDataSet traerPersonaDataSet;
     }
 }
