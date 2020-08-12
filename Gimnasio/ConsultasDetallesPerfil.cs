@@ -149,5 +149,40 @@ namespace Gimnasio
                 MessageBox.Show("Se ha producido el siguiente error: " + ex.Message);
             }    
         }
+
+        private void dataGridView3_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            String ColumnaModificada = dataGridView3.Columns[e.ColumnIndex].HeaderText;
+            String ValorCeldaModificada = dataGridView3.CurrentCell.Value.ToString();
+            String TablaAModificar = "";
+            String ClavePrimaria = "";
+            switch (ColumnaModificada)
+            {
+                case "nombrePersona":
+                    TablaAModificar = "tablaPersona";
+                    ClavePrimaria = "idPersona";
+                    break;
+                case "alturaPersona":
+                case "pesoPersona":
+                case "fecha":
+                    TablaAModificar = "tablaDetallesPersona";
+                    ClavePrimaria = "idDetalles";
+                    break;
+                default:
+                    MessageBox.Show(ColumnaModificada + " no es un dato que se pueda modificar.");
+                    this.Close();
+                    break;
+            }
+            if (TablaAModificar != "")
+            {
+                int IndiceFila = dataGridView3.CurrentCell.RowIndex;
+                String ValorClave = dataGridView3[ClavePrimaria, IndiceFila].Value.ToString();
+                String Consulta = "Update " + TablaAModificar + " set " + ColumnaModificada + " = '" +
+                ValorCeldaModificada + "' where " + ClavePrimaria + " = '" + ValorClave + "'";
+
+                DataSet ds = Utilidades.Ejecutar(Consulta);
+            }
+
+        }
     }
 }
