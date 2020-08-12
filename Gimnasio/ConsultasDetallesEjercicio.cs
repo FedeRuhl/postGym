@@ -68,5 +68,58 @@ namespace Gimnasio
                 }
             }
         }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            String ColumnaModificada = dataGridView1.Columns[e.ColumnIndex].HeaderText;
+            String ValorCeldaModificada = dataGridView1.CurrentCell.Value.ToString();
+            String TablaAModificar = "";
+            String ClavePrimaria = "";
+            switch (ColumnaModificada)
+            {
+                case "nombrePersona":
+                    TablaAModificar = "tablaPersona";
+                    ClavePrimaria = "idPersona";
+                    break;
+                case "nombreEjercicio":
+                    TablaAModificar = "tablaEjercicio";
+                    ClavePrimaria = "idEjercicio";
+                    break;
+                case "cantidadSeries":
+                case "fecha":
+                    TablaAModificar = "tablaDetallesEjercicio";
+                    ClavePrimaria = "idDetalles";
+                    break;
+                case "Lista de pesos":
+                    ColumnaModificada = "peso";
+                    TablaAModificar = "tablaSerie";
+                    ClavePrimaria = "idSerie";
+                    break;
+                case "Repeticiones":
+                    ColumnaModificada = "cantidadRepeticiones";
+                    TablaAModificar = "tablaSerie";
+                    ClavePrimaria = "idSerie";
+                    break;
+                case "Segundos":
+                    ColumnaModificada = "cantidadSegundos";
+                    TablaAModificar = "tablaSerie";
+                    ClavePrimaria = "idSerie";
+                    break;
+                default:
+                    MessageBox.Show(ColumnaModificada + " no es un dato que se pueda modificar.");
+                    this.Close();
+                    break;
+            }
+            if (TablaAModificar != "")
+            {
+                int IndiceFila = dataGridView1.CurrentCell.RowIndex;
+                String ValorClave = dataGridView1[ClavePrimaria, IndiceFila].Value.ToString();
+                String Consulta = "Update " + TablaAModificar + " set " + ColumnaModificada + " = '" +
+                ValorCeldaModificada + "' where " + ClavePrimaria + " = '" + ValorClave + "'";
+
+                MessageBox.Show(Consulta);
+                //DataSet ds = Utilidades.Ejecutar(Consulta);
+            }
+        }
     }
 }

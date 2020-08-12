@@ -21,7 +21,9 @@ namespace Gimnasio
         {    
             try
             {
-                this.tablaPersonaTableAdapter.Fill(this.tablaPersonaDataSet.tablaPersona);
+                string cmd = string.Format("select * from tablaPersona");
+                DataSet ds = Utilidades.Ejecutar(cmd);
+                dataGridView1.DataSource = ds.Tables[0];
             }
             catch(Exception ex)
             {
@@ -41,6 +43,27 @@ namespace Gimnasio
                     DataSet DS = Utilidades.Ejecutar(cmd);
                 }
             }
+        }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            String ColumnaModificada = dataGridView1.Columns[e.ColumnIndex].HeaderText;
+            String ValorCeldaModificada = dataGridView1.CurrentCell.Value.ToString();
+            if (ColumnaModificada == "nombrePersona")
+            {
+                int IndiceFila = dataGridView1.CurrentCell.RowIndex;
+                String ValorClave = dataGridView1["idPersona", IndiceFila].Value.ToString();
+                String Consulta = "Update tablaPersona set nombrePersona = '" +
+                ValorCeldaModificada + "' where idPersona  = '" + ValorClave + "'";
+
+                DataSet ds = Utilidades.Ejecutar(Consulta);
+            }
+            else
+            {
+                MessageBox.Show(ColumnaModificada + " no es un dato que se pueda modificar.");
+                this.Close();
+            }
+
         }
     }
 }
