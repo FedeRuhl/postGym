@@ -40,9 +40,9 @@ namespace Gimnasio
         {
             try
             {
-                ContenedorMantenimiento CM = new ContenedorMantenimiento();
+                Mantenimiento M = new Mantenimiento();
                 this.Hide();
-                CM.Show();
+                M.Show();
             }
             catch (Exception ex)
             {

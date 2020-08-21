@@ -99,6 +99,12 @@
     <Compile Include="CheckBoxPersonalizado.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento.Designer.cs">
+      <DependentUpon>Mantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="TextBoxPersonalizado.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -201,12 +207,6 @@
     </Compile>
     <Compile Include="MainClass.Designer.cs">
       <DependentUpon>MainClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimiento.Designer.cs">
-      <DependentUpon>Mantenimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoEjercicio.cs">
       <SubType>Form</SubType>

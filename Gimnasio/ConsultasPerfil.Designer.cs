@@ -36,15 +36,20 @@
             this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tablaPersonaDataSet = new Gimnasio.tablaPersonaDataSet();
             this.tablaPersonaTableAdapter = new Gimnasio.tablaPersonaDataSetTableAdapters.tablaPersonaTableAdapter();
+            this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablaPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
@@ -60,6 +65,10 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 45;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idPersonaDataGridViewTextBoxColumn,
+            this.nombrePersonaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tablaPersonaBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
@@ -103,6 +112,25 @@
             // 
             this.tablaPersonaTableAdapter.ClearBeforeFill = true;
             // 
+            // idPersonaDataGridViewTextBoxColumn
+            // 
+            this.idPersonaDataGridViewTextBoxColumn.DataPropertyName = "idPersona";
+            this.idPersonaDataGridViewTextBoxColumn.HeaderText = "idPersona";
+            this.idPersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idPersonaDataGridViewTextBoxColumn.Name = "idPersonaDataGridViewTextBoxColumn";
+            // 
+            // nombrePersonaDataGridViewTextBoxColumn
+            // 
+            this.nombrePersonaDataGridViewTextBoxColumn.DataPropertyName = "nombrePersona";
+            this.nombrePersonaDataGridViewTextBoxColumn.HeaderText = "nombrePersona";
+            this.nombrePersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombrePersonaDataGridViewTextBoxColumn.Name = "nombrePersonaDataGridViewTextBoxColumn";
+            // 
+            // tablaPersonaBindingSource1
+            // 
+            this.tablaPersonaBindingSource1.DataMember = "tablaPersona";
+            this.tablaPersonaBindingSource1.DataSource = this.tablaPersonaDataSet;
+            // 
             // ConsultasPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -117,6 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,5 +156,8 @@
         private tablaPersonaDataSet tablaPersonaDataSet;
         private System.Windows.Forms.BindingSource tablaPersonaBindingSource;
         private tablaPersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPersonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombrePersonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tablaPersonaBindingSource1;
     }
 }

@@ -37,26 +37,6 @@
             this.btnMod = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.Location = new System.Drawing.Point(531, 164);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3);
-            this.btnAgregar.TabIndex = 2;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Enabled = false;
-            this.btnModificar.Location = new System.Drawing.Point(836, 522);
-            this.btnModificar.Size = new System.Drawing.Size(10, 10);
-            this.btnModificar.Visible = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(836, 511);
-            this.btnEliminar.Size = new System.Drawing.Size(10, 10);
-            this.btnEliminar.Visible = false;
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -161,9 +141,6 @@
             this.Controls.SetChildIndex(this.txtIdPersona, 0);
             this.Controls.SetChildIndex(this.lblNombrePersona, 0);
             this.Controls.SetChildIndex(this.txtNombrePersona, 0);
-            this.Controls.SetChildIndex(this.btnAgregar, 0);
-            this.Controls.SetChildIndex(this.btnEliminar, 0);
-            this.Controls.SetChildIndex(this.btnModificar, 0);
             this.Controls.SetChildIndex(this.btnMod, 0);
             this.ResumeLayout(false);
             this.PerformLayout();

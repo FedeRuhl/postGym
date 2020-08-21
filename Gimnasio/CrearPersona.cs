@@ -18,7 +18,7 @@ namespace Gimnasio
             InitializeComponent();
         }
 
-        public override void Agregar()
+        public void Agregar()
         {
             try
             {

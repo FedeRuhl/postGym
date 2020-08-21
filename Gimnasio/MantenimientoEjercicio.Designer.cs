@@ -35,28 +35,7 @@
             this.txtIdEjercicio = new System.Windows.Forms.TextBox();
             this.txtNombreEjercicio = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.Location = new System.Drawing.Point(496, 147);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3);
-            this.btnAgregar.TabIndex = 2;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(496, 219);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3);
-            this.btnModificar.TabIndex = 4;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.Location = new System.Drawing.Point(496, 183);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3);
-            this.btnEliminar.TabIndex = 3;
-            // 
+            //
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -142,9 +121,6 @@
             this.Name = "MantenimientoEjercicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento ejercicio";
-            this.Controls.SetChildIndex(this.btnAgregar, 0);
-            this.Controls.SetChildIndex(this.btnEliminar, 0);
-            this.Controls.SetChildIndex(this.btnModificar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.lblIdEjercicio, 0);

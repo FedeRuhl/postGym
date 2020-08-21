@@ -19,7 +19,7 @@ namespace Gimnasio
             InitializeComponent();
         }
 
-        public override void Agregar()
+        public void Agregar()
         {
             try
             {
@@ -61,7 +61,7 @@ namespace Gimnasio
             }
         }
 
-        public override void Modificar()
+        public void Modificar()
         {
 
             try
@@ -101,7 +101,7 @@ namespace Gimnasio
             }
         }
 
-        public override void Eliminar()
+        public void Eliminar()
         {
             try
             {
