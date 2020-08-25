@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Gimnasio
 {
-    public partial class Mantenimiento : FormularioBase
+    public partial class Mantenimiento : Form
     {
         bool programaCargado = false;
         public Mantenimiento()
@@ -121,6 +121,13 @@ namespace Gimnasio
         {
             String cmd = "delete from Ejercicios where id = " + id;
             DataSet DS = Utilidades.Ejecutar(cmd);
+        }
+
+        private void Mantenimiento_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainClass MC = new MainClass();
+            this.Hide();
+            MC.Show();
         }
     }
 }

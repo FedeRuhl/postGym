@@ -43,15 +43,15 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.iconRestaurar);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panel1.Controls.Add(this.iconCerrar);
-            this.panel1.Controls.Add(this.iconMaximizar);
+            this.panel1.Controls.Add(this.iconRestaurar);
             this.panel1.Controls.Add(this.iconMinimizar);
+            this.panel1.Controls.Add(this.iconMaximizar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 39);
+            this.panel1.Size = new System.Drawing.Size(800, 28);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -60,10 +60,10 @@
             this.iconRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("iconRestaurar.Image")));
-            this.iconRestaurar.Location = new System.Drawing.Point(693, 0);
+            this.iconRestaurar.Location = new System.Drawing.Point(704, 4);
             this.iconRestaurar.Margin = new System.Windows.Forms.Padding(0);
             this.iconRestaurar.Name = "iconRestaurar";
-            this.iconRestaurar.Size = new System.Drawing.Size(54, 34);
+            this.iconRestaurar.Size = new System.Drawing.Size(48, 24);
             this.iconRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconRestaurar.TabIndex = 3;
             this.iconRestaurar.TabStop = false;
@@ -75,10 +75,10 @@
             this.iconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconCerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconCerrar.Image")));
-            this.iconCerrar.Location = new System.Drawing.Point(747, 0);
+            this.iconCerrar.Location = new System.Drawing.Point(752, 4);
             this.iconCerrar.Margin = new System.Windows.Forms.Padding(0);
             this.iconCerrar.Name = "iconCerrar";
-            this.iconCerrar.Size = new System.Drawing.Size(54, 34);
+            this.iconCerrar.Size = new System.Drawing.Size(48, 24);
             this.iconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconCerrar.TabIndex = 3;
             this.iconCerrar.TabStop = false;
@@ -89,10 +89,10 @@
             this.iconMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("iconMaximizar.Image")));
-            this.iconMaximizar.Location = new System.Drawing.Point(693, 0);
+            this.iconMaximizar.Location = new System.Drawing.Point(704, 4);
             this.iconMaximizar.Margin = new System.Windows.Forms.Padding(0);
             this.iconMaximizar.Name = "iconMaximizar";
-            this.iconMaximizar.Size = new System.Drawing.Size(54, 34);
+            this.iconMaximizar.Size = new System.Drawing.Size(48, 24);
             this.iconMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconMaximizar.TabIndex = 2;
             this.iconMaximizar.TabStop = false;
@@ -103,10 +103,10 @@
             this.iconMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("iconMinimizar.Image")));
-            this.iconMinimizar.Location = new System.Drawing.Point(639, 0);
+            this.iconMinimizar.Location = new System.Drawing.Point(656, 4);
             this.iconMinimizar.Margin = new System.Windows.Forms.Padding(0);
             this.iconMinimizar.Name = "iconMinimizar";
-            this.iconMinimizar.Size = new System.Drawing.Size(54, 34);
+            this.iconMinimizar.Size = new System.Drawing.Size(48, 24);
             this.iconMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconMinimizar.TabIndex = 1;
             this.iconMinimizar.TabStop = false;
