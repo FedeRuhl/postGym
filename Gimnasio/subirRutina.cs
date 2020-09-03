@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LibreriaGimnasio;
 
 namespace Gimnasio
 {
@@ -30,8 +29,6 @@ namespace Gimnasio
 
             try
             {
-                this.tablaEjercicioTableAdapter.Fill(this.tablaEjercicioDataSet.tablaEjercicio);
-                this.tablaPersonaTableAdapter.Fill(this.tablaPersonaDataSet.tablaPersona);
                 y = 0;
             }
             catch (Exception ex)
@@ -171,9 +168,9 @@ namespace Gimnasio
             string nombrePersona = cbPersona.Text;
             string nombreEjercicio = cbEjercicio.Text;
             DateTime fecha = dtpFechaRutina.Value;
-            string fechaFormatoUniversal = Utilidades.convertirFormatoUniversal(fecha);
+            string fechaFormatoUniversal = Fecha.convertirFormatoUniversal(fecha);
             string cmd = string.Format("EXEC actualizaDetallesEjercicio '{0}', '{1}', '{2}', '{3}'", nombrePersona, nombreEjercicio, fechaFormatoUniversal, conteo);
-            DataSet ds = Utilidades.Ejecutar(cmd);
+            BD.Consultar(cmd);
             for (int i = 0; i < conteo; i++)
             {
                 if (segundoOrepeticion.Length > 0)
@@ -186,7 +183,7 @@ namespace Gimnasio
                 else
                     cmd = string.Format("EXEC crearSerie '{0}', '{1}', '{2}', '{3}'", pesos[i], nombreEjercicio, null, null);
 
-                ds = Utilidades.Ejecutar(cmd);
+                BD.Consultar(cmd);
             }
 
             MessageBox.Show("¡Se ha guardado correctamente!");

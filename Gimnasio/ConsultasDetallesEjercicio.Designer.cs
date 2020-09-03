@@ -32,14 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.unirEjercicioDataSet1 = new Gimnasio.traerEjercicioDataSet();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.unirEjercicioTableAdapter1 = new Gimnasio.unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panelDataGridView = new System.Windows.Forms.Panel();
             this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
@@ -50,7 +47,7 @@
             // listBox1
             // 
             this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.listBox1.DisplayMember = "fecha";
             this.listBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F);
             this.listBox1.ForeColor = System.Drawing.Color.White;
@@ -71,27 +68,13 @@
             this.lblFechaConsultas.ForeColor = System.Drawing.Color.White;
             this.lblFechaConsultas.Location = new System.Drawing.Point(589, 40);
             // 
-            // unirEjercicioDataSet1
-            // 
-            this.unirEjercicioDataSet1.DataSetName = "unirEjercicioDataSet";
-            this.unirEjercicioDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "unirEjercicio";
-            this.bindingSource1.DataSource = this.unirEjercicioDataSet1;
-            // 
-            // unirEjercicioTableAdapter1
-            // 
-            this.unirEjercicioTableAdapter1.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -138,11 +121,6 @@
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
             // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataMember = "unirEjercicio";
-            this.bindingSource2.DataSource = this.unirEjercicioDataSet1;
-            // 
             // panelDataGridView
             // 
             this.panelDataGridView.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -155,12 +133,11 @@
             // bindingSource3
             // 
             this.bindingSource3.DataMember = "unirEjercicio";
-            this.bindingSource3.DataSource = this.unirEjercicioDataSet1;
             // 
             // ConsultasDetallesEjercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1379, 890);
             this.Controls.Add(this.panelDataGridView);
             this.Name = "ConsultasDetallesEjercicio";
@@ -169,7 +146,6 @@
             this.Controls.SetChildIndex(this.lblFechaConsultas, 0);
             this.Controls.SetChildIndex(this.listBox1, 0);
             this.Controls.SetChildIndex(this.panelDataGridView, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.unirEjercicioDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
@@ -183,9 +159,7 @@
         #endregion
         public System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Panel panel1;
-        private traerEjercicioDataSet unirEjercicioDataSet;
         private System.Windows.Forms.BindingSource unirEjercicioBindingSource;
-        private unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter unirEjercicioTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEjercicioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDetallesDataGridViewTextBoxColumn;
@@ -193,9 +167,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadSeriesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn listaDePesosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
-        private traerEjercicioDataSet unirEjercicioDataSet1;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private unirEjercicioDataSetTableAdapters.unirEjercicioTableAdapter unirEjercicioTableAdapter1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panelDataGridView;
         private System.Windows.Forms.BindingSource bindingSource2;

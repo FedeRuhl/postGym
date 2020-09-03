@@ -24,9 +24,9 @@ namespace Gimnasio
             {
                 DataSet ds;
                 DateTime fecha = DateTime.Parse(listBox1.Text);
-                string fechaFormatoUniversal = Utilidades.convertirFormatoUniversal(fecha);
+                string fechaFormatoUniversal = Fecha.convertirFormatoUniversal(fecha);
                 string cmd = string.Format("EXEC traerEjercicioConFecha '{0}'", fechaFormatoUniversal);
-                ds = Utilidades.Ejecutar(cmd);
+                ds = BD.Consultar(cmd);
                 dataGridView1.DataSource = ds.Tables[0];
             }
             catch (Exception ex)
@@ -40,10 +40,10 @@ namespace Gimnasio
             try
             {
                 string cmd = string.Format("EXEC traerEjercicio");
-                DataSet ds = Utilidades.Ejecutar(cmd);
+                DataSet ds = BD.Consultar(cmd);
                 dataGridView1.DataSource = ds.Tables[0];
                 cmd = "select fecha from tablaDetallesEjercicio group by fecha";
-                ds = Utilidades.Ejecutar(cmd);
+                ds = BD.Consultar(cmd);
                 listBox1.DataSource = ds.Tables[0];
 
                 dataGridView1.Columns["fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
@@ -64,7 +64,7 @@ namespace Gimnasio
                     int id = Convert.ToInt16(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value);
                     dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
                     string cmd = string.Format("EXEC eliminarDetallesEjercicio '{0}'", id);
-                    DataSet DS = Utilidades.Ejecutar(cmd);
+                    DataSet DS = BD.Consultar(cmd);
                 }
             }
         }

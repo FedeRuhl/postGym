@@ -23,7 +23,7 @@ namespace Gimnasio
         {
             try
             {
-                this.tablaPersonaTableAdapter.Fill(this.tablaPersonaDataSet.tablaPersona);
+
             }
             catch(Exception ex)
             {
@@ -52,7 +52,7 @@ namespace Gimnasio
             try
             {
                 string buscarPersona = "select idPersona from tablaPersona where nombrePersona = '" + comboBox1.Text + "'";
-                DataSet DS = Utilidades.Ejecutar(buscarPersona);
+                DataSet DS = BD.Consultar(buscarPersona);
                 if (comboBox1.Text != "" && fotoPersona != "" && txtAlturaPersona.Text != "" && txtPesoPersona.Text != "" && DS.Tables[0].Rows.Count != 0)
                 {
                     int idPersona = comboBox1.SelectedIndex + 1;
@@ -62,7 +62,7 @@ namespace Gimnasio
                     altura = altura.Replace(",", ".");
                     peso = peso.Replace(",", ".");
                     string cmd = string.Format("EXEC actualizaPersona '{0}', '{1}', '{2}', '{3}', '{4}'", idPersona, nombrePersona, fotoPersona, altura, peso);
-                    Utilidades.Ejecutar(cmd);
+                    BD.Consultar(cmd);
                     MessageBox.Show("¡Se ha actualizado correctamente!");
                     txtAlturaPersona.Clear();
                     txtPesoPersona.Clear();

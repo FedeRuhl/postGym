@@ -67,9 +67,6 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LibreriaGimnasio">
-      <HintPath>..\LibreriaGimnasio\bin\Debug\LibreriaGimnasio.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
@@ -99,6 +96,18 @@
     <Compile Include="CheckBoxPersonalizado.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrearRutina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearRutina.Designer.cs">
+      <DependentUpon>CrearRutina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ejercicios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Fecha.cs" />
     <Compile Include="Mantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +120,7 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Ejercicio.cs" />
     <Compile Include="TextBoxPersonalizado.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -169,45 +179,7 @@
       <DependentUpon>FormularioBase.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="tablaEjercicio.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tablaEjercicio.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="tablaEjercicioDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tablaEjercicioDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="tablaPersona1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tablaPersona1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="tablaPersonaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tablaPersonaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="traerEjercicioDataSet.cs">
-      <DependentUpon>traerEjercicioDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="traerEjercicioDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>traerEjercicioDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="traerPersonaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>traerPersonaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="traerPersonaFechaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>traerPersonaFechaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Utilidades.cs" />
+    <Compile Include="BD.cs" />
     <Compile Include="MainClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +233,9 @@
     <EmbeddedResource Include="ContenedorProcesos.resx">
       <DependentUpon>ContenedorProcesos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearRutina.resx">
+      <DependentUpon>CrearRutina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioBase.resx">
       <DependentUpon>FormularioBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +267,17 @@
     <EmbeddedResource Include="subirRutina.resx">
       <DependentUpon>subirRutina.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Ejercicios.xsc">
+      <DependentUpon>Ejercicios.xsd</DependentUpon>
+    </None>
+    <None Include="Ejercicios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ejercicios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Ejercicios.xss">
+      <DependentUpon>Ejercicios.xsd</DependentUpon>
+    </None>
     <None Include="Gimnasio_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ActualizarPersona.datasource" />
@@ -318,91 +304,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="tablaEjercicio.xsc">
-      <DependentUpon>tablaEjercicio.xsd</DependentUpon>
-    </None>
-    <None Include="tablaEjercicio.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tablaEjercicio.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tablaEjercicio.xss">
-      <DependentUpon>tablaEjercicio.xsd</DependentUpon>
-    </None>
-    <None Include="tablaEjercicioDataSet.xsc">
-      <DependentUpon>tablaEjercicioDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="tablaEjercicioDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tablaEjercicioDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tablaEjercicioDataSet.xss">
-      <DependentUpon>tablaEjercicioDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="tablaPersona1.xsc">
-      <DependentUpon>tablaPersona1.xsd</DependentUpon>
-    </None>
-    <None Include="tablaPersona1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tablaPersona1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tablaPersona1.xss">
-      <DependentUpon>tablaPersona1.xsd</DependentUpon>
-    </None>
-    <None Include="tablaPersonaDataSet.xsc">
-      <DependentUpon>tablaPersonaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="tablaPersonaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tablaPersonaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tablaPersonaDataSet.xss">
-      <DependentUpon>tablaPersonaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="traerEjercicioDataSet.xsc">
-      <DependentUpon>traerEjercicioDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="traerEjercicioDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>traerEjercicioDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="traerEjercicioDataSet.xss">
-      <DependentUpon>traerEjercicioDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="traerPersonaDataSet.xsc">
-      <DependentUpon>traerPersonaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="traerPersonaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>traerPersonaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="traerPersonaDataSet.xss">
-      <DependentUpon>traerPersonaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="traerPersonaFechaDataSet.xsc">
-      <DependentUpon>traerPersonaFechaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="traerPersonaFechaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>traerPersonaFechaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="traerPersonaFechaDataSet.xss">
-      <DependentUpon>traerPersonaFechaDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app_icon.ico" />
-    <None Include="img\arreglar.png" />
-    <None Include="img\gimnasio.png" />
     <Content Include="install icon.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
@@ -429,6 +336,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

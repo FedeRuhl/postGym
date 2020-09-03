@@ -35,18 +35,18 @@
             this.panelSubMenuVisualizacion = new System.Windows.Forms.Panel();
             this.btnVisualizarCondicion = new System.Windows.Forms.Button();
             this.btnVisualizarEntrenamiento = new System.Windows.Forms.Button();
-            this.btnVisualizacionDatos = new System.Windows.Forms.Button();
             this.panelSubMenuAlta = new System.Windows.Forms.Panel();
             this.btnAltaCondicion = new System.Windows.Forms.Button();
             this.btnAltaEntrenamiento = new System.Windows.Forms.Button();
-            this.btnAltaDatos = new System.Windows.Forms.Button();
             this.panelSubMenuDatos = new System.Windows.Forms.Panel();
             this.btnCrearRutina = new System.Windows.Forms.Button();
             this.btnPersonasEjercicios = new System.Windows.Forms.Button();
-            this.btnDatosBasicos = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVisualizacionDatos = new System.Windows.Forms.Button();
+            this.btnAltaDatos = new System.Windows.Forms.Button();
+            this.btnDatosBasicos = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconCerrar = new System.Windows.Forms.PictureBox();
             this.iconRestaurar = new System.Windows.Forms.PictureBox();
             this.iconMinimizar = new System.Windows.Forms.PictureBox();
@@ -57,8 +57,8 @@
             this.panelSubMenuAlta.SuspendLayout();
             this.panelSubMenuDatos.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).BeginInit();
@@ -73,7 +73,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1100, 600);
+            this.panelContenedor.Size = new System.Drawing.Size(1450, 885);
             this.panelContenedor.TabIndex = 0;
             // 
             // panelFormularios
@@ -82,7 +82,7 @@
             this.panelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormularios.Location = new System.Drawing.Point(250, 32);
             this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(850, 568);
+            this.panelFormularios.Size = new System.Drawing.Size(1200, 853);
             this.panelFormularios.TabIndex = 3;
             // 
             // panelMenuLateral
@@ -99,7 +99,7 @@
             this.panelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuLateral.Location = new System.Drawing.Point(0, 32);
             this.panelMenuLateral.Name = "panelMenuLateral";
-            this.panelMenuLateral.Size = new System.Drawing.Size(250, 568);
+            this.panelMenuLateral.Size = new System.Drawing.Size(250, 853);
             this.panelMenuLateral.TabIndex = 2;
             // 
             // panelSubMenuVisualizacion
@@ -147,24 +147,6 @@
             this.btnVisualizarEntrenamiento.UseVisualStyleBackColor = false;
             this.btnVisualizarEntrenamiento.Click += new System.EventHandler(this.btnVisualizarEntrenamiento_Click);
             // 
-            // btnVisualizacionDatos
-            // 
-            this.btnVisualizacionDatos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVisualizacionDatos.BackgroundImage")));
-            this.btnVisualizacionDatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnVisualizacionDatos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVisualizacionDatos.FlatAppearance.BorderSize = 0;
-            this.btnVisualizacionDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizacionDatos.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizacionDatos.ForeColor = System.Drawing.Color.White;
-            this.btnVisualizacionDatos.Location = new System.Drawing.Point(0, 373);
-            this.btnVisualizacionDatos.Name = "btnVisualizacionDatos";
-            this.btnVisualizacionDatos.Size = new System.Drawing.Size(250, 50);
-            this.btnVisualizacionDatos.TabIndex = 7;
-            this.btnVisualizacionDatos.Text = "Visualización datos";
-            this.btnVisualizacionDatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVisualizacionDatos.UseVisualStyleBackColor = true;
-            this.btnVisualizacionDatos.Click += new System.EventHandler(this.btnVisualizacionDatos_Click);
-            // 
             // panelSubMenuAlta
             // 
             this.panelSubMenuAlta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
@@ -209,24 +191,6 @@
             this.btnAltaEntrenamiento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAltaEntrenamiento.UseVisualStyleBackColor = false;
             this.btnAltaEntrenamiento.Click += new System.EventHandler(this.btnAltaEntrenamiento_Click);
-            // 
-            // btnAltaDatos
-            // 
-            this.btnAltaDatos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAltaDatos.BackgroundImage")));
-            this.btnAltaDatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAltaDatos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAltaDatos.FlatAppearance.BorderSize = 0;
-            this.btnAltaDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAltaDatos.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAltaDatos.ForeColor = System.Drawing.Color.White;
-            this.btnAltaDatos.Location = new System.Drawing.Point(0, 235);
-            this.btnAltaDatos.Name = "btnAltaDatos";
-            this.btnAltaDatos.Size = new System.Drawing.Size(250, 50);
-            this.btnAltaDatos.TabIndex = 4;
-            this.btnAltaDatos.Text = "Alta de datos";
-            this.btnAltaDatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAltaDatos.UseVisualStyleBackColor = true;
-            this.btnAltaDatos.Click += new System.EventHandler(this.btnAltaDatos_Click);
             // 
             // panelSubMenuDatos
             // 
@@ -275,6 +239,65 @@
             this.btnPersonasEjercicios.UseVisualStyleBackColor = false;
             this.btnPersonasEjercicios.Click += new System.EventHandler(this.btnPersonasEjercicios_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(250, 100);
+            this.panelLogo.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panel1.Controls.Add(this.iconCerrar);
+            this.panel1.Controls.Add(this.iconRestaurar);
+            this.panel1.Controls.Add(this.iconMinimizar);
+            this.panel1.Controls.Add(this.iconMaximizar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1450, 32);
+            this.panel1.TabIndex = 1;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // btnVisualizacionDatos
+            // 
+            this.btnVisualizacionDatos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVisualizacionDatos.BackgroundImage")));
+            this.btnVisualizacionDatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnVisualizacionDatos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVisualizacionDatos.FlatAppearance.BorderSize = 0;
+            this.btnVisualizacionDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizacionDatos.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizacionDatos.ForeColor = System.Drawing.Color.White;
+            this.btnVisualizacionDatos.Location = new System.Drawing.Point(0, 373);
+            this.btnVisualizacionDatos.Name = "btnVisualizacionDatos";
+            this.btnVisualizacionDatos.Size = new System.Drawing.Size(250, 50);
+            this.btnVisualizacionDatos.TabIndex = 7;
+            this.btnVisualizacionDatos.Text = "Visualización datos";
+            this.btnVisualizacionDatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVisualizacionDatos.UseVisualStyleBackColor = true;
+            this.btnVisualizacionDatos.Click += new System.EventHandler(this.btnVisualizacionDatos_Click);
+            // 
+            // btnAltaDatos
+            // 
+            this.btnAltaDatos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAltaDatos.BackgroundImage")));
+            this.btnAltaDatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAltaDatos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAltaDatos.FlatAppearance.BorderSize = 0;
+            this.btnAltaDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAltaDatos.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAltaDatos.ForeColor = System.Drawing.Color.White;
+            this.btnAltaDatos.Location = new System.Drawing.Point(0, 235);
+            this.btnAltaDatos.Name = "btnAltaDatos";
+            this.btnAltaDatos.Size = new System.Drawing.Size(250, 50);
+            this.btnAltaDatos.TabIndex = 4;
+            this.btnAltaDatos.Text = "Alta de datos";
+            this.btnAltaDatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAltaDatos.UseVisualStyleBackColor = true;
+            this.btnAltaDatos.Click += new System.EventHandler(this.btnAltaDatos_Click);
+            // 
             // btnDatosBasicos
             // 
             this.btnDatosBasicos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDatosBasicos.BackgroundImage")));
@@ -293,15 +316,6 @@
             this.btnDatosBasicos.UseVisualStyleBackColor = true;
             this.btnDatosBasicos.Click += new System.EventHandler(this.btnDatosBasicos_Click);
             // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 100);
-            this.panelLogo.TabIndex = 1;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -313,26 +327,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.panel1.Controls.Add(this.iconCerrar);
-            this.panel1.Controls.Add(this.iconRestaurar);
-            this.panel1.Controls.Add(this.iconMinimizar);
-            this.panel1.Controls.Add(this.iconMaximizar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 32);
-            this.panel1.TabIndex = 1;
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            // 
             // iconCerrar
             // 
             this.iconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconCerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconCerrar.Image")));
-            this.iconCerrar.Location = new System.Drawing.Point(1052, 4);
+            this.iconCerrar.Location = new System.Drawing.Point(1402, 4);
             this.iconCerrar.Margin = new System.Windows.Forms.Padding(0);
             this.iconCerrar.Name = "iconCerrar";
             this.iconCerrar.Size = new System.Drawing.Size(48, 24);
@@ -346,7 +346,7 @@
             this.iconRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("iconRestaurar.Image")));
-            this.iconRestaurar.Location = new System.Drawing.Point(1004, 4);
+            this.iconRestaurar.Location = new System.Drawing.Point(1354, 4);
             this.iconRestaurar.Margin = new System.Windows.Forms.Padding(0);
             this.iconRestaurar.Name = "iconRestaurar";
             this.iconRestaurar.Size = new System.Drawing.Size(48, 24);
@@ -361,7 +361,7 @@
             this.iconMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("iconMinimizar.Image")));
-            this.iconMinimizar.Location = new System.Drawing.Point(956, 4);
+            this.iconMinimizar.Location = new System.Drawing.Point(1306, 4);
             this.iconMinimizar.Margin = new System.Windows.Forms.Padding(0);
             this.iconMinimizar.Name = "iconMinimizar";
             this.iconMinimizar.Size = new System.Drawing.Size(48, 24);
@@ -375,7 +375,7 @@
             this.iconMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("iconMaximizar.Image")));
-            this.iconMaximizar.Location = new System.Drawing.Point(1004, 4);
+            this.iconMaximizar.Location = new System.Drawing.Point(1354, 4);
             this.iconMaximizar.Margin = new System.Windows.Forms.Padding(0);
             this.iconMaximizar.Name = "iconMaximizar";
             this.iconMaximizar.Size = new System.Drawing.Size(48, 24);
@@ -388,11 +388,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.ClientSize = new System.Drawing.Size(1450, 885);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(750, 600);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(818, 885);
             this.Name = "MenuPrincipal";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
             this.panelContenedor.ResumeLayout(false);
@@ -401,8 +403,8 @@
             this.panelSubMenuAlta.ResumeLayout(false);
             this.panelSubMenuDatos.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).EndInit();

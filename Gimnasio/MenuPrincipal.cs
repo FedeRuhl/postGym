@@ -136,7 +136,8 @@ namespace Gimnasio
 
         private void btnCrearRutina_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<subirRutina>();
+            AbrirFormulario<CrearRutina>();
+            btnCrearRutina.BackColor = Color.FromArgb(241, 221, 56);
         }
 
         private void btnAltaEntrenamiento_Click(object sender, EventArgs e)
@@ -153,13 +154,13 @@ namespace Gimnasio
 
         private void btnVisualizarEntrenamiento_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<ConsultasDetallesPerfil>();
+            AbrirFormulario<ConsultasDetallesEjercicio>();
             btnVisualizarEntrenamiento.BackColor = Color.FromArgb(241, 221, 56);
         }
 
         private void btnVisualizarCondicion_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<ConsultasDetallesEjercicio>();
+            AbrirFormulario<ConsultasDetallesPerfil>();
             btnVisualizarCondicion.BackColor = Color.FromArgb(241, 221, 56);
         }
 

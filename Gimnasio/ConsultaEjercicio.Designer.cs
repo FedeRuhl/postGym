@@ -34,11 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tablaEjercicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaEjercicioDataSet = new Gimnasio.tablaEjercicioDataSet();
-            this.tablaEjercicioTableAdapter = new Gimnasio.tablaEjercicioDataSetTableAdapters.tablaEjercicioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -92,16 +89,6 @@
             // tablaEjercicioBindingSource
             // 
             this.tablaEjercicioBindingSource.DataMember = "tablaEjercicio";
-            this.tablaEjercicioBindingSource.DataSource = this.tablaEjercicioDataSet;
-            // 
-            // tablaEjercicioDataSet
-            // 
-            this.tablaEjercicioDataSet.DataSetName = "tablaEjercicioDataSet";
-            this.tablaEjercicioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablaEjercicioTableAdapter
-            // 
-            this.tablaEjercicioTableAdapter.ClearBeforeFill = true;
             // 
             // ConsultaEjercicio
             // 
@@ -117,7 +104,6 @@
             this.Load += new System.EventHandler(this.ConsultaEjercicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicioDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,8 +111,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView2;
-        private tablaEjercicioDataSet tablaEjercicioDataSet;
         private System.Windows.Forms.BindingSource tablaEjercicioBindingSource;
-        private tablaEjercicioDataSetTableAdapters.tablaEjercicioTableAdapter tablaEjercicioTableAdapter;
     }
 }

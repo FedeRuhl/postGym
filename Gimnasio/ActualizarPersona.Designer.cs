@@ -40,12 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.tablaPersonaDataSet = new Gimnasio.tablaPersonaDataSet();
             this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaTableAdapter = new Gimnasio.tablaPersonaDataSetTableAdapters.tablaPersonaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPesoPersona
@@ -53,7 +49,7 @@
             this.txtPesoPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.txtPesoPersona.ForeColor = System.Drawing.Color.White;
-            this.txtPesoPersona.Location = new System.Drawing.Point(252, 350);
+            this.txtPesoPersona.Location = new System.Drawing.Point(250, 262);
             this.txtPesoPersona.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.txtPesoPersona.Name = "txtPesoPersona";
             this.txtPesoPersona.Size = new System.Drawing.Size(223, 22);
@@ -65,7 +61,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(37, 350);
+            this.label4.Location = new System.Drawing.Point(35, 262);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 33, 3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(175, 26);
@@ -77,7 +73,7 @@
             this.txtAlturaPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAlturaPersona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.txtAlturaPersona.ForeColor = System.Drawing.Color.White;
-            this.txtAlturaPersona.Location = new System.Drawing.Point(252, 294);
+            this.txtAlturaPersona.Location = new System.Drawing.Point(250, 206);
             this.txtAlturaPersona.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.txtAlturaPersona.Name = "txtAlturaPersona";
             this.txtAlturaPersona.Size = new System.Drawing.Size(223, 22);
@@ -89,7 +85,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(37, 292);
+            this.label5.Location = new System.Drawing.Point(35, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(186, 26);
             this.label5.TabIndex = 21;
@@ -100,7 +96,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(252, 240);
+            this.button1.Location = new System.Drawing.Point(250, 152);
             this.button1.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 31);
@@ -115,7 +111,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(37, 236);
+            this.label3.Location = new System.Drawing.Point(35, 148);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 33, 3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(172, 26);
@@ -133,7 +129,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(37, 177);
+            this.label1.Location = new System.Drawing.Point(35, 89);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 33, 3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 26);
@@ -146,7 +142,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(37, 117);
+            this.label2.Location = new System.Drawing.Point(84, 29);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(464, 27);
@@ -161,19 +157,26 @@
             this.comboBox1.DisplayMember = "nombrePersona";
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(252, 179);
+            this.comboBox1.Location = new System.Drawing.Point(250, 91);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(17, 3, 3, 17);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(223, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.ValueMember = "nombrePersona";
             // 
+            // tablaPersonaBindingSource
+            // 
+            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
+            // 
+            // tablaPersonaDataSet
+            // 
+            // 
             // btnActualizar
             // 
             this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnActualizar.BackColor = System.Drawing.SystemColors.Control;
             this.btnActualizar.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizar.Location = new System.Drawing.Point(508, 259);
+            this.btnActualizar.Location = new System.Drawing.Point(506, 171);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(109, 34);
             this.btnActualizar.TabIndex = 4;
@@ -181,26 +184,12 @@
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // tablaPersonaDataSet
-            // 
-            this.tablaPersonaDataSet.DataSetName = "tablaPersonaDataSet";
-            this.tablaPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablaPersonaBindingSource
-            // 
-            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource.DataSource = this.tablaPersonaDataSet;
-            // 
-            // tablaPersonaTableAdapter
-            // 
-            this.tablaPersonaTableAdapter.ClearBeforeFill = true;
-            // 
             // ActualizarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(638, 462);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.ClientSize = new System.Drawing.Size(638, 325);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
@@ -217,7 +206,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ActualizarPersona";
             this.Load += new System.EventHandler(this.ActualizarPersona_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -237,8 +225,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnActualizar;
-        private tablaPersonaDataSet tablaPersonaDataSet;
         private System.Windows.Forms.BindingSource tablaPersonaBindingSource;
-        private tablaPersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
     }
 }

@@ -22,7 +22,7 @@ namespace Gimnasio
             try
             {
                 string cmd = string.Format("select * from tablaPersona");
-                DataSet ds = Utilidades.Ejecutar(cmd);
+                DataSet ds = BD.Consultar(cmd);
                 dataGridView1.DataSource = ds.Tables[0];
             }
             catch(Exception ex)
@@ -40,7 +40,7 @@ namespace Gimnasio
                     int id = Convert.ToInt16(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value);
                     dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
                     string cmd = string.Format("EXEC eliminarPersona '{0}'", id);
-                    DataSet DS = Utilidades.Ejecutar(cmd);
+                    DataSet DS = BD.Consultar(cmd);
                 }
             }
         }
@@ -56,7 +56,7 @@ namespace Gimnasio
                 String Consulta = "Update tablaPersona set nombrePersona = '" +
                 ValorCeldaModificada + "' where idPersona  = '" + ValorClave + "'";
 
-                DataSet ds = Utilidades.Ejecutar(Consulta);
+                DataSet ds = BD.Consultar(Consulta);
             }
             else
             {

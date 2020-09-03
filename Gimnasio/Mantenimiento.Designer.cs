@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbEjercicioOPersona = new System.Windows.Forms.ComboBox();
-            this.tablaPersona = new Gimnasio.tablaPersona();
             this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaTableAdapter = new Gimnasio.tablaPersonaTableAdapters.tablaPersonaTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -46,17 +44,17 @@
             this.lAltura = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.tbAltura = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersona)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(225, 74);
+            this.label1.Location = new System.Drawing.Point(247, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(324, 54);
             this.label1.TabIndex = 1;
@@ -64,10 +62,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(240, 146);
+            this.label2.Location = new System.Drawing.Point(251, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(309, 26);
             this.label2.TabIndex = 2;
@@ -75,72 +74,61 @@
             // 
             // cbEjercicioOPersona
             // 
+            this.cbEjercicioOPersona.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbEjercicioOPersona.FormattingEnabled = true;
             this.cbEjercicioOPersona.Items.AddRange(new object[] {
             "Ejercicios",
             "Personas"});
-            this.cbEjercicioOPersona.Location = new System.Drawing.Point(312, 186);
+            this.cbEjercicioOPersona.Location = new System.Drawing.Point(327, 143);
             this.cbEjercicioOPersona.Name = "cbEjercicioOPersona";
             this.cbEjercicioOPersona.Size = new System.Drawing.Size(121, 24);
             this.cbEjercicioOPersona.TabIndex = 3;
             this.cbEjercicioOPersona.SelectedIndexChanged += new System.EventHandler(this.cbEjercicioOPersona_SelectedIndexChanged);
             // 
-            // tablaPersona
-            // 
-            this.tablaPersona.DataSetName = "tablaPersona";
-            this.tablaPersona.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablaPersonaBindingSource
-            // 
-            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource.DataSource = this.tablaPersona;
-            // 
-            // tablaPersonaTableAdapter
-            // 
-            this.tablaPersonaTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.ColumnHeadersHeight = 45;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Eliminar});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dataGridView1.Location = new System.Drawing.Point(59, 334);
+            this.dataGridView1.Location = new System.Drawing.Point(56, 274);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(688, 492);
@@ -158,9 +146,10 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAgregar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(255, 282);
+            this.btnAgregar.Location = new System.Drawing.Point(273, 227);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(235, 31);
             this.btnAgregar.TabIndex = 5;
@@ -170,10 +159,11 @@
             // 
             // lNombre
             // 
+            this.lNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lNombre.AutoSize = true;
             this.lNombre.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNombre.ForeColor = System.Drawing.Color.White;
-            this.lNombre.Location = new System.Drawing.Point(250, 225);
+            this.lNombre.Location = new System.Drawing.Point(268, 170);
             this.lNombre.Name = "lNombre";
             this.lNombre.Size = new System.Drawing.Size(86, 26);
             this.lNombre.TabIndex = 6;
@@ -181,10 +171,11 @@
             // 
             // lAltura
             // 
+            this.lAltura.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lAltura.AutoSize = true;
             this.lAltura.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lAltura.ForeColor = System.Drawing.Color.White;
-            this.lAltura.Location = new System.Drawing.Point(409, 226);
+            this.lAltura.Location = new System.Drawing.Point(427, 171);
             this.lAltura.Name = "lAltura";
             this.lAltura.Size = new System.Drawing.Size(70, 26);
             this.lAltura.TabIndex = 7;
@@ -193,14 +184,16 @@
             // 
             // tbNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(255, 254);
+            this.tbNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbNombre.Location = new System.Drawing.Point(273, 199);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(129, 22);
             this.tbNombre.TabIndex = 8;
             // 
             // tbAltura
             // 
-            this.tbAltura.Location = new System.Drawing.Point(390, 254);
+            this.tbAltura.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbAltura.Location = new System.Drawing.Point(408, 199);
             this.tbAltura.Name = "tbAltura";
             this.tbAltura.Size = new System.Drawing.Size(100, 22);
             this.tbAltura.TabIndex = 9;
@@ -210,8 +203,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(800, 838);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.ClientSize = new System.Drawing.Size(800, 790);
             this.Controls.Add(this.tbAltura);
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.lAltura);
@@ -226,16 +219,6 @@
             this.Text = "Mantenimiento";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Mantenimiento_FormClosed);
             this.Load += new System.EventHandler(this.Mantenimiento_Load);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.cbEjercicioOPersona, 0);
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
-            this.Controls.SetChildIndex(this.btnAgregar, 0);
-            this.Controls.SetChildIndex(this.lNombre, 0);
-            this.Controls.SetChildIndex(this.lAltura, 0);
-            this.Controls.SetChildIndex(this.tbNombre, 0);
-            this.Controls.SetChildIndex(this.tbAltura, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersona)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -248,9 +231,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbEjercicioOPersona;
-        private tablaPersona tablaPersona;
         private System.Windows.Forms.BindingSource tablaPersonaBindingSource;
-        private tablaPersonaTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lNombre;

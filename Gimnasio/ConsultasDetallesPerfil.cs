@@ -24,10 +24,10 @@ namespace Gimnasio
             try
             {
                 string cmd = string.Format("EXEC traerPersona");
-                DataSet ds = Utilidades.Ejecutar(cmd);
+                DataSet ds = BD.Consultar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];
                 cmd = "select fecha from tablaDetallesPersona group by fecha";
-                ds = Utilidades.Ejecutar(cmd);
+                ds = BD.Consultar(cmd);
                 listBox1.DataSource = ds.Tables[0];
 
                 dataGridView3.Columns["fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
@@ -48,7 +48,7 @@ namespace Gimnasio
                 DataSet ds;
                 string idDetalles = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
                 string cmd = "Select fotoPersona from tablaDetallesPersona where idDetalles = '" + idDetalles + "'";
-                ds = Utilidades.Ejecutar(cmd);
+                ds = BD.Consultar(cmd);
                 direccion = ds.Tables[0].Rows[0]["fotoPersona"].ToString();
                 pictureBox2.Image = Image.FromFile(direccion);
                 pictureBox2.Refresh();
@@ -64,9 +64,9 @@ namespace Gimnasio
             {
                 DataSet ds;
                 DateTime fecha = DateTime.Parse(listBox1.Text);
-                string fechaFormatoUniversal = Utilidades.convertirFormatoUniversal(fecha);
+                string fechaFormatoUniversal = Fecha.convertirFormatoUniversal(fecha);
                 string cmd = "select tablaPersona.idPersona, idDetalles, nombrePersona, alturaPersona, pesoPersona, fecha from tablaPersona inner join tablaDetallesPersona on tablaPersona.idPersona = tablaDetallesPersona.idPersona where fecha = '" + fechaFormatoUniversal + "'";
-                ds = Utilidades.Ejecutar(cmd);
+                ds = BD.Consultar(cmd);
                 dataGridView3.DataSource = ds.Tables[0];
             }
             catch(Exception error)
@@ -97,7 +97,7 @@ namespace Gimnasio
                     int id = Convert.ToInt16(dataGridView3.Rows[dataGridView3.CurrentRow.Index].Cells[1].Value);
                     dataGridView3.Rows.RemoveAt(dataGridView3.CurrentRow.Index);
                     string cmd = string.Format("EXEC eliminarDetallesPersona '{0}'", id);
-                    DataSet DS = Utilidades.Ejecutar(cmd);
+                    DataSet DS = BD.Consultar(cmd);
                 }
             }
         }
@@ -180,7 +180,7 @@ namespace Gimnasio
                 String Consulta = "Update " + TablaAModificar + " set " + ColumnaModificada + " = '" +
                 ValorCeldaModificada + "' where " + ClavePrimaria + " = '" + ValorClave + "'";
 
-                DataSet ds = Utilidades.Ejecutar(Consulta);
+                DataSet ds = BD.Consultar(Consulta);
             }
 
         }

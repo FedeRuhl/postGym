@@ -37,19 +37,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelDataGridView = new System.Windows.Forms.Panel();
-            this.traerPersonaDataSet = new Gimnasio.traerPersonaDataSet();
             this.traerPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDataGridView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.traerPersonaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traerPersonaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
             // 
             this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.listBox1.DataSource = this.traerPersonaBindingSource;
             this.listBox1.DisplayMember = "fecha";
             this.listBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -77,7 +75,7 @@
             this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -164,22 +162,12 @@
             this.panelDataGridView.Size = new System.Drawing.Size(1007, 345);
             this.panelDataGridView.TabIndex = 9;
             // 
-            // traerPersonaDataSet
-            // 
-            this.traerPersonaDataSet.DataSetName = "unirPersonaDataSet";
-            this.traerPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // traerPersonaBindingSource
-            // 
-            this.traerPersonaBindingSource.DataMember = "traerPersona";
-            this.traerPersonaBindingSource.DataSource = this.traerPersonaDataSet;
-            // 
             // ConsultasDetallesPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1100, 730);
             this.Controls.Add(this.panelDataGridView);
             this.Controls.Add(this.pictureBox2);
@@ -197,7 +185,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDataGridView.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.traerPersonaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traerPersonaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -211,6 +198,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelDataGridView;
         private System.Windows.Forms.BindingSource traerPersonaBindingSource;
-        private traerPersonaDataSet traerPersonaDataSet;
     }
 }

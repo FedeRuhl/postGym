@@ -34,14 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tablaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaPersonaDataSet = new Gimnasio.tablaPersonaDataSet();
-            this.tablaPersonaTableAdapter = new Gimnasio.tablaPersonaDataSetTableAdapters.tablaPersonaTableAdapter();
             this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tablaPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,20 +95,6 @@
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
             // 
-            // tablaPersonaBindingSource
-            // 
-            this.tablaPersonaBindingSource.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource.DataSource = this.tablaPersonaDataSet;
-            // 
-            // tablaPersonaDataSet
-            // 
-            this.tablaPersonaDataSet.DataSetName = "tablaPersonaDataSet";
-            this.tablaPersonaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablaPersonaTableAdapter
-            // 
-            this.tablaPersonaTableAdapter.ClearBeforeFill = true;
-            // 
             // idPersonaDataGridViewTextBoxColumn
             // 
             this.idPersonaDataGridViewTextBoxColumn.DataPropertyName = "idPersona";
@@ -126,11 +109,6 @@
             this.nombrePersonaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombrePersonaDataGridViewTextBoxColumn.Name = "nombrePersonaDataGridViewTextBoxColumn";
             // 
-            // tablaPersonaBindingSource1
-            // 
-            this.tablaPersonaBindingSource1.DataMember = "tablaPersona";
-            this.tablaPersonaBindingSource1.DataSource = this.tablaPersonaDataSet;
-            // 
             // ConsultasPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -144,7 +122,6 @@
             this.Load += new System.EventHandler(this.ConsultasPerfiles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -153,9 +130,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private tablaPersonaDataSet tablaPersonaDataSet;
         private System.Windows.Forms.BindingSource tablaPersonaBindingSource;
-        private tablaPersonaDataSetTableAdapters.tablaPersonaTableAdapter tablaPersonaTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource tablaPersonaBindingSource1;

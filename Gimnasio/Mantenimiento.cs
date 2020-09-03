@@ -27,7 +27,7 @@ namespace Gimnasio
         private void cbEjercicioOPersona_SelectedIndexChanged(object sender, EventArgs e)
         {
             string cmd = string.Format("select * from " + cbEjercicioOPersona.SelectedItem);
-            DataSet ds = Utilidades.Ejecutar(cmd);
+            DataSet ds = BD.Consultar(cmd);
             dataGridView1.DataSource = ds.Tables[0];
             if (cbEjercicioOPersona.SelectedItem.ToString() == "Personas")
             {
@@ -76,25 +76,25 @@ namespace Gimnasio
         private void insertarEjercicio(String nombre)
         {
             string cmd = string.Format("EXEC insertarEjercicio '{0}'", nombre);
-            DataSet ds = Utilidades.Ejecutar(cmd);
+            DataSet ds = BD.Consultar(cmd);
         }
 
         private void insertarPersona(String nombre, String altura)
         {
             string cmd = string.Format("EXEC insertarPersona '{0}', '{1}'", nombre, altura);
-            DataSet ds = Utilidades.Ejecutar(cmd);
+            DataSet ds = BD.Consultar(cmd);
         }
 
         private void actualizarEjercicio(String id, String nombre)
         {
             string cmd = string.Format("EXEC modificarEjercicio '{0}', '{1}'", id, nombre);
-            DataSet ds = Utilidades.Ejecutar(cmd);
+            DataSet ds = BD.Consultar(cmd);
         }
 
         private void actualizarPersona(String id, String nombre, String altura)
         {
             string cmd = string.Format("EXEC modificarPersona '{0}', '{1}', '{2}'", id, nombre, altura);
-            DataSet ds = Utilidades.Ejecutar(cmd);
+            DataSet ds = BD.Consultar(cmd);
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -114,13 +114,13 @@ namespace Gimnasio
         private void eliminarPersona(String id)
         {
             String cmd = "delete from Personas where id = " + id;
-            DataSet DS = Utilidades.Ejecutar(cmd);
+            DataSet DS = BD.Consultar(cmd);
         }
 
         private void eliminarEjercicio(String id)
         {
             String cmd = "delete from Ejercicios where id = " + id;
-            DataSet DS = Utilidades.Ejecutar(cmd);
+            DataSet DS = BD.Consultar(cmd);
         }
 
         private void Mantenimiento_FormClosed(object sender, FormClosedEventArgs e)
