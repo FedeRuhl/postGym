@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Gimnasio
 {
@@ -52,8 +53,29 @@ namespace Gimnasio
         }
         public static void insertarMusculosRutina(String rutinaID, String musculoID)
         {
-            String consulta = "insert into MusculosRutina (rutinaID, musculoID) values" +
-                " (" + rutinaID + ", " + musculoID + ")";
+            String consulta = "insert into MusculosRutina (rutinaID, musculoID) values (" +
+                rutinaID + ", " + musculoID + ")";
+            Consultar(consulta);
+        }
+
+        public static void insertarSet(String fecha, String personaID)
+        {
+            String consulta = "insert into sets (fecha, personaID) values ('" +
+                fecha + "', " + personaID + ")";
+            Consultar(consulta);
+        }
+
+        public static void insertarSerieRepeticiones(String setID, String ejercicioID, String repeticiones, String peso)
+        {
+            String consulta = "insert into series (SetID, EjercicioID, Repeticiones, Peso) values (" +
+                setID + ", " + ejercicioID + ", " + repeticiones + ", " + peso + ")";
+            Consultar(consulta);
+        }
+
+        public static void insertarSerieSegundos(String setID, String ejercicioID, String segundos, String peso)
+        {
+            String consulta = "insert into series (SetID, EjercicioID, Segundos, Peso) values (" +
+                setID + ", " + ejercicioID + ", " + segundos + ", " + peso + ")";
             Consultar(consulta);
         }
 

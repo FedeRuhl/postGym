@@ -41,15 +41,19 @@ namespace Gimnasio
 
         private void cbRepOseg_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (validar())
+            if (validarCantidadSeriesRepSeg())
             {
+                String nombreTextBox = "";
                 int cantidadSeries = Convert.ToInt32(tbCantidadSeries.Text);
                 String textPlaceHolder = cbRepOseg.SelectedItem.ToString() == "Repeticiones" ? "Cantidad de repeticiones" : "Cantidad de segundos";
 
                 for (int i = 0; i < cantidadSeries; i++)
                 {
-                    textRepOSeg = inicializarTextBox(textPlaceHolder);
-                    textPeso = inicializarTextBox("Cantidad de peso (kg.)");
+                    nombreTextBox = "textRepOSeg";
+                    textRepOSeg = inicializarTextBox(textPlaceHolder, nombreTextBox, i);
+
+                    nombreTextBox = "textPeso";
+                    textPeso = inicializarTextBox("Cantidad de peso (kg.)", nombreTextBox, i);
 
                     panelSubirRutina.Controls.Add(textRepOSeg);
                     panelSubirRutina.Controls.Add(textPeso);
@@ -57,18 +61,29 @@ namespace Gimnasio
                 }
 
                 posicionarBotones();
+                cbRepOseg.Enabled = false;
             }
             else if (cbRepOseg.SelectedIndex == -1)
                 return;
             else
-                MessageBox.Show("Las series, las repeticiones y los segundos deben ser ingresados correctamente.");
-    }
+            {
+                MessageBox.Show("¡No te olvides que la cantidad de series realizadas debe ser un número!");
+                tbCantidadSeries.Clear();
+                tbCantidadSeries.Focus();
+            }
+        }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void limpiarForm()
         {
             tbCantidadSeries.Clear();
             cbRepOseg.SelectedIndex = -1;
             panelSubirRutina.Controls.Clear();
+            cbRepOseg.Enabled = true;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiarForm();
         }
 
         private void posicionarBotones()
@@ -78,24 +93,20 @@ namespace Gimnasio
             btnLimpiar.Visible = true;
         }
 
-        private bool esEntero(String cadena)
+        private bool validarCantidadSeriesRepSeg()
         {
-            return int.TryParse(cadena, out _);
-        }
-
-        private bool validar()
-        {
-            if (esEntero(tbCantidadSeries.Text)
+            if (int.TryParse(tbCantidadSeries.Text, out _)
                 && !String.IsNullOrEmpty(cbRepOseg.SelectedItem.ToString()))
                 return true;
             else
                 return false;
         }
 
-        private TextBoxPersonalizado inicializarTextBox(String placeHolder)
+        private TextBoxPersonalizado inicializarTextBox(String placeHolder, String nombre, int Indice)
         {
             TextBoxPersonalizado txt = new TextBoxPersonalizado()
             {
+                Name = nombre + Indice,
                 BackColor = Color.FromArgb(23, 21, 32),
                 ForeColor = Color.White,
                 Width = 150,
@@ -117,6 +128,64 @@ namespace Gimnasio
             }
                 
             return txt;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            #region Inicializacion variables
+            int tope = Convert.ToInt32(tbCantidadSeries.Text);
+            String[] arregloRepSeg = generarArregloDinamico("textRepOSeg", tope);
+            String[] arregloPesos = generarArregloDinamico("textPeso", tope);
+            String fecha = Fecha.convertirFormatoUniversal(dtpDiaEntrenamiento.Value);
+            DataRowView Persona = (DataRowView) cbPersonas.Items[cbPersonas.SelectedIndex];
+            String personaID = Persona.Row["id"].ToString();
+            DataRowView Ejercicio = (DataRowView)cbEjercicios.Items[cbEjercicios.SelectedIndex];
+            String ejercicioID = Ejercicio.Row["id"].ToString();
+            #endregion
+
+            if (arregloPesos != null && arregloRepSeg != null)
+            {
+                BD.insertarSet(fecha, personaID);
+                String setID = BD.ObtenerPrimeraCoincidencia("select id from sets order by id desc").ToString();
+
+                for (int i = 0; i < tope; i++)
+                {
+                    if (cbRepOseg.SelectedItem.ToString() == "Repeticiones")
+                        BD.insertarSerieRepeticiones(setID, ejercicioID, arregloRepSeg[i], arregloPesos[i]);
+                    else
+                        BD.insertarSerieSegundos(setID, ejercicioID, arregloRepSeg[i], arregloPesos[i]);
+                }
+
+                MessageBox.Show("¡La serie se ha insertado correctamente!");
+                limpiarForm();
+            }
+        }
+
+        private string[] generarArregloDinamico(String nombreTexto, int tope)
+        {
+            String cadena = "";
+            String[] arregloDinamico = new String[tope];
+            String textBox = "";
+
+            for (int i = 0; i < tope; i++)
+            {
+                textBox = nombreTexto + i;
+                Control[] controles = Controls.Find(textBox, true);
+                if (controles.Length > 0)
+                {
+                    cadena = controles.First().Text;
+                    cadena = cadena.Replace(",", ".");
+
+                    if (float.TryParse(cadena, out _) && controles.Count() != 0)
+                        arregloDinamico[i] = cadena;
+                    else
+                    {
+                        MessageBox.Show("¡No te olvides que las series, las repeticiones y los pesos deben ser números!");
+                        return null;
+                    }
+                }
+            }
+            return arregloDinamico;
         }
     }
 }

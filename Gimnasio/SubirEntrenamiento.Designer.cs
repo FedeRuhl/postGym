@@ -32,7 +32,7 @@
             this.lPersona = new System.Windows.Forms.Label();
             this.cbPersonas = new System.Windows.Forms.ComboBox();
             this.lDiaEntrenamiento = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDiaEntrenamiento = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cbRepOseg = new System.Windows.Forms.ComboBox();
             this.lPesoOrepeticiones = new System.Windows.Forms.Label();
@@ -94,16 +94,16 @@
             this.lDiaEntrenamiento.TabIndex = 14;
             this.lDiaEntrenamiento.Text = "¿Qué día entrenaste?";
             // 
-            // dateTimePicker1
+            // dtpDiaEntrenamiento
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.dateTimePicker1.Location = new System.Drawing.Point(294, 199);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dtpDiaEntrenamiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpDiaEntrenamiento.CalendarForeColor = System.Drawing.Color.White;
+            this.dtpDiaEntrenamiento.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.dtpDiaEntrenamiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.dtpDiaEntrenamiento.Location = new System.Drawing.Point(294, 199);
+            this.dtpDiaEntrenamiento.Name = "dtpDiaEntrenamiento";
+            this.dtpDiaEntrenamiento.Size = new System.Drawing.Size(200, 22);
+            this.dtpDiaEntrenamiento.TabIndex = 15;
             // 
             // btnGuardar
             // 
@@ -114,10 +114,13 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Visible = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // cbRepOseg
             // 
             this.cbRepOseg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbRepOseg.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbRepOseg.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbRepOseg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.cbRepOseg.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbRepOseg.ForeColor = System.Drawing.Color.White;
@@ -232,7 +235,7 @@
             this.Controls.Add(this.panelSubirRutina);
             this.Controls.Add(this.cbRepOseg);
             this.Controls.Add(this.lPesoOrepeticiones);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDiaEntrenamiento);
             this.Controls.Add(this.tbCantidadSeries);
             this.Controls.Add(this.lDiaEntrenamiento);
             this.Controls.Add(this.lCantidadSeries);
@@ -257,7 +260,7 @@
         private System.Windows.Forms.Label lPersona;
         private System.Windows.Forms.ComboBox cbPersonas;
         private System.Windows.Forms.Label lDiaEntrenamiento;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDiaEntrenamiento;
         private System.Windows.Forms.TextBox tbCantidadSeries;
         private System.Windows.Forms.Label lCantidadSeries;
         private System.Windows.Forms.ComboBox cbEjercicios;
