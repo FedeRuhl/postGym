@@ -142,7 +142,7 @@ namespace Gimnasio
 
         private void btnAltaEntrenamiento_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<subirRutina>();
+            AbrirFormulario<SubirEntrenamiento>();
             btnAltaEntrenamiento.BackColor = Color.FromArgb(241, 221, 56);
         }
 

@@ -47,13 +47,13 @@ namespace Gimnasio
         {
             try
             {
-                /*BD.insertarRutina();
+                BD.insertarRutina();
                 String idRutina = BD.ObtenerPrimeraCoincidencia("select id from rutinas order by id desc").ToString();
 
                 PersistirDiasRutina(idRutina);
                 PersistirMusculosRutina(idRutina);
                 PersistirEjerciciosRutina(idRutina);
-                */
+
                 MessageBox.Show("La rutina se ha creado correctamente.");
 
                 LimpiarDatos();
