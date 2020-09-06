@@ -184,5 +184,12 @@ namespace Gimnasio
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            String consulta = "select foto from Fotos where id = 7";
+            byte[] Bytes = (byte[])BD.ObtenerPrimeraCoincidencia(consulta);
+            pictureBox2.Image = Imagen.ConvertirBytesImagen(Bytes);
+        }
     }
 }

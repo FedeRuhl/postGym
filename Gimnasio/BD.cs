@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Gimnasio
 {
     public static class BD
     {
-        private static String con = @"Data Source=(local);Initial Catalog=Gimnasio;Integrated Security=True";
-        private static SqlConnection conexion = new SqlConnection(con);
+        private static readonly String con = @"Data Source=(local);Initial Catalog=Gimnasio;Integrated Security=True";
+        private static readonly SqlConnection conexion = new SqlConnection(con);
         public static DataSet Consultar(string consulta)
         {
             conexion.Open();
@@ -79,5 +80,26 @@ namespace Gimnasio
             Consultar(consulta);
         }
 
+        public static void insertarDetallesPersona(String peso, String fecha, String personaID)
+        {
+            String consulta = $"insert into DetallesPersonas (Peso, Fecha, PersonaID) values ({peso}, '" +
+                $"{fecha}', {personaID})";
+            Consultar(consulta);
+        }
+
+        public static void insertarFoto(String detallesPersonaID, byte[] foto)
+        {
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "insert into Fotos (DetallesPersonaID, Foto) values (@DetallesPersonaID, @Foto)";
+            command.Parameters.AddWithValue("@DetallesPersonaID", detallesPersonaID);
+            command.Parameters.AddWithValue("@Foto", foto);
+            command.ExecuteNonQuery();
+            conexion.Close();
+
+            //String consulta = $"insert into Fotos (DetallesPersonaID, Foto) values ({detallesPersonaID}, {foto})";
+            //Consultar(consulta);
+        }
     }
 }

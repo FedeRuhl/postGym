@@ -148,7 +148,7 @@ namespace Gimnasio
 
         private void btnAltaCondicion_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<ActualizarPersona>();
+            AbrirFormulario<ActualizarCondicionFisica>();
             btnAltaCondicion.BackColor = Color.FromArgb(241, 221, 56);
         }
 

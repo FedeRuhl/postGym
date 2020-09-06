@@ -108,6 +108,7 @@
       <DependentUpon>Ejercicios.xsd</DependentUpon>
     </Compile>
     <Compile Include="Fecha.cs" />
+    <Compile Include="Imagen.cs" />
     <Compile Include="Mantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +122,12 @@
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Ejercicio.cs" />
+    <Compile Include="ActualizarCondicionFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarCondicionFisica.Designer.cs">
+      <DependentUpon>ActualizarCondicionFisica.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubirEntrenamiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +277,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ActualizarCondicionFisica.resx">
+      <DependentUpon>ActualizarCondicionFisica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubirEntrenamiento.resx">
       <DependentUpon>SubirEntrenamiento.cs</DependentUpon>
     </EmbeddedResource>
