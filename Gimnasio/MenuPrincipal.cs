@@ -152,16 +152,22 @@ namespace Gimnasio
             btnAltaCondicion.BackColor = Color.FromArgb(241, 221, 56);
         }
 
-        private void btnVisualizarEntrenamiento_Click(object sender, EventArgs e)
+        private void btnVisualizarRutinas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<ConsultasDetallesEjercicio>();
-            btnVisualizarEntrenamiento.BackColor = Color.FromArgb(241, 221, 56);
+            AbrirFormulario<ConsultaRutinas>();
+            btnVisualizarRutinas.BackColor = Color.FromArgb(241, 221, 56);
         }
 
-        private void btnVisualizarCondicion_Click(object sender, EventArgs e)
+        private void btnVisualizarEntrenamientos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<ConsultasDetallesEjercicio>();
+            btnVisualizarEntrenamientos.BackColor = Color.FromArgb(241, 221, 56);
+        }
+
+        private void btnVisualizarCondiciones_Click(object sender, EventArgs e)
         {
             AbrirFormulario<ConsultasDetallesPerfil>();
-            btnVisualizarCondicion.BackColor = Color.FromArgb(241, 221, 56);
+            btnVisualizarEntrenamientos.BackColor = Color.FromArgb(241, 221, 56);
         }
 
         private void AbrirFormulario<MiForm>() where MiForm:Form, new()
@@ -209,8 +215,8 @@ namespace Gimnasio
             btnCrearRutina.BackColor = color;
             btnAltaEntrenamiento.BackColor = color;
             btnAltaCondicion.BackColor = color;
-            btnVisualizarEntrenamiento.BackColor = color;
-            btnVisualizarCondicion.BackColor = color;
+            btnVisualizarRutinas.BackColor = color;
+            btnVisualizarEntrenamientos.BackColor = color;
         }
     }
 }

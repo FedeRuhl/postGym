@@ -33,8 +33,9 @@
             this.panelFormularios = new System.Windows.Forms.Panel();
             this.panelMenuLateral = new System.Windows.Forms.Panel();
             this.panelSubMenuVisualizacion = new System.Windows.Forms.Panel();
-            this.btnVisualizarCondicion = new System.Windows.Forms.Button();
-            this.btnVisualizarEntrenamiento = new System.Windows.Forms.Button();
+            this.btnVisualizarCondiciones = new System.Windows.Forms.Button();
+            this.btnVisualizarEntrenamientos = new System.Windows.Forms.Button();
+            this.btnVisualizarRutinas = new System.Windows.Forms.Button();
             this.btnVisualizacionDatos = new System.Windows.Forms.Button();
             this.panelSubMenuAlta = new System.Windows.Forms.Panel();
             this.btnAltaCondicion = new System.Windows.Forms.Button();
@@ -105,47 +106,65 @@
             // panelSubMenuVisualizacion
             // 
             this.panelSubMenuVisualizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
-            this.panelSubMenuVisualizacion.Controls.Add(this.btnVisualizarCondicion);
-            this.panelSubMenuVisualizacion.Controls.Add(this.btnVisualizarEntrenamiento);
+            this.panelSubMenuVisualizacion.Controls.Add(this.btnVisualizarCondiciones);
+            this.panelSubMenuVisualizacion.Controls.Add(this.btnVisualizarEntrenamientos);
+            this.panelSubMenuVisualizacion.Controls.Add(this.btnVisualizarRutinas);
             this.panelSubMenuVisualizacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuVisualizacion.Location = new System.Drawing.Point(0, 423);
             this.panelSubMenuVisualizacion.Name = "panelSubMenuVisualizacion";
-            this.panelSubMenuVisualizacion.Size = new System.Drawing.Size(250, 100);
+            this.panelSubMenuVisualizacion.Size = new System.Drawing.Size(250, 139);
             this.panelSubMenuVisualizacion.TabIndex = 8;
             // 
-            // btnVisualizarCondicion
+            // btnVisualizarCondiciones
             // 
-            this.btnVisualizarCondicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
-            this.btnVisualizarCondicion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVisualizarCondicion.FlatAppearance.BorderSize = 0;
-            this.btnVisualizarCondicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarCondicion.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarCondicion.ForeColor = System.Drawing.Color.White;
-            this.btnVisualizarCondicion.Location = new System.Drawing.Point(0, 40);
-            this.btnVisualizarCondicion.Name = "btnVisualizarCondicion";
-            this.btnVisualizarCondicion.Size = new System.Drawing.Size(250, 40);
-            this.btnVisualizarCondicion.TabIndex = 5;
-            this.btnVisualizarCondicion.Text = "Condiciones físicas";
-            this.btnVisualizarCondicion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVisualizarCondicion.UseVisualStyleBackColor = false;
-            this.btnVisualizarCondicion.Click += new System.EventHandler(this.btnVisualizarCondicion_Click);
+            this.btnVisualizarCondiciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
+            this.btnVisualizarCondiciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVisualizarCondiciones.FlatAppearance.BorderSize = 0;
+            this.btnVisualizarCondiciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarCondiciones.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarCondiciones.ForeColor = System.Drawing.Color.White;
+            this.btnVisualizarCondiciones.Location = new System.Drawing.Point(0, 80);
+            this.btnVisualizarCondiciones.Name = "btnVisualizarCondiciones";
+            this.btnVisualizarCondiciones.Size = new System.Drawing.Size(250, 40);
+            this.btnVisualizarCondiciones.TabIndex = 6;
+            this.btnVisualizarCondiciones.Text = "Condiciones físicas";
+            this.btnVisualizarCondiciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVisualizarCondiciones.UseVisualStyleBackColor = false;
+            this.btnVisualizarCondiciones.Click += new System.EventHandler(this.btnVisualizarCondiciones_Click);
             // 
-            // btnVisualizarEntrenamiento
+            // btnVisualizarEntrenamientos
             // 
-            this.btnVisualizarEntrenamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
-            this.btnVisualizarEntrenamiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVisualizarEntrenamiento.FlatAppearance.BorderSize = 0;
-            this.btnVisualizarEntrenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarEntrenamiento.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarEntrenamiento.ForeColor = System.Drawing.Color.White;
-            this.btnVisualizarEntrenamiento.Location = new System.Drawing.Point(0, 0);
-            this.btnVisualizarEntrenamiento.Name = "btnVisualizarEntrenamiento";
-            this.btnVisualizarEntrenamiento.Size = new System.Drawing.Size(250, 40);
-            this.btnVisualizarEntrenamiento.TabIndex = 4;
-            this.btnVisualizarEntrenamiento.Text = "Entrenamientos";
-            this.btnVisualizarEntrenamiento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVisualizarEntrenamiento.UseVisualStyleBackColor = false;
-            this.btnVisualizarEntrenamiento.Click += new System.EventHandler(this.btnVisualizarEntrenamiento_Click);
+            this.btnVisualizarEntrenamientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
+            this.btnVisualizarEntrenamientos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVisualizarEntrenamientos.FlatAppearance.BorderSize = 0;
+            this.btnVisualizarEntrenamientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarEntrenamientos.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarEntrenamientos.ForeColor = System.Drawing.Color.White;
+            this.btnVisualizarEntrenamientos.Location = new System.Drawing.Point(0, 40);
+            this.btnVisualizarEntrenamientos.Name = "btnVisualizarEntrenamientos";
+            this.btnVisualizarEntrenamientos.Size = new System.Drawing.Size(250, 40);
+            this.btnVisualizarEntrenamientos.TabIndex = 5;
+            this.btnVisualizarEntrenamientos.Text = "Entrenamientos";
+            this.btnVisualizarEntrenamientos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVisualizarEntrenamientos.UseVisualStyleBackColor = false;
+            this.btnVisualizarEntrenamientos.Click += new System.EventHandler(this.btnVisualizarEntrenamientos_Click);
+            // 
+            // btnVisualizarRutinas
+            // 
+            this.btnVisualizarRutinas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
+            this.btnVisualizarRutinas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVisualizarRutinas.FlatAppearance.BorderSize = 0;
+            this.btnVisualizarRutinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarRutinas.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarRutinas.ForeColor = System.Drawing.Color.White;
+            this.btnVisualizarRutinas.Location = new System.Drawing.Point(0, 0);
+            this.btnVisualizarRutinas.Name = "btnVisualizarRutinas";
+            this.btnVisualizarRutinas.Size = new System.Drawing.Size(250, 40);
+            this.btnVisualizarRutinas.TabIndex = 4;
+            this.btnVisualizarRutinas.Text = "Rutinas";
+            this.btnVisualizarRutinas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVisualizarRutinas.UseVisualStyleBackColor = false;
+            this.btnVisualizarRutinas.Click += new System.EventHandler(this.btnVisualizarRutinas_Click);
             // 
             // btnVisualizacionDatos
             // 
@@ -423,8 +442,8 @@
         private System.Windows.Forms.PictureBox iconMaximizar;
         private System.Windows.Forms.Panel panelMenuLateral;
         private System.Windows.Forms.Panel panelSubMenuVisualizacion;
-        private System.Windows.Forms.Button btnVisualizarCondicion;
-        private System.Windows.Forms.Button btnVisualizarEntrenamiento;
+        private System.Windows.Forms.Button btnVisualizarEntrenamientos;
+        private System.Windows.Forms.Button btnVisualizarRutinas;
         private System.Windows.Forms.Button btnVisualizacionDatos;
         private System.Windows.Forms.Panel panelSubMenuAlta;
         private System.Windows.Forms.Button btnAltaCondicion;
@@ -437,5 +456,6 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelFormularios;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnVisualizarCondiciones;
     }
 }
