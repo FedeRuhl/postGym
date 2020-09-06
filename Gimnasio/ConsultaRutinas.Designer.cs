@@ -144,6 +144,7 @@
             this.dgbMusculos.Size = new System.Drawing.Size(410, 293);
             this.dgbMusculos.TabIndex = 17;
             this.dgbMusculos.VirtualMode = true;
+            this.dgbMusculos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbMusculos_CellDoubleClick);
             // 
             // Eliminar
             // 

@@ -97,9 +97,18 @@ namespace Gimnasio
             command.Parameters.AddWithValue("@Foto", foto);
             command.ExecuteNonQuery();
             conexion.Close();
+        }
 
-            //String consulta = $"insert into Fotos (DetallesPersonaID, Foto) values ({detallesPersonaID}, {foto})";
-            //Consultar(consulta);
+        public static void eliminarMusculoRutina(int musculoID, int rutinaID)
+        {
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "delete from MusculosRutina where RutinaID = @RutinaID and MusculoID = @MusculoID";
+            command.Parameters.AddWithValue("@RutinaID", rutinaID);
+            command.Parameters.AddWithValue("@MusculoID", musculoID);
+            command.ExecuteNonQuery();
+            conexion.Close();
         }
     }
 }
