@@ -44,6 +44,8 @@
             this.lMusculos = new System.Windows.Forms.Label();
             this.lEjercicios = new System.Windows.Forms.Label();
             this.Borrar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.cbOpcion = new System.Windows.Forms.ComboBox();
+            this.lOpcion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgbMusculos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgbEjercicios)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +69,7 @@
             this.lDia.AutoSize = true;
             this.lDia.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDia.ForeColor = System.Drawing.Color.White;
-            this.lDia.Location = new System.Drawing.Point(401, 96);
+            this.lDia.Location = new System.Drawing.Point(326, 99);
             this.lDia.Name = "lDia";
             this.lDia.Size = new System.Drawing.Size(42, 26);
             this.lDia.TabIndex = 15;
@@ -88,7 +90,7 @@
             "Viernes",
             "Sábado",
             "Domingo"});
-            this.cbDias.Location = new System.Drawing.Point(352, 125);
+            this.cbDias.Location = new System.Drawing.Point(277, 128);
             this.cbDias.Name = "cbDias";
             this.cbDias.Size = new System.Drawing.Size(145, 28);
             this.cbDias.TabIndex = 16;
@@ -230,12 +232,47 @@
             this.Borrar.MinimumWidth = 6;
             this.Borrar.Name = "Borrar";
             // 
+            // cbOpcion
+            // 
+            this.cbOpcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbOpcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.cbOpcion.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.cbOpcion.ForeColor = System.Drawing.Color.White;
+            this.cbOpcion.FormattingEnabled = true;
+            this.cbOpcion.Items.AddRange(new object[] {
+            "Lunes",
+            "Martes",
+            "Miércoles",
+            "Jueves",
+            "Viernes",
+            "Sábado",
+            "Domingo"});
+            this.cbOpcion.Location = new System.Drawing.Point(463, 128);
+            this.cbOpcion.Name = "cbOpcion";
+            this.cbOpcion.Size = new System.Drawing.Size(145, 28);
+            this.cbOpcion.TabIndex = 22;
+            this.cbOpcion.SelectedIndexChanged += new System.EventHandler(this.cbOpcion_SelectedIndexChanged);
+            // 
+            // lOpcion
+            // 
+            this.lOpcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lOpcion.AutoSize = true;
+            this.lOpcion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lOpcion.ForeColor = System.Drawing.Color.White;
+            this.lOpcion.Location = new System.Drawing.Point(492, 99);
+            this.lOpcion.Name = "lOpcion";
+            this.lOpcion.Size = new System.Drawing.Size(77, 26);
+            this.lOpcion.TabIndex = 21;
+            this.lOpcion.Text = "Opción";
+            // 
             // ConsultaRutinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.cbOpcion);
+            this.Controls.Add(this.lOpcion);
             this.Controls.Add(this.lEjercicios);
             this.Controls.Add(this.lMusculos);
             this.Controls.Add(this.dgbEjercicios);
@@ -268,5 +305,7 @@
         private System.Windows.Forms.Label lMusculos;
         private System.Windows.Forms.Label lEjercicios;
         private System.Windows.Forms.DataGridViewImageColumn Borrar;
+        private System.Windows.Forms.ComboBox cbOpcion;
+        private System.Windows.Forms.Label lOpcion;
     }
 }
