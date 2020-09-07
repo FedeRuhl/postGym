@@ -110,5 +110,68 @@ namespace Gimnasio
             command.ExecuteNonQuery();
             conexion.Close();
         }
+
+        public static void eliminarEjercicioRutina(int ejercicioID, int rutinaID)
+        {
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "delete from EjerciciosRutina where RutinaID = @RutinaID and EjercicioID = @EjercicioID";
+            command.Parameters.AddWithValue("@RutinaID", rutinaID);
+            command.Parameters.AddWithValue("@EjercicioID", ejercicioID);
+            command.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+        public static void eliminarRutina(int rutinaID)
+        {
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "delete from Rutinas where id = @RutinaID";
+            command.Parameters.AddWithValue("@RutinaID", rutinaID);
+            command.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+        public static void insertarMusculoRutina(int musculoID, int rutinaID)
+        {
+            try
+            {
+                conexion.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = conexion;
+                command.CommandText = "insert into MusculosRutina (RutinaID, MusculoID) values (@RutinaID, @MusculoID)";
+                command.Parameters.AddWithValue("@RutinaID", rutinaID);
+                command.Parameters.AddWithValue("@MusculoID", musculoID);
+                command.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Es probable que el músculo que intentas agregar, ya forma parte de la rutina");
+                conexion.Close();
+            }
+        }
+
+        public static void insertarEjercicioRutina(int ejercicioID, int rutinaID)
+        {
+            try
+            {
+                conexion.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = conexion;
+                command.CommandText = "insert into EjerciciosRutina (RutinaID, EjercicioID) values (@RutinaID, @EjercicioID)";
+                command.Parameters.AddWithValue("@RutinaID", rutinaID);
+                command.Parameters.AddWithValue("@EjercicioID", ejercicioID);
+                command.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Es probable que el ejercicio que intentas agregar, ya forma parte de la rutina");
+                conexion.Close();
+            }
+        }
     }
 }

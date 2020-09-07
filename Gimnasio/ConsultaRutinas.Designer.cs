@@ -28,24 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaRutinas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.lDia = new System.Windows.Forms.Label();
             this.cbDias = new System.Windows.Forms.ComboBox();
             this.dgbMusculos = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgbEjercicios = new System.Windows.Forms.DataGridView();
+            this.Borrar = new System.Windows.Forms.DataGridViewImageColumn();
             this.lMusculos = new System.Windows.Forms.Label();
             this.lEjercicios = new System.Windows.Forms.Label();
-            this.Borrar = new System.Windows.Forms.DataGridViewImageColumn();
             this.cbOpcion = new System.Windows.Forms.ComboBox();
             this.lOpcion = new System.Windows.Forms.Label();
+            this.btnEliminarRutina = new System.Windows.Forms.Button();
+            this.btnAgregarMusculo = new System.Windows.Forms.Button();
+            this.btnAgregarEjercicio = new System.Windows.Forms.Button();
+            this.cbMusculos = new System.Windows.Forms.ComboBox();
+            this.cbEjercicios = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgbMusculos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgbEjercicios)).BeginInit();
             this.SuspendLayout();
@@ -106,39 +111,39 @@
             this.dgbMusculos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.dgbMusculos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgbMusculos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgbMusculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgbMusculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgbMusculos.ColumnHeadersHeight = 45;
             this.dgbMusculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgbMusculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Eliminar});
             this.dgbMusculos.EnableHeadersVisualStyles = false;
             this.dgbMusculos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgbMusculos.Location = new System.Drawing.Point(12, 233);
+            this.dgbMusculos.Location = new System.Drawing.Point(12, 334);
             this.dgbMusculos.MultiSelect = false;
             this.dgbMusculos.Name = "dgbMusculos";
             this.dgbMusculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgbMusculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgbMusculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgbMusculos.RowHeadersWidth = 51;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.dgbMusculos.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            this.dgbMusculos.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgbMusculos.RowTemplate.Height = 24;
             this.dgbMusculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgbMusculos.Size = new System.Drawing.Size(410, 293);
@@ -163,44 +168,52 @@
             this.dgbEjercicios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.dgbEjercicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgbEjercicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgbEjercicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgbEjercicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgbEjercicios.ColumnHeadersHeight = 45;
             this.dgbEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgbEjercicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Borrar});
             this.dgbEjercicios.EnableHeadersVisualStyles = false;
             this.dgbEjercicios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgbEjercicios.Location = new System.Drawing.Point(463, 233);
+            this.dgbEjercicios.Location = new System.Drawing.Point(463, 334);
             this.dgbEjercicios.MultiSelect = false;
             this.dgbEjercicios.Name = "dgbEjercicios";
             this.dgbEjercicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgbEjercicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgbEjercicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgbEjercicios.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dgbEjercicios.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            this.dgbEjercicios.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dgbEjercicios.RowTemplate.Height = 24;
             this.dgbEjercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgbEjercicios.Size = new System.Drawing.Size(425, 293);
             this.dgbEjercicios.TabIndex = 18;
             this.dgbEjercicios.VirtualMode = true;
+            this.dgbEjercicios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbEjercicios_CellDoubleClick);
+            // 
+            // Borrar
+            // 
+            this.Borrar.HeaderText = "Eliminar";
+            this.Borrar.Image = ((System.Drawing.Image)(resources.GetObject("Borrar.Image")));
+            this.Borrar.MinimumWidth = 6;
+            this.Borrar.Name = "Borrar";
             // 
             // lMusculos
             // 
@@ -208,7 +221,7 @@
             this.lMusculos.AutoSize = true;
             this.lMusculos.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lMusculos.ForeColor = System.Drawing.Color.White;
-            this.lMusculos.Location = new System.Drawing.Point(193, 204);
+            this.lMusculos.Location = new System.Drawing.Point(192, 195);
             this.lMusculos.Name = "lMusculos";
             this.lMusculos.Size = new System.Drawing.Size(96, 26);
             this.lMusculos.TabIndex = 19;
@@ -220,18 +233,11 @@
             this.lEjercicios.AutoSize = true;
             this.lEjercicios.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lEjercicios.ForeColor = System.Drawing.Color.White;
-            this.lEjercicios.Location = new System.Drawing.Point(634, 204);
+            this.lEjercicios.Location = new System.Drawing.Point(632, 195);
             this.lEjercicios.Name = "lEjercicios";
             this.lEjercicios.Size = new System.Drawing.Size(103, 26);
             this.lEjercicios.TabIndex = 20;
             this.lEjercicios.Text = "Ejercicios";
-            // 
-            // Borrar
-            // 
-            this.Borrar.HeaderText = "Eliminar";
-            this.Borrar.Image = ((System.Drawing.Image)(resources.GetObject("Borrar.Image")));
-            this.Borrar.MinimumWidth = 6;
-            this.Borrar.Name = "Borrar";
             // 
             // cbOpcion
             // 
@@ -266,12 +272,92 @@
             this.lOpcion.TabIndex = 21;
             this.lOpcion.Text = "Opción";
             // 
+            // btnEliminarRutina
+            // 
+            this.btnEliminarRutina.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminarRutina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
+            this.btnEliminarRutina.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarRutina.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarRutina.Location = new System.Drawing.Point(355, 647);
+            this.btnEliminarRutina.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
+            this.btnEliminarRutina.Name = "btnEliminarRutina";
+            this.btnEliminarRutina.Size = new System.Drawing.Size(149, 31);
+            this.btnEliminarRutina.TabIndex = 25;
+            this.btnEliminarRutina.Text = "Eliminar rutina";
+            this.btnEliminarRutina.UseVisualStyleBackColor = false;
+            this.btnEliminarRutina.Click += new System.EventHandler(this.btnEliminarRutina_Click);
+            // 
+            // btnAgregarMusculo
+            // 
+            this.btnAgregarMusculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAgregarMusculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
+            this.btnAgregarMusculo.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarMusculo.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarMusculo.Location = new System.Drawing.Point(171, 274);
+            this.btnAgregarMusculo.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
+            this.btnAgregarMusculo.Name = "btnAgregarMusculo";
+            this.btnAgregarMusculo.Size = new System.Drawing.Size(131, 31);
+            this.btnAgregarMusculo.TabIndex = 27;
+            this.btnAgregarMusculo.Text = "Agregar";
+            this.btnAgregarMusculo.UseVisualStyleBackColor = false;
+            this.btnAgregarMusculo.Click += new System.EventHandler(this.btnAgregarMusculo_Click);
+            // 
+            // btnAgregarEjercicio
+            // 
+            this.btnAgregarEjercicio.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAgregarEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
+            this.btnAgregarEjercicio.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarEjercicio.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarEjercicio.Location = new System.Drawing.Point(618, 274);
+            this.btnAgregarEjercicio.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
+            this.btnAgregarEjercicio.Name = "btnAgregarEjercicio";
+            this.btnAgregarEjercicio.Size = new System.Drawing.Size(131, 31);
+            this.btnAgregarEjercicio.TabIndex = 29;
+            this.btnAgregarEjercicio.Text = "Agregar";
+            this.btnAgregarEjercicio.UseVisualStyleBackColor = false;
+            this.btnAgregarEjercicio.Click += new System.EventHandler(this.btnAgregarEjercicio_Click);
+            // 
+            // cbMusculos
+            // 
+            this.cbMusculos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbMusculos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbMusculos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbMusculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.cbMusculos.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.cbMusculos.ForeColor = System.Drawing.Color.White;
+            this.cbMusculos.FormattingEnabled = true;
+            this.cbMusculos.Location = new System.Drawing.Point(112, 226);
+            this.cbMusculos.Name = "cbMusculos";
+            this.cbMusculos.Size = new System.Drawing.Size(256, 28);
+            this.cbMusculos.TabIndex = 30;
+            this.cbMusculos.Click += new System.EventHandler(this.cbMusculos_Click);
+            // 
+            // cbEjercicios
+            // 
+            this.cbEjercicios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbEjercicios.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbEjercicios.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbEjercicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.cbEjercicios.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.cbEjercicios.ForeColor = System.Drawing.Color.White;
+            this.cbEjercicios.FormattingEnabled = true;
+            this.cbEjercicios.Location = new System.Drawing.Point(566, 226);
+            this.cbEjercicios.Name = "cbEjercicios";
+            this.cbEjercicios.Size = new System.Drawing.Size(256, 28);
+            this.cbEjercicios.TabIndex = 31;
+            this.cbEjercicios.Click += new System.EventHandler(this.cbEjercicios_Click);
+            // 
             // ConsultaRutinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.ClientSize = new System.Drawing.Size(900, 703);
+            this.Controls.Add(this.cbEjercicios);
+            this.Controls.Add(this.cbMusculos);
+            this.Controls.Add(this.btnAgregarEjercicio);
+            this.Controls.Add(this.btnAgregarMusculo);
+            this.Controls.Add(this.btnEliminarRutina);
             this.Controls.Add(this.cbOpcion);
             this.Controls.Add(this.lOpcion);
             this.Controls.Add(this.lEjercicios);
@@ -308,5 +394,10 @@
         private System.Windows.Forms.DataGridViewImageColumn Borrar;
         private System.Windows.Forms.ComboBox cbOpcion;
         private System.Windows.Forms.Label lOpcion;
+        private System.Windows.Forms.Button btnEliminarRutina;
+        private System.Windows.Forms.Button btnAgregarMusculo;
+        private System.Windows.Forms.Button btnAgregarEjercicio;
+        private System.Windows.Forms.ComboBox cbMusculos;
+        private System.Windows.Forms.ComboBox cbEjercicios;
     }
 }
