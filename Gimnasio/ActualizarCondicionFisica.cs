@@ -50,13 +50,12 @@ namespace Gimnasio
             #region Inicializacion variables
             String fecha = Fecha.convertirFormatoUniversal(dtpActualizacion.Value);
             DataRowView Persona = (DataRowView)cbPersonas.Items[cbPersonas.SelectedIndex];
-            String personaID = Persona.Row["id"].ToString();
+            int personaID = Convert.ToInt32(Persona.Row["id"]);
             #endregion
-
-            if (float.TryParse(tbPeso.Text, out _) && fotosPersona.Count != 0)
+            if (float.TryParse(tbPeso.Text, out float peso) && fotosPersona.Count != 0)
             {
-                BD.insertarDetallesPersona(tbPeso.Text, fecha, personaID);
-                String DetallesPersonaID = BD.ObtenerPrimeraCoincidencia($"select id from DetallesPersonas where PersonaId = {personaID} order by id desc").ToString();
+                BD.insertarDetallesPersona(peso, fecha, personaID);
+                int DetallesPersonaID = Convert.ToInt32(BD.ObtenerPrimeraCoincidencia($"select id from DetallesPersonas where PersonaId = {personaID} order by id desc"));
 
                 foreach (Image Foto in fotosPersona)
                 {
@@ -66,7 +65,7 @@ namespace Gimnasio
 
                 MessageBox.Show("¡Los cambios han sigo guardados correctamente!");
                 limpiarForm();
-            }
+        }
             else
             {
                 MessageBox.Show("¡Recorda que debes seleccionar al menos una foto, y que el peso debe ser numérico!");

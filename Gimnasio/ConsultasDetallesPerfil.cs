@@ -33,6 +33,7 @@ namespace Gimnasio
                 dataGridView3.Columns["fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
 
                 //this.unirPersonaTableAdapter.Fill(this.unirPersonaFechaDataSet.traerPersona);
+
             }
             catch (Exception error)
             {

@@ -48,7 +48,7 @@ namespace Gimnasio
             try
             {
                 BD.insertarRutina();
-                String idRutina = BD.ObtenerPrimeraCoincidencia("select id from rutinas order by id desc").ToString();
+                int idRutina = Convert.ToInt32(BD.ObtenerPrimeraCoincidencia("select id from rutinas order by id desc"));
 
                 PersistirDiasRutina(idRutina);
                 PersistirMusculosRutina(idRutina);
@@ -65,22 +65,22 @@ namespace Gimnasio
             }
         }
 
-        private void PersistirDiasRutina(String idRutina)
+        private void PersistirDiasRutina(int idRutina)
         {
             foreach (DataRowView Dia in clbDias.CheckedItems)
-                BD.insertarDiasRutina(idRutina, Dia.Row["id"].ToString());
+                BD.insertarDiaRutina(idRutina, Convert.ToInt32(Dia.Row["id"]));
         }
 
-        private void PersistirMusculosRutina(String idRutina)
+        private void PersistirMusculosRutina(int idRutina)
         {
             foreach (DataRowView Musculo in clbMusculos.CheckedItems)
-                BD.insertarMusculosRutina(idRutina, Musculo.Row["id"].ToString());
+                BD.insertarMusculoRutina(Convert.ToInt32(Musculo.Row["id"]), idRutina);
         }
 
-        private void PersistirEjerciciosRutina(String idRutina)
+        private void PersistirEjerciciosRutina(int idRutina)
         {
             foreach (DataRowView Ejercicio in clbEjercicios.CheckedItems)
-                BD.insertarEjerciciosRutina(idRutina, Ejercicio.Row["id"].ToString());
+                BD.insertarEjercicioRutina(Convert.ToInt32(Ejercicio.Row["id"]), idRutina);
         }
 
         private void LimpiarDatos()

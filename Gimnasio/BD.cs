@@ -18,7 +18,8 @@ namespace Gimnasio
         {
             conexion.Open();
             DataSet DS = new DataSet();
-            SqlDataAdapter DP = new SqlDataAdapter(consulta, conexion);
+            SqlCommand command = new SqlCommand(consulta, conexion);
+            SqlDataAdapter DP = new SqlDataAdapter(command);
             DP.Fill(DS);
             conexion.Close();
             return DS;
@@ -35,59 +36,83 @@ namespace Gimnasio
         }
         public static void insertarRutina()
         {
-            String consulta = "insert into rutinas default values select scope_identity ()";
-            Consultar(consulta);
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "insert into rutinas default values select scope_identity ()";
+            command.ExecuteNonQuery();
+            conexion.Close();
         }
 
-        public static void insertarDiasRutina(String rutinaID, String DiaID)
+        public static void insertarDiaRutina(int rutinaID, int DiaID)
         {
-            String consulta = "insert into DiasRutina (rutinaID, DiaID) values (" + rutinaID
-                + ", " + DiaID + ")";
-            Consultar(consulta);
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "insert into DiasRutina (RutinaID, DiaID) values (@RutinaID, @DiaID)";
+            command.Parameters.AddWithValue("@RutinaID", rutinaID);
+            command.Parameters.AddWithValue("@DiaID", DiaID);
+            command.ExecuteNonQuery();
+            conexion.Close();
         }
 
-        public static void insertarEjerciciosRutina(String rutinaID, String ejercicioID)
+        public static void insertarSet(String fecha, int personaID)
         {
-            String consulta = "insert into EjerciciosRutina (rutinaID, ejercicioID) values" +
-                " (" + rutinaID + ", " + ejercicioID + ")";
-            Consultar(consulta);
-        }
-        public static void insertarMusculosRutina(String rutinaID, String musculoID)
-        {
-            String consulta = "insert into MusculosRutina (rutinaID, musculoID) values (" +
-                rutinaID + ", " + musculoID + ")";
-            Consultar(consulta);
-        }
-
-        public static void insertarSet(String fecha, String personaID)
-        {
-            String consulta = "insert into sets (fecha, personaID) values ('" +
-                fecha + "', " + personaID + ")";
-            Consultar(consulta);
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "insert into sets (fecha, personaID) values (@Fecha, @PersonaID)";
+            command.Parameters.AddWithValue("@Fecha", fecha);
+            command.Parameters.AddWithValue("@PersonaID", personaID);
+            command.ExecuteNonQuery();
+            conexion.Close();
         }
 
-        public static void insertarSerieRepeticiones(String setID, String ejercicioID, String repeticiones, String peso)
+        public static void insertarSerieRepeticiones(int setID, int ejercicioID, int repeticiones, float peso)
         {
-            String consulta = "insert into series (SetID, EjercicioID, Repeticiones, Peso) values (" +
-                setID + ", " + ejercicioID + ", " + repeticiones + ", " + peso + ")";
-            Consultar(consulta);
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "insert into series (SetID, EjercicioID, Repeticiones, Peso) " +
+                                    "values (@SetID, @EjercicioID, @Repeticiones, @Peso)";
+            command.Parameters.AddWithValue("@SetID", setID);
+            command.Parameters.AddWithValue("@EjercicioID", ejercicioID);
+            command.Parameters.AddWithValue("@Repeticiones", repeticiones);
+            command.Parameters.AddWithValue("@Peso", peso);
+            command.ExecuteNonQuery();
+            conexion.Close();
         }
 
-        public static void insertarSerieSegundos(String setID, String ejercicioID, String segundos, String peso)
+        public static void insertarSerieSegundos(int setID, int ejercicioID, int segundos, float peso)
         {
-            String consulta = "insert into series (SetID, EjercicioID, Segundos, Peso) values (" +
-                setID + ", " + ejercicioID + ", " + segundos + ", " + peso + ")";
-            Consultar(consulta);
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "insert into series (SetID, EjercicioID, Segundos, Peso) " +
+                                    "values (@SetID, @EjercicioID, @Segundos, @Peso)";
+            command.Parameters.AddWithValue("@SetID", setID);
+            command.Parameters.AddWithValue("@EjercicioID", ejercicioID);
+            command.Parameters.AddWithValue("@Segundos", segundos);
+            command.Parameters.AddWithValue("@Peso", peso);
+            command.ExecuteNonQuery();
+            conexion.Close();
         }
 
-        public static void insertarDetallesPersona(String peso, String fecha, String personaID)
+        public static void insertarDetallesPersona(float peso, String fecha, int personaID)
         {
-            String consulta = $"insert into DetallesPersonas (Peso, Fecha, PersonaID) values ({peso}, '" +
-                $"{fecha}', {personaID})";
-            Consultar(consulta);
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "insert into DetallesPersonas (Peso, Fecha, PersonaID)" +
+                " values (@Peso, @Fecha, @PersonaID)";
+            command.Parameters.AddWithValue("@Peso", peso);
+            command.Parameters.AddWithValue("@Fecha", fecha);
+            command.Parameters.AddWithValue("@PersonaID", personaID);
+            command.ExecuteNonQuery();
+            conexion.Close();
         }
 
-        public static void insertarFoto(String detallesPersonaID, byte[] foto)
+        public static void insertarFoto(int detallesPersonaID, byte[] foto)
         {
             conexion.Open();
             SqlCommand command = new SqlCommand();
@@ -147,7 +172,7 @@ namespace Gimnasio
                 command.ExecuteNonQuery();
                 conexion.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Es probable que el músculo que intentas agregar, ya forma parte de la rutina");
                 conexion.Close();

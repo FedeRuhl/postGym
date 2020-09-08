@@ -134,19 +134,19 @@ namespace Gimnasio
         {
             #region Inicializacion variables
             int tope = Convert.ToInt32(tbCantidadSeries.Text);
-            String[] arregloRepSeg = generarArregloDinamico("textRepOSeg", tope);
-            String[] arregloPesos = generarArregloDinamico("textPeso", tope);
+            int[] arregloRepSeg = generarArregloEntero("textRepOSeg", tope);
+            float[] arregloPesos = generarArregloFlotante("textPeso", tope);
             String fecha = Fecha.convertirFormatoUniversal(dtpDiaEntrenamiento.Value);
             DataRowView Persona = (DataRowView) cbPersonas.Items[cbPersonas.SelectedIndex];
-            String personaID = Persona.Row["id"].ToString();
+            int personaID = Convert.ToInt32(Persona.Row["id"]);
             DataRowView Ejercicio = (DataRowView)cbEjercicios.Items[cbEjercicios.SelectedIndex];
-            String ejercicioID = Ejercicio.Row["id"].ToString();
+            int ejercicioID = Convert.ToInt32(Ejercicio.Row["id"]);
             #endregion
 
             if (arregloPesos != null && arregloRepSeg != null)
             {
                 BD.insertarSet(fecha, personaID);
-                String setID = BD.ObtenerPrimeraCoincidencia("select id from sets order by id desc").ToString();
+                int setID = Convert.ToInt32(BD.ObtenerPrimeraCoincidencia("select id from sets order by id desc"));
 
                 for (int i = 0; i < tope; i++)
                 {
@@ -161,10 +161,10 @@ namespace Gimnasio
             }
         }
 
-        private string[] generarArregloDinamico(String nombreTexto, int tope)
+        private int[] generarArregloEntero(String nombreTexto, int tope)
         {
             String cadena = "";
-            String[] arregloDinamico = new String[tope];
+            int[] arregloDinamico = new int[tope];
             String textBox = "";
 
             for (int i = 0; i < tope; i++)
@@ -176,8 +176,36 @@ namespace Gimnasio
                     cadena = controles.First().Text;
                     cadena = cadena.Replace(",", ".");
 
-                    if (float.TryParse(cadena, out _) && controles.Count() != 0)
-                        arregloDinamico[i] = cadena;
+                    if (int.TryParse(cadena, out int nuevoValor) && controles.Count() != 0)
+                        arregloDinamico[i] = nuevoValor;
+                    else
+                    {
+                        MessageBox.Show("¡No te olvides que las series, las repeticiones y los pesos deben ser números!");
+                        return null;
+                    }
+                }
+            }
+            return arregloDinamico;
+        }
+
+
+        private float[] generarArregloFlotante(String nombreTexto, int tope)
+        {
+            String cadena = "";
+            float[] arregloDinamico = new float[tope];
+            String textBox = "";
+
+            for (int i = 0; i < tope; i++)
+            {
+                textBox = nombreTexto + i;
+                Control[] controles = Controls.Find(textBox, true);
+                if (controles.Length > 0)
+                {
+                    cadena = controles.First().Text;
+                    cadena = cadena.Replace(",", ".");
+
+                    if (float.TryParse(cadena, out float nuevoValor) && controles.Count() != 0)
+                        arregloDinamico[i] = nuevoValor;
                     else
                     {
                         MessageBox.Show("¡No te olvides que las series, las repeticiones y los pesos deben ser números!");
