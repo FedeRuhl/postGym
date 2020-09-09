@@ -13,6 +13,7 @@ namespace Gimnasio
 {
     public partial class ConsultaEntrenamientos : Form
     {
+        private bool programaCargado = false;
         public ConsultaEntrenamientos()
         {
             InitializeComponent();
@@ -20,6 +21,12 @@ namespace Gimnasio
 
         private void ConsultaEntrenamientos_Load(object sender, EventArgs e)
         {
+            //
+        }
+
+        private void ConsultaEntrenamientos_Enter(object sender, EventArgs e)
+        {
+            programaCargado = true;
             cargarFechasValidas();
         }
 
@@ -34,8 +41,7 @@ namespace Gimnasio
 
         private void dtpSetsEntrenamiento_ValueChanged(object sender, EventArgs e)
         {
-            actualizarDataGridView();
-            reorganizarColumnas();
+            
         }
 
         private void actualizarDataGridView()
@@ -72,6 +78,42 @@ namespace Gimnasio
             int setID = Convert.ToInt32(dgbEntrenamientos.Rows[0].Cells["SETID"].Value);
             BD.eliminarSet(setID);
             actualizarDataGridView();
+
+            cargarFechasValidas();
+        }
+
+        private void dgbEntrenamientos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (programaCargado)
+            {
+                String columnaModificada = dgbEntrenamientos.Columns[e.ColumnIndex].Name;
+                int serieID = Convert.ToInt32(dgbEntrenamientos.Rows[e.RowIndex].Cells["SERIEID"].Value);
+
+                switch (columnaModificada)
+                {
+                    case "Peso":
+                        double peso = Convert.ToDouble(dgbEntrenamientos.Rows[e.RowIndex].Cells["PESO"].Value);
+                        BD.actualizarPesoSerie(peso, serieID);
+                        break;
+                    case "Segundos":
+                        int segundos = Convert.ToInt32(dgbEntrenamientos.Rows[e.RowIndex].Cells["Segundos"].Value);
+                        BD.actualizarSegundosSerie(segundos, serieID);
+                        break;
+                    case "Repeticiones":
+                        int repeticiones = Convert.ToInt32(dgbEntrenamientos.Rows[e.RowIndex].Cells["Repeticiones"].Value);
+                        BD.actualizarRepeticionesSerie(repeticiones, serieID);
+                        break;
+                    default:
+                        MessageBox.Show("¡Solo el peso, la cantidad de repeticiones y los segundos pueden ser modificados!");
+                        break;
+                }
+            }
+        }
+
+        private void dtpSetsEntrenamiento_CloseUp(object sender, EventArgs e)
+        {
+            actualizarDataGridView();
+            reorganizarColumnas();
         }
     }
 }

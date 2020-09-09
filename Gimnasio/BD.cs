@@ -300,5 +300,65 @@ namespace Gimnasio
             command.ExecuteNonQuery();
             conexion.Close();
         }
+
+        public static void actualizarPesoSerie(double peso, int serieID)
+        {
+            try
+            {
+                conexion.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = conexion;
+                command.CommandText = "update Series set Peso = @Peso where ID = @SerieID";
+                command.Parameters.AddWithValue("@Peso", peso);
+                command.Parameters.AddWithValue("@SerieID", serieID);
+                command.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                conexion.Close();
+            }
+        }
+
+        public static void actualizarSegundosSerie(int segundos, int serieID)
+        {
+            try
+            {
+                conexion.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = conexion;
+                command.CommandText = "update Series set Segundos = @Segundos where ID = @SerieID";
+                command.Parameters.AddWithValue("@Segundos", segundos);
+                command.Parameters.AddWithValue("@SerieID", serieID);
+                command.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                conexion.Close();
+            }
+        }
+
+        public static void actualizarRepeticionesSerie(int repeticiones, int serieID)
+        {
+            try
+            {
+                conexion.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = conexion;
+                command.CommandText = "update Series set Repeticiones = @Repeticiones where ID = @SerieID";
+                command.Parameters.AddWithValue("@Repeticiones", repeticiones);
+                command.Parameters.AddWithValue("@SerieID", serieID);
+                command.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                conexion.Close();
+            }
+        }
     }
 }
