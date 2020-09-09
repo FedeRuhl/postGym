@@ -160,7 +160,7 @@ namespace Gimnasio
 
         private void btnVisualizarEntrenamientos_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<ConsultasDetallesEjercicio>();
+            AbrirFormulario<ConsultaEntrenamientos>();
             btnVisualizarEntrenamientos.BackColor = Color.FromArgb(241, 221, 56);
         }
 

@@ -97,6 +97,12 @@
     <Compile Include="CheckBoxPersonalizado.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ConsultaEntrenamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaEntrenamientos.Designer.cs">
+      <DependentUpon>ConsultaEntrenamientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaRutinas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaEjercicio.resx">
       <DependentUpon>ConsultaEjercicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaEntrenamientos.resx">
+      <DependentUpon>ConsultaEntrenamientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaRutinas.resx">
       <DependentUpon>ConsultaRutinas.cs</DependentUpon>

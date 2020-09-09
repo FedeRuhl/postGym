@@ -232,5 +232,73 @@ namespace Gimnasio
                 return 0;
             }
         }
+
+        public static Tuple<DateTime, DateTime> obtenerDiasSets()
+        {
+            try
+            {
+                conexion.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = conexion;
+                command.CommandText = "select min(Fecha) 'inicio', max(Fecha) 'fin' from Sets";
+                SqlDataReader reader = command.ExecuteReader();
+
+                Tuple<DateTime, DateTime> fechas = null;
+
+                if (reader.Read())
+                {
+                    fechas = Tuple.Create(Convert.ToDateTime(reader["inicio"]), Convert.ToDateTime(reader["fin"]));
+                    conexion.Close();
+                }
+                else
+                {
+                    fechas = Tuple.Create(DateTime.Now, DateTime.Now);
+                    conexion.Close();
+                }
+                return fechas;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                conexion.Close();
+                return null;
+            }
+        }
+
+        public static DataSet obtenerEntrenamientos(String fecha)
+        {
+            conexion.Open();
+            DataSet DS = new DataSet();
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "Select * from VEntrenamientos where Fecha = @Fecha";
+            command.Connection = conexion;
+            command.Parameters.AddWithValue("@Fecha", fecha);
+            SqlDataAdapter DP = new SqlDataAdapter(command);
+            DP.Fill(DS);
+            conexion.Close();
+            return DS;
+        }
+
+        public static void eliminarSerie(int serieID)
+        {
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "delete from Series where id = @SerieID";
+            command.Parameters.AddWithValue("@SerieID", serieID);
+            command.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+        public static void eliminarSet(int setID)
+        {
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "delete from Sets where id = @setID";
+            command.Parameters.AddWithValue("@setID", setID);
+            command.ExecuteNonQuery();
+            conexion.Close();
+        }
     }
 }
