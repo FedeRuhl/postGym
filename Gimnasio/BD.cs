@@ -56,16 +56,28 @@ namespace Gimnasio
             conexion.Close();
         }
 
-        public static void insertarSet(String fecha, int personaID)
+        public static int insertarSet(String fecha, int personaID)
         {
-            conexion.Open();
-            SqlCommand command = new SqlCommand();
-            command.Connection = conexion;
-            command.CommandText = "insert into sets (fecha, personaID) values (@Fecha, @PersonaID)";
-            command.Parameters.AddWithValue("@Fecha", fecha);
-            command.Parameters.AddWithValue("@PersonaID", personaID);
-            command.ExecuteNonQuery();
-            conexion.Close();
+            try
+            {
+                conexion.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = conexion;
+                command.CommandText = "insert into sets (fecha, personaID) values (@Fecha, @PersonaID); " +
+                                        "select SCOPE_IDENTITY()";
+                command.Parameters.AddWithValue("@Fecha", fecha);
+                command.Parameters.AddWithValue("@PersonaID", personaID);
+                int id = Convert.ToInt32(command.ExecuteScalar());
+                conexion.Close();
+                return id;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                conexion.Close();
+                return 0;
+            }
+            
         }
 
         public static void insertarSerieRepeticiones(int setID, int ejercicioID, int repeticiones, float peso)
@@ -196,6 +208,28 @@ namespace Gimnasio
             {
                 MessageBox.Show("Es probable que el ejercicio que intentas agregar, ya forma parte de la rutina");
                 conexion.Close();
+            }
+        }
+
+        public static int obtenerSet(String fecha, int personaID)
+        {
+            try
+            {
+                conexion.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = conexion;
+                command.CommandText = "Select ID from Sets where PersonaID = @PersonaID and Fecha = @Fecha";
+                command.Parameters.AddWithValue("@PersonaID", personaID);
+                command.Parameters.AddWithValue("@Fecha", fecha);
+                int id = Convert.ToInt32(command.ExecuteScalar());
+                conexion.Close();
+                return id;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                conexion.Close();
+                return 0;
             }
         }
     }

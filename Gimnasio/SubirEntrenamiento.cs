@@ -141,13 +141,14 @@ namespace Gimnasio
             int personaID = Convert.ToInt32(Persona.Row["id"]);
             DataRowView Ejercicio = (DataRowView)cbEjercicios.Items[cbEjercicios.SelectedIndex];
             int ejercicioID = Convert.ToInt32(Ejercicio.Row["id"]);
+            int setID = 0;
             #endregion
 
             if (arregloPesos != null && arregloRepSeg != null)
             {
-                BD.insertarSet(fecha, personaID);
-                int setID = Convert.ToInt32(BD.ObtenerPrimeraCoincidencia("select id from sets order by id desc"));
-
+                setID = BD.obtenerSet(fecha, personaID);
+                if (setID == 0)
+                    setID = BD.insertarSet(fecha, personaID);
                 for (int i = 0; i < tope; i++)
                 {
                     if (cbRepOseg.SelectedItem.ToString() == "Repeticiones")
