@@ -121,7 +121,7 @@
             this.btnVisualizarCondiciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVisualizarCondiciones.FlatAppearance.BorderSize = 0;
             this.btnVisualizarCondiciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarCondiciones.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarCondiciones.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnVisualizarCondiciones.ForeColor = System.Drawing.Color.White;
             this.btnVisualizarCondiciones.Location = new System.Drawing.Point(0, 80);
             this.btnVisualizarCondiciones.Name = "btnVisualizarCondiciones";
@@ -138,7 +138,7 @@
             this.btnVisualizarEntrenamientos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVisualizarEntrenamientos.FlatAppearance.BorderSize = 0;
             this.btnVisualizarEntrenamientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarEntrenamientos.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarEntrenamientos.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnVisualizarEntrenamientos.ForeColor = System.Drawing.Color.White;
             this.btnVisualizarEntrenamientos.Location = new System.Drawing.Point(0, 40);
             this.btnVisualizarEntrenamientos.Name = "btnVisualizarEntrenamientos";
@@ -155,7 +155,7 @@
             this.btnVisualizarRutinas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVisualizarRutinas.FlatAppearance.BorderSize = 0;
             this.btnVisualizarRutinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarRutinas.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarRutinas.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnVisualizarRutinas.ForeColor = System.Drawing.Color.White;
             this.btnVisualizarRutinas.Location = new System.Drawing.Point(0, 0);
             this.btnVisualizarRutinas.Name = "btnVisualizarRutinas";
@@ -173,7 +173,7 @@
             this.btnVisualizacionDatos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVisualizacionDatos.FlatAppearance.BorderSize = 0;
             this.btnVisualizacionDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizacionDatos.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizacionDatos.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
             this.btnVisualizacionDatos.ForeColor = System.Drawing.Color.White;
             this.btnVisualizacionDatos.Location = new System.Drawing.Point(0, 373);
             this.btnVisualizacionDatos.Name = "btnVisualizacionDatos";
@@ -201,7 +201,7 @@
             this.btnAltaCondicion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAltaCondicion.FlatAppearance.BorderSize = 0;
             this.btnAltaCondicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAltaCondicion.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAltaCondicion.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnAltaCondicion.ForeColor = System.Drawing.Color.White;
             this.btnAltaCondicion.Location = new System.Drawing.Point(0, 40);
             this.btnAltaCondicion.Name = "btnAltaCondicion";
@@ -218,7 +218,7 @@
             this.btnAltaEntrenamiento.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAltaEntrenamiento.FlatAppearance.BorderSize = 0;
             this.btnAltaEntrenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAltaEntrenamiento.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAltaEntrenamiento.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnAltaEntrenamiento.ForeColor = System.Drawing.Color.White;
             this.btnAltaEntrenamiento.Location = new System.Drawing.Point(0, 0);
             this.btnAltaEntrenamiento.Name = "btnAltaEntrenamiento";
@@ -236,7 +236,7 @@
             this.btnAltaDatos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAltaDatos.FlatAppearance.BorderSize = 0;
             this.btnAltaDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAltaDatos.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAltaDatos.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
             this.btnAltaDatos.ForeColor = System.Drawing.Color.White;
             this.btnAltaDatos.Location = new System.Drawing.Point(0, 235);
             this.btnAltaDatos.Name = "btnAltaDatos";
@@ -265,7 +265,7 @@
             this.btnCrearRutina.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrearRutina.FlatAppearance.BorderSize = 0;
             this.btnCrearRutina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearRutina.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearRutina.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnCrearRutina.ForeColor = System.Drawing.Color.White;
             this.btnCrearRutina.Location = new System.Drawing.Point(0, 40);
             this.btnCrearRutina.Name = "btnCrearRutina";
@@ -283,7 +283,7 @@
             this.btnPersonasEjercicios.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPersonasEjercicios.FlatAppearance.BorderSize = 0;
             this.btnPersonasEjercicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonasEjercicios.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonasEjercicios.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnPersonasEjercicios.ForeColor = System.Drawing.Color.White;
             this.btnPersonasEjercicios.Location = new System.Drawing.Point(0, 0);
             this.btnPersonasEjercicios.Name = "btnPersonasEjercicios";
@@ -301,7 +301,7 @@
             this.btnDatosBasicos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDatosBasicos.FlatAppearance.BorderSize = 0;
             this.btnDatosBasicos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDatosBasicos.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatosBasicos.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
             this.btnDatosBasicos.ForeColor = System.Drawing.Color.White;
             this.btnDatosBasicos.Location = new System.Drawing.Point(0, 100);
             this.btnDatosBasicos.Name = "btnDatosBasicos";

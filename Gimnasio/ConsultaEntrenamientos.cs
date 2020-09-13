@@ -21,7 +21,7 @@ namespace Gimnasio
 
         private void ConsultaEntrenamientos_Load(object sender, EventArgs e)
         {
-            //
+            dtpSetsEntrenamiento.Value = DateTime.Now;
         }
 
         private void ConsultaEntrenamientos_Enter(object sender, EventArgs e)

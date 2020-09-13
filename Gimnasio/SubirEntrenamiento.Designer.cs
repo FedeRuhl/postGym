@@ -217,6 +217,8 @@
             // 
             this.panelSubirRutina.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelSubirRutina.AutoScroll = true;
+            this.panelSubirRutina.Font = new System.Drawing.Font("Trebuchet MS", 8F, System.Drawing.FontStyle.Bold);
+            this.panelSubirRutina.ForeColor = System.Drawing.Color.White;
             this.panelSubirRutina.Location = new System.Drawing.Point(184, 420);
             this.panelSubirRutina.Name = "panelSubirRutina";
             this.panelSubirRutina.Size = new System.Drawing.Size(464, 317);
