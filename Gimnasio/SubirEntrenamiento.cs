@@ -137,8 +137,8 @@ namespace Gimnasio
             {
                 #region Inicializacion variables
                 int tope = Convert.ToInt32(tbCantidadSeries.Text);
-                int[] arregloRepSeg = generarArregloEntero("textRepOSeg", tope);
-                double[] arregloPesos = generarArregloDouble("textPeso", tope);
+                int[] arregloRepSeg = generarArreglo<int>("textRepOSeg", tope);
+                double[] arregloPesos = generarArreglo<double>("textPeso", tope);
                 String fecha = Fecha.convertirFormatoUniversal(dtpDiaEntrenamiento.Value);
                 DataRowView Persona = (DataRowView)cbPersonas.Items[cbPersonas.SelectedIndex];
                 int personaID = Convert.ToInt32(Persona.Row["id"]);
@@ -169,51 +169,25 @@ namespace Gimnasio
                 MessageBox.Show("Recordá que las personas y los ejercicios deben ser ingresados correctamente");
         }
 
-        private int[] generarArregloEntero(String nombreTexto, int tope)
+        private type[] generarArreglo<type>(String nombreTexto, int tope)
         {
-            String cadena = "";
-            int[] arregloDinamico = new int[tope];
-            String textBox = "";
+            type[] arregloDinamico = new type[tope];
 
             for (int i = 0; i < tope; i++)
             {
-                textBox = nombreTexto + i;
+                string textBox = nombreTexto + i;
                 Control[] controles = Controls.Find(textBox, true);
                 if (controles.Length > 0)
                 {
-                    cadena = controles.First().Text;
+                    string cadena = controles.First().Text;
                     cadena = cadena.Replace(",", ".");
 
-                    if (int.TryParse(cadena, out int nuevoValor) && controles.Count() != 0)
-                        arregloDinamico[i] = nuevoValor;
-                    else
+                    if (double.TryParse(cadena, out double valor) && controles.Count() != 0)
                     {
-                        MessageBox.Show("¡No te olvides que las series, las repeticiones y los pesos deben ser números!");
-                        return null;
+                        object objeto = Convert.ChangeType(valor, typeof(type));
+                        arregloDinamico[i] = (type) objeto;
                     }
-                }
-            }
-            return arregloDinamico;
-        }
-
-
-        private double[] generarArregloDouble(String nombreTexto, int tope)
-        {
-            String cadena = "";
-            double[] arregloDinamico = new double[tope];
-            String textBox = "";
-
-            for (int i = 0; i < tope; i++)
-            {
-                textBox = nombreTexto + i;
-                Control[] controles = Controls.Find(textBox, true);
-                if (controles.Length > 0)
-                {
-                    cadena = controles.First().Text;
-                    cadena = cadena.Replace(",", ".");
-
-                    if (double.TryParse(cadena, out double nuevoValor) && controles.Count() != 0)
-                        arregloDinamico[i] = nuevoValor;
+                        
                     else
                     {
                         MessageBox.Show("¡No te olvides que las series, las repeticiones y los pesos deben ser números!");
