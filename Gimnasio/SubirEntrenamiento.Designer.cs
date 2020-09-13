@@ -74,7 +74,6 @@
             // 
             this.cbPersonas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbPersonas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.cbPersonas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPersonas.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbPersonas.ForeColor = System.Drawing.Color.White;
             this.cbPersonas.FormattingEnabled = true;
@@ -127,7 +126,6 @@
             this.cbRepOseg.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbRepOseg.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbRepOseg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.cbRepOseg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRepOseg.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbRepOseg.ForeColor = System.Drawing.Color.White;
             this.cbRepOseg.FormattingEnabled = true;

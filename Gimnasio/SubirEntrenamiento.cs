@@ -1,4 +1,5 @@
 ﻿using Gimnasio.Datos;
+using Gimnasio.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -131,33 +132,41 @@ namespace Gimnasio
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            #region Inicializacion variables
-            int tope = Convert.ToInt32(tbCantidadSeries.Text);
-            int[] arregloRepSeg = generarArregloEntero("textRepOSeg", tope);
-            double[] arregloPesos = generarArregloDouble("textPeso", tope);
-            String fecha = Fecha.convertirFormatoUniversal(dtpDiaEntrenamiento.Value);
-            DataRowView Persona = (DataRowView) cbPersonas.Items[cbPersonas.SelectedIndex];
-            int personaID = Convert.ToInt32(Persona.Row["id"]);
-            DataRowView Ejercicio = (DataRowView)cbEjercicios.Items[cbEjercicios.SelectedIndex];
-            int ejercicioID = Convert.ToInt32(Ejercicio.Row["id"]);
-            #endregion
-
-            if (arregloPesos != null && arregloRepSeg != null)
+            if (ValidarComboBox.opcionValida(cbPersonas, cbPersonas.Text)
+                && ValidarComboBox.opcionValida(cbEjercicios, cbEjercicios.Text))
             {
-                int setID = Sets.obtenerSet(fecha, personaID);
-                if (setID == 0)
-                    setID = Sets.insertarSet(fecha, personaID);
-                for (int i = 0; i < tope; i++)
-                {
-                    if (cbRepOseg.SelectedItem.ToString() == "Repeticiones")
-                        Series.insertarSerieRepeticiones(setID, ejercicioID, arregloRepSeg[i], arregloPesos[i]);
-                    else
-                        Series.insertarSerieSegundos(setID, ejercicioID, arregloRepSeg[i], arregloPesos[i]);
-                }
+                #region Inicializacion variables
+                int tope = Convert.ToInt32(tbCantidadSeries.Text);
+                int[] arregloRepSeg = generarArregloEntero("textRepOSeg", tope);
+                double[] arregloPesos = generarArregloDouble("textPeso", tope);
+                String fecha = Fecha.convertirFormatoUniversal(dtpDiaEntrenamiento.Value);
+                DataRowView Persona = (DataRowView)cbPersonas.Items[cbPersonas.SelectedIndex];
+                int personaID = Convert.ToInt32(Persona.Row["id"]);
+                DataRowView Ejercicio = (DataRowView)cbEjercicios.Items[cbEjercicios.SelectedIndex];
+                int ejercicioID = Convert.ToInt32(Ejercicio.Row["id"]);
+                #endregion
 
-                MessageBox.Show("¡La serie se ha insertado correctamente!");
-                limpiarForm();
+                if (arregloPesos != null
+                    && arregloRepSeg != null
+                    && ValidarComboBox.opcionValida(cbRepOseg, cbRepOseg.Text))
+                {
+                    int setID = Sets.obtenerSet(fecha, personaID);
+                    if (setID == 0)
+                        setID = Sets.insertarSet(fecha, personaID);
+                    for (int i = 0; i < tope; i++)
+                    {
+                        if (cbRepOseg.SelectedItem.ToString() == "Repeticiones")
+                            Series.insertarSerieRepeticiones(setID, ejercicioID, arregloRepSeg[i], arregloPesos[i]);
+                        else
+                            Series.insertarSerieSegundos(setID, ejercicioID, arregloRepSeg[i], arregloPesos[i]);
+                    }
+
+                    MessageBox.Show("¡La serie se ha insertado correctamente!");
+                    limpiarForm();
+                }
             }
+            else
+                MessageBox.Show("Recordá que las personas y los ejercicios deben ser ingresados correctamente");
         }
 
         private int[] generarArregloEntero(String nombreTexto, int tope)

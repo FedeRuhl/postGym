@@ -1,4 +1,5 @@
 ﻿using Gimnasio.Datos;
+using Gimnasio.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -134,7 +135,8 @@ namespace Gimnasio
 
         private void btnAgregarMusculo_Click(object sender, EventArgs e)
         {
-            if (cbOpcion.SelectedIndex != -1)
+            if (ValidarComboBox.opcionValida(cbOpcion, cbOpcion.Text)
+                && ValidarComboBox.opcionValida(cbMusculos, cbMusculos.Text))
             {
                 DataRowView Musculo = (DataRowView)cbMusculos.Items[cbMusculos.SelectedIndex];
                 int musculoID = Convert.ToInt32(Musculo.Row["id"]);
@@ -143,13 +145,14 @@ namespace Gimnasio
             }
             else
             {
-                MessageBox.Show("¡Primero tenes que seleccionar una opción de rutina!");
+                MessageBox.Show("¡Primero tenes que seleccionar una opción de rutina y algún músculo!");
             }
         }
 
         private void btnAgregarEjercicio_Click(object sender, EventArgs e)
         {
-            if (cbOpcion.SelectedIndex != -1)
+            if (ValidarComboBox.opcionValida(cbOpcion, cbOpcion.Text)
+                && ValidarComboBox.opcionValida(cbEjercicios, cbEjercicios.Text))
             {
                 DataRowView Ejercicio = (DataRowView)cbEjercicios.Items[cbEjercicios.SelectedIndex];
                 int ejercicioID = Convert.ToInt32(Ejercicio.Row["id"]);
@@ -158,7 +161,7 @@ namespace Gimnasio
             }
             else
             {
-                MessageBox.Show("¡Primero tenes que seleccionar una opción de rutina!");
+                MessageBox.Show("¡Primero tenes que seleccionar una opción de rutina y algún ejercicio!");
             }
         }
     }

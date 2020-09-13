@@ -162,6 +162,7 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilidades\ValidarComboBox.cs" />
     <EmbeddedResource Include="ConsultaCondicionesFisicas.resx">
       <DependentUpon>ConsultaCondicionesFisicas.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,5 @@
 ﻿using Gimnasio.Datos;
+using Gimnasio.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,28 +46,32 @@ namespace Gimnasio
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            #region Inicializacion variables
-            String fecha = Fecha.convertirFormatoUniversal(dtpActualizacion.Value);
-            DataRowView Persona = (DataRowView)cbPersonas.Items[cbPersonas.SelectedIndex];
-            int personaID = Convert.ToInt32(Persona.Row["id"]);
-            #endregion
-            if (double.TryParse(tbPeso.Text, out double peso) && fotosPersona.Count != 0)
+            if (ValidarComboBox.opcionValida(cbPersonas, cbPersonas.Text))
             {
-                int DetallesPersonaID = DetallesPersonas.insertarDetallesPersona(peso, fecha, personaID);
-
-                foreach (Image Foto in fotosPersona)
+                #region Inicializacion variables
+                String fecha = Fecha.convertirFormatoUniversal(dtpActualizacion.Value);
+                DataRowView Persona = (DataRowView)cbPersonas.Items[cbPersonas.SelectedIndex];
+                int personaID = Convert.ToInt32(Persona.Row["id"]);
+                #endregion
+                if (double.TryParse(tbPeso.Text, out double peso)
+                    && fotosPersona.Count != 0)
                 {
-                    byte[] fotoPersona = ConversorImagenes.ConvertirImagenBytes(Foto);
-                    DetallesPersonas.insertarFoto(DetallesPersonaID, fotoPersona);
-                }
+                    int DetallesPersonaID = DetallesPersonas.insertarDetallesPersona(peso, fecha, personaID);
 
-                MessageBox.Show("¡Los cambios han sigo guardados correctamente!");
-                limpiarForm();
-        }
-            else
-            {
-                MessageBox.Show("¡Recorda que debes seleccionar al menos una foto, y que el peso debe ser numérico!");
+                    foreach (Image Foto in fotosPersona)
+                    {
+                        byte[] fotoPersona = ConversorImagenes.ConvertirImagenBytes(Foto);
+                        DetallesPersonas.insertarFoto(DetallesPersonaID, fotoPersona);
+                    }
+
+                    MessageBox.Show("¡Los cambios han sigo guardados correctamente!");
+                    limpiarForm();
+                }
+                else
+                    MessageBox.Show("¡Recorda que debes seleccionar al menos una foto, y que el peso debe ser numérico!");
             }
+            else
+                MessageBox.Show("¡Recordá que tenes que elegir una persona!");
         }
 
         private void limpiarForm()

@@ -1,4 +1,5 @@
 ﻿using Gimnasio.Datos;
+using Gimnasio.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,21 +28,24 @@ namespace Gimnasio
 
         private void RecargarDataGridView()
         {
-            if (cbEjercicioOPersona.SelectedItem.ToString() == "Personas")
+            if (ValidarComboBox.opcionValida(cbEjercicioOPersona, cbEjercicioOPersona.Text))
             {
-                dataGridView1.DataSource = Personas.obtenerPersonas().Tables[0];
-                lAltura.Visible = true;
-                tbAltura.Visible = true;
-            }
-            else
-            {
-                dataGridView1.DataSource = Ejercicios.obtenerEjercicios().Tables[0];
-                lAltura.Visible = false;
-                tbAltura.Visible = false;
-            }
+                if (cbEjercicioOPersona.SelectedItem.ToString() == "Personas")
+                {
+                    dataGridView1.DataSource = Personas.obtenerPersonas().Tables[0];
+                    lAltura.Visible = true;
+                    tbAltura.Visible = true;
+                }
+                else
+                {
+                    dataGridView1.DataSource = Ejercicios.obtenerEjercicios().Tables[0];
+                    lAltura.Visible = false;
+                    tbAltura.Visible = false;
+                }
 
-            dataGridView1.Columns["ID"].Visible = false;
-            dataGridView1.Columns["Eliminar"].DisplayIndex = dataGridView1.Columns.Count - 1;
+                dataGridView1.Columns["ID"].Visible = false;
+                dataGridView1.Columns["Eliminar"].DisplayIndex = dataGridView1.Columns.Count - 1;
+            }
         }
 
         private void cbEjercicioOPersona_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,10 +56,8 @@ namespace Gimnasio
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             string nombre = tbNombre.Text.Trim();
-
-            if (String.IsNullOrEmpty(nombre))
-                MessageBox.Show("¡Recordá que el nombre no puede estar vacío!");
-            else
+            if (ValidarComboBox.opcionValida(cbEjercicioOPersona, cbEjercicioOPersona.Text)
+                && !String.IsNullOrEmpty(nombre))
             {
                 if (cbEjercicioOPersona.SelectedItem.ToString() == "Ejercicios")
                     Ejercicios.insertarEjercicio(nombre);
@@ -64,11 +66,15 @@ namespace Gimnasio
                 else
                     MessageBox.Show("¡Recordá que la altura tiene que ser un número!");
             }
-            
+            else
+                MessageBox.Show("Recordá que el nombre no puede estar vacío. Además, solo se pueden seleccionar personas o ejercicios.");
+
             RecargarDataGridView();
             tbNombre.Text = "";
             tbAltura.Text = "";
         }
+
+        
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {

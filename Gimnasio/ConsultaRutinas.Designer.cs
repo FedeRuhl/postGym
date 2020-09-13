@@ -86,7 +86,6 @@
             // 
             this.cbDias.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbDias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.cbDias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDias.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbDias.ForeColor = System.Drawing.Color.White;
             this.cbDias.FormattingEnabled = true;
@@ -262,7 +261,6 @@
             // 
             this.cbOpcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbOpcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.cbOpcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOpcion.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbOpcion.ForeColor = System.Drawing.Color.White;
             this.cbOpcion.FormattingEnabled = true;
@@ -343,7 +341,6 @@
             this.cbMusculos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbMusculos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbMusculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.cbMusculos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMusculos.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbMusculos.ForeColor = System.Drawing.Color.White;
             this.cbMusculos.FormattingEnabled = true;

@@ -110,7 +110,7 @@ namespace Gimnasio.Datos
             conexion.Open();
             DataSet DS = new DataSet();
             SqlCommand command = new SqlCommand();
-            command.CommandText = "select Ejercicio, ID from VRutinaEjercicios where RutinaID = @RutinaID and DiaID = @DiaID";
+            command.CommandText = "select Ejercicio, ID from VRutinaEjercicios where RutinaID = @RutinaID and DiaID = @DiaID order by Ejercicio";
             command.Parameters.AddWithValue("@RutinaID", rutinaID);
             command.Parameters.AddWithValue("@DiaID", diaID);
             command.Connection = conexion;
