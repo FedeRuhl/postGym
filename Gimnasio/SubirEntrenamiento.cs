@@ -37,6 +37,9 @@ namespace Gimnasio
             cbEjercicios.ValueMember = "nombre";
             cbEjercicios.SelectedIndex = 0;
 
+            dtpDiaEntrenamiento.Value = DateTime.Now;
+            dtpDiaEntrenamiento.MaxDate = DateTime.Now;
+
         }
 
         private void cbRepOseg_SelectedIndexChanged(object sender, EventArgs e)

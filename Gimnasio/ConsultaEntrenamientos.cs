@@ -39,11 +39,6 @@ namespace Gimnasio
             dtpSetsEntrenamiento.MaxDate = fechaFin;
         }
 
-        private void dtpSetsEntrenamiento_ValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void actualizarDataGridView()
         {
             DateTime fecha = dtpSetsEntrenamiento.Value;

@@ -190,7 +190,7 @@ namespace Gimnasio
         {
             String consulta = "select foto from Fotos where id = 7";
             byte[] Bytes = (byte[])BD.ObtenerPrimeraCoincidencia(consulta);
-            pictureBox2.Image = Imagen.ConvertirBytesImagen(Bytes);
+            pictureBox2.Image = ConversorImagenes.ConvertirBytesImagen(Bytes);
         }
     }
 }

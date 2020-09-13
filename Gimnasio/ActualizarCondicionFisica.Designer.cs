@@ -163,6 +163,7 @@
             this.dtpActualizacion.Name = "dtpActualizacion";
             this.dtpActualizacion.Size = new System.Drawing.Size(223, 22);
             this.dtpActualizacion.TabIndex = 27;
+            this.dtpActualizacion.Value = new System.DateTime(2020, 9, 10, 0, 0, 0, 0);
             // 
             // lDiaActualizacion
             // 
@@ -225,6 +226,7 @@
             this.Name = "ActualizarCondicionFisica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ActualizarCondicionFisica";
+            this.Load += new System.EventHandler(this.ActualizarCondicionFisica_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

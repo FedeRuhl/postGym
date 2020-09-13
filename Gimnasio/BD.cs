@@ -360,5 +360,80 @@ namespace Gimnasio
                 conexion.Close();
             }
         }
+
+        public static DataSet obtenerCondicionesFisicas(String fecha)
+        {
+            conexion.Open();
+            DataSet DS = new DataSet();
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "Select * from VPersonas where Fecha = @Fecha";
+            command.Connection = conexion;
+            command.Parameters.AddWithValue("@Fecha", fecha);
+            SqlDataAdapter DP = new SqlDataAdapter(command);
+            DP.Fill(DS);
+            conexion.Close();
+            return DS;
+        }
+
+        public static DataSet obtenerFechasCondiciones()
+        {
+            conexion.Open();
+            DataSet DS = new DataSet();
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "Select fecha from DetallesPersonas group by fecha";
+            command.Connection = conexion;
+            SqlDataAdapter DP = new SqlDataAdapter(command);
+            DP.Fill(DS);
+            conexion.Close();
+            return DS;
+        }
+
+        public static void actualizarPesoPersona(int detallesID, double peso)
+        {
+            try
+            {
+                conexion.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = conexion;
+                command.CommandText = "update DetallesPersonas set Peso = @Peso where ID = @DetallesID";
+                command.Parameters.AddWithValue("@Peso", peso);
+                command.Parameters.AddWithValue("@DetallesID", detallesID);
+                command.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                conexion.Close();
+            }
+        }
+
+        public static bool eliminarFoto(int fotoID, int detallesPersonaID)
+        {
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "delete from Fotos where ID = @FotoID; Select count(*) from Fotos where DetallesPersonaID = @DetallesPersonaID";
+            command.Parameters.AddWithValue("@FotoID", fotoID);
+            command.Parameters.AddWithValue("@DetallesPersonaID", detallesPersonaID);
+            int cantidadTuplasFotos = Convert.ToInt32(command.ExecuteScalar());
+            conexion.Close();
+
+            if (cantidadTuplasFotos == 0)
+                return true;
+            else
+                return false;
+        }
+
+        public static void eliminarDetallesPersona(int ID)
+        {
+            conexion.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = conexion;
+            command.CommandText = "delete from DetallesPersonas where id = @ID";
+            command.Parameters.AddWithValue("@ID", ID);
+            command.ExecuteNonQuery();
+            conexion.Close();
+        }
     }
 }

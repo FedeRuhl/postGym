@@ -97,6 +97,12 @@
     <Compile Include="CheckBoxPersonalizado.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ConsultaCondicionesFisicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaCondicionesFisicas.Designer.cs">
+      <DependentUpon>ConsultaCondicionesFisicas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaEntrenamientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,7 +127,13 @@
       <DependentUpon>Ejercicios.xsd</DependentUpon>
     </Compile>
     <Compile Include="Fecha.cs" />
-    <Compile Include="Imagen.cs" />
+    <Compile Include="MostrarFotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarFotos.Designer.cs">
+      <DependentUpon>MostrarFotos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConversorImagenes.cs" />
     <Compile Include="Mantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +247,9 @@
     <EmbeddedResource Include="ActualizarPersona.resx">
       <DependentUpon>ActualizarPersona.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaCondicionesFisicas.resx">
+      <DependentUpon>ConsultaCondicionesFisicas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaEjercicio.resx">
       <DependentUpon>ConsultaEjercicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioBase.resx">
       <DependentUpon>FormularioBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarFotos.resx">
+      <DependentUpon>MostrarFotos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainClass.resx">
       <DependentUpon>MainClass.cs</DependentUpon>

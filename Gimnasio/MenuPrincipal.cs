@@ -166,8 +166,8 @@ namespace Gimnasio
 
         private void btnVisualizarCondiciones_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<ConsultasDetallesPerfil>();
-            btnVisualizarEntrenamientos.BackColor = Color.FromArgb(241, 221, 56);
+            AbrirFormulario<ConsultaCondicionesFisicas>();
+            btnVisualizarCondiciones.BackColor = Color.FromArgb(241, 221, 56);
         }
 
         private void AbrirFormulario<MiForm>() where MiForm:Form, new()
@@ -217,6 +217,7 @@ namespace Gimnasio
             btnAltaCondicion.BackColor = color;
             btnVisualizarRutinas.BackColor = color;
             btnVisualizarEntrenamientos.BackColor = color;
+            btnVisualizarCondiciones.BackColor = color;
         }
     }
 }

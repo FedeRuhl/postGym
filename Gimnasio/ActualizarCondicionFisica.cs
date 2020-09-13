@@ -59,7 +59,7 @@ namespace Gimnasio
 
                 foreach (Image Foto in fotosPersona)
                 {
-                    byte[] fotoPersona = Imagen.ConvertirImagenBytes(Foto);
+                    byte[] fotoPersona = ConversorImagenes.ConvertirImagenBytes(Foto);
                     BD.insertarFoto(DetallesPersonaID, fotoPersona);
                 }
 
@@ -83,6 +83,12 @@ namespace Gimnasio
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiarForm();
+        }
+
+        private void ActualizarCondicionFisica_Load(object sender, EventArgs e)
+        {
+            dtpActualizacion.Value = DateTime.Now;
+            dtpActualizacion.MaxDate = DateTime.Now;
         }
     }
 }

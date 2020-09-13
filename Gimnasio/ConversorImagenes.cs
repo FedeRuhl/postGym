@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Gimnasio
 {
-    static class Imagen
+    static class ConversorImagenes
     {
         public static byte[] ConvertirImagenBytes(Image Foto)
         {

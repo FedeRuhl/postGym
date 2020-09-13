@@ -117,31 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="tablaPersonaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>162, 17</value>
-  </metadata>
-  <metadata name="Eliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Eliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAACdAAAAnQGPcuduAAADAElE
-        QVRYR62Xya4SQRSGyfUp1DeQlUbjsDFx4YZ5WBJ4gCuQ+A66cHtd+ACIBKJv4PQKjDIpsFKXXhcMxvL/
-        i662u6lquoGTfLm53afO/9NdVX0qsi8SiQS5Am6Ap+At6IHfQFhcWtfeAeZEk8kkx1hVDggOBixyH7wC
-        38AfoERNMIe5HHMPhDOSSqWU+DXwAvwEOqEg/ACscRVEYrGYpWKIeDyuxO+Az+Av0BUOA2t8BLeArK8N
-        dRM8Bl+Artgx9MEjsGtCXQT85TvieDKu/4NgGMOJSg336+AFcB18AvYAFslkMqJQKIQywdxisShyuZxu
-        HDWo5RI/A5wsdiIHptNpUavVRK/XE9VqVcC1s5AW5jB3MBiIRqMhstmszgS1qGkbeABcs52/nOLL5VIw
-        JpOJqFQqviaU+HQ6lWPW67VtwpPL1cElKg3QCdesnUDHfOzdblcWUuFnwiuuot1um17hBa6d0UAUcONw
-        JXAAC1LUGToTJvHhcCjK5bJOnHwFURrg1qnd4VRhPxMm8dFoJMWdRj1Q85wGuLfrEiQmAWWCeA0GEFe8
-        pgGuTd1NG5OJ+XwuccZ4PDbOEw09GuCXTHfThcmEM0KKk0sa0N3QwsIUWCwWluT/4JMI+NhdnNRAyF8v
-        Oekr0C3RPfw6ahLOZjOJM0Ka6NLAQcuQE47vnGLeZRjChFyGezcinbgSIAeasDci363YT1zl+plgjX1b
-        sfZjxO95v9+3Sm3Db4czmeBnuVQq6UzYHyPCzpefSDuBzUS9Xher1UoWCrK9ek1sNhvRarVEPp/3GvgO
-        7oJtP0An+LvTkLAnoIlOpxN4k2EOHzt/ebPZNHVFz3Bu2DYkjq6IbfgHYCdyIJuJE7dk74Fs0+1wnAXY
-        Ou/sC2HEFYYxHSDbczwpS90KXrRg67x3czoAij8EUkcb6ia4DVwd8hHwYMJXexNE8O4tNUMwyeJUR7Pn
-        INjRzBkcAHiw5HK5AGEPpy8Bx57slMzj+TmoA84R7/GcR6834Ang7hpAOBL5B1N8lbiozywkAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
 </root>

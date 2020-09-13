@@ -61,7 +61,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(320, 24);
+            this.label1.Location = new System.Drawing.Point(357, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(240, 54);
             this.label1.TabIndex = 11;
@@ -74,7 +74,7 @@
             this.lDia.AutoSize = true;
             this.lDia.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDia.ForeColor = System.Drawing.Color.White;
-            this.lDia.Location = new System.Drawing.Point(326, 99);
+            this.lDia.Location = new System.Drawing.Point(326, 83);
             this.lDia.Name = "lDia";
             this.lDia.Size = new System.Drawing.Size(42, 26);
             this.lDia.TabIndex = 15;
@@ -95,7 +95,7 @@
             "Viernes",
             "Sábado",
             "Domingo"});
-            this.cbDias.Location = new System.Drawing.Point(277, 128);
+            this.cbDias.Location = new System.Drawing.Point(277, 112);
             this.cbDias.Name = "cbDias";
             this.cbDias.Size = new System.Drawing.Size(145, 28);
             this.cbDias.TabIndex = 16;
@@ -105,7 +105,7 @@
             // 
             this.dgbMusculos.AllowUserToAddRows = false;
             this.dgbMusculos.AllowUserToDeleteRows = false;
-            this.dgbMusculos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgbMusculos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgbMusculos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgbMusculos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgbMusculos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
@@ -125,7 +125,7 @@
             this.Eliminar});
             this.dgbMusculos.EnableHeadersVisualStyles = false;
             this.dgbMusculos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgbMusculos.Location = new System.Drawing.Point(12, 334);
+            this.dgbMusculos.Location = new System.Drawing.Point(12, 318);
             this.dgbMusculos.MultiSelect = false;
             this.dgbMusculos.Name = "dgbMusculos";
             this.dgbMusculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -162,7 +162,7 @@
             // 
             this.dgbEjercicios.AllowUserToAddRows = false;
             this.dgbEjercicios.AllowUserToDeleteRows = false;
-            this.dgbEjercicios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgbEjercicios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgbEjercicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgbEjercicios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgbEjercicios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
@@ -182,7 +182,7 @@
             this.Borrar});
             this.dgbEjercicios.EnableHeadersVisualStyles = false;
             this.dgbEjercicios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgbEjercicios.Location = new System.Drawing.Point(463, 334);
+            this.dgbEjercicios.Location = new System.Drawing.Point(463, 318);
             this.dgbEjercicios.MultiSelect = false;
             this.dgbEjercicios.Name = "dgbEjercicios";
             this.dgbEjercicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -221,7 +221,7 @@
             this.lMusculos.AutoSize = true;
             this.lMusculos.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lMusculos.ForeColor = System.Drawing.Color.White;
-            this.lMusculos.Location = new System.Drawing.Point(192, 195);
+            this.lMusculos.Location = new System.Drawing.Point(192, 179);
             this.lMusculos.Name = "lMusculos";
             this.lMusculos.Size = new System.Drawing.Size(96, 26);
             this.lMusculos.TabIndex = 19;
@@ -233,7 +233,7 @@
             this.lEjercicios.AutoSize = true;
             this.lEjercicios.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lEjercicios.ForeColor = System.Drawing.Color.White;
-            this.lEjercicios.Location = new System.Drawing.Point(632, 195);
+            this.lEjercicios.Location = new System.Drawing.Point(632, 179);
             this.lEjercicios.Name = "lEjercicios";
             this.lEjercicios.Size = new System.Drawing.Size(103, 26);
             this.lEjercicios.TabIndex = 20;
@@ -254,7 +254,7 @@
             "Viernes",
             "Sábado",
             "Domingo"});
-            this.cbOpcion.Location = new System.Drawing.Point(463, 128);
+            this.cbOpcion.Location = new System.Drawing.Point(463, 112);
             this.cbOpcion.Name = "cbOpcion";
             this.cbOpcion.Size = new System.Drawing.Size(145, 28);
             this.cbOpcion.TabIndex = 22;
@@ -266,7 +266,7 @@
             this.lOpcion.AutoSize = true;
             this.lOpcion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lOpcion.ForeColor = System.Drawing.Color.White;
-            this.lOpcion.Location = new System.Drawing.Point(492, 99);
+            this.lOpcion.Location = new System.Drawing.Point(492, 83);
             this.lOpcion.Name = "lOpcion";
             this.lOpcion.Size = new System.Drawing.Size(77, 26);
             this.lOpcion.TabIndex = 21;
@@ -274,11 +274,11 @@
             // 
             // btnEliminarRutina
             // 
-            this.btnEliminarRutina.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminarRutina.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEliminarRutina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
             this.btnEliminarRutina.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnEliminarRutina.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarRutina.Location = new System.Drawing.Point(355, 647);
+            this.btnEliminarRutina.Location = new System.Drawing.Point(355, 631);
             this.btnEliminarRutina.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.btnEliminarRutina.Name = "btnEliminarRutina";
             this.btnEliminarRutina.Size = new System.Drawing.Size(149, 31);
@@ -293,7 +293,7 @@
             this.btnAgregarMusculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
             this.btnAgregarMusculo.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnAgregarMusculo.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMusculo.Location = new System.Drawing.Point(171, 274);
+            this.btnAgregarMusculo.Location = new System.Drawing.Point(171, 258);
             this.btnAgregarMusculo.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.btnAgregarMusculo.Name = "btnAgregarMusculo";
             this.btnAgregarMusculo.Size = new System.Drawing.Size(131, 31);
@@ -308,7 +308,7 @@
             this.btnAgregarEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
             this.btnAgregarEjercicio.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnAgregarEjercicio.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarEjercicio.Location = new System.Drawing.Point(618, 274);
+            this.btnAgregarEjercicio.Location = new System.Drawing.Point(618, 258);
             this.btnAgregarEjercicio.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.btnAgregarEjercicio.Name = "btnAgregarEjercicio";
             this.btnAgregarEjercicio.Size = new System.Drawing.Size(131, 31);
@@ -326,7 +326,7 @@
             this.cbMusculos.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbMusculos.ForeColor = System.Drawing.Color.White;
             this.cbMusculos.FormattingEnabled = true;
-            this.cbMusculos.Location = new System.Drawing.Point(112, 226);
+            this.cbMusculos.Location = new System.Drawing.Point(112, 210);
             this.cbMusculos.Name = "cbMusculos";
             this.cbMusculos.Size = new System.Drawing.Size(256, 28);
             this.cbMusculos.TabIndex = 30;
@@ -341,7 +341,7 @@
             this.cbEjercicios.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbEjercicios.ForeColor = System.Drawing.Color.White;
             this.cbEjercicios.FormattingEnabled = true;
-            this.cbEjercicios.Location = new System.Drawing.Point(566, 226);
+            this.cbEjercicios.Location = new System.Drawing.Point(566, 210);
             this.cbEjercicios.Name = "cbEjercicios";
             this.cbEjercicios.Size = new System.Drawing.Size(256, 28);
             this.cbEjercicios.TabIndex = 31;

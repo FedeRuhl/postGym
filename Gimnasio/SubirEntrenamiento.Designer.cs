@@ -64,7 +64,7 @@
             this.lPersona.AutoSize = true;
             this.lPersona.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lPersona.ForeColor = System.Drawing.Color.White;
-            this.lPersona.Location = new System.Drawing.Point(339, 74);
+            this.lPersona.Location = new System.Drawing.Point(343, 70);
             this.lPersona.Name = "lPersona";
             this.lPersona.Size = new System.Drawing.Size(87, 26);
             this.lPersona.TabIndex = 12;
@@ -100,19 +100,23 @@
             this.dtpDiaEntrenamiento.CalendarForeColor = System.Drawing.Color.White;
             this.dtpDiaEntrenamiento.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.dtpDiaEntrenamiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.dtpDiaEntrenamiento.Location = new System.Drawing.Point(294, 199);
+            this.dtpDiaEntrenamiento.Location = new System.Drawing.Point(294, 183);
             this.dtpDiaEntrenamiento.Name = "dtpDiaEntrenamiento";
             this.dtpDiaEntrenamiento.Size = new System.Drawing.Size(200, 22);
             this.dtpDiaEntrenamiento.TabIndex = 15;
+            this.dtpDiaEntrenamiento.Value = new System.DateTime(2020, 9, 10, 0, 0, 0, 0);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
+            this.btnGuardar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(114, 13);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(87, 34);
             this.btnGuardar.TabIndex = 0;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Visible = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -128,7 +132,7 @@
             this.cbRepOseg.Items.AddRange(new object[] {
             "Repeticiones",
             "Segundos"});
-            this.cbRepOseg.Location = new System.Drawing.Point(401, 390);
+            this.cbRepOseg.Location = new System.Drawing.Point(401, 374);
             this.cbRepOseg.Name = "cbRepOseg";
             this.cbRepOseg.Size = new System.Drawing.Size(200, 28);
             this.cbRepOseg.TabIndex = 22;
@@ -140,7 +144,7 @@
             this.lPesoOrepeticiones.AutoSize = true;
             this.lPesoOrepeticiones.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lPesoOrepeticiones.ForeColor = System.Drawing.Color.White;
-            this.lPesoOrepeticiones.Location = new System.Drawing.Point(386, 346);
+            this.lPesoOrepeticiones.Location = new System.Drawing.Point(386, 336);
             this.lPesoOrepeticiones.Name = "lPesoOrepeticiones";
             this.lPesoOrepeticiones.Size = new System.Drawing.Size(262, 26);
             this.lPesoOrepeticiones.TabIndex = 21;
@@ -152,7 +156,7 @@
             this.tbCantidadSeries.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.tbCantidadSeries.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.tbCantidadSeries.ForeColor = System.Drawing.Color.White;
-            this.tbCantidadSeries.Location = new System.Drawing.Point(184, 393);
+            this.tbCantidadSeries.Location = new System.Drawing.Point(184, 377);
             this.tbCantidadSeries.Name = "tbCantidadSeries";
             this.tbCantidadSeries.Size = new System.Drawing.Size(200, 25);
             this.tbCantidadSeries.TabIndex = 19;
@@ -163,7 +167,7 @@
             this.lCantidadSeries.AutoSize = true;
             this.lCantidadSeries.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lCantidadSeries.ForeColor = System.Drawing.Color.White;
-            this.lCantidadSeries.Location = new System.Drawing.Point(198, 346);
+            this.lCantidadSeries.Location = new System.Drawing.Point(198, 336);
             this.lCantidadSeries.Name = "lCantidadSeries";
             this.lCantidadSeries.Size = new System.Drawing.Size(168, 26);
             this.lCantidadSeries.TabIndex = 18;
@@ -178,9 +182,9 @@
             this.cbEjercicios.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbEjercicios.ForeColor = System.Drawing.Color.White;
             this.cbEjercicios.FormattingEnabled = true;
-            this.cbEjercicios.Location = new System.Drawing.Point(227, 291);
+            this.cbEjercicios.Location = new System.Drawing.Point(184, 275);
             this.cbEjercicios.Name = "cbEjercicios";
-            this.cbEjercicios.Size = new System.Drawing.Size(342, 28);
+            this.cbEjercicios.Size = new System.Drawing.Size(417, 28);
             this.cbEjercicios.TabIndex = 17;
             // 
             // lEjercicio
@@ -189,7 +193,7 @@
             this.lEjercicio.AutoSize = true;
             this.lEjercicio.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lEjercicio.ForeColor = System.Drawing.Color.White;
-            this.lEjercicio.Location = new System.Drawing.Point(260, 248);
+            this.lEjercicio.Location = new System.Drawing.Point(260, 232);
             this.lEjercicio.Name = "lEjercicio";
             this.lEjercicio.Size = new System.Drawing.Size(258, 26);
             this.lEjercicio.TabIndex = 17;
@@ -197,12 +201,15 @@
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
+            this.btnLimpiar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(207, 13);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(87, 34);
             this.btnLimpiar.TabIndex = 23;
             this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Visible = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
@@ -210,7 +217,7 @@
             // 
             this.panelSubirRutina.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelSubirRutina.AutoScroll = true;
-            this.panelSubirRutina.Location = new System.Drawing.Point(184, 436);
+            this.panelSubirRutina.Location = new System.Drawing.Point(184, 420);
             this.panelSubirRutina.Name = "panelSubirRutina";
             this.panelSubirRutina.Size = new System.Drawing.Size(464, 317);
             this.panelSubirRutina.TabIndex = 24;
@@ -220,7 +227,7 @@
             this.panelBotones.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelBotones.Controls.Add(this.btnLimpiar);
             this.panelBotones.Controls.Add(this.btnGuardar);
-            this.panelBotones.Location = new System.Drawing.Point(184, 776);
+            this.panelBotones.Location = new System.Drawing.Point(184, 760);
             this.panelBotones.Name = "panelBotones";
             this.panelBotones.Size = new System.Drawing.Size(432, 60);
             this.panelBotones.TabIndex = 25;
