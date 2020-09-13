@@ -108,7 +108,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(317, 815);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(174, 37);
-            this.btnGuardar.TabIndex = 16;
+            this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -124,7 +124,7 @@
             this.clbEjercicios.Location = new System.Drawing.Point(162, 453);
             this.clbEjercicios.Name = "clbEjercicios";
             this.clbEjercicios.Size = new System.Drawing.Size(488, 356);
-            this.clbEjercicios.TabIndex = 17;
+            this.clbEjercicios.TabIndex = 3;
             this.clbEjercicios.ThreeDCheckBoxes = true;
             // 
             // clbDias
@@ -137,7 +137,7 @@
             this.clbDias.Location = new System.Drawing.Point(162, 184);
             this.clbDias.Name = "clbDias";
             this.clbDias.Size = new System.Drawing.Size(228, 224);
-            this.clbDias.TabIndex = 18;
+            this.clbDias.TabIndex = 1;
             this.clbDias.ThreeDCheckBoxes = true;
             // 
             // clbMusculos
@@ -150,7 +150,7 @@
             this.clbMusculos.Location = new System.Drawing.Point(408, 184);
             this.clbMusculos.Name = "clbMusculos";
             this.clbMusculos.Size = new System.Drawing.Size(242, 224);
-            this.clbMusculos.TabIndex = 19;
+            this.clbMusculos.TabIndex = 2;
             this.clbMusculos.ThreeDCheckBoxes = true;
             // 
             // CrearRutina

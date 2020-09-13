@@ -82,7 +82,7 @@
             this.lbFechas.Margin = new System.Windows.Forms.Padding(4);
             this.lbFechas.Name = "lbFechas";
             this.lbFechas.Size = new System.Drawing.Size(413, 165);
-            this.lbFechas.TabIndex = 18;
+            this.lbFechas.TabIndex = 1;
             // 
             // btnBuscar
             // 
@@ -94,7 +94,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(19, 24, 4, 24);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(191, 50);
-            this.btnBuscar.TabIndex = 29;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -157,7 +157,7 @@
             this.dgbCondicionesFisicas.RowTemplate.Height = 75;
             this.dgbCondicionesFisicas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgbCondicionesFisicas.Size = new System.Drawing.Size(908, 476);
-            this.dgbCondicionesFisicas.TabIndex = 30;
+            this.dgbCondicionesFisicas.TabIndex = 3;
             this.dgbCondicionesFisicas.VirtualMode = true;
             this.dgbCondicionesFisicas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbCondicionesFisicas_CellContentClick);
             this.dgbCondicionesFisicas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbCondicionesFisicas_CellDoubleClick);

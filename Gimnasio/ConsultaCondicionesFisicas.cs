@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gimnasio.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,7 @@ namespace Gimnasio
 
         private void CargarListBoxFechas()
         {
-            lbFechas.DataSource = BD.obtenerFechasCondiciones().Tables[0];
+            lbFechas.DataSource = DetallesPersonas.obtenerFechasDetalles().Tables[0];
             lbFechas.DisplayMember = "fecha";
             lbFechas.ValueMember = "fecha";
         }
@@ -40,7 +41,7 @@ namespace Gimnasio
         {
             DateTime fecha = Convert.ToDateTime(lbFechas.SelectedValue.ToString());
             String fechaFormatoUniversal = Fecha.convertirFormatoUniversal(fecha);
-            dgbCondicionesFisicas.DataSource = BD.obtenerCondicionesFisicas(fechaFormatoUniversal).Tables[0];
+            dgbCondicionesFisicas.DataSource = DetallesPersonas.obtenerDetalles(fechaFormatoUniversal).Tables[0];
             dataGridViewCargado = true;
         }
 
@@ -95,10 +96,10 @@ namespace Gimnasio
                 int fotoID = Convert.ToInt32(dgbCondicionesFisicas.Rows[idFilaActual].Cells["fotoID"].Value);
                 int detallesID = Convert.ToInt32(dgbCondicionesFisicas.Rows[e.RowIndex].Cells["ID"].Value);
 
-                bool ultimaFotoEliminada = BD.eliminarFoto(fotoID, detallesID);
+                bool ultimaFotoEliminada = DetallesPersonas.eliminarFoto(fotoID, detallesID);
                 if (ultimaFotoEliminada)
                 {
-                    BD.eliminarDetallesPersona(detallesID);
+                    DetallesPersonas.eliminarDetallesPersona(detallesID);
                     CargarListBoxFechas();
                 }
                     
@@ -114,7 +115,7 @@ namespace Gimnasio
                 {
                     int detallesID = Convert.ToInt32(dgbCondicionesFisicas.Rows[e.RowIndex].Cells["ID"].Value);
                     double peso = Convert.ToDouble(dgbCondicionesFisicas.Rows[e.RowIndex].Cells["PESO"].Value);
-                    BD.actualizarPesoPersona(detallesID, peso);
+                    DetallesPersonas.actualizarPesoPersona(detallesID, peso);
 
                     LLenarDataGridView();
                 }

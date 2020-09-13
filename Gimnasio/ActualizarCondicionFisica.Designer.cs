@@ -66,7 +66,7 @@
             this.cbPersonas.Location = new System.Drawing.Point(277, 115);
             this.cbPersonas.Name = "cbPersonas";
             this.cbPersonas.Size = new System.Drawing.Size(223, 28);
-            this.cbPersonas.TabIndex = 15;
+            this.cbPersonas.TabIndex = 1;
             // 
             // lPersona
             // 
@@ -120,7 +120,7 @@
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(223, 31);
-            this.btnSeleccionar.TabIndex = 23;
+            this.btnSeleccionar.TabIndex = 4;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.button1_Click);
@@ -135,7 +135,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(131, 31);
-            this.btnGuardar.TabIndex = 24;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -162,7 +162,7 @@
             this.dtpActualizacion.Location = new System.Drawing.Point(276, 203);
             this.dtpActualizacion.Name = "dtpActualizacion";
             this.dtpActualizacion.Size = new System.Drawing.Size(223, 22);
-            this.dtpActualizacion.TabIndex = 27;
+            this.dtpActualizacion.TabIndex = 2;
             this.dtpActualizacion.Value = new System.DateTime(2020, 9, 10, 0, 0, 0, 0);
             // 
             // lDiaActualizacion
@@ -186,7 +186,7 @@
             this.tbPeso.Location = new System.Drawing.Point(276, 274);
             this.tbPeso.Name = "tbPeso";
             this.tbPeso.Size = new System.Drawing.Size(223, 25);
-            this.tbPeso.TabIndex = 21;
+            this.tbPeso.TabIndex = 3;
             this.tbPeso.Text = "Pesaje (kg.)";
             this.tbPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -200,7 +200,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(131, 31);
-            this.btnLimpiar.TabIndex = 28;
+            this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);

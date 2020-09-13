@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gimnasio.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,23 +24,18 @@ namespace Gimnasio
 
         private void SubirEntrenamiento_Load(object sender, EventArgs e)
         {
-            string consulta = string.Format("select * from personas");
-            DataSet ds = BD.Consultar(consulta);
-            cbPersonas.DataSource = ds.Tables[0];
+            cbPersonas.DataSource = Personas.obtenerPersonas().Tables[0];
             cbPersonas.DisplayMember = "nombre";
             cbPersonas.ValueMember = "nombre";
             cbPersonas.SelectedIndex = 0;
 
-            consulta = string.Format("select * from ejercicios");
-            ds = BD.Consultar(consulta);
-            cbEjercicios.DataSource = ds.Tables[0];
+            cbEjercicios.DataSource = Ejercicios.obtenerEjercicios().Tables[0];
             cbEjercicios.DisplayMember = "nombre";
             cbEjercicios.ValueMember = "nombre";
             cbEjercicios.SelectedIndex = 0;
 
             dtpDiaEntrenamiento.Value = DateTime.Now;
             dtpDiaEntrenamiento.MaxDate = DateTime.Now;
-
         }
 
         private void cbRepOseg_SelectedIndexChanged(object sender, EventArgs e)
@@ -138,7 +134,7 @@ namespace Gimnasio
             #region Inicializacion variables
             int tope = Convert.ToInt32(tbCantidadSeries.Text);
             int[] arregloRepSeg = generarArregloEntero("textRepOSeg", tope);
-            float[] arregloPesos = generarArregloFlotante("textPeso", tope);
+            double[] arregloPesos = generarArregloDouble("textPeso", tope);
             String fecha = Fecha.convertirFormatoUniversal(dtpDiaEntrenamiento.Value);
             DataRowView Persona = (DataRowView) cbPersonas.Items[cbPersonas.SelectedIndex];
             int personaID = Convert.ToInt32(Persona.Row["id"]);
@@ -148,15 +144,15 @@ namespace Gimnasio
 
             if (arregloPesos != null && arregloRepSeg != null)
             {
-                int setID = BD.obtenerSet(fecha, personaID);
+                int setID = Sets.obtenerSet(fecha, personaID);
                 if (setID == 0)
-                    setID = BD.insertarSet(fecha, personaID);
+                    setID = Sets.insertarSet(fecha, personaID);
                 for (int i = 0; i < tope; i++)
                 {
                     if (cbRepOseg.SelectedItem.ToString() == "Repeticiones")
-                        BD.insertarSerieRepeticiones(setID, ejercicioID, arregloRepSeg[i], arregloPesos[i]);
+                        Series.insertarSerieRepeticiones(setID, ejercicioID, arregloRepSeg[i], arregloPesos[i]);
                     else
-                        BD.insertarSerieSegundos(setID, ejercicioID, arregloRepSeg[i], arregloPesos[i]);
+                        Series.insertarSerieSegundos(setID, ejercicioID, arregloRepSeg[i], arregloPesos[i]);
                 }
 
                 MessageBox.Show("¡La serie se ha insertado correctamente!");
@@ -192,10 +188,10 @@ namespace Gimnasio
         }
 
 
-        private float[] generarArregloFlotante(String nombreTexto, int tope)
+        private double[] generarArregloDouble(String nombreTexto, int tope)
         {
             String cadena = "";
-            float[] arregloDinamico = new float[tope];
+            double[] arregloDinamico = new double[tope];
             String textBox = "";
 
             for (int i = 0; i < tope; i++)
@@ -207,7 +203,7 @@ namespace Gimnasio
                     cadena = controles.First().Text;
                     cadena = cadena.Replace(",", ".");
 
-                    if (float.TryParse(cadena, out float nuevoValor) && controles.Count() != 0)
+                    if (double.TryParse(cadena, out double nuevoValor) && controles.Count() != 0)
                         arregloDinamico[i] = nuevoValor;
                     else
                     {

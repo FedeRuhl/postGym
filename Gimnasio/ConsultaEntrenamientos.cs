@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gimnasio.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,8 +33,8 @@ namespace Gimnasio
 
         private void cargarFechasValidas()
         {
-            DateTime fechaInicio = BD.obtenerDiasSets().Item1;
-            DateTime fechaFin = BD.obtenerDiasSets().Item2;
+            DateTime fechaInicio = Sets.obtenerDiasSets().Item1;
+            DateTime fechaFin = Sets.obtenerDiasSets().Item2;
 
             dtpSetsEntrenamiento.MinDate = fechaInicio;
             dtpSetsEntrenamiento.MaxDate = fechaFin;
@@ -44,7 +45,7 @@ namespace Gimnasio
             DateTime fecha = dtpSetsEntrenamiento.Value;
             string fechaFormatoUniversal = Fecha.convertirFormatoUniversal(fecha);
 
-            dgbEntrenamientos.DataSource = BD.obtenerEntrenamientos(fechaFormatoUniversal).Tables[0];
+            dgbEntrenamientos.DataSource = Series.obtenerEntrenamientos(fechaFormatoUniversal).Tables[0];
         }
 
         private void reorganizarColumnas()
@@ -63,7 +64,7 @@ namespace Gimnasio
                 int idFilaActual = dgbEntrenamientos.CurrentRow.Index;
                 int serieID = Convert.ToInt32(dgbEntrenamientos.Rows[idFilaActual].Cells["SERIEID"].Value);
 
-                BD.eliminarSerie(serieID);
+                Series.eliminarSerie(serieID);
                 dgbEntrenamientos.Rows.RemoveAt(idFilaActual);
             }
         }
@@ -71,7 +72,7 @@ namespace Gimnasio
         private void btnEliminarSet_Click(object sender, EventArgs e)
         {
             int setID = Convert.ToInt32(dgbEntrenamientos.Rows[0].Cells["SETID"].Value);
-            BD.eliminarSet(setID);
+            Sets.eliminarSet(setID);
             actualizarDataGridView();
 
             cargarFechasValidas();
@@ -88,15 +89,15 @@ namespace Gimnasio
                 {
                     case "Peso":
                         double peso = Convert.ToDouble(dgbEntrenamientos.Rows[e.RowIndex].Cells["PESO"].Value);
-                        BD.actualizarPesoSerie(peso, serieID);
+                        Series.actualizarPesoSerie(peso, serieID);
                         break;
                     case "Segundos":
                         int segundos = Convert.ToInt32(dgbEntrenamientos.Rows[e.RowIndex].Cells["Segundos"].Value);
-                        BD.actualizarSegundosSerie(segundos, serieID);
+                        Series.actualizarSegundosSerie(segundos, serieID);
                         break;
                     case "Repeticiones":
                         int repeticiones = Convert.ToInt32(dgbEntrenamientos.Rows[e.RowIndex].Cells["Repeticiones"].Value);
-                        BD.actualizarRepeticionesSerie(repeticiones, serieID);
+                        Series.actualizarRepeticionesSerie(repeticiones, serieID);
                         break;
                     default:
                         MessageBox.Show("¡Solo el peso, la cantidad de repeticiones y los segundos pueden ser modificados!");

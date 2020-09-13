@@ -74,13 +74,14 @@
             // 
             this.cbPersonas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbPersonas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.cbPersonas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPersonas.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbPersonas.ForeColor = System.Drawing.Color.White;
             this.cbPersonas.FormattingEnabled = true;
             this.cbPersonas.Location = new System.Drawing.Point(294, 103);
             this.cbPersonas.Name = "cbPersonas";
             this.cbPersonas.Size = new System.Drawing.Size(200, 28);
-            this.cbPersonas.TabIndex = 13;
+            this.cbPersonas.TabIndex = 1;
             // 
             // lDiaEntrenamiento
             // 
@@ -103,7 +104,7 @@
             this.dtpDiaEntrenamiento.Location = new System.Drawing.Point(294, 183);
             this.dtpDiaEntrenamiento.Name = "dtpDiaEntrenamiento";
             this.dtpDiaEntrenamiento.Size = new System.Drawing.Size(200, 22);
-            this.dtpDiaEntrenamiento.TabIndex = 15;
+            this.dtpDiaEntrenamiento.TabIndex = 2;
             this.dtpDiaEntrenamiento.Value = new System.DateTime(2020, 9, 10, 0, 0, 0, 0);
             // 
             // btnGuardar
@@ -111,10 +112,10 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
             this.btnGuardar.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(114, 13);
+            this.btnGuardar.Location = new System.Drawing.Point(101, 13);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(87, 34);
-            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.Size = new System.Drawing.Size(100, 34);
+            this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Visible = false;
@@ -126,6 +127,7 @@
             this.cbRepOseg.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbRepOseg.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbRepOseg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.cbRepOseg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRepOseg.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbRepOseg.ForeColor = System.Drawing.Color.White;
             this.cbRepOseg.FormattingEnabled = true;
@@ -135,7 +137,7 @@
             this.cbRepOseg.Location = new System.Drawing.Point(401, 374);
             this.cbRepOseg.Name = "cbRepOseg";
             this.cbRepOseg.Size = new System.Drawing.Size(200, 28);
-            this.cbRepOseg.TabIndex = 22;
+            this.cbRepOseg.TabIndex = 5;
             this.cbRepOseg.SelectedIndexChanged += new System.EventHandler(this.cbRepOseg_SelectedIndexChanged);
             // 
             // lPesoOrepeticiones
@@ -159,7 +161,7 @@
             this.tbCantidadSeries.Location = new System.Drawing.Point(184, 377);
             this.tbCantidadSeries.Name = "tbCantidadSeries";
             this.tbCantidadSeries.Size = new System.Drawing.Size(200, 25);
-            this.tbCantidadSeries.TabIndex = 19;
+            this.tbCantidadSeries.TabIndex = 4;
             // 
             // lCantidadSeries
             // 
@@ -185,7 +187,7 @@
             this.cbEjercicios.Location = new System.Drawing.Point(184, 275);
             this.cbEjercicios.Name = "cbEjercicios";
             this.cbEjercicios.Size = new System.Drawing.Size(417, 28);
-            this.cbEjercicios.TabIndex = 17;
+            this.cbEjercicios.TabIndex = 3;
             // 
             // lEjercicio
             // 
@@ -206,8 +208,8 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(207, 13);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(87, 34);
-            this.btnLimpiar.TabIndex = 23;
+            this.btnLimpiar.Size = new System.Drawing.Size(103, 34);
+            this.btnLimpiar.TabIndex = 8;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Visible = false;
@@ -222,7 +224,7 @@
             this.panelSubirRutina.Location = new System.Drawing.Point(184, 420);
             this.panelSubirRutina.Name = "panelSubirRutina";
             this.panelSubirRutina.Size = new System.Drawing.Size(464, 317);
-            this.panelSubirRutina.TabIndex = 24;
+            this.panelSubirRutina.TabIndex = 6;
             // 
             // panelBotones
             // 

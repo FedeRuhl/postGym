@@ -84,7 +84,7 @@
             this.panelFormularios.Location = new System.Drawing.Point(250, 32);
             this.panelFormularios.Name = "panelFormularios";
             this.panelFormularios.Size = new System.Drawing.Size(1200, 968);
-            this.panelFormularios.TabIndex = 3;
+            this.panelFormularios.TabIndex = 11;
             // 
             // panelMenuLateral
             // 
@@ -126,7 +126,7 @@
             this.btnVisualizarCondiciones.Location = new System.Drawing.Point(0, 80);
             this.btnVisualizarCondiciones.Name = "btnVisualizarCondiciones";
             this.btnVisualizarCondiciones.Size = new System.Drawing.Size(250, 40);
-            this.btnVisualizarCondiciones.TabIndex = 6;
+            this.btnVisualizarCondiciones.TabIndex = 10;
             this.btnVisualizarCondiciones.Text = "Condiciones físicas";
             this.btnVisualizarCondiciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVisualizarCondiciones.UseVisualStyleBackColor = false;
@@ -143,7 +143,7 @@
             this.btnVisualizarEntrenamientos.Location = new System.Drawing.Point(0, 40);
             this.btnVisualizarEntrenamientos.Name = "btnVisualizarEntrenamientos";
             this.btnVisualizarEntrenamientos.Size = new System.Drawing.Size(250, 40);
-            this.btnVisualizarEntrenamientos.TabIndex = 5;
+            this.btnVisualizarEntrenamientos.TabIndex = 9;
             this.btnVisualizarEntrenamientos.Text = "Entrenamientos";
             this.btnVisualizarEntrenamientos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVisualizarEntrenamientos.UseVisualStyleBackColor = false;
@@ -160,7 +160,7 @@
             this.btnVisualizarRutinas.Location = new System.Drawing.Point(0, 0);
             this.btnVisualizarRutinas.Name = "btnVisualizarRutinas";
             this.btnVisualizarRutinas.Size = new System.Drawing.Size(250, 40);
-            this.btnVisualizarRutinas.TabIndex = 4;
+            this.btnVisualizarRutinas.TabIndex = 8;
             this.btnVisualizarRutinas.Text = "Rutinas";
             this.btnVisualizarRutinas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVisualizarRutinas.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@
             this.btnAltaCondicion.Location = new System.Drawing.Point(0, 40);
             this.btnAltaCondicion.Name = "btnAltaCondicion";
             this.btnAltaCondicion.Size = new System.Drawing.Size(250, 40);
-            this.btnAltaCondicion.TabIndex = 3;
+            this.btnAltaCondicion.TabIndex = 6;
             this.btnAltaCondicion.Text = "Condición física";
             this.btnAltaCondicion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAltaCondicion.UseVisualStyleBackColor = false;
@@ -223,7 +223,7 @@
             this.btnAltaEntrenamiento.Location = new System.Drawing.Point(0, 0);
             this.btnAltaEntrenamiento.Name = "btnAltaEntrenamiento";
             this.btnAltaEntrenamiento.Size = new System.Drawing.Size(250, 40);
-            this.btnAltaEntrenamiento.TabIndex = 2;
+            this.btnAltaEntrenamiento.TabIndex = 5;
             this.btnAltaEntrenamiento.Text = "Entrenamiento";
             this.btnAltaEntrenamiento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAltaEntrenamiento.UseVisualStyleBackColor = false;
@@ -270,7 +270,7 @@
             this.btnCrearRutina.Location = new System.Drawing.Point(0, 40);
             this.btnCrearRutina.Name = "btnCrearRutina";
             this.btnCrearRutina.Size = new System.Drawing.Size(250, 40);
-            this.btnCrearRutina.TabIndex = 1;
+            this.btnCrearRutina.TabIndex = 3;
             this.btnCrearRutina.Text = "Crear rutina";
             this.btnCrearRutina.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCrearRutina.UseVisualStyleBackColor = false;
@@ -288,7 +288,7 @@
             this.btnPersonasEjercicios.Location = new System.Drawing.Point(0, 0);
             this.btnPersonasEjercicios.Name = "btnPersonasEjercicios";
             this.btnPersonasEjercicios.Size = new System.Drawing.Size(250, 40);
-            this.btnPersonasEjercicios.TabIndex = 0;
+            this.btnPersonasEjercicios.TabIndex = 2;
             this.btnPersonasEjercicios.Text = "Personas y ejercicios";
             this.btnPersonasEjercicios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPersonasEjercicios.UseVisualStyleBackColor = false;
@@ -306,7 +306,7 @@
             this.btnDatosBasicos.Location = new System.Drawing.Point(0, 100);
             this.btnDatosBasicos.Name = "btnDatosBasicos";
             this.btnDatosBasicos.Size = new System.Drawing.Size(250, 50);
-            this.btnDatosBasicos.TabIndex = 0;
+            this.btnDatosBasicos.TabIndex = 1;
             this.btnDatosBasicos.Text = "Datos básicos";
             this.btnDatosBasicos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDatosBasicos.UseVisualStyleBackColor = true;
@@ -413,7 +413,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(818, 885);
             this.Name = "MenuPrincipal";
-            this.Opacity = 0.95D;
+            this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
             this.panelContenedor.ResumeLayout(false);

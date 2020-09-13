@@ -1,4 +1,4 @@
-﻿using Gimnasio.Modelos;
+﻿using Gimnasio.Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,25 +17,19 @@ namespace Gimnasio
         {
             InitializeComponent();
             #region DataSet Ejercicios
-            string cmd = string.Format("select * from ejercicios");
-            DataSet ds = BD.Consultar(cmd);
-            clbEjercicios.DataSource = ds.Tables[0];
+            clbEjercicios.DataSource = Ejercicios.obtenerEjercicios().Tables[0];
             clbEjercicios.DisplayMember = "nombre";
             clbEjercicios.ValueMember = "nombre";
             #endregion
 
             #region DataSet Dias
-            cmd = string.Format("select * from dias");
-            ds = BD.Consultar(cmd);
-            clbDias.DataSource = ds.Tables[0];
+            clbDias.DataSource = Dias.obtenerDias().Tables[0];
             clbDias.DisplayMember = "dia";
             clbDias.ValueMember = "dia";
             #endregion
 
             #region DataSet Musculos
-            cmd = string.Format("select * from musculos");
-            ds = BD.Consultar(cmd);
-            clbMusculos.DataSource = ds.Tables[0];
+            clbMusculos.DataSource = Musculos.obtenerMusculos().Tables[0];
             clbMusculos.DisplayMember = "musculo";
             clbMusculos.ValueMember = "musculo";
             #endregion
@@ -47,8 +41,7 @@ namespace Gimnasio
         {
             try
             {
-                BD.insertarRutina();
-                int idRutina = Convert.ToInt32(BD.ObtenerPrimeraCoincidencia("select id from rutinas order by id desc"));
+                int idRutina = Convert.ToInt32(Rutinas.insertarRutina());
 
                 PersistirDiasRutina(idRutina);
                 PersistirMusculosRutina(idRutina);
@@ -68,19 +61,19 @@ namespace Gimnasio
         private void PersistirDiasRutina(int idRutina)
         {
             foreach (DataRowView Dia in clbDias.CheckedItems)
-                BD.insertarDiaRutina(idRutina, Convert.ToInt32(Dia.Row["id"]));
+                Rutinas.insertarDiaRutina(idRutina, Convert.ToInt32(Dia.Row["id"]));
         }
 
         private void PersistirMusculosRutina(int idRutina)
         {
             foreach (DataRowView Musculo in clbMusculos.CheckedItems)
-                BD.insertarMusculoRutina(Convert.ToInt32(Musculo.Row["id"]), idRutina);
+                Rutinas.insertarMusculoRutina(Convert.ToInt32(Musculo.Row["id"]), idRutina);
         }
 
         private void PersistirEjerciciosRutina(int idRutina)
         {
             foreach (DataRowView Ejercicio in clbEjercicios.CheckedItems)
-                BD.insertarEjercicioRutina(Convert.ToInt32(Ejercicio.Row["id"]), idRutina);
+                Rutinas.insertarEjercicioRutina(Convert.ToInt32(Ejercicio.Row["id"]), idRutina);
         }
 
         private void LimpiarDatos()

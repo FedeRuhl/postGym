@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gimnasio.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,10 +18,7 @@ namespace Gimnasio
         public ActualizarCondicionFisica()
         {
             InitializeComponent();
-
-            string consulta = string.Format("select * from personas");
-            DataSet ds = BD.Consultar(consulta);
-            cbPersonas.DataSource = ds.Tables[0];
+            cbPersonas.DataSource = Personas.obtenerPersonas().Tables[0];
             cbPersonas.DisplayMember = "nombre";
             cbPersonas.ValueMember = "nombre";
             cbPersonas.SelectedIndex = 0;
@@ -52,15 +50,14 @@ namespace Gimnasio
             DataRowView Persona = (DataRowView)cbPersonas.Items[cbPersonas.SelectedIndex];
             int personaID = Convert.ToInt32(Persona.Row["id"]);
             #endregion
-            if (float.TryParse(tbPeso.Text, out float peso) && fotosPersona.Count != 0)
+            if (double.TryParse(tbPeso.Text, out double peso) && fotosPersona.Count != 0)
             {
-                BD.insertarDetallesPersona(peso, fecha, personaID);
-                int DetallesPersonaID = Convert.ToInt32(BD.ObtenerPrimeraCoincidencia($"select id from DetallesPersonas where PersonaId = {personaID} order by id desc"));
+                int DetallesPersonaID = DetallesPersonas.insertarDetallesPersona(peso, fecha, personaID);
 
                 foreach (Image Foto in fotosPersona)
                 {
                     byte[] fotoPersona = ConversorImagenes.ConvertirImagenBytes(Foto);
-                    BD.insertarFoto(DetallesPersonaID, fotoPersona);
+                    DetallesPersonas.insertarFoto(DetallesPersonaID, fotoPersona);
                 }
 
                 MessageBox.Show("¡Los cambios han sigo guardados correctamente!");

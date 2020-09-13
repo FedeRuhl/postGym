@@ -49,7 +49,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>install icon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Gimnasio.Program</StartupObject>
@@ -88,13 +89,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActualizarPersona.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ActualizarPersona.Designer.cs">
-      <DependentUpon>ActualizarPersona.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CheckBoxPersonalizado.cs">
+    <Compile Include="Datos\DetallesPersonas.cs" />
+    <Compile Include="Datos\Dias.cs" />
+    <Compile Include="Datos\Ejercicios.cs" />
+    <Compile Include="Datos\Musculos.cs" />
+    <Compile Include="Datos\Personas.cs" />
+    <Compile Include="Datos\Rutinas.cs" />
+    <Compile Include="Datos\Series.cs" />
+    <Compile Include="Datos\Sets.cs" />
+    <Compile Include="Elementos personalizados\CheckBoxPersonalizado.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ConsultaCondicionesFisicas.cs">
@@ -121,24 +124,19 @@
     <Compile Include="CrearRutina.Designer.cs">
       <DependentUpon>CrearRutina.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ejercicios.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Ejercicios.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Fecha.cs" />
+    <Compile Include="Utilidades\Fecha.cs" />
     <Compile Include="MostrarFotos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MostrarFotos.Designer.cs">
       <DependentUpon>MostrarFotos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConversorImagenes.cs" />
-    <Compile Include="Mantenimiento.cs">
+    <Compile Include="Utilidades\ConversorImagenes.cs" />
+    <Compile Include="MantenimientoPersonasEjercicios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimiento.Designer.cs">
-      <DependentUpon>Mantenimiento.cs</DependentUpon>
+    <Compile Include="MantenimientoPersonasEjercicios.Designer.cs">
+      <DependentUpon>MantenimientoPersonasEjercicios.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -146,7 +144,6 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modelos\Ejercicio.cs" />
     <Compile Include="ActualizarCondicionFisica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,99 +156,14 @@
     <Compile Include="SubirEntrenamiento.Designer.cs">
       <DependentUpon>SubirEntrenamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="TextBoxPersonalizado.cs">
+    <Compile Include="Elementos personalizados\TextBoxPersonalizado.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ConsultaEjercicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultaEjercicio.Designer.cs">
-      <DependentUpon>ConsultaEjercicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consultas.Designer.cs">
-      <DependentUpon>Consultas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ConsultasDetallesEjercicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultasDetallesEjercicio.Designer.cs">
-      <DependentUpon>ConsultasDetallesEjercicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ConsultasDetallesPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultasDetallesPerfil.Designer.cs">
-      <DependentUpon>ConsultasDetallesPerfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ConsultasPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultasPerfil.Designer.cs">
-      <DependentUpon>ConsultasPerfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ContenedorConsultas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ContenedorConsultas.Designer.cs">
-      <DependentUpon>ContenedorConsultas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ContenedorMantenimiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ContenedorMantenimiento.Designer.cs">
-      <DependentUpon>ContenedorMantenimiento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ContenedorProcesos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ContenedorProcesos.Designer.cs">
-      <DependentUpon>ContenedorProcesos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioBase.Designer.cs">
-      <DependentUpon>FormularioBase.cs</DependentUpon>
-    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="BD.cs" />
-    <Compile Include="MainClass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainClass.Designer.cs">
-      <DependentUpon>MainClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MantenimientoEjercicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenimientoEjercicio.Designer.cs">
-      <DependentUpon>MantenimientoEjercicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CrearPersona.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CrearPersona.Designer.cs">
-      <DependentUpon>CrearPersona.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="subirRutina.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="subirRutina.Designer.cs">
-      <DependentUpon>subirRutina.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="ActualizarPersona.resx">
-      <DependentUpon>ActualizarPersona.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaCondicionesFisicas.resx">
       <DependentUpon>ConsultaCondicionesFisicas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConsultaEjercicio.resx">
-      <DependentUpon>ConsultaEjercicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaEntrenamientos.resx">
       <DependentUpon>ConsultaEntrenamientos.cs</DependentUpon>
@@ -259,47 +171,14 @@
     <EmbeddedResource Include="ConsultaRutinas.resx">
       <DependentUpon>ConsultaRutinas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas.resx">
-      <DependentUpon>Consultas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConsultasDetallesEjercicio.resx">
-      <DependentUpon>ConsultasDetallesEjercicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConsultasDetallesPerfil.resx">
-      <DependentUpon>ConsultasDetallesPerfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConsultasPerfil.resx">
-      <DependentUpon>ConsultasPerfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ContenedorConsultas.resx">
-      <DependentUpon>ContenedorConsultas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ContenedorMantenimiento.resx">
-      <DependentUpon>ContenedorMantenimiento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ContenedorProcesos.resx">
-      <DependentUpon>ContenedorProcesos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CrearRutina.resx">
       <DependentUpon>CrearRutina.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioBase.resx">
-      <DependentUpon>FormularioBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarFotos.resx">
       <DependentUpon>MostrarFotos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainClass.resx">
-      <DependentUpon>MainClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimiento.resx">
-      <DependentUpon>Mantenimiento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MantenimientoEjercicio.resx">
-      <DependentUpon>MantenimientoEjercicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrearPersona.resx">
-      <DependentUpon>CrearPersona.cs</DependentUpon>
+    <EmbeddedResource Include="MantenimientoPersonasEjercicios.resx">
+      <DependentUpon>MantenimientoPersonasEjercicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -320,20 +199,6 @@
     <EmbeddedResource Include="SubirEntrenamiento.resx">
       <DependentUpon>SubirEntrenamiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="subirRutina.resx">
-      <DependentUpon>subirRutina.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="Ejercicios.xsc">
-      <DependentUpon>Ejercicios.xsd</DependentUpon>
-    </None>
-    <None Include="Ejercicios.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Ejercicios.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Ejercicios.xss">
-      <DependentUpon>Ejercicios.xsd</DependentUpon>
-    </None>
     <None Include="Gimnasio_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ActualizarPersona.datasource" />
@@ -365,8 +230,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app_icon.ico" />
-    <Content Include="install icon.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

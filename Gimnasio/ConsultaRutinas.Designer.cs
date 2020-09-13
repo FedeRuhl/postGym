@@ -86,6 +86,7 @@
             // 
             this.cbDias.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbDias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.cbDias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDias.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbDias.ForeColor = System.Drawing.Color.White;
             this.cbDias.FormattingEnabled = true;
@@ -100,7 +101,7 @@
             this.cbDias.Location = new System.Drawing.Point(277, 112);
             this.cbDias.Name = "cbDias";
             this.cbDias.Size = new System.Drawing.Size(145, 28);
-            this.cbDias.TabIndex = 16;
+            this.cbDias.TabIndex = 1;
             this.cbDias.SelectedIndexChanged += new System.EventHandler(this.cbDias_SelectedIndexChanged);
             // 
             // dgbMusculos
@@ -157,7 +158,7 @@
             this.dgbMusculos.RowTemplate.Height = 24;
             this.dgbMusculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgbMusculos.Size = new System.Drawing.Size(410, 293);
-            this.dgbMusculos.TabIndex = 17;
+            this.dgbMusculos.TabIndex = 7;
             this.dgbMusculos.VirtualMode = true;
             this.dgbMusculos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbMusculos_CellDoubleClick);
             // 
@@ -222,7 +223,7 @@
             this.dgbEjercicios.RowTemplate.Height = 24;
             this.dgbEjercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgbEjercicios.Size = new System.Drawing.Size(425, 293);
-            this.dgbEjercicios.TabIndex = 18;
+            this.dgbEjercicios.TabIndex = 8;
             this.dgbEjercicios.VirtualMode = true;
             this.dgbEjercicios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbEjercicios_CellDoubleClick);
             // 
@@ -261,6 +262,7 @@
             // 
             this.cbOpcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbOpcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.cbOpcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOpcion.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbOpcion.ForeColor = System.Drawing.Color.White;
             this.cbOpcion.FormattingEnabled = true;
@@ -275,7 +277,7 @@
             this.cbOpcion.Location = new System.Drawing.Point(463, 112);
             this.cbOpcion.Name = "cbOpcion";
             this.cbOpcion.Size = new System.Drawing.Size(145, 28);
-            this.cbOpcion.TabIndex = 22;
+            this.cbOpcion.TabIndex = 2;
             this.cbOpcion.SelectedIndexChanged += new System.EventHandler(this.cbOpcion_SelectedIndexChanged);
             // 
             // lOpcion
@@ -300,7 +302,7 @@
             this.btnEliminarRutina.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.btnEliminarRutina.Name = "btnEliminarRutina";
             this.btnEliminarRutina.Size = new System.Drawing.Size(149, 31);
-            this.btnEliminarRutina.TabIndex = 25;
+            this.btnEliminarRutina.TabIndex = 9;
             this.btnEliminarRutina.Text = "Eliminar rutina";
             this.btnEliminarRutina.UseVisualStyleBackColor = false;
             this.btnEliminarRutina.Click += new System.EventHandler(this.btnEliminarRutina_Click);
@@ -315,7 +317,7 @@
             this.btnAgregarMusculo.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.btnAgregarMusculo.Name = "btnAgregarMusculo";
             this.btnAgregarMusculo.Size = new System.Drawing.Size(131, 31);
-            this.btnAgregarMusculo.TabIndex = 27;
+            this.btnAgregarMusculo.TabIndex = 4;
             this.btnAgregarMusculo.Text = "Agregar";
             this.btnAgregarMusculo.UseVisualStyleBackColor = false;
             this.btnAgregarMusculo.Click += new System.EventHandler(this.btnAgregarMusculo_Click);
@@ -330,7 +332,7 @@
             this.btnAgregarEjercicio.Margin = new System.Windows.Forms.Padding(15, 17, 3, 17);
             this.btnAgregarEjercicio.Name = "btnAgregarEjercicio";
             this.btnAgregarEjercicio.Size = new System.Drawing.Size(131, 31);
-            this.btnAgregarEjercicio.TabIndex = 29;
+            this.btnAgregarEjercicio.TabIndex = 6;
             this.btnAgregarEjercicio.Text = "Agregar";
             this.btnAgregarEjercicio.UseVisualStyleBackColor = false;
             this.btnAgregarEjercicio.Click += new System.EventHandler(this.btnAgregarEjercicio_Click);
@@ -341,13 +343,14 @@
             this.cbMusculos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbMusculos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbMusculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.cbMusculos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMusculos.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.cbMusculos.ForeColor = System.Drawing.Color.White;
             this.cbMusculos.FormattingEnabled = true;
             this.cbMusculos.Location = new System.Drawing.Point(112, 210);
             this.cbMusculos.Name = "cbMusculos";
             this.cbMusculos.Size = new System.Drawing.Size(256, 28);
-            this.cbMusculos.TabIndex = 30;
+            this.cbMusculos.TabIndex = 3;
             this.cbMusculos.Click += new System.EventHandler(this.cbMusculos_Click);
             // 
             // cbEjercicios
@@ -362,7 +365,7 @@
             this.cbEjercicios.Location = new System.Drawing.Point(566, 210);
             this.cbEjercicios.Name = "cbEjercicios";
             this.cbEjercicios.Size = new System.Drawing.Size(256, 28);
-            this.cbEjercicios.TabIndex = 31;
+            this.cbEjercicios.TabIndex = 5;
             this.cbEjercicios.Click += new System.EventHandler(this.cbEjercicios_Click);
             // 
             // ConsultaRutinas

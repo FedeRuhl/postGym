@@ -130,7 +130,7 @@ namespace Gimnasio
 
         private void btnPersonasEjercicios_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Mantenimiento>();
+            AbrirFormulario<MantenimientoPersonasEjercicios>();
             btnPersonasEjercicios.BackColor = Color.FromArgb(241, 221, 56);
         }
 
