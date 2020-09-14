@@ -70,5 +70,19 @@ namespace Gimnasio.Datos
             command.ExecuteNonQuery();
             conexion.Close();
         }
+
+        public static DataSet obtenerEjerciciosSegunDia(int diaID)
+        {
+            conexion.Open();
+            DataSet DS = new DataSet();
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "Select ID, Ejercicio from VRutinaEjercicios where DiaID = @DiaID order by Ejercicio";
+            command.Parameters.AddWithValue("@DiaID", diaID);
+            command.Connection = conexion;
+            SqlDataAdapter DP = new SqlDataAdapter(command);
+            DP.Fill(DS);
+            conexion.Close();
+            return DS;
+        }
     }
 }

@@ -43,6 +43,7 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.panelSubirRutina = new System.Windows.Forms.FlowLayoutPanel();
             this.panelBotones = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelBotones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +106,7 @@
             this.dtpDiaEntrenamiento.Size = new System.Drawing.Size(200, 22);
             this.dtpDiaEntrenamiento.TabIndex = 2;
             this.dtpDiaEntrenamiento.Value = new System.DateTime(2020, 9, 10, 0, 0, 0, 0);
+            this.dtpDiaEntrenamiento.ValueChanged += new System.EventHandler(this.dtpDiaEntrenamiento_ValueChanged);
             // 
             // btnGuardar
             // 
@@ -234,12 +236,27 @@
             this.panelBotones.Size = new System.Drawing.Size(432, 60);
             this.panelBotones.TabIndex = 25;
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
+            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(607, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 34);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Traer todos";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SubirEntrenamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(800, 903);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.panelSubirRutina);
             this.Controls.Add(this.cbRepOseg);
@@ -280,5 +297,6 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.FlowLayoutPanel panelSubirRutina;
         private System.Windows.Forms.Panel panelBotones;
+        private System.Windows.Forms.Button button1;
     }
 }

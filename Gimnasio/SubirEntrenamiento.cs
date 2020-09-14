@@ -30,11 +30,6 @@ namespace Gimnasio
             cbPersonas.ValueMember = "nombre";
             cbPersonas.SelectedIndex = 0;
 
-            cbEjercicios.DataSource = Ejercicios.obtenerEjercicios().Tables[0];
-            cbEjercicios.DisplayMember = "nombre";
-            cbEjercicios.ValueMember = "nombre";
-            cbEjercicios.SelectedIndex = 0;
-
             dtpDiaEntrenamiento.Value = DateTime.Now;
             dtpDiaEntrenamiento.MaxDate = DateTime.Now;
         }
@@ -196,6 +191,24 @@ namespace Gimnasio
                 }
             }
             return arregloDinamico;
+        }
+
+        private void dtpDiaEntrenamiento_ValueChanged(object sender, EventArgs e)
+        {
+            int diaSemana = Convert.ToInt32(dtpDiaEntrenamiento.Value.DayOfWeek);
+            diaSemana = (diaSemana == 0) ? 7 : diaSemana;
+
+            cbEjercicios.DataSource = Ejercicios.obtenerEjerciciosSegunDia(diaSemana).Tables[0];
+            cbEjercicios.DisplayMember = "Ejercicio";
+            cbEjercicios.ValueMember = "Ejercicio";
+            //cbEjercicios.SelectedIndex = 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cbEjercicios.DataSource = Ejercicios.obtenerEjercicios().Tables[0];
+            cbEjercicios.DisplayMember = "Nombre";
+            cbEjercicios.ValueMember = "Nombre";
         }
     }
 }
