@@ -17,9 +17,7 @@ namespace Gimnasio
         {
             InitializeComponent();
             #region DataSet Ejercicios
-            clbEjercicios.DataSource = Ejercicios.obtenerEjercicios().Tables[0];
-            clbEjercicios.DisplayMember = "nombre";
-            clbEjercicios.ValueMember = "nombre";
+            actualizarCheckedListEjercicios();
             #endregion
 
             #region DataSet Dias
@@ -35,6 +33,13 @@ namespace Gimnasio
             #endregion
 
 
+        }
+
+        private void actualizarCheckedListEjercicios()
+        {
+            clbEjercicios.DataSource = Ejercicios.obtenerEjercicios().Tables[0];
+            clbEjercicios.DisplayMember = "nombre";
+            clbEjercicios.ValueMember = "nombre";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -86,6 +91,21 @@ namespace Gimnasio
 
             for (int i = 0; i < clbEjercicios.Items.Count; i++)
                 clbEjercicios.SetItemChecked(i, false);
+        }
+
+        private void tbFiltro_KeyUp(object sender, KeyEventArgs e)
+        {
+            BindingSource bs = new BindingSource
+            {
+                DataSource = clbEjercicios.DataSource,
+                Filter = "nombre like '%" + tbFiltro.Text + "%'"
+            };
+            clbEjercicios.DataSource = bs.DataSource;
+        }
+
+        private void CrearRutina_Enter(object sender, EventArgs e)
+        {
+            actualizarCheckedListEjercicios();
         }
     }
 }

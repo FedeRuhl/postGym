@@ -19,10 +19,15 @@ namespace Gimnasio
         public ActualizarCondicionFisica()
         {
             InitializeComponent();
+            cargarCheckBoxPersonas();
+        }
+
+        private void cargarCheckBoxPersonas()
+        {
             cbPersonas.DataSource = Personas.obtenerPersonas().Tables[0];
             cbPersonas.DisplayMember = "nombre";
             cbPersonas.ValueMember = "nombre";
-            cbPersonas.SelectedIndex = 0;
+            //cbPersonas.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,6 +96,11 @@ namespace Gimnasio
         {
             dtpActualizacion.Value = DateTime.Now;
             dtpActualizacion.MaxDate = DateTime.Now;
+        }
+
+        private void ActualizarCondicionFisica_Enter(object sender, EventArgs e)
+        {
+            cargarCheckBoxPersonas();
         }
     }
 }

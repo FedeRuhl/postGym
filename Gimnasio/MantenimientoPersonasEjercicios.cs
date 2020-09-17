@@ -42,9 +42,6 @@ namespace Gimnasio
                     lAltura.Visible = false;
                     tbAltura.Visible = false;
                 }
-
-                dataGridView1.Columns["ID"].Visible = false;
-                dataGridView1.Columns["Eliminar"].DisplayIndex = dataGridView1.Columns.Count - 1;
             }
         }
 
@@ -97,14 +94,37 @@ namespace Gimnasio
         {
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Eliminar")
             {
-                int idFilaActual = dataGridView1.CurrentRow.Index;
-                int id = Convert.ToInt32(dataGridView1["id", idFilaActual].Value);
-                if (cbEjercicioOPersona.SelectedItem.ToString() == "Personas")
-                    Personas.eliminarPersona(id);
-                else
-                    Ejercicios.eliminarEjercicio(id);
-                dataGridView1.Rows.RemoveAt(idFilaActual);
+                String pregunta = "¿Segurísimo que querés borrar todos los datos de " + dataGridView1["nombre", e.RowIndex].Value.ToString() + "?";
+                if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    int idFilaActual = dataGridView1.CurrentRow.Index;
+                    int id = Convert.ToInt32(dataGridView1["id", idFilaActual].Value);
+                    if (cbEjercicioOPersona.SelectedItem.ToString() == "Personas")
+                        Personas.eliminarPersona(id);
+                    else
+                        Ejercicios.eliminarEjercicio(id);
+                    dataGridView1.Rows.RemoveAt(idFilaActual);
+                }
             }
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            dataGridView1.Columns["ID"].Visible = false;
+            dataGridView1.Columns["Eliminar"].DisplayIndex = dataGridView1.Columns.Count - 1;
+
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Eliminar")
+                dataGridView1[e.ColumnIndex, e.RowIndex].ToolTipText = "Doble clic para eliminar";
+        }
+
+        private void tbFiltro_KeyUp(object sender, KeyEventArgs e)
+        {
+            BindingSource bs = new BindingSource
+            {
+                DataSource = dataGridView1.DataSource,
+                Filter = "nombre like '%" + tbFiltro.Text + "%'"
+            };
+            dataGridView1.DataSource = bs.DataSource;
         }
     }
 }

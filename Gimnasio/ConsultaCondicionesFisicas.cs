@@ -39,10 +39,13 @@ namespace Gimnasio
 
         private void LLenarDataGridView()
         {
-            DateTime fecha = Convert.ToDateTime(lbFechas.SelectedValue.ToString());
-            String fechaFormatoUniversal = Fecha.convertirFormatoUniversal(fecha);
-            dgbCondicionesFisicas.DataSource = DetallesPersonas.obtenerDetalles(fechaFormatoUniversal).Tables[0];
-            dataGridViewCargado = true;
+            if (lbFechas.SelectedValue != null)
+            {
+                DateTime fecha = Convert.ToDateTime(lbFechas.SelectedValue.ToString());
+                String fechaFormatoUniversal = Fecha.convertirFormatoUniversal(fecha);
+                dgbCondicionesFisicas.DataSource = DetallesPersonas.obtenerDetalles(fechaFormatoUniversal).Tables[0];
+                dataGridViewCargado = true;
+            }
         }
 
         private void ConsultaCondicionesFisicas_Enter(object sender, EventArgs e)
@@ -52,17 +55,19 @@ namespace Gimnasio
 
         private void ReorganizarColumnas()
         {
-            dgbCondicionesFisicas.Columns["Eliminar"].DisplayIndex = dgbCondicionesFisicas.Columns.Count - 1;
-            dgbCondicionesFisicas.Columns["PersonaID"].Visible = false;
-            dgbCondicionesFisicas.Columns["ID"].Visible = false;
-            dgbCondicionesFisicas.Columns["Fecha"].Visible = false;
-            dgbCondicionesFisicas.Columns["FotoID"].Visible = false;
+            if (lbFechas.Items.Count > 0)
+            {
+                dgbCondicionesFisicas.Columns["Eliminar"].DisplayIndex = dgbCondicionesFisicas.Columns.Count - 1;
+                dgbCondicionesFisicas.Columns["PersonaID"].Visible = false;
+                dgbCondicionesFisicas.Columns["ID"].Visible = false;
+                dgbCondicionesFisicas.Columns["Fecha"].Visible = false;
+                dgbCondicionesFisicas.Columns["FotoID"].Visible = false;
 
-            //dgbCondicionesFisicas.RowTemplate.Height = 50; seteado desde el form evita errores
+                //dgbCondicionesFisicas.RowTemplate.Height = 50; seteado desde el form evita errores
 
-            DataGridViewImageColumn columnaImagen = (DataGridViewImageColumn) dgbCondicionesFisicas.Columns["Foto"];
-            columnaImagen.ImageLayout = DataGridViewImageCellLayout.Stretch;
-           
+                DataGridViewImageColumn columnaImagen = (DataGridViewImageColumn)dgbCondicionesFisicas.Columns["Foto"];
+                columnaImagen.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            }           
         }
 
         private void dgbCondicionesFisicas_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
@@ -92,18 +97,21 @@ namespace Gimnasio
         {
             if (dgbCondicionesFisicas.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
-                int idFilaActual = dgbCondicionesFisicas.CurrentRow.Index;
-                int fotoID = Convert.ToInt32(dgbCondicionesFisicas.Rows[idFilaActual].Cells["fotoID"].Value);
-                int detallesID = Convert.ToInt32(dgbCondicionesFisicas.Rows[e.RowIndex].Cells["ID"].Value);
-
-                bool ultimaFotoEliminada = DetallesPersonas.eliminarFoto(fotoID, detallesID);
-                if (ultimaFotoEliminada)
+                String pregunta = "¿Segurísimo que querés borrar ese avance personal? ";
+                if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    DetallesPersonas.eliminarDetallesPersona(detallesID);
-                    CargarListBoxFechas();
+                    int idFilaActual = dgbCondicionesFisicas.CurrentRow.Index;
+                    int fotoID = Convert.ToInt32(dgbCondicionesFisicas.Rows[idFilaActual].Cells["fotoID"].Value);
+                    int detallesID = Convert.ToInt32(dgbCondicionesFisicas.Rows[e.RowIndex].Cells["ID"].Value);
+
+                    bool ultimaFotoEliminada = DetallesPersonas.eliminarFoto(fotoID, detallesID);
+                    if (ultimaFotoEliminada)
+                    {
+                        DetallesPersonas.eliminarDetallesPersona(detallesID);
+                        CargarListBoxFechas();
+                    }
+                    dgbCondicionesFisicas.Rows.RemoveAt(idFilaActual);
                 }
-                    
-                dgbCondicionesFisicas.Rows.RemoveAt(idFilaActual);
             }
         }
 

@@ -25,10 +25,7 @@ namespace Gimnasio
 
         private void SubirEntrenamiento_Load(object sender, EventArgs e)
         {
-            cbPersonas.DataSource = Personas.obtenerPersonas().Tables[0];
-            cbPersonas.DisplayMember = "nombre";
-            cbPersonas.ValueMember = "nombre";
-            cbPersonas.SelectedIndex = 0;
+            actualizarComboBoxPersonas();
 
             dtpDiaEntrenamiento.Value = DateTime.Now;
             dtpDiaEntrenamiento.MaxDate = DateTime.Now;
@@ -38,13 +35,12 @@ namespace Gimnasio
         {
             if (validarCantidadSeriesRepSeg())
             {
-                String nombreTextBox = "";
                 int cantidadSeries = Convert.ToInt32(tbCantidadSeries.Text);
                 String textPlaceHolder = cbRepOseg.SelectedItem.ToString() == "Repeticiones" ? "Cantidad de repeticiones" : "Cantidad de segundos";
 
                 for (int i = 0; i < cantidadSeries; i++)
                 {
-                    nombreTextBox = "textRepOSeg";
+                    string nombreTextBox = "textRepOSeg";
                     textRepOSeg = inicializarTextBox(textPlaceHolder, nombreTextBox, i);
 
                     nombreTextBox = "textPeso";
@@ -198,10 +194,7 @@ namespace Gimnasio
             int diaSemana = Convert.ToInt32(dtpDiaEntrenamiento.Value.DayOfWeek);
             diaSemana = (diaSemana == 0) ? 7 : diaSemana;
 
-            cbEjercicios.DataSource = Ejercicios.obtenerEjerciciosSegunDia(diaSemana).Tables[0];
-            cbEjercicios.DisplayMember = "Ejercicio";
-            cbEjercicios.ValueMember = "Ejercicio";
-            //cbEjercicios.SelectedIndex = 0;
+            actualizarComboBoxEjercicios(diaSemana);   
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -209,6 +202,31 @@ namespace Gimnasio
             cbEjercicios.DataSource = Ejercicios.obtenerEjercicios().Tables[0];
             cbEjercicios.DisplayMember = "Nombre";
             cbEjercicios.ValueMember = "Nombre";
+        }
+
+        private void SubirEntrenamiento_Enter(object sender, EventArgs e)
+        {
+            int diaSemana = Convert.ToInt32(dtpDiaEntrenamiento.Value.DayOfWeek);
+            diaSemana = (diaSemana == 0) ? 7 : diaSemana;
+
+            actualizarComboBoxPersonas();
+            actualizarComboBoxEjercicios(diaSemana);
+        }
+
+        private void actualizarComboBoxPersonas()
+        {
+            cbPersonas.DataSource = Personas.obtenerPersonas().Tables[0];
+            cbPersonas.DisplayMember = "nombre";
+            cbPersonas.ValueMember = "nombre";
+            //cbPersonas.SelectedIndex = 0;
+        }
+
+        private void actualizarComboBoxEjercicios(int diaSemana)
+        {
+            cbEjercicios.DataSource = Ejercicios.obtenerEjerciciosSegunDia(diaSemana).Tables[0];
+            cbEjercicios.DisplayMember = "Ejercicio";
+            cbEjercicios.ValueMember = "Ejercicio";
+            //cbEjercicios.SelectedIndex = 0;
         }
     }
 }

@@ -1,32 +1,37 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Windows.Forms;
 
 namespace Gimnasio.Datos
 {
     public static class Sets
     {
-        private static readonly String con = @"Data Source=(local);Initial Catalog=Gimnasio;Integrated Security=True";
-        private static readonly SqlConnection conexion = new SqlConnection(con);
+        private static readonly String path = Application.StartupPath + "\\BD\\Gimnasio.db";
+        private static readonly String con = $"Data Source={path};Version=3";
+        //private static readonly SQLiteConnection conexion = new SQLiteConnection(con);
         public static int obtenerSet(String fecha, int personaID)
         {
             try
             {
-                conexion.Open();
-                SqlCommand command = new SqlCommand();
-                command.Connection = conexion;
-                command.CommandText = "Select ID from Sets where PersonaID = @PersonaID and Fecha = @Fecha";
-                command.Parameters.AddWithValue("@PersonaID", personaID);
-                command.Parameters.AddWithValue("@Fecha", fecha);
-                int id = Convert.ToInt32(command.ExecuteScalar());
-                conexion.Close();
-                return id;
+                using (SQLiteConnection conexion = new SQLiteConnection(con))
+                {
+                    conexion.Open();
+                    using (SQLiteCommand command = new SQLiteCommand())
+                    {
+                        command.Connection = conexion;
+                        command.CommandText = "Select ID from Sets where PersonaID = @PersonaID and Fecha = @Fecha";
+                        command.Parameters.AddWithValue("@PersonaID", personaID);
+                        command.Parameters.AddWithValue("@Fecha", fecha);
+                        int id = Convert.ToInt32(command.ExecuteScalar());
+                        return id;
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                conexion.Close();
                 return 0;
             }
         }
@@ -35,21 +40,24 @@ namespace Gimnasio.Datos
         {
             try
             {
-                conexion.Open();
-                SqlCommand command = new SqlCommand();
-                command.Connection = conexion;
-                command.CommandText = "insert into sets (fecha, personaID) values (@Fecha, @PersonaID); " +
-                                        "select SCOPE_IDENTITY()";
-                command.Parameters.AddWithValue("@Fecha", fecha);
-                command.Parameters.AddWithValue("@PersonaID", personaID);
-                int id = Convert.ToInt32(command.ExecuteScalar());
-                conexion.Close();
-                return id;
+                using (SQLiteConnection conexion = new SQLiteConnection(con))
+                {
+                    conexion.Open();
+                    using (SQLiteCommand command = new SQLiteCommand())
+                    {
+                        command.Connection = conexion;
+                        command.CommandText = "insert into sets (fecha, personaID) values (@Fecha, @PersonaID); " +
+                                                "select last_insert_rowid()";
+                        command.Parameters.AddWithValue("@Fecha", fecha);
+                        command.Parameters.AddWithValue("@PersonaID", personaID);
+                        int id = Convert.ToInt32(command.ExecuteScalar());
+                        return id;
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                conexion.Close();
                 return 0;
             }
         }
@@ -58,43 +66,49 @@ namespace Gimnasio.Datos
         {
             try
             {
-                conexion.Open();
-                SqlCommand command = new SqlCommand();
-                command.Connection = conexion;
-                command.CommandText = "select min(Fecha) 'inicio', max(Fecha) 'fin' from Sets";
-                SqlDataReader reader = command.ExecuteReader();
-
-                Tuple<DateTime, DateTime> fechas = null;
-
-                if (reader.Read())
+                using (SQLiteConnection conexion = new SQLiteConnection(con))
                 {
-                    fechas = Tuple.Create(Convert.ToDateTime(reader["inicio"]), Convert.ToDateTime(reader["fin"]));
-                    conexion.Close();
+                    conexion.Open();
+                    using (SQLiteCommand command = new SQLiteCommand())
+                    {
+                        command.Connection = conexion;
+                        command.CommandText = "select min(Fecha) 'inicio', max(Fecha) 'fin' from Sets";
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            DateTime fechaFicticia = DateTime.Parse("1999/01/01");
+                            Tuple<DateTime, DateTime> fechas = Tuple.Create(fechaFicticia, DateTime.Today);
+
+                            if (reader.Read())
+                            {
+                                if (reader["inicio"] != DBNull.Value && reader["fin"] != DBNull.Value)
+                                    fechas = Tuple.Create(Convert.ToDateTime(reader["inicio"]), Convert.ToDateTime(reader["fin"]));
+                            }
+                            conexion.Close();
+                            return fechas;
+                        }
+                    }
                 }
-                else
-                {
-                    fechas = Tuple.Create(DateTime.Now, DateTime.Now);
-                    conexion.Close();
-                }
-                return fechas;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                conexion.Close();
                 return null;
             }
         }
 
         public static void eliminarSet(int setID)
         {
-            conexion.Open();
-            SqlCommand command = new SqlCommand();
-            command.Connection = conexion;
-            command.CommandText = "delete from Sets where id = @setID";
-            command.Parameters.AddWithValue("@setID", setID);
-            command.ExecuteNonQuery();
-            conexion.Close();
+            using (SQLiteConnection conexion = new SQLiteConnection(con))
+            {
+                conexion.Open();
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    command.Connection = conexion;
+                    command.CommandText = "PRAGMA foreign_keys = ON; delete from Sets where id = @setID";
+                    command.Parameters.AddWithValue("@setID", setID);
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

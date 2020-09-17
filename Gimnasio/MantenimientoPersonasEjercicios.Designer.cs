@@ -45,6 +45,7 @@
             this.lAltura = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.tbAltura = new System.Windows.Forms.TextBox();
+            this.tbFiltro = new Gimnasio.TextBoxPersonalizado();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPersonaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -124,7 +125,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dataGridView1.Location = new System.Drawing.Point(63, 289);
+            this.dataGridView1.Location = new System.Drawing.Point(63, 346);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -146,10 +147,11 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(774, 615);
+            this.dataGridView1.Size = new System.Drawing.Size(774, 680);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.VirtualMode = true;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // Eliminar
@@ -223,12 +225,26 @@
             this.tbAltura.TabIndex = 3;
             this.tbAltura.Visible = false;
             // 
+            // tbFiltro
+            // 
+            this.tbFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.tbFiltro.ForeColor = System.Drawing.Color.White;
+            this.tbFiltro.Location = new System.Drawing.Point(307, 314);
+            this.tbFiltro.Name = "tbFiltro";
+            this.tbFiltro.Size = new System.Drawing.Size(264, 25);
+            this.tbFiltro.TabIndex = 9;
+            this.tbFiltro.Text = "Filtrar por nombre";
+            this.tbFiltro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbFiltro_KeyUp);
+            // 
             // MantenimientoPersonasEjercicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(900, 988);
+            this.ClientSize = new System.Drawing.Size(900, 1053);
+            this.Controls.Add(this.tbFiltro);
             this.Controls.Add(this.tbAltura);
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.lAltura);
@@ -264,5 +280,6 @@
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.TextBox tbAltura;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private TextBoxPersonalizado tbFiltro;
     }
 }

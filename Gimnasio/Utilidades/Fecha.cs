@@ -20,7 +20,7 @@ namespace Gimnasio
             if (dia.Length == 1)
                 dia = '0' + dia;
 
-            return (anio + mes + dia);
+            return (anio + "-" + mes + "-" + dia);
         }
     }
 }

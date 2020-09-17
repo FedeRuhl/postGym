@@ -89,11 +89,16 @@ namespace Gimnasio
         {
             if (dgbMusculos.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
-                int idFilaActual = dgbMusculos.CurrentRow.Index;
-                int musculoID = Convert.ToInt32(dgbMusculos.Rows[idFilaActual].Cells["ID"].Value);
-                
-                Rutinas.eliminarMusculoRutina(musculoID, rutinaID);
-                dgbMusculos.Rows.RemoveAt(idFilaActual);
+                String pregunta = "¿Segurísimo que querés borrar todos los datos del grupo muscular " + dgbMusculos["musculo", e.RowIndex].Value.ToString() + "?";
+                if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    int idFilaActual = dgbMusculos.CurrentRow.Index;
+                    int musculoID = Convert.ToInt32(dgbMusculos.Rows[idFilaActual].Cells["ID"].Value);
+
+                    Rutinas.eliminarMusculoRutina(musculoID, rutinaID);
+                    dgbMusculos.Rows.RemoveAt(idFilaActual);
+                }
+                    
             }
         }
 
@@ -101,20 +106,29 @@ namespace Gimnasio
         {
             if (dgbEjercicios.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
-                int idFilaActual = dgbEjercicios.CurrentRow.Index;
-                int ejercicioID = Convert.ToInt32(dgbEjercicios.Rows[idFilaActual].Cells["ID"].Value);
+                String pregunta = "¿Segurísimo que querés borrar todos los datos del ejercicio " + dgbEjercicios["ejercicio", e.RowIndex].Value.ToString() + "?";
+                if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    int idFilaActual = dgbEjercicios.CurrentRow.Index;
+                    int ejercicioID = Convert.ToInt32(dgbEjercicios.Rows[idFilaActual].Cells["ID"].Value);
 
-                Rutinas.eliminarEjercicioRutina(ejercicioID, rutinaID);
-                dgbEjercicios.Rows.RemoveAt(idFilaActual);
+                    Rutinas.eliminarEjercicioRutina(ejercicioID, rutinaID);
+                    dgbEjercicios.Rows.RemoveAt(idFilaActual);
+                }
+                   
             }
         }
 
         private void btnEliminarRutina_Click(object sender, EventArgs e)
         {
-            int diaID = cbDias.SelectedIndex + 1;
-            Rutinas.eliminarRutina(rutinaID);
-            cargarCheckBoxOpcion(diaID);
-            limpiarForm();
+            String pregunta = "¿Segurísimo que querés borrar la rutina " + cbOpcion.Text + "?";
+            if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                int diaID = cbDias.SelectedIndex + 1;
+                Rutinas.eliminarRutina(rutinaID);
+                cargarCheckBoxOpcion(diaID);
+                limpiarForm();
+            }
         }
 
         private void cbEjercicios_Click(object sender, EventArgs e)
@@ -163,6 +177,18 @@ namespace Gimnasio
             {
                 MessageBox.Show("¡Primero tenes que seleccionar una opción de rutina y algún ejercicio!");
             }
+        }
+
+        private void dgbMusculos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgbMusculos.Columns[e.ColumnIndex].HeaderText == "Eliminar")
+                dgbMusculos[e.ColumnIndex, e.RowIndex].ToolTipText = "Doble clic para eliminar";
+        }
+
+        private void dgbEjercicios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgbEjercicios.Columns[e.ColumnIndex].HeaderText == "Eliminar")
+                dgbEjercicios[e.ColumnIndex, e.RowIndex].ToolTipText = "Doble clic para eliminar";
         }
     }
 }

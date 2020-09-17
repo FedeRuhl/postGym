@@ -217,7 +217,7 @@
             // 
             // panelSubirRutina
             // 
-            this.panelSubirRutina.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelSubirRutina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panelSubirRutina.AutoScroll = true;
             this.panelSubirRutina.Font = new System.Drawing.Font("Trebuchet MS", 8F, System.Drawing.FontStyle.Bold);
             this.panelSubirRutina.ForeColor = System.Drawing.Color.White;
@@ -274,6 +274,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SubirEntrenamiento";
             this.Load += new System.EventHandler(this.SubirEntrenamiento_Load);
+            this.Enter += new System.EventHandler(this.SubirEntrenamiento_Enter);
             this.panelBotones.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

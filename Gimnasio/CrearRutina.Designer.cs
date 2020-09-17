@@ -37,6 +37,7 @@
             this.clbEjercicios = new System.Windows.Forms.CheckedListBox();
             this.clbDias = new System.Windows.Forms.CheckedListBox();
             this.clbMusculos = new System.Windows.Forms.CheckedListBox();
+            this.tbFiltro = new Gimnasio.TextBoxPersonalizado();
             this.SuspendLayout();
             // 
             // lAltura
@@ -45,7 +46,7 @@
             this.lAltura.AutoSize = true;
             this.lAltura.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lAltura.ForeColor = System.Drawing.Color.White;
-            this.lAltura.Location = new System.Drawing.Point(458, 155);
+            this.lAltura.Location = new System.Drawing.Point(458, 140);
             this.lAltura.Name = "lAltura";
             this.lAltura.Size = new System.Drawing.Size(104, 26);
             this.lAltura.TabIndex = 12;
@@ -57,7 +58,7 @@
             this.lDia.AutoSize = true;
             this.lDia.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDia.ForeColor = System.Drawing.Color.White;
-            this.lDia.Location = new System.Drawing.Point(249, 155);
+            this.lDia.Location = new System.Drawing.Point(249, 140);
             this.lDia.Name = "lDia";
             this.lDia.Size = new System.Drawing.Size(59, 26);
             this.lDia.TabIndex = 11;
@@ -93,7 +94,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(348, 421);
+            this.label3.Location = new System.Drawing.Point(348, 394);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 26);
             this.label3.TabIndex = 14;
@@ -105,7 +106,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(1)))), ((int)(((byte)(38)))));
             this.btnGuardar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(317, 815);
+            this.btnGuardar.Location = new System.Drawing.Point(309, 809);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(174, 37);
             this.btnGuardar.TabIndex = 4;
@@ -121,7 +122,7 @@
             this.clbEjercicios.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.clbEjercicios.ForeColor = System.Drawing.Color.White;
             this.clbEjercicios.FormattingEnabled = true;
-            this.clbEjercicios.Location = new System.Drawing.Point(162, 453);
+            this.clbEjercicios.Location = new System.Drawing.Point(155, 450);
             this.clbEjercicios.Name = "clbEjercicios";
             this.clbEjercicios.Size = new System.Drawing.Size(488, 356);
             this.clbEjercicios.TabIndex = 3;
@@ -134,7 +135,7 @@
             this.clbDias.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.clbDias.ForeColor = System.Drawing.Color.White;
             this.clbDias.FormattingEnabled = true;
-            this.clbDias.Location = new System.Drawing.Point(162, 184);
+            this.clbDias.Location = new System.Drawing.Point(162, 169);
             this.clbDias.Name = "clbDias";
             this.clbDias.Size = new System.Drawing.Size(228, 224);
             this.clbDias.TabIndex = 1;
@@ -147,18 +148,32 @@
             this.clbMusculos.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.clbMusculos.ForeColor = System.Drawing.Color.White;
             this.clbMusculos.FormattingEnabled = true;
-            this.clbMusculos.Location = new System.Drawing.Point(408, 184);
+            this.clbMusculos.Location = new System.Drawing.Point(408, 169);
             this.clbMusculos.Name = "clbMusculos";
             this.clbMusculos.Size = new System.Drawing.Size(242, 224);
             this.clbMusculos.TabIndex = 2;
             this.clbMusculos.ThreeDCheckBoxes = true;
+            // 
+            // tbFiltro
+            // 
+            this.tbFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.tbFiltro.ForeColor = System.Drawing.Color.White;
+            this.tbFiltro.Location = new System.Drawing.Point(265, 422);
+            this.tbFiltro.Name = "tbFiltro";
+            this.tbFiltro.Size = new System.Drawing.Size(264, 22);
+            this.tbFiltro.TabIndex = 15;
+            this.tbFiltro.Text = "Filtrar por nombre";
+            this.tbFiltro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbFiltro_KeyUp);
             // 
             // CrearRutina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(800, 873);
+            this.ClientSize = new System.Drawing.Size(800, 893);
+            this.Controls.Add(this.tbFiltro);
             this.Controls.Add(this.clbMusculos);
             this.Controls.Add(this.clbDias);
             this.Controls.Add(this.clbEjercicios);
@@ -171,6 +186,7 @@
             this.Name = "CrearRutina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearRutina";
+            this.Enter += new System.EventHandler(this.CrearRutina_Enter);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +203,6 @@
         private System.Windows.Forms.CheckedListBox clbEjercicios;
         private System.Windows.Forms.CheckedListBox clbDias;
         private System.Windows.Forms.CheckedListBox clbMusculos;
+        private TextBoxPersonalizado tbFiltro;
     }
 }

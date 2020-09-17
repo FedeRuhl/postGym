@@ -125,6 +125,7 @@
             this.dgbEntrenamientos.TabIndex = 2;
             this.dgbEntrenamientos.VirtualMode = true;
             this.dgbEntrenamientos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbEntrenamientos_CellDoubleClick);
+            this.dgbEntrenamientos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgbEntrenamientos_CellFormatting);
             this.dgbEntrenamientos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbEntrenamientos_CellValueChanged);
             // 
             // Eliminar

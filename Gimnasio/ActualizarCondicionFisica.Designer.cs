@@ -227,6 +227,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ActualizarCondicionFisica";
             this.Load += new System.EventHandler(this.ActualizarCondicionFisica_Load);
+            this.Enter += new System.EventHandler(this.ActualizarCondicionFisica_Enter);
             this.ResumeLayout(false);
             this.PerformLayout();
 

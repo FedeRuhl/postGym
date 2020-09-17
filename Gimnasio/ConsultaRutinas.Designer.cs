@@ -160,6 +160,7 @@
             this.dgbMusculos.TabIndex = 7;
             this.dgbMusculos.VirtualMode = true;
             this.dgbMusculos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbMusculos_CellDoubleClick);
+            this.dgbMusculos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgbMusculos_CellFormatting);
             // 
             // Eliminar
             // 
@@ -225,6 +226,7 @@
             this.dgbEjercicios.TabIndex = 8;
             this.dgbEjercicios.VirtualMode = true;
             this.dgbEjercicios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbEjercicios_CellDoubleClick);
+            this.dgbEjercicios.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgbEjercicios_CellFormatting);
             // 
             // Borrar
             // 

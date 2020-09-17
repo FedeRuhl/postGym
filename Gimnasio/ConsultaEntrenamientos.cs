@@ -33,11 +33,11 @@ namespace Gimnasio
 
         private void cargarFechasValidas()
         {
-            DateTime fechaInicio = Sets.obtenerDiasSets().Item1;
-            DateTime fechaFin = Sets.obtenerDiasSets().Item2;
+                DateTime fechaInicio = Sets.obtenerDiasSets().Item1;
+                DateTime fechaFin = Sets.obtenerDiasSets().Item2;
 
-            dtpSetsEntrenamiento.MinDate = fechaInicio;
-            dtpSetsEntrenamiento.MaxDate = fechaFin;
+                dtpSetsEntrenamiento.MinDate = fechaInicio;
+                dtpSetsEntrenamiento.MaxDate = fechaFin;
         }
 
         private void actualizarDataGridView()
@@ -61,21 +61,31 @@ namespace Gimnasio
         {
             if (dgbEntrenamientos.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
-                int idFilaActual = dgbEntrenamientos.CurrentRow.Index;
-                int serieID = Convert.ToInt32(dgbEntrenamientos.Rows[idFilaActual].Cells["SERIEID"].Value);
+                String pregunta = "¿Segurísimo que querés borrar esa serie?";
+                if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    int idFilaActual = dgbEntrenamientos.CurrentRow.Index;
+                    int serieID = Convert.ToInt32(dgbEntrenamientos.Rows[idFilaActual].Cells["SERIEID"].Value);
 
-                Series.eliminarSerie(serieID);
-                dgbEntrenamientos.Rows.RemoveAt(idFilaActual);
+                    Series.eliminarSerie(serieID);
+                    dgbEntrenamientos.Rows.RemoveAt(idFilaActual);
+                }
             }
         }
 
         private void btnEliminarSet_Click(object sender, EventArgs e)
         {
-            int setID = Convert.ToInt32(dgbEntrenamientos.Rows[0].Cells["SETID"].Value);
-            Sets.eliminarSet(setID);
-            actualizarDataGridView();
+            DateTime fechaFicticia = DateTime.Parse("1999/01/01");
+            String pregunta = "¿Segurísimo que querés borrar el entrenamiento completo del día " + dtpSetsEntrenamiento.Value.ToShortDateString().ToString() + "?";
+            if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes
+                && dtpSetsEntrenamiento.MinDate.Year != fechaFicticia.Year)
+            {
+                int setID = Convert.ToInt32(dgbEntrenamientos.Rows[0].Cells["SETID"].Value);
+                Sets.eliminarSet(setID);
+                actualizarDataGridView();
 
-            cargarFechasValidas();
+                cargarFechasValidas();
+            }
         }
 
         private void dgbEntrenamientos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -110,6 +120,12 @@ namespace Gimnasio
         {
             actualizarDataGridView();
             reorganizarColumnas();
+        }
+
+        private void dgbEntrenamientos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgbEntrenamientos.Columns[e.ColumnIndex].Name == "Eliminar")
+                dgbEntrenamientos[e.ColumnIndex, e.RowIndex].ToolTipText = "Doble clic para eliminar";
         }
     }
 }
