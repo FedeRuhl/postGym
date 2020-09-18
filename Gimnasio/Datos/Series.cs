@@ -8,7 +8,7 @@ namespace Gimnasio.Datos
 {
     public static class Series
     {
-        private static readonly String path = Application.StartupPath + "\\BD\\Gimnasio.db";
+        private static readonly String path = Application.StartupPath + "\\Gimnasio.db";
         private static readonly String con = $"Data Source={path};Version=3";
         //private static readonly SQLiteConnection conexion = new SQLiteConnection(con);
         public static void insertarSerieRepeticiones(int setID, int ejercicioID, int repeticiones, double peso)

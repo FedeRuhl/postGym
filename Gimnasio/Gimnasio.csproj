@@ -233,9 +233,9 @@
     <EmbeddedResource Include="SubirEntrenamiento.resx">
       <DependentUpon>SubirEntrenamiento.cs</DependentUpon>
     </EmbeddedResource>
-    <Content Include="BD\Gimnasio.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="Gimnasio.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Gimnasio_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ActualizarPersona.datasource" />

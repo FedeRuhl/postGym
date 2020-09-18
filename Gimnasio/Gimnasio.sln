@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimnasio", "Gimnasio.csproj", "{EF4F2B33-0C6F-4486-B1D9-A0AC39BDE42A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PostGym", "..\PostGym\PostGym.vdproj", "{20847873-7D8F-4FC5-A474-5A9CEE785540}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PostGym", "..\PostGym\PostGym.vdproj", "{1420806C-A585-4E94-A3F3-5EC65B9D0D7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{EF4F2B33-0C6F-4486-B1D9-A0AC39BDE42A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF4F2B33-0C6F-4486-B1D9-A0AC39BDE42A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF4F2B33-0C6F-4486-B1D9-A0AC39BDE42A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20847873-7D8F-4FC5-A474-5A9CEE785540}.Debug|Any CPU.ActiveCfg = Debug
-		{20847873-7D8F-4FC5-A474-5A9CEE785540}.Release|Any CPU.ActiveCfg = Release
+		{1420806C-A585-4E94-A3F3-5EC65B9D0D7B}.Debug|Any CPU.ActiveCfg = Debug
+		{1420806C-A585-4E94-A3F3-5EC65B9D0D7B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

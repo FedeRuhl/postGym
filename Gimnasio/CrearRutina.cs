@@ -46,15 +46,22 @@ namespace Gimnasio
         {
             try
             {
-                int idRutina = Convert.ToInt32(Rutinas.insertarRutina());
+                if (clbDias.SelectedItems.Count > 0
+                    && clbEjercicios.SelectedItems.Count > 0
+                    && clbMusculos.CheckedItems.Count > 0)
+                {
+                    int idRutina = Convert.ToInt32(Rutinas.insertarRutina());
 
-                PersistirDiasRutina(idRutina);
-                PersistirMusculosRutina(idRutina);
-                PersistirEjerciciosRutina(idRutina);
+                    PersistirDiasRutina(idRutina);
+                    PersistirMusculosRutina(idRutina);
+                    PersistirEjerciciosRutina(idRutina);
 
-                MessageBox.Show("La rutina se ha creado correctamente.");
+                    MessageBox.Show("La rutina se ha creado correctamente.");
 
-                LimpiarDatos();
+                    LimpiarDatos();
+                }
+                else
+                    MessageBox.Show("¡Acordate que primero tenés que seleccionar los días, músculos y ejercicios!");
             }
 
             catch(Exception ex)
