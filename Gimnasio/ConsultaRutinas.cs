@@ -136,7 +136,7 @@ namespace Gimnasio
             cbEjercicios.DataSource = Ejercicios.obtenerEjercicios().Tables[0];
             cbEjercicios.DisplayMember = "nombre";
             cbEjercicios.ValueMember = "nombre";
-            cbEjercicios.SelectedIndex = 0;
+            //cbEjercicios.SelectedIndex = 0;
         }
 
         private void cbMusculos_Click(object sender, EventArgs e)
