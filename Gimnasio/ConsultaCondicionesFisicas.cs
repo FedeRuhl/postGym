@@ -95,7 +95,8 @@ namespace Gimnasio
 
         private void dgbCondicionesFisicas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgbCondicionesFisicas.Columns[e.ColumnIndex].HeaderText == "Eliminar")
+            if (dgbCondicionesFisicas.Rows.Count > 0
+                && dgbCondicionesFisicas.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
                 String pregunta = "¿Segurísimo que querés borrar ese avance personal? ";
                 if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)

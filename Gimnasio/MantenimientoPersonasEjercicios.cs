@@ -92,7 +92,8 @@ namespace Gimnasio
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "Eliminar")
+            if (dataGridView1.Rows.Count > 0
+                && dataGridView1.Columns[e.ColumnIndex].Name == "Eliminar")
             {
                 String pregunta = "¿Segurísimo que querés borrar todos los datos de " + dataGridView1["nombre", e.RowIndex].Value.ToString() + "?";
                 if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)

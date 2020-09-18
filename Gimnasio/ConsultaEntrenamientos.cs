@@ -59,7 +59,8 @@ namespace Gimnasio
 
         private void dgbEntrenamientos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgbEntrenamientos.Columns[e.ColumnIndex].HeaderText == "Eliminar")
+            if (dgbEntrenamientos.Rows.Count > 0
+                && dgbEntrenamientos.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
                 String pregunta = "¿Segurísimo que querés borrar esa serie?";
                 if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
@@ -77,7 +78,8 @@ namespace Gimnasio
         {
             DateTime fechaFicticia = DateTime.Parse("1999/01/01");
             String pregunta = "¿Segurísimo que querés borrar el entrenamiento completo del día " + dtpSetsEntrenamiento.Value.ToShortDateString().ToString() + "?";
-            if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes
+            if (dgbEntrenamientos.Rows.Count > 0
+                && MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes
                 && dtpSetsEntrenamiento.MinDate.Year != fechaFicticia.Year)
             {
                 int setID = Convert.ToInt32(dgbEntrenamientos.Rows[0].Cells["SETID"].Value);

@@ -87,7 +87,8 @@ namespace Gimnasio
 
         private void dgbMusculos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgbMusculos.Columns[e.ColumnIndex].HeaderText == "Eliminar")
+            if (dgbMusculos.Rows.Count > 0
+                && dgbMusculos.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
                 String pregunta = "¿Segurísimo que querés borrar todos los datos del grupo muscular " + dgbMusculos["musculo", e.RowIndex].Value.ToString() + "?";
                 if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
@@ -104,7 +105,8 @@ namespace Gimnasio
 
         private void dgbEjercicios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgbEjercicios.Columns[e.ColumnIndex].HeaderText == "Eliminar")
+            if (dgbEjercicios.Rows.Count > 0
+                && dgbEjercicios.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
                 String pregunta = "¿Segurísimo que querés borrar todos los datos del ejercicio " + dgbEjercicios["ejercicio", e.RowIndex].Value.ToString() + "?";
                 if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
@@ -122,7 +124,8 @@ namespace Gimnasio
         private void btnEliminarRutina_Click(object sender, EventArgs e)
         {
             String pregunta = "¿Segurísimo que querés borrar la rutina " + cbOpcion.Text + "?";
-            if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            if (cbOpcion.SelectedIndex != -1
+                && MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 int diaID = cbDias.SelectedIndex + 1;
                 Rutinas.eliminarRutina(rutinaID);
