@@ -519,12 +519,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_99CDEE4BEE5E46E29769E4C1714A1F85"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9BC93EEADF448E845C679A101069F4D9"
         "OwnerKey" = "8:_0663A95AA7654D6E9A8E7D3B539E985D"
         "MsmSig" = "8:_UNDEFINED"
@@ -3853,26 +3847,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_99CDEE4BEE5E46E29769E4C1714A1F85"
-            {
-            "SourcePath" = "8:..\\Gimnasio\\Gimnasio.db"
-            "TargetName" = "8:Gimnasio.db"
-            "Tag" = "8:"
-            "Folder" = "8:_FBB7ACDFA9CD4F21A1FC97401E9A20F0"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:TRUE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9BC93EEADF448E845C679A101069F4D9"
             {
             "AssemblyRegister" = "3:1"
@@ -5646,7 +5620,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:PostGym"
         "ProductCode" = "8:{E2C9AB61-E94C-4E79-8120-25AD6538C505}"
-        "PackageCode" = "8:{9653BF05-B568-4950-A517-7363A8BED2E8}"
+        "PackageCode" = "8:{0641A2FE-528D-4675-BB87-1EFC00A4C80B}"
         "UpgradeCode" = "8:{689D8290-02DE-4FDD-A30F-1D2C40915C8E}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"

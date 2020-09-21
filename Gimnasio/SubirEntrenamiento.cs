@@ -18,6 +18,8 @@ namespace Gimnasio
         private TextBoxPersonalizado textPeso;
         private int posicionY = 0;
         private bool textBoxIzquierda = false;
+        private int cantidadEjercicios = 0;
+        private int cantidadPersonas = 0;
         public SubirEntrenamiento()
         {
             InitializeComponent();
@@ -209,8 +211,21 @@ namespace Gimnasio
             int diaSemana = Convert.ToInt32(dtpDiaEntrenamiento.Value.DayOfWeek);
             diaSemana = (diaSemana == 0) ? 7 : diaSemana;
 
-            actualizarComboBoxPersonas();
-            actualizarComboBoxEjercicios(diaSemana);
+            DataSet dsEjercicios = Ejercicios.obtenerEjerciciosSegunDia(diaSemana);
+            DataSet dsPersonas = Personas.obtenerPersonas();
+
+            if (dsEjercicios.Tables[0].Rows.Count != cantidadEjercicios)
+            {
+                cbEjercicios.DataSource = dsEjercicios.Tables[0];
+                cantidadEjercicios = dsEjercicios.Tables[0].Rows.Count;
+            }
+
+            if (dsPersonas.Tables[0].Rows.Count != cantidadPersonas)
+            {
+                cbPersonas.DataSource = dsPersonas.Tables[0];
+                cantidadPersonas = dsPersonas.Tables[0].Rows.Count;
+            }
+            
         }
 
         private void actualizarComboBoxPersonas()
@@ -219,6 +234,8 @@ namespace Gimnasio
             cbPersonas.DisplayMember = "nombre";
             cbPersonas.ValueMember = "nombre";
             //cbPersonas.SelectedIndex = 0;
+
+            cantidadPersonas = cbPersonas.Items.Count;
         }
 
         private void actualizarComboBoxEjercicios(int diaSemana)
@@ -227,6 +244,8 @@ namespace Gimnasio
             cbEjercicios.DisplayMember = "Ejercicio";
             cbEjercicios.ValueMember = "Ejercicio";
             //cbEjercicios.SelectedIndex = 0;
+
+            cantidadEjercicios = cbEjercicios.Items.Count;
         }
     }
 }
