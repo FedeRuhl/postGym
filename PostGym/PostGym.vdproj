@@ -519,6 +519,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_998E7CA00D1348879CB6064684B582EF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9BC93EEADF448E845C679A101069F4D9"
         "OwnerKey" = "8:_0663A95AA7654D6E9A8E7D3B539E985D"
         "MsmSig" = "8:_UNDEFINED"
@@ -3845,6 +3851,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_998E7CA00D1348879CB6064684B582EF"
+            {
+            "SourcePath" = "8:..\\Gimnasio\\Gimnasio.db"
+            "TargetName" = "8:Gimnasio.db"
+            "Tag" = "8:"
+            "Folder" = "8:_FBB7ACDFA9CD4F21A1FC97401E9A20F0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9BC93EEADF448E845C679A101069F4D9"
