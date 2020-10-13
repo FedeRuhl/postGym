@@ -13,6 +13,7 @@ namespace Gimnasio
 {
     public partial class CrearRutina : Form
     {
+        HashSet<String> ejerciciosSeleccionados = new HashSet<String>();
         public CrearRutina()
         {
             InitializeComponent();
@@ -108,11 +109,34 @@ namespace Gimnasio
                 Filter = "nombre like '%" + tbFiltro.Text + "%'"
             };
             clbEjercicios.DataSource = bs.DataSource;
+
+            RemarcarCheckListBox(ejerciciosSeleccionados, clbEjercicios);
+        }
+
+        private void RemarcarCheckListBox(HashSet<String> ejerciciosSeleccionados, CheckedListBox clbEjercicios)
+        {
+            for (int i = 0; i < ejerciciosSeleccionados.Count; i++)
+            {
+                int posicion = clbEjercicios.FindString(ejerciciosSeleccionados.ElementAt(i));
+                if (posicion != -1)
+                    clbEjercicios.SetItemChecked(posicion, true);
+            }
         }
 
         private void CrearRutina_Enter(object sender, EventArgs e)
         {
             actualizarCheckedListEjercicios();
+        }
+
+        private void clbEjercicios_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            DataRowView ejercicioSeleccionado = (DataRowView)clbEjercicios.Items[e.Index];
+            String ejercicio = ejercicioSeleccionado.Row["nombre"].ToString();
+
+            if (e.NewValue == CheckState.Checked)
+                ejerciciosSeleccionados.Add(ejercicio);
+            else if (e.NewValue == CheckState.Unchecked)
+                ejerciciosSeleccionados.Remove(ejercicio);
         }
     }
 }

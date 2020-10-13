@@ -127,6 +127,7 @@
             this.clbEjercicios.Size = new System.Drawing.Size(488, 356);
             this.clbEjercicios.TabIndex = 3;
             this.clbEjercicios.ThreeDCheckBoxes = true;
+            this.clbEjercicios.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbEjercicios_ItemCheck);
             // 
             // clbDias
             // 
