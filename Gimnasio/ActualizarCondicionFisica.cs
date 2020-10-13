@@ -85,6 +85,7 @@ namespace Gimnasio
             lCheck.Visible = false;
             openFileDialog1.FileName = "";
             fotosPersona.Clear();
+            tbPeso.Focus();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

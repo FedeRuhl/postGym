@@ -148,7 +148,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(774, 680);
-            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.TabIndex = 6;
             this.dataGridView1.VirtualMode = true;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
@@ -233,7 +233,7 @@
             this.tbFiltro.Location = new System.Drawing.Point(307, 314);
             this.tbFiltro.Name = "tbFiltro";
             this.tbFiltro.Size = new System.Drawing.Size(264, 25);
-            this.tbFiltro.TabIndex = 9;
+            this.tbFiltro.TabIndex = 5;
             this.tbFiltro.Text = "Filtrar por nombre";
             this.tbFiltro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbFiltro_KeyUp);

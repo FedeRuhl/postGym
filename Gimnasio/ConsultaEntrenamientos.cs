@@ -63,7 +63,7 @@ namespace Gimnasio
                 && dgbEntrenamientos.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
                 String pregunta = "¿Segurísimo que querés borrar esa serie?";
-                if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show(pregunta, "Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
                 {
                     int idFilaActual = dgbEntrenamientos.CurrentRow.Index;
                     int serieID = Convert.ToInt32(dgbEntrenamientos.Rows[idFilaActual].Cells["SERIEID"].Value);
@@ -79,7 +79,7 @@ namespace Gimnasio
             DateTime fechaFicticia = DateTime.Parse("1999/01/01");
             String pregunta = "¿Segurísimo que querés borrar el entrenamiento completo del día " + dtpSetsEntrenamiento.Value.ToShortDateString().ToString() + "?";
             if (dgbEntrenamientos.Rows.Count > 0
-                && MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes
+                && (MessageBox.Show(pregunta, "Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
                 && dtpSetsEntrenamiento.MinDate.Year != fechaFicticia.Year)
             {
                 int setID = Convert.ToInt32(dgbEntrenamientos.Rows[0].Cells["SETID"].Value);

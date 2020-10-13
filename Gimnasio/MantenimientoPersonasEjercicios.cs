@@ -69,6 +69,7 @@ namespace Gimnasio
             RecargarDataGridView();
             tbNombre.Text = "";
             tbAltura.Text = "";
+            tbNombre.Focus();
         }
 
         
@@ -96,7 +97,7 @@ namespace Gimnasio
                 && dataGridView1.Columns[e.ColumnIndex].Name == "Eliminar")
             {
                 String pregunta = "¿Segurísimo que querés borrar todos los datos de " + dataGridView1["nombre", e.RowIndex].Value.ToString() + "?";
-                if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show(pregunta, "Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
                 {
                     int idFilaActual = dataGridView1.CurrentRow.Index;
                     int id = Convert.ToInt32(dataGridView1["id", idFilaActual].Value);

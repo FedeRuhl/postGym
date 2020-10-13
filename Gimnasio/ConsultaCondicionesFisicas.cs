@@ -99,7 +99,7 @@ namespace Gimnasio
                 && dgbCondicionesFisicas.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
                 String pregunta = "¿Segurísimo que querés borrar ese avance personal? ";
-                if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show(pregunta, "Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
                 {
                     int idFilaActual = dgbCondicionesFisicas.CurrentRow.Index;
                     int fotoID = Convert.ToInt32(dgbCondicionesFisicas.Rows[idFilaActual].Cells["fotoID"].Value);

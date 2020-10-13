@@ -71,6 +71,7 @@ namespace Gimnasio
             tbCantidadSeries.Clear();
             cbRepOseg.SelectedIndex = -1;
             panelSubirRutina.Controls.Clear();
+            cbEjercicios.Focus();
             cbRepOseg.Enabled = true;
         }
 

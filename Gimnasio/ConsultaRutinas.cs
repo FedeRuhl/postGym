@@ -91,7 +91,7 @@ namespace Gimnasio
                 && dgbMusculos.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
                 String pregunta = "¿Segurísimo que querés borrar todos los datos del grupo muscular " + dgbMusculos["musculo", e.RowIndex].Value.ToString() + "?";
-                if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show(pregunta, "Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
                 {
                     int idFilaActual = dgbMusculos.CurrentRow.Index;
                     int musculoID = Convert.ToInt32(dgbMusculos.Rows[idFilaActual].Cells["ID"].Value);
@@ -109,7 +109,7 @@ namespace Gimnasio
                 && dgbEjercicios.Columns[e.ColumnIndex].HeaderText == "Eliminar")
             {
                 String pregunta = "¿Segurísimo que querés borrar todos los datos del ejercicio " + dgbEjercicios["ejercicio", e.RowIndex].Value.ToString() + "?";
-                if (MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show(pregunta, "Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
                 {
                     int idFilaActual = dgbEjercicios.CurrentRow.Index;
                     int ejercicioID = Convert.ToInt32(dgbEjercicios.Rows[idFilaActual].Cells["ID"].Value);
@@ -125,7 +125,7 @@ namespace Gimnasio
         {
             String pregunta = "¿Segurísimo que querés borrar la rutina " + cbOpcion.Text + "?";
             if (cbOpcion.SelectedIndex != -1
-                && MessageBox.Show(pregunta, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                && MessageBox.Show(pregunta, "Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
             {
                 int diaID = cbDias.SelectedIndex + 1;
                 Rutinas.eliminarRutina(rutinaID);
@@ -159,6 +159,7 @@ namespace Gimnasio
                 int musculoID = Convert.ToInt32(Musculo.Row["id"]);
                 Rutinas.insertarMusculoRutina(musculoID, rutinaID);
                 actualizarDataGridViews();
+                cbMusculos.Focus();
             }
             else
             {
@@ -175,6 +176,7 @@ namespace Gimnasio
                 int ejercicioID = Convert.ToInt32(Ejercicio.Row["id"]);
                 Rutinas.insertarEjercicioRutina(ejercicioID, rutinaID);
                 actualizarDataGridViews();
+                cbEjercicios.Focus();
             }
             else
             {
