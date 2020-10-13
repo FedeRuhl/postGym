@@ -63,16 +63,6 @@ namespace Gimnasio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arreglar {
-            get {
-                object obj = ResourceManager.GetObject("arreglar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap gimnasio {
             get {
                 object obj = ResourceManager.GetObject("gimnasio", resourceCulture);
